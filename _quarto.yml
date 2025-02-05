@@ -6,9 +6,9 @@ project:
 
 website: 
   page-navigation: true
-  title: "NOAA quarto simple" 
-  site-url: "https://sael-swfsc.github.io/PAM_template_ResearchCompendium/" 
-  repo-url: "https://github.com/SAEL-SWFSC/PAM_template_ResearchCompendium"
+  title: "CalCurCEAS-2024-Drifter-Analysis" 
+  site-url: "https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/" 
+  repo-url: "https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis"
   repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
   
