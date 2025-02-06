@@ -1,0 +1,8 @@
+---
+title: "Pamguard Processing"
+editor: visual
+---
+
+# Summary
+
+Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data that was run through PAMpal.

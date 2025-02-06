@@ -1,0 +1,22 @@
+Package: CalCurCEAS2024DrifterAnalysis
+Title: CalCurCEAS 2024 Drifter Analysis
+Description: Not a package, but includes code for processing drifter buoy data. This 
+    DESCRIPTION file is only used to document and install required packages to 
+    render the report.
+Author: person("Kourtney", "Burger", email = "kourtney.burger@noaa.gov")
+Maintainer: Kourtney Burger <kourtney.burger@noaa.gov>
+License: MIT + file LICENSE
+Version: 0.0.0
+Imports:
+    here,
+    tidyverse,
+    ggplot2,
+    sf,
+    marmap,
+    rnaturalearth,
+    rnaturalearthdata,
+    gganimate,
+    swfscDAS,
+    xml2,
+    PAMmisc,
+    RNetCDF
