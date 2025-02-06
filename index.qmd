@@ -1,13 +1,15 @@
 ---
-title: "California Current Cetacean and Ecosystem Assessment Survey Passive Acoustic Analysis"
-subtitle: "A research compendium for the passive acoustics component of CalCurCEAS"
+title: "The California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)"
+subtitle: The passive acoustic analysis reserach compendium
 page-layout: full
 ---
 
-## Overview
+![](content/images/CalCurCEAS_logo.JPG){fig-align="center" width="400"}
 
-The 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the [Marine Mammal and Turtle Division](https://www.fisheries.noaa.gov/about/marine-mammal-and-turtle-division-southwest-fisheries-science-center) (MMTD) of [Southwest Fisheries Science Center](https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center) (SWFSC). The survey was conducted over the course of 6 legs aboard the M/V Bold Horizon between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD's fulfillment of regulatory requirements and scientific initiatives, such as marine mammal stock assessments for stakeholders such as the US Navy and BOEM.
+## Overview 
+
+The 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the [Marine Mammal and Turtle Division](https://www.fisheries.noaa.gov/about/marine-mammal-and-turtle-division-southwest-fisheries-science-center) (MMTD) of [Southwest Fisheries Science Center](https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center) (SWFSC). The survey was conducted over the course of 6 legs aboard the [M/V Bold Horizon](http://www.eclipse.us.com/pdfs/MV_bold_horizon.pdf) between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD's fulfillment of regulatory requirements and scientific initiatives, such as marine mammal stock assessments for stakeholders such as the US Navy and BOEM.
 
 ## Drifting Acoustic Recorders in the California Current
 
-The passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it's transitory nature (re positioning the vessel from San Diego to the north end of the study area).
+The passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it's transitory nature (re-positioning the vessel from San Diego to the north end of the study area).
