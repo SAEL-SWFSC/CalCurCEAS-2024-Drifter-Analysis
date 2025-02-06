@@ -39,8 +39,16 @@ website:
       - href: content/folderStructure.qmd
         text: "Folder Structure & Content"
       - section: "Data Collection"
+        contents: content/data-collection.qmd
+      - section: "Data Managment and Archive"
         contents: 
-          - content/data-collection.qmd
+          - content/DataManagementandArchive/DataManagement.qmd
+          - content/DataManagementandArchive/DataQualityCheck.qmd
+          - content/DataManagementandArchive/DataUpload.qmd
+      - section: "Analysis"
+        contents: 
+          - content/Analysis/DataManagement.qmd
+          
 
         
 format:
