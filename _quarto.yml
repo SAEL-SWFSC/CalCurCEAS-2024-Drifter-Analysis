@@ -42,12 +42,12 @@ website:
         contents: content/data-collection.qmd
       - section: "Data Managment and Archive"
         contents: 
-          - content/DataManagementandArchive/DataManagement.qmd
-          - content/DataManagementandArchive/DataQualityCheck.qmd
-          - content/DataManagementandArchive/DataUpload.qmd
+          - content/DataManagement.qmd
+          - content/DataQualityCheck.qmd
+          - content/DataUpload.qmd
       - section: "Analysis"
         contents: 
-          - content/Analysis/DataManagement.qmd
+          - content/DataManagement.qmd
           
 
         
