@@ -1,4 +1,30 @@
 ---
-title: "DataUpload"
+title: "Data Upload & Archive"
 editor: visual
 ---
+
+## Local Archive
+
+All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;
+
+-   extracted SUD files (log, wav, accelerometer)
+-   depth data
+-   GPS data
+-   QAQC results
+-   decimated data
+-   LTSAs
+-   analysis data products
+
+Compressed SUD files are stored locally to the PAM Synology drive.
+
+Deployment metadata is also archived to a local [Tethys database](https://tethys.sdsu.edu/). Detailed directions to access this database [here](https://sael-swfsc.github.io/SAEL-lab-manual/content/Data-Archive-Tethys.html).
+
+## NCEI
+
+Raw audio data and deployment metadata are archived to [NCEI Passive Acoustic Data Archive](https://www.ncei.noaa.gov/products/passive-acoustic-data).
+
+Link to archived data once uploaded.
+
+## PACM
+
+Once finalized, beaked whale and sperm whale detections will be archived to [NEFSC Passive Acoustic Cetacean Map](https://apps-nefsc.fisheries.noaa.gov/pacm/#/)

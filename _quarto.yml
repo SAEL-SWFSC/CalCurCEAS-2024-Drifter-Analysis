@@ -42,7 +42,7 @@ website:
         contents: content/data-collection.qmd
       - section: "Data Managment and Archive"
         contents: 
-          - content/DataManagement.qmd
+#           - content/DataManagement.qmd
           - content/DataQualityCheck.qmd
           - content/DataUpload.qmd
       - section: "Analysis"
