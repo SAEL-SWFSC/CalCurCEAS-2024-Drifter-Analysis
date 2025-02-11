@@ -4,7 +4,7 @@
     "href": "content/PamguardProcessing.html",
     "title": "Pamguard Processing",
     "section": "",
-    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales.\n\n\nBeaked Whales",
+    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.\n\n\nBeaked Whales",
     "crumbs": [
       "Analysis",
       "Pamguard Processing"
@@ -216,6 +216,17 @@
     "crumbs": [
       "Data Managment and Archive",
       "Data Upload & Archive"
+    ]
+  },
+  {
+    "objectID": "content/deployment.html",
+    "href": "content/deployment.html",
+    "title": "Deployment",
+    "section": "",
+    "text": "Deployment of a drift acoustic buoy",
+    "crumbs": [
+      "Data Collection",
+      "Deployment"
     ]
   }
 ]
