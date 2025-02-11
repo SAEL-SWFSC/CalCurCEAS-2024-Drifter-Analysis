@@ -4,7 +4,7 @@
     "href": "content/PamguardProcessing.html",
     "title": "Pamguard Processing",
     "section": "",
-    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data that was run through PAMpal.",
+    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales.\n\n\nBeaked Whales",
     "crumbs": [
       "Analysis",
       "Pamguard Processing"
@@ -128,6 +128,94 @@
     "text": "Drifting Acoustic Recorders in the California Current\nThe passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it’s transitory nature (re-positioning the vessel from San Diego to the north end of the study area).",
     "crumbs": [
       "Home"
+    ]
+  },
+  {
+    "objectID": "content/DataQualityCheck.html",
+    "href": "content/DataQualityCheck.html",
+    "title": "Data Prep and Quality Check",
+    "section": "",
+    "text": "After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using Soundtrap Host software file extraction tool (version ___). The exported files include raw audio files (.wav), recording logs, and accelerometer data.\n\n\n\nTo prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the Matlab based Triton Software Package. LTSAs were also made for each dataset with the following parameters;\n\n384 kHz (raw data): 5 seconds, 200 Hz\n48 kHz: 5 seconds, 1 Hz\n12 kHz: 5 seconds, 1 Hz\n500 Hz: 1 seconds, 1 Hz\n\nThe data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before anaylsis.",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Prep and Quality Check"
+    ]
+  },
+  {
+    "objectID": "content/DataQualityCheck.html#data-prep",
+    "href": "content/DataQualityCheck.html#data-prep",
+    "title": "Data Prep and Quality Check",
+    "section": "",
+    "text": "After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using Soundtrap Host software file extraction tool (version ___). The exported files include raw audio files (.wav), recording logs, and accelerometer data.\n\n\n\nTo prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the Matlab based Triton Software Package. LTSAs were also made for each dataset with the following parameters;\n\n384 kHz (raw data): 5 seconds, 200 Hz\n48 kHz: 5 seconds, 1 Hz\n12 kHz: 5 seconds, 1 Hz\n500 Hz: 1 seconds, 1 Hz\n\nThe data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before anaylsis.",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Prep and Quality Check"
+    ]
+  },
+  {
+    "objectID": "content/DataQualityCheck.html#qaqc",
+    "href": "content/DataQualityCheck.html#qaqc",
+    "title": "Data Prep and Quality Check",
+    "section": "QAQC",
+    "text": "QAQC\nThe full bandwidth LTSAs were used to assess the overall data quality as good, compromised, or unusable.\nA recording QAQC was also run to identify abnormal file sizes, gaps in the recordings, or other recording abnormalities. This QAQC was ran using a custom Matlab script (PAMmisc QAQC R version).",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Prep and Quality Check"
+    ]
+  },
+  {
+    "objectID": "content/DataQualityCheck.html#noise-assessment",
+    "href": "content/DataQualityCheck.html#noise-assessment",
+    "title": "Data Prep and Quality Check",
+    "section": "Noise Assessment",
+    "text": "Noise Assessment\nUsing the Triton Logger remora, the 384 kHz LTSAs were manually scanned to log time periods with noisy or compromised data, which would be excluded from analysis.",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Prep and Quality Check"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html",
+    "href": "content/DataUpload.html",
+    "title": "Data Upload & Archive",
+    "section": "",
+    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html#local-archive",
+    "href": "content/DataUpload.html#local-archive",
+    "title": "Data Upload & Archive",
+    "section": "",
+    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html#ncei",
+    "href": "content/DataUpload.html#ncei",
+    "title": "Data Upload & Archive",
+    "section": "NCEI",
+    "text": "NCEI\nRaw audio data and deployment metadata are archived to NCEI Passive Acoustic Data Archive.\nLink to archived data once uploaded.",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html#pacm",
+    "href": "content/DataUpload.html#pacm",
+    "title": "Data Upload & Archive",
+    "section": "PACM",
+    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
     ]
   }
 ]
