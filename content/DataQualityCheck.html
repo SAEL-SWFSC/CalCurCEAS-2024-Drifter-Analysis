@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DataQualityCheck – CalCurCEAS-2024-Drifter-Analysis</title>
+<title>Data Prep and Quality Check – CalCurCEAS-2024-Drifter-Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../content/DataUpload.html" rel="next">
-<link href="../content/DataManagement.html" rel="prev">
+<link href="//content/data-collection.html" rel="prev">
 <link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/DataManagement.html">Data Managment and Archive</a></li><li class="breadcrumb-item"><a href="../content/DataQualityCheck.html">DataQualityCheck</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/DataQualityCheck.html">Data Managment and Archive</a></li><li class="breadcrumb-item"><a href="../content/DataQualityCheck.html">Data Prep and Quality Check</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -147,20 +147,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/DataManagement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">DataManagement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../content/DataQualityCheck.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">DataQualityCheck</span></a>
+ <span class="menu-text">Data Prep and Quality Check</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/DataUpload.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">DataUpload</span></a>
+ <span class="menu-text">Data Upload &amp; Archive</span></a>
   </div>
 </li>
       </ul>
@@ -187,15 +181,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-prep" id="toc-data-prep" class="nav-link active" data-scroll-target="#data-prep">Data Prep</a>
+  <ul class="collapse">
+  <li><a href="#offloading-and-decompressing-sud-files" id="toc-offloading-and-decompressing-sud-files" class="nav-link" data-scroll-target="#offloading-and-decompressing-sud-files">Offloading and Decompressing SUD files</a></li>
+  <li><a href="#decimation-and-ltsas" id="toc-decimation-and-ltsas" class="nav-link" data-scroll-target="#decimation-and-ltsas">Decimation and LTSAs</a></li>
+  </ul></li>
+  <li><a href="#qaqc" id="toc-qaqc" class="nav-link" data-scroll-target="#qaqc">QAQC</a></li>
+  <li><a href="#noise-assessment" id="toc-noise-assessment" class="nav-link" data-scroll-target="#noise-assessment">Noise Assessment</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/edit/main/content/DataQualityCheck.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/content/DataQualityCheck.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/DataManagement.html">Data Managment and Archive</a></li><li class="breadcrumb-item"><a href="../content/DataQualityCheck.html">DataQualityCheck</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/DataQualityCheck.html">Data Managment and Archive</a></li><li class="breadcrumb-item"><a href="../content/DataQualityCheck.html">Data Prep and Quality Check</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">DataQualityCheck</h1>
+<h1 class="title">Data Prep and Quality Check</h1>
 </div>
 
 
@@ -212,8 +218,35 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="data-prep" class="level2">
+<h2 class="anchored" data-anchor-id="data-prep">Data Prep</h2>
+<section id="offloading-and-decompressing-sud-files" class="level3">
+<h3 class="anchored" data-anchor-id="offloading-and-decompressing-sud-files">Offloading and Decompressing SUD files</h3>
+<p>After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using <a href="https://www.oceaninstruments.co.nz/downloads/">Soundtrap Host software</a> file extraction tool (version ___). The exported files include raw audio files (.wav), recording logs, and accelerometer data.</p>
+</section>
+<section id="decimation-and-ltsas" class="level3">
+<h3 class="anchored" data-anchor-id="decimation-and-ltsas">Decimation and LTSAs</h3>
+<p>To prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the Matlab based <a href="https://www.cetus.ucsd.edu/technologies_triton.html">Triton Software Package</a>. LTSAs were also made for each dataset with the following parameters;</p>
+<ul>
+<li><p>384 kHz (raw data): 5 seconds, 200 Hz</p></li>
+<li><p>48 kHz: 5 seconds, 1 Hz</p></li>
+<li><p>12 kHz: 5 seconds, 1 Hz</p></li>
+<li><p>500 Hz: 1 seconds, 1 Hz</p></li>
+</ul>
+<p>The data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before anaylsis.</p>
+</section>
+</section>
+<section id="qaqc" class="level2">
+<h2 class="anchored" data-anchor-id="qaqc">QAQC</h2>
+<p>The full bandwidth LTSAs were used to assess the overall data quality as good, compromised, or unusable.</p>
+<p>A recording QAQC was also run to identify abnormal file sizes, gaps in the recordings, or other recording abnormalities. This QAQC was ran using a custom Matlab script <a href="https://github.com/TaikiSan21/PAMmisc/blob/main/devel/qaqcFunctions.R">(PAMmisc QAQC R version)</a>.</p>
+</section>
+<section id="noise-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="noise-assessment">Noise Assessment</h2>
+<p>Using the <a href="https://github.com/MarineBioAcousticsRC/Triton/tree/master/Remoras/Logger">Triton Logger remora</a>, the 384 kHz LTSAs were manually scanned to log time periods with noisy or compromised data, which would be excluded from analysis.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -779,13 +812,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content/DataManagement.html" class="pagination-link" aria-label="DataManagement">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">DataManagement</span>
+      <a href="//content/data-collection.html" class="pagination-link" aria-label="Data Collection">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data Collection</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/DataUpload.html" class="pagination-link" aria-label="DataUpload">
-        <span class="nav-page-text">DataUpload</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../content/DataUpload.html" class="pagination-link" aria-label="Data Upload &amp; Archive">
+        <span class="nav-page-text">Data Upload &amp; Archive</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -797,7 +830,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/edit/main/content/DataQualityCheck.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/content/DataQualityCheck.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/edit/main/content/DataQualityCheck.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/content/DataQualityCheck.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
