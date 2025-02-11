@@ -5,6 +5,6 @@ editor: visual
 
 # Summary
 
-Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales.
+[Pamgaurd version 2.02.14](https://www.pamguard.org/releases/download.html) was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.
 
 # Beaked Whales 

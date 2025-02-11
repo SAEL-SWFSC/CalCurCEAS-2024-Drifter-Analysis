@@ -1,4 +1,6 @@
 ---
-title: "Data Collection"
+title: "Deployment"
 editor: visual
 ---
+
+# Deployment of a drift acoustic buoy
