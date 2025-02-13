@@ -115,20 +115,14 @@
     "href": "index.html#overview",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Overview",
-    "text": "Overview\nThe 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the Marine Mammal and Turtle Division (MMTD) of Southwest Fisheries Science Center (SWFSC). The survey was conducted over the course of 6 legs aboard the M/V Bold Horizon between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD’s fulfillment of regulatory requirements and scientific initiatives, such as marine mammal stock assessments for stakeholders such as the US Navy and BOEM.",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Overview\nThe 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the Marine Mammal and Turtle Division (MMTD) of Southwest Fisheries Science Center (SWFSC). The survey was conducted over the course of 6 legs aboard the M/V Bold Horizon between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD’s fulfillment of regulatory requirements and scientific initiatives, such as marine mammal stock assessments for stakeholders such as the US Navy and BOEM."
   },
   {
     "objectID": "index.html#drifting-acoustic-recorders-in-the-california-current",
     "href": "index.html#drifting-acoustic-recorders-in-the-california-current",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Drifting Acoustic Recorders in the California Current",
-    "text": "Drifting Acoustic Recorders in the California Current\nThe passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it’s transitory nature (re-positioning the vessel from San Diego to the north end of the study area).",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Drifting Acoustic Recorders in the California Current\nThe passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it’s transitory nature (re-positioning the vessel from San Diego to the north end of the study area)."
   },
   {
     "objectID": "content/DataQualityCheck.html",
@@ -228,5 +222,19 @@
       "Data Collection",
       "Deployment"
     ]
+  },
+  {
+    "objectID": "content/retrieval.html",
+    "href": "content/retrieval.html",
+    "title": "Retrieval",
+    "section": "",
+    "text": "Retrieval of the drifting acoustic buoys from the M/V Bold Horizon was done from mid-ship on the starboard side. The captain on duty positioned the ship downwind from the buoy and into the swell. From the bridge or the aft pilot station, the captain then was able to slide the buoy down the starboard side of the vessel for retrieval."
+  },
+  {
+    "objectID": "content/retrieval.html#steps-for-retrieval",
+    "href": "content/retrieval.html#steps-for-retrieval",
+    "title": "Retrieval",
+    "section": "Steps for Retrieval",
+    "text": "Steps for Retrieval\n\nShip approaches last know location (using GPS coordinates)\nSlow to 5kts when within one nautical mile of the last known location\n\nDuring daylight hours, ask the crew or visual team to use bionoculars to aid in finding the buoy.\n\nDuring the night, the strobe should be flashing on the pole buoys to help find them. If using a different surface buoy, the reflective solas tape can be seen at ranges up to 0.5 nmi. Use a spotlight to illuminate the reflective tape.\nUsing a boat hook or grapple to grab the orange floating line between the main buoy and the trailing buoy.\nBring the buoy on board and set it on deck\nRetrieve the main line down to the subsurface gear and gentally wrap it around the power capstan to pull in. Make sure that one person keeps an eye on the line as it is being pulled aboard so that it doesn’t chaff on the ship and so that you can see the subsurface gear as it approaches the surface.\nRemove line from the capstan once you see the drogue and hand pull the array onto the ship.\n\nHold the hydrophone array away from the vessel lip as you are retrieving it to avoid banging the array against the ship.\nLift the recorder and anchor carefully over the railing.\n\nMake note of the date, time, latitude and longitude upon retrieval."
   }
 ]
