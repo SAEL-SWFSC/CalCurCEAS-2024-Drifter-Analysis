@@ -218,5 +218,27 @@
     "crumbs": [
       "Folder Structure & Content"
     ]
+  },
+  {
+    "objectID": "content/retrieval.html",
+    "href": "content/retrieval.html",
+    "title": "Retrieval",
+    "section": "",
+    "text": "Retrieval of the drifting acoustic buoys from the M/V Bold Horizon was done from mid-ship on the starboard side. The captain on duty positioned the ship downwind from the buoy and into the swell. From the bridge or the aft pilot station, the captain then was able to slide the buoy down the starboard side of the vessel for retrieval.",
+    "crumbs": [
+      "Data Collection",
+      "Retrieval"
+    ]
+  },
+  {
+    "objectID": "content/retrieval.html#steps-for-retrieval",
+    "href": "content/retrieval.html#steps-for-retrieval",
+    "title": "Retrieval",
+    "section": "Steps for Retrieval",
+    "text": "Steps for Retrieval\n\nShip approaches last know location (using GPS coordinates)\nSlow to 5kts when within one nautical mile of the last known location\n\nDuring daylight hours, ask the crew or visual team to use bionoculars to aid in finding the buoy.\n\nDuring the night, the strobe should be flashing on the pole buoys to help find them. If using a different surface buoy, the reflective solas tape can be seen at ranges up to 0.5 nmi. Use a spotlight to illuminate the reflective tape.\nUsing a boat hook or grapple to grab the orange floating line between the main buoy and the trailing buoy.\nBring the buoy on board and set it on deck\nRetrieve the main line down to the subsurface gear and gentally wrap it around the power capstan to pull in. Make sure that one person keeps an eye on the line as it is being pulled aboard so that it doesn’t chaff on the ship and so that you can see the subsurface gear as it approaches the surface.\nRemove line from the capstan once you see the drogue and hand pull the array onto the ship.\n\nHold the hydrophone array away from the vessel lip as you are retrieving it to avoid banging the array against the ship.\nLift the recorder and anchor carefully over the railing.\n\nMake note of the date, time, latitude and longitude upon retrieval.",
+    "crumbs": [
+      "Data Collection",
+      "Retrieval"
+    ]
   }
 ]
