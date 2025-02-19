@@ -11,4 +11,6 @@ The 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS
 
 ## Drifting Acoustic Recorders in the California Current
 
-The passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it's transitory nature (re-positioning the vessel from San Diego to the north end of the study area).
+The passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it's transitory nature (re-positioning the vessel from San Diego to the north end of the study area). Buoys were then left to drift at sea between 2-14 days before being retrieved.
+
+Data from those buoys were downloaded and then processed to look for specific species. More detail can be found on the following pages.
