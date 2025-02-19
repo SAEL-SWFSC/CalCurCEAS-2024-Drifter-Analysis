@@ -39,7 +39,8 @@ website:
       - href: content/folderStructure.qmd
         text: "Folder Structure & Content"
       - section: "Data Collection"
-        contents: 
+        contents:
+          - content/Equipment.qmd
           - content/deployment.qmd
           - content/metadata&tracking.qmd
           - content/retrieval.qmd
