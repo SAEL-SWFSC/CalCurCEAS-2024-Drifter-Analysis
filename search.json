@@ -31,50 +31,6 @@
     ]
   },
   {
-    "objectID": "content/DataUpload.html",
-    "href": "content/DataUpload.html",
-    "title": "Data Upload & Archive",
-    "section": "",
-    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Upload & Archive"
-    ]
-  },
-  {
-    "objectID": "content/DataUpload.html#local-archive",
-    "href": "content/DataUpload.html#local-archive",
-    "title": "Data Upload & Archive",
-    "section": "",
-    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Upload & Archive"
-    ]
-  },
-  {
-    "objectID": "content/DataUpload.html#ncei",
-    "href": "content/DataUpload.html#ncei",
-    "title": "Data Upload & Archive",
-    "section": "NCEI",
-    "text": "NCEI\nRaw audio data and deployment metadata are archived to NCEI Passive Acoustic Data Archive.\nLink to archived data once uploaded.",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Upload & Archive"
-    ]
-  },
-  {
-    "objectID": "content/DataUpload.html#pacm",
-    "href": "content/DataUpload.html#pacm",
-    "title": "Data Upload & Archive",
-    "section": "PACM",
-    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Upload & Archive"
-    ]
-  },
-  {
     "objectID": "content/DataQualityCheck.html",
     "href": "content/DataQualityCheck.html",
     "title": "Data Prep and Quality Check",
@@ -116,6 +72,50 @@
     "crumbs": [
       "Data Managment and Archive",
       "Data Prep and Quality Check"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html",
+    "href": "content/DataUpload.html",
+    "title": "Data Upload & Archive",
+    "section": "",
+    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html#local-archive",
+    "href": "content/DataUpload.html#local-archive",
+    "title": "Data Upload & Archive",
+    "section": "",
+    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html#ncei",
+    "href": "content/DataUpload.html#ncei",
+    "title": "Data Upload & Archive",
+    "section": "NCEI",
+    "text": "NCEI\nRaw audio data and deployment metadata are archived to NCEI Passive Acoustic Data Archive.\nLink to archived data once uploaded.",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html#pacm",
+    "href": "content/DataUpload.html#pacm",
+    "title": "Data Upload & Archive",
+    "section": "PACM",
+    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
     ]
   },
   {

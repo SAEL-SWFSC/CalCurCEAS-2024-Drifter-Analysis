@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/index.html</loc>
-    <lastmod>2025-02-19T00:12:16.862Z</lastmod>
+    <lastmod>2025-02-19T20:56:52.813Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/content/metadata&amp;tracking.html</loc>
-    <lastmod>2025-02-19T00:12:16.729Z</lastmod>
+    <lastmod>2025-02-19T20:56:52.663Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/content/deployment.html</loc>
-    <lastmod>2025-02-19T00:12:16.728Z</lastmod>
+    <lastmod>2025-02-19T20:56:52.660Z</lastmod>
   </url>
   <url>
-    <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/content/DataUpload.html</loc>
-    <lastmod>2025-02-19T00:12:16.728Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/content/DataManagement.html</loc>
-    <lastmod>2025-02-19T00:12:16.728Z</lastmod>
+    <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/content/Equipment.html</loc>
+    <lastmod>2025-02-19T20:56:52.660Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/content/DataQualityCheck.html</loc>
-    <lastmod>2025-02-19T00:12:16.728Z</lastmod>
+    <lastmod>2025-02-19T20:56:52.660Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/content/DataManagement.html</loc>
+    <lastmod>2025-02-19T20:56:52.660Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/content/DataUpload.html</loc>
+    <lastmod>2025-02-19T20:56:52.660Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/content/PamguardProcessing.html</loc>
-    <lastmod>2025-02-19T00:12:16.728Z</lastmod>
+    <lastmod>2025-02-19T20:56:52.660Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/content/folderStructure.html</loc>
-    <lastmod>2025-02-19T00:12:16.728Z</lastmod>
+    <lastmod>2025-02-19T20:56:52.660Z</lastmod>
   </url>
   <url>
     <loc>https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/content/retrieval.html</loc>
-    <lastmod>2025-02-19T00:12:16.729Z</lastmod>
+    <lastmod>2025-02-19T20:56:52.663Z</lastmod>
   </url>
 </urlset>
