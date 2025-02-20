@@ -123,7 +123,7 @@
     "href": "content/PamguardProcessing.html",
     "title": "Pamguard Processing",
     "section": "",
-    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.\n\n\nBeaked Whales",
+    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.\n\n\nBeaked Whales\nFull bandwith recordings were run through a suite of click detectors in Pamguard to pull out clicks corresponding to specific frequency bands.",
     "crumbs": [
       "Analysis",
       "Pamguard Processing"
