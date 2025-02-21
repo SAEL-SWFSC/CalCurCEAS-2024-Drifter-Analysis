@@ -4,7 +4,7 @@
     "href": "content/PamguardProcessing.html",
     "title": "Pamguard Processing",
     "section": "",
-    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.\n\n\nBeaked Whales",
+    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.\n\n\nBeaked Whales\nFull bandwidth recordings were run through a suite of click detectors in PAMguard to pull out clicks corresponding to specific frequency bands. Prior to this, recordings were decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMguard settings files can be found here.",
     "crumbs": [
       "Analysis",
       "Pamguard Processing"
@@ -115,14 +115,20 @@
     "href": "index.html#overview",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Overview",
-    "text": "Overview\nThe 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the Marine Mammal and Turtle Division (MMTD) of Southwest Fisheries Science Center (SWFSC). The survey was conducted over the course of 6 legs aboard the M/V Bold Horizon between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD’s fulfillment of regulatory requirements and scientific initiatives, such as marine mammal stock assessments for stakeholders such as the US Navy and BOEM."
+    "text": "Overview\nThe 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the Marine Mammal and Turtle Division (MMTD) of Southwest Fisheries Science Center (SWFSC). The survey was conducted over the course of 6 legs aboard the M/V Bold Horizon between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD’s fulfillment of regulatory requirements and scientific initiatives, such as marine mammal stock assessments for stakeholders such as the US Navy and BOEM.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#drifting-acoustic-recorders-in-the-california-current",
     "href": "index.html#drifting-acoustic-recorders-in-the-california-current",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Drifting Acoustic Recorders in the California Current",
-    "text": "Drifting Acoustic Recorders in the California Current\nThe passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it’s transitory nature (re-positioning the vessel from San Diego to the north end of the study area)."
+    "text": "Drifting Acoustic Recorders in the California Current\nThe passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it’s transitory nature (re-positioning the vessel from San Diego to the north end of the study area). Buoys were then left to drift at sea between 2-14 days before being retrieved.\nData from those buoys were downloaded and then processed to look for specific species. More detail can be found on the following pages.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "content/DataQualityCheck.html",
