@@ -2,3 +2,19 @@
 title: "Equipment"
 editor: visual
 ---
+
+# Equipment
+
+## Buoys
+
+Two types of buoys were used for CalCurCEAS, a pole buoy and a spar buoy (designed and built by Pacific Island Fisheries Science Center (PIFSC)). The reason behind using both buoy types was to test how the PIFSC buoy fared in the California Current. Historically the radar reflectors on the pole buoys acted as sails, and caused the drift rate of that buoy to be faster than expected. Each buoy type used different GPS units for tracking and a different weighted anchor, although the rest of the sub-surface gear was the same.
+
+![](images/Pole_PIFSC_buoy_diagram.jpg){fig-align="center"}
+
+## Pole Buoy 
+
+The pole buoy consists of an 8-12 ft aluminum pole that is weighted on one end. Crab floats are fastened to the center of the pole to keep it up right in the water. There is a radar reflector towards the top of the pole to aid in retrieval during days with poor visibility. At the very top of the pole is a mount for a [SmarOne Solar GPS](https://www.lonestartracking.com/tracking-devices/smartone-solar-satellite-based-solar-powered-iot-asset-tracker-device/?srsltid=AfmBOopZkzLYCHWgZznwq4ADMguXEVZa-eZM0coR_r64zuEgYnk8AxhX).
+
+## PIFSC Buoy
+
+The PIFSC buoy is made up of PVC sealed spar as the main body and a clam shell floating collar that is bolted together at the top of the spar body. Inside the head piece is a 3D printed mount for 2 Spot GPS units and their corresponding battery packs.
