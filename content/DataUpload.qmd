@@ -21,10 +21,12 @@ Deployment metadata is also archived to a local [Tethys database](https://tethys
 
 ## NCEI
 
-Raw audio data and deployment metadata are archived to [NCEI Passive Acoustic Data Archive](https://www.ncei.noaa.gov/products/passive-acoustic-data).
+Raw audio data and deployment metadata are archived to [NCEI Passive Acoustic Data Archive](https://www.ncei.noaa.gov/products/passive-acoustic-data). To allign with permitting requirements, data may be inaccessible to the public for up to two years after the data collection date. 
 
 Link to archived data once uploaded.
 
 ## PACM
 
 Once finalized, beaked whale and sperm whale detections will be archived to [NEFSC Passive Acoustic Cetacean Map](https://apps-nefsc.fisheries.noaa.gov/pacm/#/)
+
+Link to archived data once uploaded.
