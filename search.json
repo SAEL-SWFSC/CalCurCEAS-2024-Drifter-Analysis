@@ -145,7 +145,7 @@
     "href": "content/DataUpload.html#ncei",
     "title": "Data Upload & Archive",
     "section": "NCEI",
-    "text": "NCEI\nRaw audio data and deployment metadata are archived to NCEI Passive Acoustic Data Archive.\nLink to archived data once uploaded.",
+    "text": "NCEI\nRaw audio data and deployment metadata are archived to NCEI Passive Acoustic Data Archive. To allign with permitting requirements, data may be inaccessible to the public for up to two years after the data collection date.\nLink to archived data once uploaded.",
     "crumbs": [
       "Data Managment and Archive",
       "Data Upload & Archive"
@@ -156,7 +156,7 @@
     "href": "content/DataUpload.html#pacm",
     "title": "Data Upload & Archive",
     "section": "PACM",
-    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map",
+    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map\nLink to archived data once uploaded.",
     "crumbs": [
       "Data Managment and Archive",
       "Data Upload & Archive"
