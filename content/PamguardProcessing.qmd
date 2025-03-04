@@ -9,10 +9,10 @@ editor: visual
 
 # Beaked Whales
 
-Full bandwidth recordings were run through a suite of click detectors in [PAMguard](https://www.pamguard.org/) to pull out clicks corresponding to specific frequency bands. Prior to this, recordings were decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMguard settings files can be found [here](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/data/BeakedWhales/Pamguard/PamgaurdSettings).
+Full bandwidth recordings were run through a suite of click detectors in [PAMguard](https://www.pamguard.org/) to pull out clicks corresponding to specific frequency bands. Prior to this, recordings were decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMguard settings files can be found [here](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/BeakedWhales/Pamguard/PamgaurdSettings).
 
 # Sperm Whales
 
 In progress
 
-PAMGuard settings files can be found here.
+PAMGuard settings files can be found [here](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/SpermWhales/Pamguard/PamguardSettings).
