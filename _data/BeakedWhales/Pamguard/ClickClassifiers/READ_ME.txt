@@ -1,0 +1,1 @@
+Add click classifers from PG

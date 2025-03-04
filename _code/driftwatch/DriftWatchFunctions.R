@@ -974,7 +974,7 @@ plotAPIDrift <- function(drift, etopo = 'etopo180.nc', filename=NULL, bathy=TRUE
     
     # Plotting drift and start/end points with numeric labels (1, 2, 3, ..., N)
     # Create a numeric sequence for labeling drifts
-    mapLabs <- seq(24, length(unique(drift[[labelBy]])) +23)  # Numeric labels (1, 2, 3, ..., N)
+    mapLabs <- seq(1, length(unique(drift[[labelBy]])))  # Numeric labels (1, 2, 3, ..., N)
     
     # Loop through each unique drift to plot and label the start and end points
     for(d in seq_along(unique(drift[[labelBy]]))) {

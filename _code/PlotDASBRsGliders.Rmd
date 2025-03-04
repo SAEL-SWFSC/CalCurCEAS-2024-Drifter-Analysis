@@ -1,12 +1,12 @@
 ---
-title: "redo"
+title: "Plot DASBRs, Gliders, and Ship Track"
+subtitle: "Script to plot drifting buoy GPS tracks, glider path, and ship tracks on one map"
 author: "Kourtney Burger"
 date: "2025-01-15"
 output: html_document
 editor_options: 
   markdown: 
     wrap: 72
-    
 ---
 
 # Load Packages
@@ -37,7 +37,7 @@ database
 1.  Load driftwatch functions and GPS database
 
     ```{r}
-    # Load driftwatch functions here - note: line 39 of this code is commented out, only works if full driftwatch directory is saved to this repo
+    # Load driftwatch functions here - note: line 39 of this code is commented out. That only works if full driftwatch directory is saved to this repo but it is not needed for this purpose
     source(here('_code/driftwatch/DriftWatchFunctions.R'))
 
     # Load GPS database, may need to download updated version from driftwatch google drive if new drifts aren't included

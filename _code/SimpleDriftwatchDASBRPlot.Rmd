@@ -1,0 +1,32 @@
+---
+title: "Simple Driftwatch DASBR Plot"
+author: "Kourtney Burger"
+date: "2025-03-04"
+output: html_document
+---
+# Load Packages
+```{r}
+library(here)
+```
+
+# Load Driftwatch Code and GPS Data
+```{r}
+# Load driftwatch functions here - note: line 39 of this code is commented out. That only works if full driftwatch directory is saved to this repo but it is not needed for this purpose
+source(here('_code/driftwatch/DriftWatchFunctions.R'))
+
+# Load GPS database, may need to download updated version from driftwatch google drive if new drifts aren't included
+db <- here('_data/GPS/DASBRs/SPOTGPS_Logger.sqlite3')
+```
+
+# Create Plot
+## Select Deployments
+```{r}
+gps <- getDbDeployment(db)
+CalCurCEAS <- filter(gps, grepl('CalCurCEAS_', DriftName))
+```
+
+## Plot
+```{r}
+plotAPIDrift(CalCurCEAS, simple = FALSE, current = FALSE, sl = FALSE, wca = FALSE, filename = "CalCurCEAS_DriftWatch_Plot.png")
+```
+

@@ -1,5 +1,6 @@
 ---
 title: "Drifter Data - CSV to KML"
+subtitle: "Function to convert all drifting buoy GPS csv files to a single KML file, to be opened in Google Earth or other mapping softwares"
 author: "Kourtney Burger"
 date: "2025-01-07"
 output: html_document
@@ -17,9 +18,7 @@ library(here)
 # Read in data
 
 ```{r}
-#data <- read.csv("GPS data/CalCurCEAS_027_GPS.csv")
-
-csv_files <- list.files(path = here('data/GPS/DASBRs'), pattern = "\\.csv$", full.names = TRUE)
+csv_files <- list.files(path = here('_data/GPS/DASBRs'), pattern = "\\.csv$", full.names = TRUE)
 ```
 
 # Create a KML document
@@ -75,7 +74,7 @@ create_kml_from_csv <- function(csv_files, kml_output) {
 
 ```{r}
 # Define the path to the "GPS data" folder
-folder_path <- "GPS data"
+folder_path <- "_data/GPS/DASBRs"
 
 # Get the list of CSV files in the folder
 csv_files <- list.files(path = folder_path, pattern = "\\.csv$", full.names = TRUE)
@@ -94,7 +93,7 @@ create_kml_from_csv(csv_files, kml_output)
 
 ```{r}
 # Define the path to the "GPS data" folder
-folder_path <- "GPS data/Oregon Subset/"
+folder_path <- "_data/GPS/DASBRs"
 
 # Get the list of CSV files in the folder
 csv_files <- list.files(path = folder_path, pattern = "\\.csv$", full.names = TRUE)
