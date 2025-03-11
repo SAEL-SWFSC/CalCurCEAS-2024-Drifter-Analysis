@@ -4,11 +4,7 @@
     "href": "content/PamguardProcessing.html",
     "title": "Pamguard Processing",
     "section": "",
-    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.\n\n\nBeaked Whales\nFull bandwidth recordings were run through a suite of click detectors in PAMguard to pull out clicks corresponding to specific frequency bands. Prior to this, recordings were decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMguard settings files can be found here.",
-    "crumbs": [
-      "Analysis",
-      "Pamguard Processing"
-    ]
+    "text": "Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis."
   },
   {
     "objectID": "content/folderStructure.html",
@@ -115,20 +111,14 @@
     "href": "index.html#overview",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Overview",
-    "text": "Overview\nThe 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the Marine Mammal and Turtle Division (MMTD) of Southwest Fisheries Science Center (SWFSC). The survey was conducted over the course of 6 legs aboard the M/V Bold Horizon between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD’s fulfillment of regulatory requirements and scientific initiatives, such as marine mammal stock assessments for stakeholders such as the US Navy and BOEM.",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Overview\nThe 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the Marine Mammal and Turtle Division (MMTD) of Southwest Fisheries Science Center (SWFSC). The survey was conducted over the course of 6 legs aboard the M/V Bold Horizon between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD’s fulfillment of regulatory requirements and scientific initiatives, such as marine mammal stock assessments for stakeholders such as the US Navy and BOEM."
   },
   {
     "objectID": "index.html#drifting-acoustic-recorders-in-the-california-current",
     "href": "index.html#drifting-acoustic-recorders-in-the-california-current",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Drifting Acoustic Recorders in the California Current",
-    "text": "Drifting Acoustic Recorders in the California Current\nThe passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it’s transitory nature (re-positioning the vessel from San Diego to the north end of the study area). Buoys were then left to drift at sea between 2-14 days before being retrieved.\nData from those buoys were downloaded and then processed to look for specific species. More detail can be found on the following pages.",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Drifting Acoustic Recorders in the California Current\nThe passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it’s transitory nature (re-positioning the vessel from San Diego to the north end of the study area). Buoys were then left to drift at sea between 2-14 days before being retrieved.\nData from those buoys were downloaded and then processed to look for specific species. More detail can be found on the following pages."
   },
   {
     "objectID": "content/DataQualityCheck.html",
@@ -179,11 +169,7 @@
     "href": "content/DataUpload.html",
     "title": "Data Upload & Archive",
     "section": "",
-    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Upload & Archive"
-    ]
+    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.\nStatus: Completed"
   },
   {
     "objectID": "content/DataUpload.html#local-archive",
@@ -201,22 +187,14 @@
     "href": "content/DataUpload.html#ncei",
     "title": "Data Upload & Archive",
     "section": "NCEI",
-    "text": "NCEI\nRaw audio data and deployment metadata are archived to NCEI Passive Acoustic Data Archive.\nLink to archived data once uploaded.",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Upload & Archive"
-    ]
+    "text": "NCEI\nRaw audio data and deployment metadata are archived to NCEI Passive Acoustic Data Archive. To align with permitting requirements, data may be inaccessible to the public for up to two years after the data collection date.\nSee detailed methods here to archive deployment metadata and raw audio data to NCEI.\nStatus: Waiting for Navy clearance to send packaged deployment metadata and raw audio data to NCEI. Once sent and published, we will link to the DOI here."
   },
   {
     "objectID": "content/DataUpload.html#pacm",
     "href": "content/DataUpload.html#pacm",
     "title": "Data Upload & Archive",
     "section": "PACM",
-    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Upload & Archive"
-    ]
+    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map.\nSee detailed methods here to archive deployment metadata and detections to PACM.\nCurrent status: Waiting for new PACM release - Makara - to archive deployment metdata. Waiting for finalized analysis results from partners to archive detections. Will link here to finalized data in PACM/Makara"
   },
   {
     "objectID": "content/deployment.html",
@@ -242,5 +220,12 @@
     "title": "Retrieval",
     "section": "Steps for Retrieval",
     "text": "Steps for Retrieval\n\nShip approaches last know location (using GPS coordinates)\nSlow to 5kts when within one nautical mile of the last known location\n\nDuring daylight hours, ask the crew or visual team to use bionoculars to aid in finding the buoy.\n\nDuring the night, the strobe should be flashing on the pole buoys to help find them. If using a different surface buoy, the reflective solas tape can be seen at ranges up to 0.5 nmi. Use a spotlight to illuminate the reflective tape.\nUsing a boat hook or grapple to grab the orange floating line between the main buoy and the trailing buoy.\nBring the buoy on board and set it on deck\nRetrieve the main line down to the subsurface gear and gentally wrap it around the power capstan to pull in. Make sure that one person keeps an eye on the line as it is being pulled aboard so that it doesn’t chaff on the ship and so that you can see the subsurface gear as it approaches the surface.\nRemove line from the capstan once you see the drogue and hand pull the array onto the ship.\n\nHold the hydrophone array away from the vessel lip as you are retrieving it to avoid banging the array against the ship.\nLift the recorder and anchor carefully over the railing.\n\nMake note of the date, time, latitude and longitude upon retrieval."
+  },
+  {
+    "objectID": "content/PamguardProcessing.html#status",
+    "href": "content/PamguardProcessing.html#status",
+    "title": "Pamguard Processing",
+    "section": "Status:",
+    "text": "Status:\nAll data has been processed in PAMGuard"
   }
 ]

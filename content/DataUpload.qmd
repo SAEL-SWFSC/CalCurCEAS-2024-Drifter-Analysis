@@ -19,14 +19,20 @@ Compressed SUD files are stored locally to the PAM Synology drive.
 
 Deployment metadata is also archived to a local [Tethys database](https://tethys.sdsu.edu/). Detailed directions to access this database [here](https://sael-swfsc.github.io/SAEL-lab-manual/content/Data-Archive-Tethys.html).
 
+*Status: Completed*
+
 ## NCEI
 
-Raw audio data and deployment metadata are archived to [NCEI Passive Acoustic Data Archive](https://www.ncei.noaa.gov/products/passive-acoustic-data). To allign with permitting requirements, data may be inaccessible to the public for up to two years after the data collection date. 
+Raw audio data and deployment metadata are archived to [NCEI Passive Acoustic Data Archive](https://www.ncei.noaa.gov/products/passive-acoustic-data). To align with permitting requirements, data may be inaccessible to the public for up to two years after the data collection date.
 
-Link to archived data once uploaded.
+See detailed methods [here](https://sael-swfsc.github.io/SAEL-lab-manual/content/Data-Archive-NCEI.html) to archive deployment metadata and raw audio data to NCEI.
+
+*Status: Waiting for Navy clearance to send packaged deployment metadata and raw audio data to NCEI. Once sent and published, we will link to the DOI here.*
 
 ## PACM
 
-Once finalized, beaked whale and sperm whale detections will be archived to [NEFSC Passive Acoustic Cetacean Map](https://apps-nefsc.fisheries.noaa.gov/pacm/#/)
+Once finalized, beaked whale and sperm whale detections will be archived to [NEFSC Passive Acoustic Cetacean Map](https://apps-nefsc.fisheries.noaa.gov/pacm/#/).
 
-Link to archived data once uploaded.
+See detailed methods [here](https://sael-swfsc.github.io/SAEL-lab-manual/content/Data-Archive-NCEI.html#submitting-data) to archive deployment metadata and detections to PACM.
+
+*Current status: Waiting for new PACM release - Makara - to archive deployment metdata. Waiting for finalized analysis results from partners to archive detections. Will link here to finalized data in PACM/Makara*

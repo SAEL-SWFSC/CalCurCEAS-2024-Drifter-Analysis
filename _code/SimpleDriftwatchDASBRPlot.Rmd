@@ -27,6 +27,10 @@ CalCurCEAS <- filter(gps, grepl('CalCurCEAS_', DriftName))
 
 ## Plot
 ```{r}
+# simple plot
 plotAPIDrift(CalCurCEAS, simple = FALSE, current = FALSE, sl = FALSE, wca = FALSE, filename = "CalCurCEAS_DriftWatch_Plot.png")
+
+# with WEAs
+plotAPIDrift(CalCurCEAS, simple = FALSE, current = FALSE, sl = FALSE, wca = TRUE, filename = "CalCurCEAS_DriftWatch_Plot.png") #Not currently working, needs to be ran in driftwatch directory 
 ```
 
