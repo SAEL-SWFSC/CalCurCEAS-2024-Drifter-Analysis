@@ -123,7 +123,7 @@
     "href": "content/DataUpload.html",
     "title": "Data Upload & Archive",
     "section": "",
-    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.",
+    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.\nStatus: Completed",
     "crumbs": [
       "Data Managment and Archive",
       "Data Upload & Archive"
@@ -134,7 +134,7 @@
     "href": "content/DataUpload.html#local-archive",
     "title": "Data Upload & Archive",
     "section": "",
-    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.",
+    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.\nStatus: Completed",
     "crumbs": [
       "Data Managment and Archive",
       "Data Upload & Archive"
@@ -145,7 +145,7 @@
     "href": "content/DataUpload.html#ncei",
     "title": "Data Upload & Archive",
     "section": "NCEI",
-    "text": "NCEI\nRaw audio data and deployment metadata are archived to NCEI Passive Acoustic Data Archive. To allign with permitting requirements, data may be inaccessible to the public for up to two years after the data collection date.\nLink to archived data once uploaded.",
+    "text": "NCEI\nRaw audio data and deployment metadata are archived to NCEI Passive Acoustic Data Archive. To align with permitting requirements, data may be inaccessible to the public for up to two years after the data collection date.\nSee detailed methods here to archive deployment metadata and raw audio data to NCEI.\nStatus: Waiting for Navy clearance to send packaged deployment metadata and raw audio data to NCEI. Once sent and published, we will link to the DOI here.",
     "crumbs": [
       "Data Managment and Archive",
       "Data Upload & Archive"
@@ -156,7 +156,7 @@
     "href": "content/DataUpload.html#pacm",
     "title": "Data Upload & Archive",
     "section": "PACM",
-    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map\nLink to archived data once uploaded.",
+    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map.\nSee detailed methods here to archive deployment metadata and detections to PACM.\nCurrent status: Waiting for new PACM release - Makara - to archive deployment metdata. Waiting for finalized analysis results from partners to archive detections. Will link here to finalized data in PACM/Makara",
     "crumbs": [
       "Data Managment and Archive",
       "Data Upload & Archive"
@@ -167,7 +167,18 @@
     "href": "content/PamguardProcessing.html",
     "title": "Pamguard Processing",
     "section": "",
-    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.\n\n\nBeaked Whales\nFull bandwidth recordings were run through a suite of click detectors in PAMguard to pull out clicks corresponding to specific frequency bands. Prior to this, recordings were decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMguard settings files can be found here.\n\n\nSperm Whales\nIn progress\nPAMGuard settings files can be found here.",
+    "text": "Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.",
+    "crumbs": [
+      "Analysis",
+      "Pamguard Processing"
+    ]
+  },
+  {
+    "objectID": "content/PamguardProcessing.html#status",
+    "href": "content/PamguardProcessing.html#status",
+    "title": "Pamguard Processing",
+    "section": "Status:",
+    "text": "Status:\nAll data has been processed in PAMGuard. PAMpal analysis in progress",
     "crumbs": [
       "Analysis",
       "Pamguard Processing"
