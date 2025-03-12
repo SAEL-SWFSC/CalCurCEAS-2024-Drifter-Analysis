@@ -4,3 +4,40 @@ editor: visual
 ---
 
 # Deployment of a drift acoustic buoy
+
+## Pre-Deployment
+
+1.  Identify the buoy (spar or pole) that you will deploy
+2.  Prepare an array that will work for that buoy type
+3.  Attach Sensus depth senor to the top of the array with a zip tie
+4.  Setup SoundTrap recorder to record at the following settings (see screenshot below) and attach to brace on the array
+    -   Set time (UTC) to start recording an hour or more prior than the planned deployment time
+    -   Select channels 1 & 2
+    -   384kHz sample rate
+    -   Check off ancillary sensors if available (log every 10s)
+    -   Check disable calibration tones
+    -   Click deploy
+
+![Figure 1. Screenshot of SoundTrap deployment settings for CalCurCEAS 2025](images/SoundTrap_setup.JPG){width="690"}
+
+5.  A few hours prior to deployment, turn on the GPS and make sure it has a clear view of the sky.
+    1.  Check that it is pinging consistently over a few hours
+    2.  Make sure it is attached properly to the buoy
+6.  Attach a strobe to the buoy using zip ties (see screen shot below)
+7.  Pull out an anchor that is appropriate for the buoy you are using
+8.  Note all equipment details in the [Deployment Details](https://docs.google.com/spreadsheets/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit?gid=395545420#gid=395545420) Google Sheet
+
+## Deployment
+
+1.  Ask the vessel captain to slow the boat to 2kts (or whatever speed you need for bare steerage)
+2.  Lay the buoy, array, and anchor on the back deck and attach all components to one another
+3.  Set up a guideline for the anchor so that you can easily lower it into the water
+4.  Communicate with the ship's captain when you are ready to deploy
+5.  With the help of at least one other person, lower the buoy into the water first
+6.  Pay out the 100m of line that is attached to the buoy and the array
+7.  Lower the array into the water gently
+8.  Lower the anchor into the water with the guideline
+9.  Mark the lat/long and time (UTC) in a GPS
+    -   Record this information in the Deployment Details Google Sheet
+
+![Figure 2. Drifting acoustic recording buoy being deployed from the back deck of the Bold Horizon](images/Deployment_KF-01.JPG){fig-align="center" width="687"}

@@ -11,90 +11,63 @@
     "href": "content/folderStructure.html",
     "title": "Folder Structure & Content",
     "section": "",
-    "text": "This template provides a set of standard folders for specific types of files. We recommend following these standard approaches as consistency allows us to follow each other’s research workflow.\nHere we further explain how to work with this folder structure, with tips and tricks to make your work more accessible, reproducible, and to help Future You!",
-    "crumbs": [
-      "Folder Structure & Content"
-    ]
+    "text": "This template provides a set of standard folders for specific types of files. We recommend following these standard approaches as consistency allows us to follow each other’s research workflow.\nHere we further explain how to work with this folder structure, with tips and tricks to make your work more accessible, reproducible, and to help Future You!"
   },
   {
     "objectID": "content/folderStructure.html#manuscript",
     "href": "content/folderStructure.html#manuscript",
     "title": "Folder Structure & Content",
     "section": "📁 manuscript",
-    "text": "📁 manuscript\nManuscript for Report. This may contain one or more versions of the manuscript in one or more formats. This folder does not serve as the output location for rendered versions of the manuscript (those would be saved in the docs folder). Typically, this would be reserved for final manuscripts or manuscripts saved in an alternative format or manually modified (not direct rendered output).",
-    "crumbs": [
-      "Folder Structure & Content"
-    ]
+    "text": "📁 manuscript\nManuscript for Report. This may contain one or more versions of the manuscript in one or more formats. This folder does not serve as the output location for rendered versions of the manuscript (those would be saved in the docs folder). Typically, this would be reserved for final manuscripts or manuscripts saved in an alternative format or manually modified (not direct rendered output)."
   },
   {
     "objectID": "content/folderStructure.html#content",
     "href": "content/folderStructure.html#content",
     "title": "Folder Structure & Content",
     "section": "📁 content",
-    "text": "📁 content\nThis Research Compendium template is formatted for a HTML (website) output, and all chapters/sections for online report should reside in this content folder.",
-    "crumbs": [
-      "Folder Structure & Content"
-    ]
+    "text": "📁 content\nThis Research Compendium template is formatted for a HTML (website) output, and all chapters/sections for online report should reside in this content folder."
   },
   {
     "objectID": "content/folderStructure.html#figs",
     "href": "content/folderStructure.html#figs",
     "title": "Folder Structure & Content",
     "section": "📁 figs",
-    "text": "📁 figs\nContains all figures generated for the analysis. Your code to create figures should be saved in the code folder, and it should automatically save figure output directly to this figs folder. All figure names should be descriptive not based on the # of the figure (as this may change).",
-    "crumbs": [
-      "Folder Structure & Content"
-    ]
+    "text": "📁 figs\nContains all figures generated for the analysis. Your code to create figures should be saved in the code folder, and it should automatically save figure output directly to this figs folder. All figure names should be descriptive not based on the # of the figure (as this may change)."
   },
   {
     "objectID": "content/folderStructure.html#docs",
     "href": "content/folderStructure.html#docs",
     "title": "Folder Structure & Content",
     "section": "📁 docs",
-    "text": "📁 docs\nContains rendered versions of the reports (if applicable). Note that this is different from the manuscript folder, which would have version(s) of the manuscript not rendered directly from the repository.\n\n\n\n\n\n\nNote: Need to check if this is relevant for this particular HTML output format",
-    "crumbs": [
-      "Folder Structure & Content"
-    ]
+    "text": "📁 docs\nContains rendered versions of the reports (if applicable). Note that this is different from the manuscript folder, which would have version(s) of the manuscript not rendered directly from the repository.\n\n\n\n\n\n\nNote: Need to check if this is relevant for this particular HTML output format"
   },
   {
     "objectID": "content/folderStructure.html#data",
     "href": "content/folderStructure.html#data",
     "title": "Folder Structure & Content",
     "section": "📁 data",
-    "text": "📁 data\nContains ORIGINAL raw or raw-derived data. Github is NOT an appropriate platform for saving large files or large numbers of files. You will need to save your raw data (and possible other large data products) in an alternative location, such as NCEI, Figshare, or Zenodo. We recommend that you identify the location of all raw data (WHERE?). As this data is intended to be ORIGINAL data, we recommend that modified or intermediate data or data products (that are modified by code stored in the code folder) be stored in the output folder.\n\n\n\n\n\n\nNote: Where do we recommend that they identify the location of any data or data products not directly saved to this repository? In the readme? or the index file?",
-    "crumbs": [
-      "Folder Structure & Content"
-    ]
+    "text": "📁 data\nContains ORIGINAL raw or raw-derived data. Github is NOT an appropriate platform for saving large files or large numbers of files. You will need to save your raw data (and possible other large data products) in an alternative location, such as NCEI, Figshare, or Zenodo. We recommend that you identify the location of all raw data (WHERE?). As this data is intended to be ORIGINAL data, we recommend that modified or intermediate data or data products (that are modified by code stored in the code folder) be stored in the output folder.\n\n\n\n\n\n\nNote: Where do we recommend that they identify the location of any data or data products not directly saved to this repository? In the readme? or the index file?"
   },
   {
     "objectID": "content/folderStructure.html#output",
     "href": "content/folderStructure.html#output",
     "title": "Folder Structure & Content",
     "section": "📁 output",
-    "text": "📁 output\nThis can include any modified or intermediate data or data products (data in data folder is ORIGINAL), and data in output may be modified using code stored in code folder.",
-    "crumbs": [
-      "Folder Structure & Content"
-    ]
+    "text": "📁 output\nThis can include any modified or intermediate data or data products (data in data folder is ORIGINAL), and data in output may be modified using code stored in code folder."
   },
   {
     "objectID": "content/folderStructure.html#code",
     "href": "content/folderStructure.html#code",
     "title": "Folder Structure & Content",
     "section": "📁 code",
-    "text": "📁 code\nScripts that actually do things. If using R, your script should use the here package rather than setwd() to build paths to files and allow for more efficient reproduction of workflow. Script should automatically access data in the data folder and save output to relevant folders (output, figs).\n\n_commonR.R\nWe recommend saving commonly used functions in the _commonR.R file (assuming you are using R for your analysis– if not, you can delete this file). This is a good place to identify the libraries to load, any themes or common formatting requirements, or other common functions. Ideally these types of functions are only located in one place, so that they only need to be changed in one place. You can then source this file in other code (reduces redundancy and allows you to modify these basic functions in one place instead of throughout your various scripts).",
-    "crumbs": [
-      "Folder Structure & Content"
-    ]
+    "text": "📁 code\nScripts that actually do things. If using R, your script should use the here package rather than setwd() to build paths to files and allow for more efficient reproduction of workflow. Script should automatically access data in the data folder and save output to relevant folders (output, figs).\n\n_commonR.R\nWe recommend saving commonly used functions in the _commonR.R file (assuming you are using R for your analysis– if not, you can delete this file). This is a good place to identify the libraries to load, any themes or common formatting requirements, or other common functions. Ideally these types of functions are only located in one place, so that they only need to be changed in one place. You can then source this file in other code (reduces redundancy and allows you to modify these basic functions in one place instead of throughout your various scripts)."
   },
   {
     "objectID": "content/folderStructure.html#supplement",
     "href": "content/folderStructure.html#supplement",
     "title": "Folder Structure & Content",
     "section": "📁 supplement",
-    "text": "📁 supplement\nSupplementary files that are not data, script, or components of the manuscript.",
-    "crumbs": [
-      "Folder Structure & Content"
-    ]
+    "text": "📁 supplement\nSupplementary files that are not data, script, or components of the manuscript."
   },
   {
     "objectID": "index.html",
@@ -201,11 +174,7 @@
     "href": "content/deployment.html",
     "title": "Deployment",
     "section": "",
-    "text": "Deployment of a drift acoustic buoy",
-    "crumbs": [
-      "Data Collection",
-      "Deployment"
-    ]
+    "text": "Identify the buoy (spar or pole) that you will deploy\nPrepare an array that will work for that buoy type\nAttach Sensus depth senor to the top of the array with a zip tie\nSetup SoundTrap recorder to record at the following settings (see screenshot below) and attach to brace on the array\n\nSet time (UTC) to start recording an hour or more prior than the planned deployment time\nSelect channels 1 & 2\n384kHz sample rate\nCheck off ancillary sensors if available (log every 10s)\nCheck disable calibration tones\nClick deploy\n\n\n\n\n\nFigure 1. Screenshot of SoundTrap deployment settings for CalCurCEAS 2025\n\n\n\nA few hours prior to deployment, turn on the GPS and make sure it has a clear view of the sky.\n\nCheck that it is pinging consistently over a few hours\nMake sure it is attached properly to the buoy\n\nAttach a strobe to the buoy using zip ties (see screen shot below)\nPull out an anchor that is appropriate for the buoy you are using\nNote all equipment details in the Deployment Details Google Sheet\n\n\n\n\n\nAsk the vessel captain to slow the boat to 2kts (or whatever speed you need for bare steerage)\nLay the buoy, array, and anchor on the back deck and attach all components to one another\nSet up a guideline for the anchor so that you can easily lower it into the water\nCommunicate with the ship’s captain when you are ready to deploy\nWith the help of at least one other person, lower the buoy into the water first\nPay out the 100m of line that is attached to the buoy and the array\nLower the array into the water gently\nLower the anchor into the water with the guideline\nMark the lat/long and time (UTC) in a GPS\n\nRecord this information in the Deployment Details Google Sheet\n\n\n\n\n\nFigure 2. Drifting acoustic recording buoy being deployed from the back deck of the Bold Horizon"
   },
   {
     "objectID": "content/retrieval.html",
@@ -227,5 +196,12 @@
     "title": "Pamguard Processing",
     "section": "Status:",
     "text": "Status:\nAll data has been processed in PAMGuard"
+  },
+  {
+    "objectID": "content/Equipment.html",
+    "href": "content/Equipment.html",
+    "title": "Equipment",
+    "section": "",
+    "text": "Two types of buoys were used for CalCurCEAS, a pole buoy and a spar buoy (designed and built by Pacific Island Fisheries Science Center (PIFSC)). The reason behind using both buoy types was to test how the PIFSC buoy fared in the California Current. Historically the radar reflectors on the pole buoys acted as sails, and caused the drift rate of that buoy to be faster than expected. Each buoy type used different GPS units for tracking and a different weighted anchor, although the rest of the sub-surface gear was the same.\n\n\n\n\n\n\n\n\nThe pole buoy consists of an 8-12 ft aluminum pole that is weighted on one end. Crab floats are fastened to the center of the pole to keep it up right in the water. There is a radar reflector towards the top of the pole to aid in retrieval during days with poor visibility. At the very top of the pole is a mount for a SmarOne Solar GPS.\n\n\n\nThe PIFSC buoy is made up of PVC sealed spar as the main body and a clam shell floating collar that is bolted together at the top of the spar body. Inside the head piece is a 3D printed mount for 2 Spot GPS units and their corresponding battery packs."
   }
 ]

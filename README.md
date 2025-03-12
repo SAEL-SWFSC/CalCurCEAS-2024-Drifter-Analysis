@@ -1,25 +1,20 @@
-# NOAA-PAM Research Compendium Template
-**Rename above to your *Project Name***
+# CalCurCEAS Reserach Compendium
 
-## Link to Final Report
-**Provide link to final report**
+This repository contains methods for the passive acoustic analysis of the CalCurCEAS 2024 survey conducted by Southwest Fisheries Science Center. You will find data, code and methodology within this repo.
 
-## How to Cite
-**Provide recommended citation**
-
-## Research Compendium
-This repository contains data and code for the ***Project Name***, including 
+## [Link to Site](https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/)
 
 ## Contents
+
 This directory contains:
 
 -   📁 manuscript: Manuscript for Report
 
 -   📁 content: chapters/sections for online report
 
--   📁 figs: contains all figures generated for the analysis 
+-   📁 figs: contains all figures generated for the analysis
 
--   📁 docs: Contains rendered versions of the reports 
+-   📁 docs: Contains rendered versions of the reports
 
 -   📁 data: Contains raw or raw-derived data
 
@@ -30,6 +25,7 @@ This directory contains:
 -   📁 supplement: Supplementary files that are not data, script, or components of the manuscript
 
 ## Funding
+
 **Provide statement of funding**
 
 ### Disclaimer

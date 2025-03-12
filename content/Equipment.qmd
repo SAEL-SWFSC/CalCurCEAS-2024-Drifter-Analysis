@@ -11,7 +11,7 @@ Two types of buoys were used for CalCurCEAS, a pole buoy and a spar buoy (design
 
 ![](images/Pole_PIFSC_buoy_diagram.jpg){fig-align="center"}
 
-## Pole Buoy 
+## Pole Buoy
 
 The pole buoy consists of an 8-12 ft aluminum pole that is weighted on one end. Crab floats are fastened to the center of the pole to keep it up right in the water. There is a radar reflector towards the top of the pole to aid in retrieval during days with poor visibility. At the very top of the pole is a mount for a [SmarOne Solar GPS](https://www.lonestartracking.com/tracking-devices/smartone-solar-satellite-based-solar-powered-iot-asset-tracker-device/?srsltid=AfmBOopZkzLYCHWgZznwq4ADMguXEVZa-eZM0coR_r64zuEgYnk8AxhX).
 
