@@ -1,0 +1,79 @@
+---
+title: "CalCurCEAS_drift-specific_Pm_take2"
+author: "Kourtney Burger"
+date: "2025-03-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Code source
+
+Replicated code from Jenny Trickey's repo [here](https://github.com/jtrickey86/SpermWhale_DASBR/blob/main/HICEAS_2023/HICEAS23_drift-specific_Pm.Rmd)
+
+# Load Libraries and settings
+
+```{r}
+#Load libraries
+library(PAMpal)
+library(PAMmisc)
+library(dplyr)
+library(manipulate)
+
+#Set time zone to UTC
+Sys.setenv(TZ = 'UTC')
+
+# saved to external hard drive with binaries and databases
+save_path <- 'E:/Sperm Whales/Pm_AcousticStudies'
+```
+
+# Add GPS into databases
+```{r}
+#Copy and paste the below lines for each drift
+DB <-'E:/Sperm Whales/Databases/CalCurCEAS_013_2024_SpermWhale_PAM20214.sqlite3' #path to first deployment database
+Track <- 'E:/Sperm Whales/GPS Data/CalCurCEAS_013_GPS.csv' #path to first deployment GPS csv
+
+addPgGps(db = DB, gps = Track, source ='csv')
+```
+
+# Run PAMpal
+
+```{r}
+#Create a settings object (loading databases and binaries) #current filter setting is for Pm data
+myPpsL <- PAMpalSettings(sr_hz=384000, winLen_sec=.0025,
+                      filterfrom_khz=2, filterto_khz=NULL)
+
+#Extracting data to build the AcousticStudy
+AS_CalCurCEAS_2024_013 <- processPgDetections(myPpsL, mode='recording', id='CalCurCEAS_013') 
+
+saveRDS(AS_CalCurCEAS_2024_013, file=file.path(save_path, 'CalCurCEAS_2024_013.rdata'))
+```
+
+# Remove Click Detector
+
+```{r}
+AS_data_filtered <- filter(AS_data, detectorName == 'Click_Detector_1') 
+
+saveRDS(AS_data_filtered, file=file.path(save_path, 'CalCurCEAS_2024_013_Filtered.rdata'))
+```
+
+# Reduce data to single Channels
+
+```{r}
+#separate data by channels
+ch1AS_data_filtered <- filter(AS_data_filtered, Channel %in% 1)
+ch2AS_data_filtered <- filter(AS_data_filtered, Channel %in% 2)
+
+#save single channel data
+saveRDS(ch1AS_data_filtered, file=file.path(save_path, 'CalCurCEAS_2024_013_ch1.rdata'))
+saveRDS(ch2AS_data_filtered, file=file.path(save_path, 'CalCurCEAS_2024_013_ch2.rdata'))
+```
+
+# Load data if neccessary
+
+```{r}
+#reload data from anywhere: get Data
+#Data20_DS2 <- readRDS(file.choose())
+```
