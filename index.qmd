@@ -14,3 +14,9 @@ The 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS
 The passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it's transitory nature (re-positioning the vessel from San Diego to the north end of the study area). Buoys were then left to drift at sea between 2-14 days before being retrieved.
 
 Data from those buoys were downloaded and then processed to look for specific species. More detail can be found on the following pages.
+
+## Study Area
+
+Our study area encompassed the entire west coast exclusive economic zone (EEZ), from the boarder of Canada to the north to the boarder of Mexico to the south and the near coast region to the east to 200 nmi west of a The map below shows the proposed survey tracklines and drifting acoustic buoy deployment locations at trackline intersections (large red numbers and letters). The deployment numbers at each intersection represented primary deployment locations, while the letters represented secondary locations. The
+
+![CalCurCEAS 2025 study area with tracklines. There is both an inshore and offshore strata. The red polygons in the inshore strata represent Wind Energy Areas (WEAs). The blue, black and brown numbers on the tracklines represent the line numbers and the larger red letters and numbers at the intersection of the tracklines are potential drifting buoy deployment locations.](content/images/1741895055994-6bce443d-4bf8-45e2-a830-32d23e5c891c_1.jpg)

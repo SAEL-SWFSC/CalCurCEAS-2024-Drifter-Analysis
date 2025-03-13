@@ -21,6 +21,6 @@ Full bandwidth recordings were run through a suite of click detectors in PAMGuar
 
 Following PAMGuard pre-processing, [PAMpal](https://taikisan21.github.io/PAMpal/) was used to create acoustic studies for all detections in each drift (code here - *input later*). The next step was to create event summary reports for all potential sperm whale click events (code here - *input later*). Lastly, these events will be manually validated as sperm whale click events or noise, and those validated detections will be used for further analysis.
 
-## *Status:* 
+## *Status:*
 
 *All data has been processed in PAMGuard. PAMpal analysis in progress*
