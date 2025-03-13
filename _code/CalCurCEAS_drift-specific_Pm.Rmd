@@ -14,7 +14,6 @@ knitr::opts_chunk$set(echo = TRUE)
 Replicated code from Jenny Trickey's repo [here](https://github.com/jtrickey86/SpermWhale_DASBR/blob/main/HICEAS_2023/HICEAS23_drift-specific_Pm.Rmd)
 
 # Load Libraries and settings
-
 ```{r}
 #Load libraries
 library(PAMpal)
@@ -24,16 +23,44 @@ library(manipulate)
 
 #Set time zone to UTC
 Sys.setenv(TZ = 'UTC')
-
-# saved to external hard drive with binaries and databases
-save_path <- 'E:/Sperm Whales/Pm_AcousticStudies'
 ```
+
+# Set global variables
+Follow this folder structure for raw data
+- Root directory
+  - Sperm Whales/
+    - Binaries/
+      - CalCurCEAS_###/
+        - YYYYMMDD
+          - PG Binary files
+        - ...
+    - Databases/
+      - CalCurCEAS_###_2024_SpermWhale_PAM20214.sqlite3
+      - ...
+    - GPS Data/
+      - CalCurCEAS_###_GPS.csv
+      - ...
+    - Pm_AcousticStudies/ (empty folder for code results to be saved to)
+    
+```{r}
+# Path to binaries, databases, and GPS files
+Binaries <- 'E:/Sperm Whales/Binaries/'
+Databases <- 'E:/Sperm Whales/Databases/'
+GPS <- 'E:/Sperm Whales/GPS Data/'
+
+# Path to save acoustic studies to
+save_path <- 'E:/Sperm Whales/Pm_AcousticStudies'
+
+# Global variable to drift ID, edit with each run
+DriftID <- '001'
+```
+
 
 # Add GPS into databases
 ```{r}
 #Copy and paste the below lines for each drift
-DB <-'E:/Sperm Whales/Databases/CalCurCEAS_013_2024_SpermWhale_PAM20214.sqlite3' #path to first deployment database
-Track <- 'E:/Sperm Whales/GPS Data/CalCurCEAS_013_GPS.csv' #path to first deployment GPS csv
+DB <- paste0(Databases,'CalCurCEAS_', DriftID, '_2024_SpermWhale_PAM20214.sqlite3') #path to first deployment database
+Track <- paste0(GPS, 'CalCurCEAS_', DriftID, '_GPS.csv') #path to first deployment GPS csv
 
 addPgGps(db = DB, gps = Track, source ='csv')
 ```
@@ -43,12 +70,12 @@ addPgGps(db = DB, gps = Track, source ='csv')
 ```{r}
 #Create a settings object (loading databases and binaries) #current filter setting is for Pm data
 myPpsL <- PAMpalSettings(sr_hz=384000, winLen_sec=.0025,
-                      filterfrom_khz=2, filterto_khz=NULL)
+                         filterfrom_khz=2, filterto_khz=NULL)
 
 #Extracting data to build the AcousticStudy
-AS_CalCurCEAS_2024_013 <- processPgDetections(myPpsL, mode='recording', id='CalCurCEAS_013') 
+AS_data <- processPgDetections(myPpsL, mode='recording', id=paste0('CalCurCEAS_2024_', DriftID)) 
 
-saveRDS(AS_CalCurCEAS_2024_013, file=file.path(save_path, 'CalCurCEAS_2024_013.rdata'))
+saveRDS(AS_data, file=file.path(save_path, paste0('CalCurCEAS_2024_', DriftID, '.rdata')))
 ```
 
 # Remove Click Detector
@@ -56,7 +83,7 @@ saveRDS(AS_CalCurCEAS_2024_013, file=file.path(save_path, 'CalCurCEAS_2024_013.r
 ```{r}
 AS_data_filtered <- filter(AS_data, detectorName == 'Click_Detector_1') 
 
-saveRDS(AS_data_filtered, file=file.path(save_path, 'CalCurCEAS_2024_013_Filtered.rdata'))
+saveRDS(AS_data_filtered, file=file.path(save_path, paste0('CalCurCEAS_2024_', DriftID, '_Filtered.rdata')))
 ```
 
 # Reduce data to single Channels
@@ -67,8 +94,8 @@ ch1AS_data_filtered <- filter(AS_data_filtered, Channel %in% 1)
 ch2AS_data_filtered <- filter(AS_data_filtered, Channel %in% 2)
 
 #save single channel data
-saveRDS(ch1AS_data_filtered, file=file.path(save_path, 'CalCurCEAS_2024_013_ch1.rdata'))
-saveRDS(ch2AS_data_filtered, file=file.path(save_path, 'CalCurCEAS_2024_013_ch2.rdata'))
+saveRDS(ch1AS_data_filtered, file=file.path(save_path, paste0('CalCurCEAS_2024_', DriftID, '_ch1.rdata')))
+saveRDS(ch2AS_data_filtered, file=file.path(save_path, paste0('CalCurCEAS_2024_', DriftID, '_ch2.rdata')))
 ```
 
 # Load data if neccessary
