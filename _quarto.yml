@@ -36,8 +36,6 @@ website:
     contents:
       - href: index.qmd
         text: Home
-      - href: content/folderStructure.qmd
-        text: "Folder Structure & Content"
       - section: "Data Collection"
         contents:
           - content/Equipment.qmd

@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../content/deployment.html" rel="next">
-<link href="../content/folderStructure.html" rel="prev">
+<link href="../index.html" rel="prev">
 <link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -103,11 +103,6 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">Home</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/folderStructure.html" class="sidebar-item-text sidebar-link">Folder Structure &amp; Content</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -184,12 +179,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#equipment" id="toc-equipment" class="nav-link active" data-scroll-target="#equipment">Equipment</a>
-  <ul class="collapse">
-  <li><a href="#buoys" id="toc-buoys" class="nav-link" data-scroll-target="#buoys">Buoys</a></li>
+  <li><a href="#buoys" id="toc-buoys" class="nav-link active" data-scroll-target="#buoys">Buoys</a></li>
   <li><a href="#pole-buoy" id="toc-pole-buoy" class="nav-link" data-scroll-target="#pole-buoy">Pole Buoy</a></li>
   <li><a href="#pifsc-buoy" id="toc-pifsc-buoy" class="nav-link" data-scroll-target="#pifsc-buoy">PIFSC Buoy</a></li>
-  </ul></li>
+  <li><a href="#array" id="toc-array" class="nav-link" data-scroll-target="#array">Array</a></li>
+  <li><a href="#anchor" id="toc-anchor" class="nav-link" data-scroll-target="#anchor">Anchor</a></li>
+  <li><a href="#additional-information" id="toc-additional-information" class="nav-link" data-scroll-target="#additional-information">Additional Information</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/edit/main/content/Equipment.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/content/Equipment.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -213,27 +208,37 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="equipment" class="level1">
-<h1>Equipment</h1>
 <section id="buoys" class="level2">
 <h2 class="anchored" data-anchor-id="buoys">Buoys</h2>
 <p>Two types of buoys were used for CalCurCEAS, a pole buoy and a spar buoy (designed and built by Pacific Island Fisheries Science Center (PIFSC)). The reason behind using both buoy types was to test how the PIFSC buoy fared in the California Current. Historically the radar reflectors on the pole buoys acted as sails, and caused the drift rate of that buoy to be faster than expected. Each buoy type used different GPS units for tracking and a different weighted anchor, although the rest of the sub-surface gear was the same.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Pole_PIFSC_buoy_diagram.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 1. On the left is the pole buoy setup and to the right is the PIFSC buoy configuration</figcaption><p></p>
 </figure>
 </div>
 </section>
 <section id="pole-buoy" class="level2">
 <h2 class="anchored" data-anchor-id="pole-buoy">Pole Buoy</h2>
-<p>The pole buoy consists of an 8-12 ft aluminum pole that is weighted on one end. Crab floats are fastened to the center of the pole to keep it up right in the water. There is a radar reflector towards the top of the pole to aid in retrieval during days with poor visibility. At the very top of the pole is a mount for a <a href="https://www.lonestartracking.com/tracking-devices/smartone-solar-satellite-based-solar-powered-iot-asset-tracker-device/?srsltid=AfmBOopZkzLYCHWgZznwq4ADMguXEVZa-eZM0coR_r64zuEgYnk8AxhX">SmarOne Solar GPS</a>.</p>
+<p>The pole buoy was built using an 8 to 12 foot aluminum pole with 10 pounds of lead weight secured at the base for stability. Two crab floats were attached at the center to maintain an upright position in the water. A radar reflector was mounted near the top to improve visibility on the ship’s radar system in poor conditions. A <a href="https://www.lonestartracking.com/tracking-devices/smartone-solar-satellite-based-solar-powered-iot-asset-tracker-device/?srsltid=AfmBOopZkzLYCHWgZznwq4ADMguXEVZa-eZM0coR_r64zuEgYnk8AxhX">SmarOne Solar GPS</a> unit was affixed to a custom aluminum mount at the top, enabling reliable tracking. Finally, a rope bridle was attached above and below the crab floats and allowed easy connection between the buoy and the array.</p>
 </section>
 <section id="pifsc-buoy" class="level2">
 <h2 class="anchored" data-anchor-id="pifsc-buoy">PIFSC Buoy</h2>
-<p>The PIFSC buoy is made up of PVC sealed spar as the main body and a clam shell floating collar that is bolted together at the top of the spar body. Inside the head piece is a 3D printed mount for 2 Spot GPS units and their corresponding battery packs.</p>
-
-
+<p>The PIFSC buoy featured a watertight PVC spar as its main body, with a clamshell floating collar bolted together at the top. A watertight headpiece, secured by a threaded locking collar, housed a 3D-printed mount for two Spot GPS units and their corresponding battery packs. To ensure stability in the water column, 10lbs of lead weight was bolted to the bottom of the PVC body. Extending approximately 1m from the base was a spar whip, serving as the attachment point for the rest of the array.</p>
 </section>
+<section id="array" class="level2">
+<h2 class="anchored" data-anchor-id="array">Array</h2>
+<p>A 100m long array was attached to both buoy configurations, with the only difference being the addition of a surface buoy in the pole buoy setup. This provided buoyancy for the array, as it was not directly supported by the pole. Aside from this distinction, the arrays were identical. Each consisted of approximately 100m of crab line with a subsurface buoy attached. Below the subsurface buoy was a drogue, an in-line bungee, and a dampener plate. The hydrophone array, positioned beneath these components, included a <a href="https://www.oceaninstruments.co.nz/product/st640/">SoundTrap 640</a>recorder and two <a href="https://www.hightechincusa.com/products/hydrophones/">HTI hydrophone</a>s spaced 5 meters apart.</p>
+</section>
+<section id="anchor" class="level2">
+<h2 class="anchored" data-anchor-id="anchor">Anchor</h2>
+<p><a href="https://www.cabelas.com/shop/en/bass-pro-shops-river-anchor?ds_e=GOOGLE&amp;ds_c=Cabelas%7CShopping%7CPMax%7CProprietary%7CGeneral%7CNAud%7CGoogle%7CNMT&amp;gad_source=1&amp;gclid=Cj0KCQjwkN--BhDkARIsAD_mnIr1-yHk4tzY2vuJiaR2WV44mgcNn8FP_tggNRNOiRazzmO7YGhygyQaAj0HEALw_wcB&amp;gclsrc=aw.ds">River anchors</a> were secured to the bottom of each array, with the required weight depending on the buoy type. A 30 lb anchor was used for pole buoy deployments, while a 40 lb anchor was necessary for PIFSC buoy setups.</p>
+</section>
+<section id="additional-information" class="level2">
+<h2 class="anchored" data-anchor-id="additional-information">Additional Information</h2>
+<p>More information about the drifting acoustic recorder components and design can be found on our <a href="https://sael-swfsc.github.io/adrift-field-methods/">Adrift Field Methods</a> website.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -487,8 +492,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content/folderStructure.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Folder Structure &amp; Content</span>
+      <a href="../index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
