@@ -119,12 +119,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/folderStructure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Folder Structure &amp; Content</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -205,8 +199,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lonestar-tracking" id="toc-lonestar-tracking" class="nav-link active" data-scroll-target="#lonestar-tracking"><strong>Lonestar Tracking</strong></a></li>
+  <li><a href="#find-me-spot" id="toc-find-me-spot" class="nav-link" data-scroll-target="#find-me-spot">Find Me Spot</a></li>
+  <li><a href="#driftwatch" id="toc-driftwatch" class="nav-link" data-scroll-target="#driftwatch"><strong>Driftwatch</strong></a>
+  <ul class="collapse">
+  <li><a href="#drift-maps" id="toc-drift-maps" class="nav-link" data-scroll-target="#drift-maps"><strong>Drift Maps</strong></a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/edit/main/content/metadata&amp;tracking.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/content/metadata&amp;tracking.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -230,8 +235,49 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>We used three platforms for tracking our buoys: (1) <a href="https://fleetone.lonestartracking.com/new/">Lonestar Tracking</a> and (2) <a href="https://maps.findmespot.com/Track#live/assets">Find Me Spot</a>, and (3) Driftwatch.</p>
+<section id="lonestar-tracking" class="level2">
+<h2 class="anchored" data-anchor-id="lonestar-tracking"><strong>Lonestar Tracking</strong></h2>
+<p>Lonestar Tracking is an online tracking platform provided by our satellite tracking provider for our SolarOne GPS units. This platform provides updates on previous and current positions of our pole buoys.</p>
+<p>*Contact Shannon Rankin (shannon.rankin@noaa.gov) if you require login information.</p>
+</section>
+<section id="find-me-spot" class="level2">
+<h2 class="anchored" data-anchor-id="find-me-spot">Find Me Spot</h2>
+<p>Find Me Spot is an online tracking platform provided by our other satellite tracking provider for our Spot GPS units. This platform provides updates on the most recent position of our PIFSC buoys.</p>
+<p><img src="images/spotTracking.jpg" class="img-fluid"></p>
+</section>
+<section id="driftwatch" class="level2">
+<h2 class="anchored" data-anchor-id="driftwatch"><strong>Driftwatch</strong></h2>
+<p>DriftWatch was developed by our team (Taiki Sakai) to help us track our buoys. Ocean currents can be unpredictable, so having a near-real-time tool to keep track of buoy positions is very useful. DriftWatch automatically downloads GPS data for each buoy, and creates plots of their drift tracks with the ocean currents every hour. These get uploaded to a <a href="https://drive.google.com/drive/folders/10LOJhEUO6mfjY0LmXwmm2iu0JH70uj6x?usp=sharing">Google Drive folder</a> so that it is easy for anyone to access them.</p>
+<p>Driftwatch currently consists of 3 functions:</p>
+<ol type="1">
+<li><p>Drift Maps. Maps of current deployments, updated hourly</p></li>
+<li><p>Test Deployments. Allows user to create a map of potential deployment locations overlaid on ocean currents</p></li>
+<li><p>Text Location Updates. Sends text message updates on buoy location to aid retrieval.</p></li>
+</ol>
+<section id="drift-maps" class="level3">
+<h3 class="anchored" data-anchor-id="drift-maps"><strong>Drift Maps</strong></h3>
+<p>Maps will automatically be made for any deployments that DriftWatch knows about. To add a new deployment, you need to fill in information in the NEW DEPLOYMENT TO SAVE tab of the <a href="https://docs.google.com/spreadsheets/u/0/d/10bxlwfVOe1LFfj69B_YddxcA0V14m7codYwgD2YncFk/edit">Deployment Details</a> worksheet. The important fields for DriftWatch are:</p>
+<ul>
+<li><p>Deployment_Date_UTC - The date of deployment. This is when DriftWatch will start creating maps. This can just be a date initially, but should eventually be updated to an accurate deployment time.</p></li>
+<li><p>Data_Start_UTC - To be filled in later, the start of usable data on the recording.&nbsp;</p></li>
+<li><p>Recovery_Date_UTC - The date of recovery. This is when DriftWatch will stop creating maps. This can just be a date initially, but should eventually be updated to an accurate deployment time.</p></li>
+<li><p>Data_End_UTC - To be filled in later, the end of usable data on the recording.&nbsp;</p></li>
+<li><p>GPS ID - The ID(s) for the trackers attached to this deployment. Should be letters for SPOT devices, or SO-### for solar devices. If multiple trackers are used, they should be separated by a /</p></li>
+<li><p>Project - Project name, e.g ADRIFT</p></li>
+<li><p>DeploymentID - Deployment number for this project</p></li>
+<li><p>Site - Optional, a 3 letter code for the deployment site. Should be one of the options on the “Site List” tab of the worksheet</p></li>
+</ul>
+<p>Once these are filled in, DriftWatch will add this drift to its known deployments the next time it runs, and maps will be made. The remainder of the fields are not used by DriftWatch, but should be filled in if you have the information.</p>
+<p>Plots are uploaded to the “DriftPlots” folder every hour, and are named according to the following naming scheme:</p>
+<blockquote class="blockquote">
+<p>Project_DeploymentID_Current_DeployDate_Site.png</p>
+</blockquote>
+<p>“Current” is either HYCOM or HFRADAR depending on which source of ocean current data is being used. DriftWatch will always try to make a plot using both, but occasionally it can run into errors trying to download the data so you may only see one. HYCOM data have excellent coverage everywhere, but the major downside is that they are only updated once a day, typically in the morning. This means that the current picture may not look accurate later in the day. HFRADAR is updated much more frequently, but there are many areas that do not have any coverage for HFRADAR, so your plot may not show any data. Additionally, the HFRADAR data source has been much more finicky, and can often be unavailable for download. All plots show the last time the current data was updated at the bottom.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -815,7 +861,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/edit/main/content/metadata&amp;tracking.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/content/metadata&amp;tracking.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/edit/main/content/metadata&amp;tracking.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/content/metadata&amp;tracking.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

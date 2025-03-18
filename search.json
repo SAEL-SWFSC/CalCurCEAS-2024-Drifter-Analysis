@@ -24,130 +24,75 @@
     "href": "index.html#study-area",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Study Area",
-    "text": "Study Area\nOur study area encompassed the entire west coast exclusive economic zone (EEZ), from the boarder of Canada to the north to the boarder of Mexico to the south and the near coast region to the east to 200 nmi west of a The map below shows the proposed survey tracklines and drifting acoustic buoy deployment locations at trackline intersections (large red numbers and letters). The deployment numbers at each intersection represented primary deployment locations, while the letters represented secondary locations. The\n\n\n\nCalCurCEAS 2025 study area with tracklines. There is both an inshore and offshore strata. The red polygons in the inshore strata represent Wind Energy Areas (WEAs). The blue, black and brown numbers on the tracklines represent the line numbers and the larger red letters and numbers at the intersection of the tracklines are potential drifting buoy deployment locations.",
+    "text": "Study Area\nOur study area encompassed the entire west coast exclusive economic zone (EEZ), from the boarder of Canada to the north to the boarder of Mexico to the south, and the near coast region to the east to 200 nmi west. The map below shows the proposed survey tracklines and drifting acoustic buoy deployment locations at trackline intersections (large red numbers and letters). The deployment numbers at each intersection represented proposed primary deployment locations, while the letters represented secondary locations. The red outlined polygons represent wind energy areas on the west coast.\n\n\n\nCalCurCEAS 2025 study area with tracklines. There is both an inshore and offshore strata. The red polygons in the inshore strata represent Wind Energy Areas (WEAs). The blue, black and brown numbers on the tracklines represent the line numbers and the larger red letters and numbers at the intersection of the tracklines are potential drifting buoy deployment locations.",
     "crumbs": [
       "Home"
     ]
   },
   {
-    "objectID": "content/deployment.html",
-    "href": "content/deployment.html",
-    "title": "Deployment",
+    "objectID": "content/metadata&tracking.html",
+    "href": "content/metadata&tracking.html",
+    "title": "Metadata and Tracking",
     "section": "",
-    "text": "Identify the buoy (spar or pole) that you will deploy\nPrepare an array that will work for that buoy type\nAttach Sensus depth senor to the top of the array with a zip tie\nSetup SoundTrap recorder to record at the following settings (see screenshot below) and attach to brace on the array\n\nSet time (UTC) to start recording an hour or more prior than the planned deployment time\nSelect channels 1 & 2\n384kHz sample rate\nCheck off ancillary sensors if available (log every 10s)\nCheck disable calibration tones\nClick deploy\n\n\n\n\n\nFigure 1. Screenshot of SoundTrap deployment settings for CalCurCEAS 2025\n\n\n\nA few hours prior to deployment, turn on the GPS and make sure it has a clear view of the sky.\n\nCheck that it is pinging consistently over a few hours\nMake sure it is attached properly to the buoy\n\nAttach a strobe to the buoy using zip ties (see screen shot below)\nPull out an anchor that is appropriate for the buoy you are using\nNote all equipment details in the Deployment Details Google Sheet\n\n\n\n\n\nAsk the vessel captain to slow the boat to 2kts (or whatever speed you need for bare steerage)\nLay the buoy, array, and anchor on the back deck and attach all components to one another\nSet up a guideline for the anchor so that you can easily lower it into the water\nCommunicate with the ship’s captain when you are ready to deploy\nWith the help of at least one other person, lower the buoy into the water first\nPay out the 100m of line that is attached to the buoy and the array\nLower the array into the water gently\nLower the anchor into the water with the guideline\nMark the lat/long and time (UTC) in a GPS\n\nRecord this information in the Deployment Details Google Sheet\n\n\n\n\n\nFigure 2. Drifting acoustic recording buoy being deployed from the back deck of the Bold Horizon",
+    "text": "We used three platforms for tracking our buoys: (1) Lonestar Tracking and (2) Find Me Spot, and (3) Driftwatch.",
     "crumbs": [
       "Data Collection",
-      "Deployment"
+      "Metadata and Tracking"
     ]
   },
   {
-    "objectID": "content/deployment.html#pre-deployment",
-    "href": "content/deployment.html#pre-deployment",
-    "title": "Deployment",
-    "section": "",
-    "text": "Identify the buoy (spar or pole) that you will deploy\nPrepare an array that will work for that buoy type\nAttach Sensus depth senor to the top of the array with a zip tie\nSetup SoundTrap recorder to record at the following settings (see screenshot below) and attach to brace on the array\n\nSet time (UTC) to start recording an hour or more prior than the planned deployment time\nSelect channels 1 & 2\n384kHz sample rate\nCheck off ancillary sensors if available (log every 10s)\nCheck disable calibration tones\nClick deploy\n\n\n\n\n\nFigure 1. Screenshot of SoundTrap deployment settings for CalCurCEAS 2025\n\n\n\nA few hours prior to deployment, turn on the GPS and make sure it has a clear view of the sky.\n\nCheck that it is pinging consistently over a few hours\nMake sure it is attached properly to the buoy\n\nAttach a strobe to the buoy using zip ties (see screen shot below)\nPull out an anchor that is appropriate for the buoy you are using\nNote all equipment details in the Deployment Details Google Sheet",
+    "objectID": "content/metadata&tracking.html#lonestar-tracking",
+    "href": "content/metadata&tracking.html#lonestar-tracking",
+    "title": "Metadata and Tracking",
+    "section": "Lonestar Tracking",
+    "text": "Lonestar Tracking\nLonestar Tracking is an online tracking platform provided by our satellite tracking provider for our SolarOne GPS units. This platform provides updates on previous and current positions of our pole buoys.\n*Contact Shannon Rankin (shannon.rankin@noaa.gov) if you require login information.",
     "crumbs": [
       "Data Collection",
-      "Deployment"
+      "Metadata and Tracking"
     ]
   },
   {
-    "objectID": "content/deployment.html#deployment",
-    "href": "content/deployment.html#deployment",
-    "title": "Deployment",
-    "section": "",
-    "text": "Ask the vessel captain to slow the boat to 2kts (or whatever speed you need for bare steerage)\nLay the buoy, array, and anchor on the back deck and attach all components to one another\nSet up a guideline for the anchor so that you can easily lower it into the water\nCommunicate with the ship’s captain when you are ready to deploy\nWith the help of at least one other person, lower the buoy into the water first\nPay out the 100m of line that is attached to the buoy and the array\nLower the array into the water gently\nLower the anchor into the water with the guideline\nMark the lat/long and time (UTC) in a GPS\n\nRecord this information in the Deployment Details Google Sheet\n\n\n\n\n\nFigure 2. Drifting acoustic recording buoy being deployed from the back deck of the Bold Horizon",
+    "objectID": "content/metadata&tracking.html#find-me-spot",
+    "href": "content/metadata&tracking.html#find-me-spot",
+    "title": "Metadata and Tracking",
+    "section": "Find Me Spot",
+    "text": "Find Me Spot\nFind Me Spot is an online tracking platform provided by our other satellite tracking provider for our Spot GPS units. This platform provides updates on the most recent position of our PIFSC buoys.",
     "crumbs": [
       "Data Collection",
-      "Deployment"
+      "Metadata and Tracking"
     ]
   },
   {
-    "objectID": "content/Equipment.html",
-    "href": "content/Equipment.html",
-    "title": "Equipment",
-    "section": "",
-    "text": "Two types of buoys were used for CalCurCEAS, a pole buoy and a spar buoy (designed and built by Pacific Island Fisheries Science Center (PIFSC)). The reason behind using both buoy types was to test how the PIFSC buoy fared in the California Current. Historically the radar reflectors on the pole buoys acted as sails, and caused the drift rate of that buoy to be faster than expected. Each buoy type used different GPS units for tracking and a different weighted anchor, although the rest of the sub-surface gear was the same.\n\n\n\n\n\n\n\n\nThe pole buoy consists of an 8-12 ft aluminum pole that is weighted on one end. Crab floats are fastened to the center of the pole to keep it up right in the water. There is a radar reflector towards the top of the pole to aid in retrieval during days with poor visibility. At the very top of the pole is a mount for a SmarOne Solar GPS.\n\n\n\nThe PIFSC buoy is made up of PVC sealed spar as the main body and a clam shell floating collar that is bolted together at the top of the spar body. Inside the head piece is a 3D printed mount for 2 Spot GPS units and their corresponding battery packs.",
+    "objectID": "content/metadata&tracking.html#driftwatch",
+    "href": "content/metadata&tracking.html#driftwatch",
+    "title": "Metadata and Tracking",
+    "section": "Driftwatch",
+    "text": "Driftwatch\nDriftWatch was developed by our team (Taiki Sakai) to help us track our buoys. Ocean currents can be unpredictable, so having a near-real-time tool to keep track of buoy positions is very useful. DriftWatch automatically downloads GPS data for each buoy, and creates plots of their drift tracks with the ocean currents every hour. These get uploaded to a Google Drive folder so that it is easy for anyone to access them.\nDriftwatch currently consists of 3 functions:\n\nDrift Maps. Maps of current deployments, updated hourly\nTest Deployments. Allows user to create a map of potential deployment locations overlaid on ocean currents\nText Location Updates. Sends text message updates on buoy location to aid retrieval.\n\n\nDrift Maps\nMaps will automatically be made for any deployments that DriftWatch knows about. To add a new deployment, you need to fill in information in the NEW DEPLOYMENT TO SAVE tab of the Deployment Details worksheet. The important fields for DriftWatch are:\n\nDeployment_Date_UTC - The date of deployment. This is when DriftWatch will start creating maps. This can just be a date initially, but should eventually be updated to an accurate deployment time.\nData_Start_UTC - To be filled in later, the start of usable data on the recording. \nRecovery_Date_UTC - The date of recovery. This is when DriftWatch will stop creating maps. This can just be a date initially, but should eventually be updated to an accurate deployment time.\nData_End_UTC - To be filled in later, the end of usable data on the recording. \nGPS ID - The ID(s) for the trackers attached to this deployment. Should be letters for SPOT devices, or SO-### for solar devices. If multiple trackers are used, they should be separated by a /\nProject - Project name, e.g ADRIFT\nDeploymentID - Deployment number for this project\nSite - Optional, a 3 letter code for the deployment site. Should be one of the options on the “Site List” tab of the worksheet\n\nOnce these are filled in, DriftWatch will add this drift to its known deployments the next time it runs, and maps will be made. The remainder of the fields are not used by DriftWatch, but should be filled in if you have the information.\nPlots are uploaded to the “DriftPlots” folder every hour, and are named according to the following naming scheme:\n\nProject_DeploymentID_Current_DeployDate_Site.png\n\n“Current” is either HYCOM or HFRADAR depending on which source of ocean current data is being used. DriftWatch will always try to make a plot using both, but occasionally it can run into errors trying to download the data so you may only see one. HYCOM data have excellent coverage everywhere, but the major downside is that they are only updated once a day, typically in the morning. This means that the current picture may not look accurate later in the day. HFRADAR is updated much more frequently, but there are many areas that do not have any coverage for HFRADAR, so your plot may not show any data. Additionally, the HFRADAR data source has been much more finicky, and can often be unavailable for download. All plots show the last time the current data was updated at the bottom.",
     "crumbs": [
       "Data Collection",
-      "Equipment"
+      "Metadata and Tracking"
     ]
   },
   {
-    "objectID": "content/Equipment.html#buoys",
-    "href": "content/Equipment.html#buoys",
-    "title": "Equipment",
+    "objectID": "content/PamguardProcessing.html",
+    "href": "content/PamguardProcessing.html",
+    "title": "Pamguard Processing",
     "section": "",
-    "text": "Two types of buoys were used for CalCurCEAS, a pole buoy and a spar buoy (designed and built by Pacific Island Fisheries Science Center (PIFSC)). The reason behind using both buoy types was to test how the PIFSC buoy fared in the California Current. Historically the radar reflectors on the pole buoys acted as sails, and caused the drift rate of that buoy to be faster than expected. Each buoy type used different GPS units for tracking and a different weighted anchor, although the rest of the sub-surface gear was the same.",
+    "text": "Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.",
     "crumbs": [
-      "Data Collection",
-      "Equipment"
+      "Analysis",
+      "Pamguard Processing"
     ]
   },
   {
-    "objectID": "content/Equipment.html#pole-buoy",
-    "href": "content/Equipment.html#pole-buoy",
-    "title": "Equipment",
-    "section": "",
-    "text": "The pole buoy consists of an 8-12 ft aluminum pole that is weighted on one end. Crab floats are fastened to the center of the pole to keep it up right in the water. There is a radar reflector towards the top of the pole to aid in retrieval during days with poor visibility. At the very top of the pole is a mount for a SmarOne Solar GPS.",
+    "objectID": "content/PamguardProcessing.html#status",
+    "href": "content/PamguardProcessing.html#status",
+    "title": "Pamguard Processing",
+    "section": "Status:",
+    "text": "Status:\nAll data has been processed in PAMGuard. PAMpal analysis in progress",
     "crumbs": [
-      "Data Collection",
-      "Equipment"
-    ]
-  },
-  {
-    "objectID": "content/Equipment.html#pifsc-buoy",
-    "href": "content/Equipment.html#pifsc-buoy",
-    "title": "Equipment",
-    "section": "",
-    "text": "The PIFSC buoy is made up of PVC sealed spar as the main body and a clam shell floating collar that is bolted together at the top of the spar body. Inside the head piece is a 3D printed mount for 2 Spot GPS units and their corresponding battery packs.",
-    "crumbs": [
-      "Data Collection",
-      "Equipment"
-    ]
-  },
-  {
-    "objectID": "content/DataQualityCheck.html",
-    "href": "content/DataQualityCheck.html",
-    "title": "Data Prep and Quality Check",
-    "section": "",
-    "text": "After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using Soundtrap Host software file extraction tool (version ___). The exported files include raw audio files (.wav), recording logs, and accelerometer data.\n\n\n\nTo prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the Matlab based Triton Software Package. LTSAs were also made for each dataset with the following parameters;\n\n384 kHz (raw data): 5 seconds, 200 Hz\n48 kHz: 5 seconds, 1 Hz\n12 kHz: 5 seconds, 1 Hz\n500 Hz: 1 seconds, 1 Hz\n\nThe data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before anaylsis.",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Prep and Quality Check"
-    ]
-  },
-  {
-    "objectID": "content/DataQualityCheck.html#data-prep",
-    "href": "content/DataQualityCheck.html#data-prep",
-    "title": "Data Prep and Quality Check",
-    "section": "",
-    "text": "After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using Soundtrap Host software file extraction tool (version ___). The exported files include raw audio files (.wav), recording logs, and accelerometer data.\n\n\n\nTo prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the Matlab based Triton Software Package. LTSAs were also made for each dataset with the following parameters;\n\n384 kHz (raw data): 5 seconds, 200 Hz\n48 kHz: 5 seconds, 1 Hz\n12 kHz: 5 seconds, 1 Hz\n500 Hz: 1 seconds, 1 Hz\n\nThe data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before anaylsis.",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Prep and Quality Check"
-    ]
-  },
-  {
-    "objectID": "content/DataQualityCheck.html#qaqc",
-    "href": "content/DataQualityCheck.html#qaqc",
-    "title": "Data Prep and Quality Check",
-    "section": "QAQC",
-    "text": "QAQC\nThe full bandwidth LTSAs were used to assess the overall data quality as good, compromised, or unusable.\nA recording QAQC was also run to identify abnormal file sizes, gaps in the recordings, or other recording abnormalities. This QAQC was ran using a custom Matlab script (PAMmisc QAQC R version).",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Prep and Quality Check"
-    ]
-  },
-  {
-    "objectID": "content/DataQualityCheck.html#noise-assessment",
-    "href": "content/DataQualityCheck.html#noise-assessment",
-    "title": "Data Prep and Quality Check",
-    "section": "Noise Assessment",
-    "text": "Noise Assessment\nUsing the Triton Logger remora, the 384 kHz LTSAs were manually scanned to log time periods with noisy or compromised data, which would be excluded from analysis.",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Prep and Quality Check"
+      "Analysis",
+      "Pamguard Processing"
     ]
   },
   {
@@ -195,115 +140,157 @@
     ]
   },
   {
-    "objectID": "content/PamguardProcessing.html",
-    "href": "content/PamguardProcessing.html",
-    "title": "Pamguard Processing",
+    "objectID": "content/DataQualityCheck.html",
+    "href": "content/DataQualityCheck.html",
+    "title": "Data Prep and Quality Check",
     "section": "",
-    "text": "Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.",
+    "text": "After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using Soundtrap Host software file extraction tool (version ___). The exported files include raw audio files (.wav), recording logs, and accelerometer data.\n\n\n\nTo prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the Matlab based Triton Software Package. LTSAs were also made for each dataset with the following parameters;\n\n384 kHz (raw data): 5 seconds, 200 Hz\n48 kHz: 5 seconds, 1 Hz\n12 kHz: 5 seconds, 1 Hz\n500 Hz: 1 seconds, 1 Hz\n\nThe data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before anaylsis.",
     "crumbs": [
-      "Analysis",
-      "Pamguard Processing"
+      "Data Managment and Archive",
+      "Data Prep and Quality Check"
     ]
   },
   {
-    "objectID": "content/PamguardProcessing.html#status",
-    "href": "content/PamguardProcessing.html#status",
-    "title": "Pamguard Processing",
-    "section": "Status:",
-    "text": "Status:\nAll data has been processed in PAMGuard. PAMpal analysis in progress",
-    "crumbs": [
-      "Analysis",
-      "Pamguard Processing"
-    ]
-  },
-  {
-    "objectID": "content/folderStructure.html",
-    "href": "content/folderStructure.html",
-    "title": "Folder Structure & Content",
+    "objectID": "content/DataQualityCheck.html#data-prep",
+    "href": "content/DataQualityCheck.html#data-prep",
+    "title": "Data Prep and Quality Check",
     "section": "",
-    "text": "This template provides a set of standard folders for specific types of files. We recommend following these standard approaches as consistency allows us to follow each other’s research workflow.\nHere we further explain how to work with this folder structure, with tips and tricks to make your work more accessible, reproducible, and to help Future You!",
+    "text": "After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using Soundtrap Host software file extraction tool (version ___). The exported files include raw audio files (.wav), recording logs, and accelerometer data.\n\n\n\nTo prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the Matlab based Triton Software Package. LTSAs were also made for each dataset with the following parameters;\n\n384 kHz (raw data): 5 seconds, 200 Hz\n48 kHz: 5 seconds, 1 Hz\n12 kHz: 5 seconds, 1 Hz\n500 Hz: 1 seconds, 1 Hz\n\nThe data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before anaylsis.",
     "crumbs": [
-      "Folder Structure & Content"
+      "Data Managment and Archive",
+      "Data Prep and Quality Check"
     ]
   },
   {
-    "objectID": "content/folderStructure.html#manuscript",
-    "href": "content/folderStructure.html#manuscript",
-    "title": "Folder Structure & Content",
-    "section": "📁 manuscript",
-    "text": "📁 manuscript\nManuscript for Report. This may contain one or more versions of the manuscript in one or more formats. This folder does not serve as the output location for rendered versions of the manuscript (those would be saved in the docs folder). Typically, this would be reserved for final manuscripts or manuscripts saved in an alternative format or manually modified (not direct rendered output).",
+    "objectID": "content/DataQualityCheck.html#qaqc",
+    "href": "content/DataQualityCheck.html#qaqc",
+    "title": "Data Prep and Quality Check",
+    "section": "QAQC",
+    "text": "QAQC\nThe full bandwidth LTSAs were used to assess the overall data quality as good, compromised, or unusable.\nA recording QAQC was also run to identify abnormal file sizes, gaps in the recordings, or other recording abnormalities. This QAQC was ran using a custom Matlab script (PAMmisc QAQC R version).",
     "crumbs": [
-      "Folder Structure & Content"
+      "Data Managment and Archive",
+      "Data Prep and Quality Check"
     ]
   },
   {
-    "objectID": "content/folderStructure.html#content",
-    "href": "content/folderStructure.html#content",
-    "title": "Folder Structure & Content",
-    "section": "📁 content",
-    "text": "📁 content\nThis Research Compendium template is formatted for a HTML (website) output, and all chapters/sections for online report should reside in this content folder.",
+    "objectID": "content/DataQualityCheck.html#noise-assessment",
+    "href": "content/DataQualityCheck.html#noise-assessment",
+    "title": "Data Prep and Quality Check",
+    "section": "Noise Assessment",
+    "text": "Noise Assessment\nUsing the Triton Logger remora, the 384 kHz LTSAs were manually scanned to log time periods with noisy or compromised data, which would be excluded from analysis.",
     "crumbs": [
-      "Folder Structure & Content"
+      "Data Managment and Archive",
+      "Data Prep and Quality Check"
     ]
   },
   {
-    "objectID": "content/folderStructure.html#figs",
-    "href": "content/folderStructure.html#figs",
-    "title": "Folder Structure & Content",
-    "section": "📁 figs",
-    "text": "📁 figs\nContains all figures generated for the analysis. Your code to create figures should be saved in the code folder, and it should automatically save figure output directly to this figs folder. All figure names should be descriptive not based on the # of the figure (as this may change).",
+    "objectID": "content/Equipment.html",
+    "href": "content/Equipment.html",
+    "title": "Equipment",
+    "section": "",
+    "text": "Two types of buoys were used for CalCurCEAS, a pole buoy and a spar buoy (designed and built by Pacific Island Fisheries Science Center (PIFSC)). The reason behind using both buoy types was to test how the PIFSC buoy fared in the California Current. Historically the radar reflectors on the pole buoys acted as sails, and caused the drift rate of that buoy to be faster than expected. Each buoy type used different GPS units for tracking and a different weighted anchor, although the rest of the sub-surface gear was the same.\n\n\n\nFigure 1. On the left is the pole buoy setup and to the right is the PIFSC buoy configuration",
     "crumbs": [
-      "Folder Structure & Content"
+      "Data Collection",
+      "Equipment"
     ]
   },
   {
-    "objectID": "content/folderStructure.html#docs",
-    "href": "content/folderStructure.html#docs",
-    "title": "Folder Structure & Content",
-    "section": "📁 docs",
-    "text": "📁 docs\nContains rendered versions of the reports (if applicable). Note that this is different from the manuscript folder, which would have version(s) of the manuscript not rendered directly from the repository.\n\n\n\n\n\n\nNote: Need to check if this is relevant for this particular HTML output format",
+    "objectID": "content/Equipment.html#buoys",
+    "href": "content/Equipment.html#buoys",
+    "title": "Equipment",
+    "section": "",
+    "text": "Two types of buoys were used for CalCurCEAS, a pole buoy and a spar buoy (designed and built by Pacific Island Fisheries Science Center (PIFSC)). The reason behind using both buoy types was to test how the PIFSC buoy fared in the California Current. Historically the radar reflectors on the pole buoys acted as sails, and caused the drift rate of that buoy to be faster than expected. Each buoy type used different GPS units for tracking and a different weighted anchor, although the rest of the sub-surface gear was the same.\n\n\n\nFigure 1. On the left is the pole buoy setup and to the right is the PIFSC buoy configuration",
     "crumbs": [
-      "Folder Structure & Content"
+      "Data Collection",
+      "Equipment"
     ]
   },
   {
-    "objectID": "content/folderStructure.html#data",
-    "href": "content/folderStructure.html#data",
-    "title": "Folder Structure & Content",
-    "section": "📁 data",
-    "text": "📁 data\nContains ORIGINAL raw or raw-derived data. Github is NOT an appropriate platform for saving large files or large numbers of files. You will need to save your raw data (and possible other large data products) in an alternative location, such as NCEI, Figshare, or Zenodo. We recommend that you identify the location of all raw data (WHERE?). As this data is intended to be ORIGINAL data, we recommend that modified or intermediate data or data products (that are modified by code stored in the code folder) be stored in the output folder.\n\n\n\n\n\n\nNote: Where do we recommend that they identify the location of any data or data products not directly saved to this repository? In the readme? or the index file?",
+    "objectID": "content/Equipment.html#pole-buoy",
+    "href": "content/Equipment.html#pole-buoy",
+    "title": "Equipment",
+    "section": "Pole Buoy",
+    "text": "Pole Buoy\nThe pole buoy was built using an 8 to 12 foot aluminum pole with 10 pounds of lead weight secured at the base for stability. Two crab floats were attached at the center to maintain an upright position in the water. A radar reflector was mounted near the top to improve visibility on the ship’s radar system in poor conditions. A SmarOne Solar GPS unit was affixed to a custom aluminum mount at the top, enabling reliable tracking. Finally, a rope bridle was attached above and below the crab floats and allowed easy connection between the buoy and the array.",
     "crumbs": [
-      "Folder Structure & Content"
+      "Data Collection",
+      "Equipment"
     ]
   },
   {
-    "objectID": "content/folderStructure.html#output",
-    "href": "content/folderStructure.html#output",
-    "title": "Folder Structure & Content",
-    "section": "📁 output",
-    "text": "📁 output\nThis can include any modified or intermediate data or data products (data in data folder is ORIGINAL), and data in output may be modified using code stored in code folder.",
+    "objectID": "content/Equipment.html#pifsc-buoy",
+    "href": "content/Equipment.html#pifsc-buoy",
+    "title": "Equipment",
+    "section": "PIFSC Buoy",
+    "text": "PIFSC Buoy\nThe PIFSC buoy featured a watertight PVC spar as its main body, with a clamshell floating collar bolted together at the top. A watertight headpiece, secured by a threaded locking collar, housed a 3D-printed mount for two Spot GPS units and their corresponding battery packs. To ensure stability in the water column, 10lbs of lead weight was bolted to the bottom of the PVC body. Extending approximately 1m from the base was a spar whip, serving as the attachment point for the rest of the array.",
     "crumbs": [
-      "Folder Structure & Content"
+      "Data Collection",
+      "Equipment"
     ]
   },
   {
-    "objectID": "content/folderStructure.html#code",
-    "href": "content/folderStructure.html#code",
-    "title": "Folder Structure & Content",
-    "section": "📁 code",
-    "text": "📁 code\nScripts that actually do things. If using R, your script should use the here package rather than setwd() to build paths to files and allow for more efficient reproduction of workflow. Script should automatically access data in the data folder and save output to relevant folders (output, figs).\n\n_commonR.R\nWe recommend saving commonly used functions in the _commonR.R file (assuming you are using R for your analysis– if not, you can delete this file). This is a good place to identify the libraries to load, any themes or common formatting requirements, or other common functions. Ideally these types of functions are only located in one place, so that they only need to be changed in one place. You can then source this file in other code (reduces redundancy and allows you to modify these basic functions in one place instead of throughout your various scripts).",
+    "objectID": "content/Equipment.html#array",
+    "href": "content/Equipment.html#array",
+    "title": "Equipment",
+    "section": "Array",
+    "text": "Array\nA 100m long array was attached to both buoy configurations, with the only difference being the addition of a surface buoy in the pole buoy setup. This provided buoyancy for the array, as it was not directly supported by the pole. Aside from this distinction, the arrays were identical. Each consisted of approximately 100m of crab line with a subsurface buoy attached. Below the subsurface buoy was a drogue, an in-line bungee, and a dampener plate. The hydrophone array, positioned beneath these components, included a SoundTrap 640recorder and two HTI hydrophones spaced 5 meters apart.",
     "crumbs": [
-      "Folder Structure & Content"
+      "Data Collection",
+      "Equipment"
     ]
   },
   {
-    "objectID": "content/folderStructure.html#supplement",
-    "href": "content/folderStructure.html#supplement",
-    "title": "Folder Structure & Content",
-    "section": "📁 supplement",
-    "text": "📁 supplement\nSupplementary files that are not data, script, or components of the manuscript.",
+    "objectID": "content/Equipment.html#anchor",
+    "href": "content/Equipment.html#anchor",
+    "title": "Equipment",
+    "section": "Anchor",
+    "text": "Anchor\nRiver anchors were secured to the bottom of each array, with the required weight depending on the buoy type. A 30 lb anchor was used for pole buoy deployments, while a 40 lb anchor was necessary for PIFSC buoy setups.",
     "crumbs": [
-      "Folder Structure & Content"
+      "Data Collection",
+      "Equipment"
+    ]
+  },
+  {
+    "objectID": "content/Equipment.html#additional-information",
+    "href": "content/Equipment.html#additional-information",
+    "title": "Equipment",
+    "section": "Additional Information",
+    "text": "Additional Information\nMore information about the drifting acoustic recorder components and design can be found on our Adrift Field Methods website.",
+    "crumbs": [
+      "Data Collection",
+      "Equipment"
+    ]
+  },
+  {
+    "objectID": "content/deployment.html",
+    "href": "content/deployment.html",
+    "title": "Deployment",
+    "section": "",
+    "text": "Identify the buoy (spar or pole) that you will deploy\nPrepare an array that will work for that buoy type\nAttach Sensus depth senor to the top of the array with a zip tie\nSetup SoundTrap recorder to record at the following settings (see screenshot below) and attach to brace on the array\n\nSet time (UTC) to start recording an hour or more prior than the planned deployment time\nSelect channels 1 & 2\n384kHz sample rate\nCheck off ancillary sensors if available (log every 10s)\nCheck disable calibration tones\nClick deploy\n\n\n\n\n\nFigure 1. Screenshot of SoundTrap deployment settings for CalCurCEAS 2025\n\n\n\nA few hours prior to deployment, turn on the GPS and make sure it has a clear view of the sky.\n\nCheck that it is pinging consistently over a few hours\nMake sure it is attached properly to the buoy\n\nAttach a strobe to the buoy using zip ties (see screen shot below)\nPull out an anchor that is appropriate for the buoy you are using\nNote all equipment details in the Deployment Details Google Sheet\n\n\n\n\n\nAsk the vessel captain to slow the boat to 2kts (or whatever speed you need for bare steerage)\nLay the buoy, array, and anchor on the back deck and attach all components to one another\nSet up a guideline for the anchor so that you can easily lower it into the water\nCommunicate with the ship’s captain when you are ready to deploy\nWith the help of at least one other person, lower the buoy into the water first\nPay out the 100m of line that is attached to the buoy and the array\nLower the array into the water gently\nLower the anchor into the water with the guideline\nMark the lat/long and time (UTC) in a GPS\n\nRecord this information in the Deployment Details Google Sheet\n\n\n\n\n\nFigure 2. Drifting acoustic recording buoy being deployed from the back deck of the Bold Horizon",
+    "crumbs": [
+      "Data Collection",
+      "Deployment"
+    ]
+  },
+  {
+    "objectID": "content/deployment.html#pre-deployment",
+    "href": "content/deployment.html#pre-deployment",
+    "title": "Deployment",
+    "section": "",
+    "text": "Identify the buoy (spar or pole) that you will deploy\nPrepare an array that will work for that buoy type\nAttach Sensus depth senor to the top of the array with a zip tie\nSetup SoundTrap recorder to record at the following settings (see screenshot below) and attach to brace on the array\n\nSet time (UTC) to start recording an hour or more prior than the planned deployment time\nSelect channels 1 & 2\n384kHz sample rate\nCheck off ancillary sensors if available (log every 10s)\nCheck disable calibration tones\nClick deploy\n\n\n\n\n\nFigure 1. Screenshot of SoundTrap deployment settings for CalCurCEAS 2025\n\n\n\nA few hours prior to deployment, turn on the GPS and make sure it has a clear view of the sky.\n\nCheck that it is pinging consistently over a few hours\nMake sure it is attached properly to the buoy\n\nAttach a strobe to the buoy using zip ties (see screen shot below)\nPull out an anchor that is appropriate for the buoy you are using\nNote all equipment details in the Deployment Details Google Sheet",
+    "crumbs": [
+      "Data Collection",
+      "Deployment"
+    ]
+  },
+  {
+    "objectID": "content/deployment.html#deployment",
+    "href": "content/deployment.html#deployment",
+    "title": "Deployment",
+    "section": "",
+    "text": "Ask the vessel captain to slow the boat to 2kts (or whatever speed you need for bare steerage)\nLay the buoy, array, and anchor on the back deck and attach all components to one another\nSet up a guideline for the anchor so that you can easily lower it into the water\nCommunicate with the ship’s captain when you are ready to deploy\nWith the help of at least one other person, lower the buoy into the water first\nPay out the 100m of line that is attached to the buoy and the array\nLower the array into the water gently\nLower the anchor into the water with the guideline\nMark the lat/long and time (UTC) in a GPS\n\nRecord this information in the Deployment Details Google Sheet\n\n\n\n\n\nFigure 2. Drifting acoustic recording buoy being deployed from the back deck of the Bold Horizon",
+    "crumbs": [
+      "Data Collection",
+      "Deployment"
     ]
   },
   {
