@@ -11,7 +11,7 @@ Lonestar Tracking is an online tracking platform provided by our satellite track
 
 \*Contact Shannon Rankin (shannon.rankin\@noaa.gov) if you require login information.
 
-## Find Me Spot 
+## Find Me Spot
 
 Find Me Spot is an online tracking platform provided by our other satellite tracking provider for our Spot GPS units. This platform provides updates on the most recent position of our PIFSC buoys.
 
