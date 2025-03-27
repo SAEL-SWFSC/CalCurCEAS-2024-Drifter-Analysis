@@ -1,0 +1,16 @@
+---
+title: "Beaked Whales"
+editor: visual
+---
+
+### PAMGuard
+
+Full bandwidth recordings were run through a suite of click detectors in [PAMguard](https://www.pamguard.org/) to pull out clicks corresponding to specific frequency bands. The recordings were first decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMguard settings files can be found [here](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/BeakedWhales/Pamguard/PamgaurdSettings).
+
+### Events (work in progress)
+
+An experienced analyst (Anne Simonis) manually scanned the click data in PAMGuard Viewer Mode and created beaked whale events.
+
+### *Status:*
+
+*All data has been processed in PAMGuard. Manual event annotation on hold until contract awarded.*

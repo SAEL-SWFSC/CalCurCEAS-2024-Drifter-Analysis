@@ -48,9 +48,12 @@ website:
           - content/DataUpload.qmd
       - section: "Analysis"
         contents: 
-          - content/PamguardProcessing.qmd
-          
-
+          - content/Overview.qmd
+          - content/BeakedWhales.qmd
+          - content/SpermWhales.qmd
+      - section: "Results"
+        contents: 
+          - content/Effort.qmd
         
 format:
   html:

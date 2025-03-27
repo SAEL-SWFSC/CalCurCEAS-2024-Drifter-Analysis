@@ -1,0 +1,15 @@
+---
+title: "Effort"
+editor: visual
+---
+
+## Acoustic Survey Effort
+
+Drifting acoustic recording buoys were deployed on legs 2 through 6 along predetermined locations
+within the California Current Ecosystem. A total of 27 buoys were deployed along select trackline intersections to provide good spatial coverage across the entire study area (Figure 1). Additionally, 4 opportunistic buoys were deployed during sei whale encounters in an attempt to collect valuable acoustic data on this understudied species. Both deployments and retrievals occurred during the day and night, depending on other scientific operations.
+
+During the survey, the buoys covered a distance of 1,959 nautical miles and collected 5330 hours of acoustic recordings (Table 1). Unfortunately, one buoy was lost at sea and a second buoy lost its hydrophone array due to equipment failure, but overall the acoustic sampling effort was successful.
+
+![Figure 1. CalCurCEAS 2025 Drifting Acoustic Recorder Tracks. Black squares represent the start of the deployment and gray triangles represent the end of the deployment. Purple outlines represent the west coast Wind Energy Areas (WEAs). It should be noted that drift 5 was lost at sea but the end point for that deployment was the last GPS ping available, and drift 7 was retrieved without a recorder attached.](images/CalCurCEAS_DASBR_Deployment_Tracks.png)
+
+![](images/DASBR_Deployment_Summary.JPG)

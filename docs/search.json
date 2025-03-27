@@ -4,7 +4,7 @@
     "href": "content/PamguardProcessing.html",
     "title": "Pamguard Processing",
     "section": "",
-    "text": "Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis."
+    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. It should be stated that the whistle and moan and the cepstrum detectors were also run on the data, although those output are not currently being used for this analysis. Analysis of these data will differ on a species by species basis."
   },
   {
     "objectID": "content/folderStructure.html",
@@ -84,14 +84,20 @@
     "href": "index.html#overview",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Overview",
-    "text": "Overview\nThe 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the Marine Mammal and Turtle Division (MMTD) of NOAA Fisheries’ Southwest Fisheries Science Center (SWFSC). The survey was conducted over the course of 6 legs aboard the M/V Bold Horizon between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD’s fulfillment of regulatory requirements and scientific initiatives, such as marine mammal stock assessments for stakeholders such as the US Navy and the Bureau of Ocean Energy Managment (BOEM)."
+    "text": "Overview\nThe 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the Marine Mammal and Turtle Division (MMTD) of NOAA Fisheries’ Southwest Fisheries Science Center (SWFSC). The survey was conducted over the course of 6 legs aboard the M/V Bold Horizon between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD’s fulfillment of regulatory requirements and scientific initiatives, such as marine mammal stock assessments for stakeholders such as the US Navy and the Bureau of Ocean Energy Managment (BOEM).",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "index.html#drifting-acoustic-recorders-in-the-california-current",
     "href": "index.html#drifting-acoustic-recorders-in-the-california-current",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Drifting Acoustic Recorders in the California Current",
-    "text": "Drifting Acoustic Recorders in the California Current\nThe passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it’s transitory nature (re-positioning the vessel from San Diego to the north end of the study area). Buoys were then left to drift at sea between 2-14 days before being retrieved.\nData from those buoys were downloaded and then processed to look for specific species. More detail can be found on the following pages."
+    "text": "Drifting Acoustic Recorders in the California Current\nThe passive acoustics component of CalCurCEAS 2024 was comprised of deploying drifting acoustic recording buoys at predetermined locations in the survey area. Buoys were deployed on all legs except for leg 1 due to it’s transitory nature (re-positioning the vessel from San Diego to the north end of the study area). Buoys were then left to drift at sea between 2-14 days before being retrieved.\nData from those buoys were downloaded and then processed to look for specific species. More detail can be found on the following pages.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "content/DataQualityCheck.html",
@@ -183,7 +189,11 @@
     "href": "content/PamguardProcessing.html#status",
     "title": "Pamguard Processing",
     "section": "Status:",
-    "text": "Status:\nAll data has been processed in PAMGuard. PAMpal analysis in progress"
+    "text": "Status:\nAll data has been processed in PAMGuard. PAMpal analysis in progress",
+    "crumbs": [
+      "Analysis",
+      "Pamguard Processing"
+    ]
   },
   {
     "objectID": "content/Equipment.html",
@@ -197,7 +207,10 @@
     "href": "index.html#study-area",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Study Area",
-    "text": "Study Area\nOur study area encompassed the entire west coast exclusive economic zone (EEZ), from the boarder of Canada to the north to the boarder of Mexico to the south, and the near coast region to the east to 200 nmi west. The map below shows the proposed survey tracklines and drifting acoustic buoy deployment locations at trackline intersections (large red numbers and letters). The deployment numbers at each intersection represented proposed primary deployment locations, while the letters represented secondary locations. The red outlined polygons represent wind energy areas on the west coast.\n\n\n\nCalCurCEAS 2025 study area with tracklines. There is both an inshore and offshore strata. The red polygons in the inshore strata represent Wind Energy Areas (WEAs). The blue, black and brown numbers on the tracklines represent the line numbers and the larger red letters and numbers at the intersection of the tracklines are potential drifting buoy deployment locations.\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis study was funded by the U.S. Department of the Interior, Bureau of Ocean Energy Management (BOEM), Environmental Studies Program, Washington, DC, through Interagency Agreement Number M24PG00021 with the Southwest Fisheries Science Center. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the opinions or policies of BOEM, nor does mention of trade names or commercial products constitute endorsement or recommendation for use."
+    "text": "Study Area\nOur study area encompassed the entire west coast exclusive economic zone (EEZ), from the boarder of Canada to the north to the boarder of Mexico to the south, and the near coast region to the east to 200 nmi west. The map below shows the proposed survey tracklines and drifting acoustic buoy deployment locations at trackline intersections (large red numbers and letters). The deployment numbers at each intersection represented proposed primary deployment locations, while the letters represented secondary locations. The red outlined polygons represent wind energy areas on the west coast.\n\n\n\nCalCurCEAS 2025 study area with tracklines. There is both an inshore and offshore strata. The red polygons in the inshore strata represent Wind Energy Areas (WEAs). The blue, black and brown numbers on the tracklines represent the line numbers and the larger red letters and numbers at the intersection of the tracklines are potential drifting buoy deployment locations.\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis study was funded by the U.S. Department of the Interior, Bureau of Ocean Energy Management (BOEM), Environmental Studies Program, Washington, DC, through Interagency Agreement Number M24PG00021 with the Southwest Fisheries Science Center. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the opinions or policies of BOEM, nor does mention of trade names or commercial products constitute endorsement or recommendation for use.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "content/Equipment.html#pole-buoy",
@@ -267,6 +280,86 @@
     "href": "index.html#why-drifting-acoustic-recorders",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Why Drifting Acoustic Recorders",
-    "text": "Why Drifting Acoustic Recorders\nPassive acoustic monitoring (PAM) of marine mammals provides a non-invasive tool for studying marine mammals, allowing researchers to detect species in no or low visability conditions and track their presence over long periods. It helps identify deep diving creatures, such as beaked whales"
+    "text": "Why Drifting Acoustic Recorders\nPassive acoustic monitoring (PAM) of marine mammals provides a non-invasive tool for studying marine mammals, allowing researchers to detect species in no or low visability conditions and track their presence over long periods. It helps identify deep diving creatures, such as beaked whales",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "content/BeakedWhales.html",
+    "href": "content/BeakedWhales.html",
+    "title": "Beaked Whales",
+    "section": "",
+    "text": "PAMGuard\nFull bandwidth recordings were run through a suite of click detectors in PAMguard to pull out clicks corresponding to specific frequency bands. The recordings were first decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMguard settings files can be found here.\n\n\nEvents (work in progress)\nAn experienced analyst (Anne Simonis) manually scanned the click data in PAMGuard Viewer Mode and created beaked whale events.\n\n\nStatus:\nAll data has been processed in PAMGuard. Manual event annotation on hold until contract awarded.",
+    "crumbs": [
+      "Analysis",
+      "Beaked Whales"
+    ]
+  },
+  {
+    "objectID": "content/Overview.html",
+    "href": "content/Overview.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. It should be stated that the whistle and moan and the cepstrum detectors were also run on the data, although those output are not currently being used for this analysis. Analysis of these data will differ on a species by species basis.\n\n\nThis page is a work in progress and more will be added when analysis is completed.",
+    "crumbs": [
+      "Analysis",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "content/SpermWhales.html",
+    "href": "content/SpermWhales.html",
+    "title": "Sperm Whales",
+    "section": "",
+    "text": "PAMGuard\nFull bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. Each drifting acoustic recorder was run indepedently through PAMGuard. Click information was save in binary files, while settings for the configuration were saved in a database. PAMGuard settings files can be found here.\n\n\nPAMpal\nFollowing PAMGuard processing, PAMpal was used to create acoustic studies for all detections in each drift (code can be found in the _code folder of this repo and is called “CalCurCEAS_drift-specific_Pm.Rmd”). The next step was to create event summary reports for all potential sperm whale click events (code here - input later). Lastly, these events will be manually validated as sperm whale click events or noise, and those validated detections will be used for further analysis.\n\n\nStatus:\nAll data has been processed in PAMGuard. PAMpal analysis in progress",
+    "crumbs": [
+      "Analysis",
+      "Sperm Whales"
+    ]
+  },
+  {
+    "objectID": "content/SpermWhales.html#status",
+    "href": "content/SpermWhales.html#status",
+    "title": "Sperm Whales",
+    "section": "Status:",
+    "text": "Status:\nAll data has been processed in PAMGuard. PAMpal analysis in progress",
+    "crumbs": [
+      "Analysis",
+      "Sperm Whales"
+    ]
+  },
+  {
+    "objectID": "content/Overview.html#status",
+    "href": "content/Overview.html#status",
+    "title": "Overview",
+    "section": "",
+    "text": "This page is a work in progress and more will be added when analysis is completed.",
+    "crumbs": [
+      "Analysis",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "content/Effort.html",
+    "href": "content/Effort.html",
+    "title": "Effort",
+    "section": "",
+    "text": "Drifting acoustic recording buoys were deployed on legs 2 through 6 along predetermined locations within the California Current Ecosystem. A total of 27 buoys were deployed along select trackline intersections to provide good spatial coverage across the entire study area (Figure 1). Additionally, 4 opportunistic buoys were deployed during sei whale encounters in an attempt to collect valuable acoustic data on this understudied species. Both deployments and retrievals occurred during the day and night, depending on other scientific operations.\nDuring the survey, the buoys covered a distance of 1,959 nautical miles and collected 5330 hours of acoustic recordings (Table 1). Unfortunately, one buoy was lost at sea and a second buoy lost its hydrophone array due to equipment failure, but overall the acoustic sampling effort was successful.\n\n\n\nFigure 1. CalCurCEAS 2025 Drifting Acoustic Recorder Tracks. Black squares represent the start of the deployment and gray triangles represent the end of the deployment. Purple outlines represent the west coast Wind Energy Areas (WEAs). It should be noted that drift 5 was lost at sea but the end point for that deployment was the last GPS ping available, and drift 7 was retrieved without a recorder attached.",
+    "crumbs": [
+      "Results",
+      "Effort"
+    ]
+  },
+  {
+    "objectID": "content/Effort.html#acoustic-survey-effort",
+    "href": "content/Effort.html#acoustic-survey-effort",
+    "title": "Effort",
+    "section": "",
+    "text": "Drifting acoustic recording buoys were deployed on legs 2 through 6 along predetermined locations within the California Current Ecosystem. A total of 27 buoys were deployed along select trackline intersections to provide good spatial coverage across the entire study area (Figure 1). Additionally, 4 opportunistic buoys were deployed during sei whale encounters in an attempt to collect valuable acoustic data on this understudied species. Both deployments and retrievals occurred during the day and night, depending on other scientific operations.\nDuring the survey, the buoys covered a distance of 1,959 nautical miles and collected 5330 hours of acoustic recordings (Table 1). Unfortunately, one buoy was lost at sea and a second buoy lost its hydrophone array due to equipment failure, but overall the acoustic sampling effort was successful.\n\n\n\nFigure 1. CalCurCEAS 2025 Drifting Acoustic Recorder Tracks. Black squares represent the start of the deployment and gray triangles represent the end of the deployment. Purple outlines represent the west coast Wind Energy Areas (WEAs). It should be noted that drift 5 was lost at sea but the end point for that deployment was the last GPS ping available, and drift 7 was retrieved without a recorder attached.",
+    "crumbs": [
+      "Results",
+      "Effort"
+    ]
   }
 ]

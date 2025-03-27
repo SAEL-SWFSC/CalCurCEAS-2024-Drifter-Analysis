@@ -1,0 +1,16 @@
+---
+title: "Sperm Whales"
+editor: visual
+---
+
+### PAMGuard
+
+Full bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. Each drifting acoustic recorder was run indepedently through PAMGuard. Click information was save in binary files, while settings for the configuration were saved in a database. PAMGuard settings files can be found [here](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/SpermWhales/Pamguard/PamguardSettings).
+
+### PAMpal
+
+Following PAMGuard processing, [PAMpal](https://taikisan21.github.io/PAMpal/) was used to create acoustic studies for all detections in each drift (code can be found in the \_code folder of this repo and is called "CalCurCEAS_drift-specific_Pm.Rmd"). The next step was to create event summary reports for all potential sperm whale click events (code here - *input later*). Lastly, these events will be manually validated as sperm whale click events or noise, and those validated detections will be used for further analysis.
+
+### *Status:*
+
+*All data has been processed in PAMGuard. PAMpal analysis in progress*
