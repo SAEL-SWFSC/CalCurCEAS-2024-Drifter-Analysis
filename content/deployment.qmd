@@ -3,8 +3,6 @@ title: "Deployment"
 editor: visual
 ---
 
-# Deployment of a drift acoustic buoy
-
 ## Pre-Deployment
 
 1.  Identify the buoy (spar or pole) that you will deploy

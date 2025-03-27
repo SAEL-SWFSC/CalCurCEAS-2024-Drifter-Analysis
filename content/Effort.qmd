@@ -12,4 +12,4 @@ During the survey, the buoys covered a distance of 1,959 nautical miles and coll
 
 ![Figure 1. CalCurCEAS 2025 Drifting Acoustic Recorder Tracks. Black squares represent the start of the deployment and gray triangles represent the end of the deployment. Purple outlines represent the west coast Wind Energy Areas (WEAs). It should be noted that drift 5 was lost at sea but the end point for that deployment was the last GPS ping available, and drift 7 was retrieved without a recorder attached.](images/CalCurCEAS_DASBR_Deployment_Tracks.png)
 
-![](images/DASBR_Deployment_Summary.JPG)
+![](images/DASBR_Deployment_Summary.JPG){fig-align="center"}
