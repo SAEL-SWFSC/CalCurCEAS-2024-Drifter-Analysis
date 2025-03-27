@@ -84,69 +84,58 @@
     ]
   },
   {
-    "objectID": "content/PamguardProcessing.html",
-    "href": "content/PamguardProcessing.html",
-    "title": "Pamguard Processing",
+    "objectID": "content/SpermWhales.html",
+    "href": "content/SpermWhales.html",
+    "title": "Sperm Whales",
     "section": "",
-    "text": "Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. Analysis of these data will differ on a species by species basis.",
+    "text": "PAMGuard\nFull bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. Each drifting acoustic recorder was run indepedently through PAMGuard. Click information was save in binary files, while settings for the configuration were saved in a database. PAMGuard settings files can be found here.\n\n\nPAMpal\nFollowing PAMGuard processing, PAMpal was used to create acoustic studies for all detections in each drift (code can be found in the _code folder of this repo and is called “CalCurCEAS_drift-specific_Pm.Rmd”). The next step was to create event summary reports for all potential sperm whale click events (code here - input later). Lastly, these events will be manually validated as sperm whale click events or noise, and those validated detections will be used for further analysis.\n\n\nStatus:\nAll data has been processed in PAMGuard. PAMpal analysis in progress",
     "crumbs": [
       "Analysis",
-      "Pamguard Processing"
+      "Sperm Whales"
     ]
   },
   {
-    "objectID": "content/PamguardProcessing.html#status",
-    "href": "content/PamguardProcessing.html#status",
-    "title": "Pamguard Processing",
-    "section": "Status:",
-    "text": "Status:\nAll data has been processed in PAMGuard. PAMpal analysis in progress",
+    "objectID": "content/Overview.html",
+    "href": "content/Overview.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. It should be stated that the whistle and moan and the cepstrum detectors were also run on the data, although those output are not currently being used for this analysis. Analysis of these data will differ on a species by species basis.\n\n\nThis page is a work in progress and more will be added when analysis is completed.",
     "crumbs": [
       "Analysis",
-      "Pamguard Processing"
+      "Overview"
     ]
   },
   {
-    "objectID": "content/DataUpload.html",
-    "href": "content/DataUpload.html",
-    "title": "Data Upload & Archive",
+    "objectID": "content/Overview.html#status",
+    "href": "content/Overview.html#status",
+    "title": "Overview",
     "section": "",
-    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.\nStatus: Completed",
+    "text": "This page is a work in progress and more will be added when analysis is completed.",
     "crumbs": [
-      "Data Managment and Archive",
-      "Data Upload & Archive"
+      "Analysis",
+      "Overview"
     ]
   },
   {
-    "objectID": "content/DataUpload.html#local-archive",
-    "href": "content/DataUpload.html#local-archive",
-    "title": "Data Upload & Archive",
+    "objectID": "content/Effort.html",
+    "href": "content/Effort.html",
+    "title": "Effort",
     "section": "",
-    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.\nStatus: Completed",
+    "text": "Drifting acoustic recording buoys were deployed on legs 2 through 6 along predetermined locations within the California Current Ecosystem. A total of 27 buoys were deployed along select trackline intersections to provide good spatial coverage across the entire study area (Figure 1). Additionally, 4 opportunistic buoys were deployed during sei whale encounters in an attempt to collect valuable acoustic data on this understudied species. Both deployments and retrievals occurred during the day and night, depending on other scientific operations.\nDuring the survey, the buoys covered a distance of 1,959 nautical miles and collected 5330 hours of acoustic recordings (Table 1). Unfortunately, one buoy was lost at sea and a second buoy lost its hydrophone array due to equipment failure, but overall the acoustic sampling effort was successful.\n\n\n\nFigure 1. CalCurCEAS 2025 Drifting Acoustic Recorder Tracks. Black squares represent the start of the deployment and gray triangles represent the end of the deployment. Purple outlines represent the west coast Wind Energy Areas (WEAs). It should be noted that drift 5 was lost at sea but the end point for that deployment was the last GPS ping available, and drift 7 was retrieved without a recorder attached.",
     "crumbs": [
-      "Data Managment and Archive",
-      "Data Upload & Archive"
+      "Results",
+      "Effort"
     ]
   },
   {
-    "objectID": "content/DataUpload.html#ncei",
-    "href": "content/DataUpload.html#ncei",
-    "title": "Data Upload & Archive",
-    "section": "NCEI",
-    "text": "NCEI\nRaw audio data and deployment metadata are archived to NCEI Passive Acoustic Data Archive. To align with permitting requirements, data may be inaccessible to the public for up to two years after the data collection date.\nSee detailed methods here to archive deployment metadata and raw audio data to NCEI.\nStatus: Waiting for Navy clearance to send packaged deployment metadata and raw audio data to NCEI. Once sent and published, we will link to the DOI here.",
+    "objectID": "content/Effort.html#acoustic-survey-effort",
+    "href": "content/Effort.html#acoustic-survey-effort",
+    "title": "Effort",
+    "section": "",
+    "text": "Drifting acoustic recording buoys were deployed on legs 2 through 6 along predetermined locations within the California Current Ecosystem. A total of 27 buoys were deployed along select trackline intersections to provide good spatial coverage across the entire study area (Figure 1). Additionally, 4 opportunistic buoys were deployed during sei whale encounters in an attempt to collect valuable acoustic data on this understudied species. Both deployments and retrievals occurred during the day and night, depending on other scientific operations.\nDuring the survey, the buoys covered a distance of 1,959 nautical miles and collected 5330 hours of acoustic recordings (Table 1). Unfortunately, one buoy was lost at sea and a second buoy lost its hydrophone array due to equipment failure, but overall the acoustic sampling effort was successful.\n\n\n\nFigure 1. CalCurCEAS 2025 Drifting Acoustic Recorder Tracks. Black squares represent the start of the deployment and gray triangles represent the end of the deployment. Purple outlines represent the west coast Wind Energy Areas (WEAs). It should be noted that drift 5 was lost at sea but the end point for that deployment was the last GPS ping available, and drift 7 was retrieved without a recorder attached.",
     "crumbs": [
-      "Data Managment and Archive",
-      "Data Upload & Archive"
-    ]
-  },
-  {
-    "objectID": "content/DataUpload.html#pacm",
-    "href": "content/DataUpload.html#pacm",
-    "title": "Data Upload & Archive",
-    "section": "PACM",
-    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map.\nSee detailed methods here to archive deployment metadata and detections to PACM.\nCurrent status: Waiting for new PACM release - Makara - to archive deployment metdata. Waiting for finalized analysis results from partners to archive detections. Will link here to finalized data in PACM/Makara",
-    "crumbs": [
-      "Data Managment and Archive",
-      "Data Upload & Archive"
+      "Results",
+      "Effort"
     ]
   },
   {
@@ -191,6 +180,61 @@
     "crumbs": [
       "Data Managment and Archive",
       "Data Prep and Quality Check"
+    ]
+  },
+  {
+    "objectID": "content/BeakedWhales.html",
+    "href": "content/BeakedWhales.html",
+    "title": "Beaked Whales",
+    "section": "",
+    "text": "PAMGuard\nFull bandwidth recordings were run through a suite of click detectors in PAMguard to pull out clicks corresponding to specific frequency bands. The recordings were first decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMguard settings files can be found here.\n\n\nEvents (work in progress)\nAn experienced analyst (Anne Simonis) manually scanned the click data in PAMGuard Viewer Mode and created beaked whale events.\n\n\nStatus:\nAll data has been processed in PAMGuard. Manual event annotation on hold until contract awarded.",
+    "crumbs": [
+      "Analysis",
+      "Beaked Whales"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html",
+    "href": "content/DataUpload.html",
+    "title": "Data Upload & Archive",
+    "section": "",
+    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.\nStatus: Completed",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html#local-archive",
+    "href": "content/DataUpload.html#local-archive",
+    "title": "Data Upload & Archive",
+    "section": "",
+    "text": "All metadata, raw audio data, and data products are stored locally on the DON shared network drive (\\\\swc-storage4-s, MMTD-ACOUSTICS). This includes the following;\n\nextracted SUD files (log, wav, accelerometer)\ndepth data\nGPS data\nQAQC results\ndecimated data\nLTSAs\nanalysis data products\n\nCompressed SUD files are stored locally to the PAM Synology drive.\nDeployment metadata is also archived to a local Tethys database. Detailed directions to access this database here.\nStatus: Completed",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html#ncei",
+    "href": "content/DataUpload.html#ncei",
+    "title": "Data Upload & Archive",
+    "section": "NCEI",
+    "text": "NCEI\nRaw audio data and deployment metadata are archived to NCEI Passive Acoustic Data Archive. To align with permitting requirements, data may be inaccessible to the public for up to two years after the data collection date.\nSee detailed methods here to archive deployment metadata and raw audio data to NCEI.\nStatus: Waiting for Navy clearance to send packaged deployment metadata and raw audio data to NCEI. Once sent and published, we will link to the DOI here.",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
+    ]
+  },
+  {
+    "objectID": "content/DataUpload.html#pacm",
+    "href": "content/DataUpload.html#pacm",
+    "title": "Data Upload & Archive",
+    "section": "PACM",
+    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map.\nSee detailed methods here to archive deployment metadata and detections to PACM.\nCurrent status: Waiting for new PACM release - Makara - to archive deployment metdata. Waiting for finalized analysis results from partners to archive detections. Will link here to finalized data in PACM/Makara",
+    "crumbs": [
+      "Data Managment and Archive",
+      "Data Upload & Archive"
     ]
   },
   {
@@ -269,6 +313,13 @@
       "Data Collection",
       "Equipment"
     ]
+  },
+  {
+    "objectID": "content/PamguardProcessing.html",
+    "href": "content/PamguardProcessing.html",
+    "title": "Pamguard Processing",
+    "section": "",
+    "text": "Summary\nPamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. It should be stated that the whistle and moan and the cepstrum detectors were also run on the data, although those output are not currently being used for this analysis. Analysis of these data will differ on a species by species basis."
   },
   {
     "objectID": "content/deployment.html",
