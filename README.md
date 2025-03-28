@@ -1,6 +1,10 @@
 # CalCurCEAS Reserach Compendium
 
-This repository contains methods for the passive acoustic analysis of the CalCurCEAS 2024 survey conducted by Southwest Fisheries Science Center. You will find data, code and methodology within this repo.
+This repository contains methods for the passive acoustic analysis of the CalCurCEAS 2024 survey conducted by Southwest Fisheries Science Center. You will find data, code and methodology within this repo. This is a living document to provide information about the acoustic analysis as it is completed.
+
+## Status of Analysis
+
+Pre-processing of acoustic data through PAMGuard software is complete. We are working on sperm whale and beaked whale next steps. Sperm whale data will be sent off to PIFSC for further analysis. Beaked whale data will be worked up by Anne Simonis (funding pending).
 
 ## [Link to Site](https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/)
 
@@ -8,25 +12,23 @@ This repository contains methods for the passive acoustic analysis of the CalCur
 
 This directory contains:
 
--   📁 manuscript: Manuscript for Report
+\*The underscore before a folder name means that it will not be render each time the site is built.
 
--   📁 content: chapters/sections for online report
+-   📁 content: chapters/sections for online site
 
--   📁 figs: contains all figures generated for the analysis
+-   📁 \_figs: contains all figures generated for the analysis
 
--   📁 docs: Contains rendered versions of the reports
+-   📁 docs: Contains rendered versions of the site
 
--   📁 data: Contains raw or raw-derived data
+-   📁 \_data: Contains raw or raw-derived data
 
 -   📁 output: This can include any modified or intermediate data or data products (data in data folder is ORIGINAL, and data in output may be modified using code stored in R folder.
 
--   📁 code: scripts that actually do things.
+-   📁 \_code: scripts that actually do things.
 
--   📁 supplement: Supplementary files that are not data, script, or components of the manuscript
+### Funding
 
-## Funding
-
-**Provide statement of funding**
+This study was funded by the U.S. Department of the Interior, Bureau of Ocean Energy Management (BOEM), Environmental Studies Program, Washington, DC, through Interagency Agreement Number M24PG00021 with the Southwest Fisheries Science Center. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the opinions or policies of BOEM, nor does mention of trade names or commercial products constitute endorsement or recommendation for use.
 
 ### Disclaimer
 
