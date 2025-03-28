@@ -46,9 +46,8 @@ website:
         contents: 
           - content/DataQualityCheck.qmd
           - content/DataUpload.qmd
-      - section: "Analysis"
+      - section: content/Overview.qmd
         contents: 
-          - content/Overview.qmd
           - content/BeakedWhales.qmd
           - content/SpermWhales.qmd
       - section: "Results"
