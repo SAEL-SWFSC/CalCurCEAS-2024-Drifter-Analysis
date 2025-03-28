@@ -7,11 +7,11 @@ editor: visual
 
 ### Offloading and Decompressing SUD files
 
-After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using [Soundtrap Host software](https://www.oceaninstruments.co.nz/downloads/) file extraction tool (version \_\_\_). The exported files include raw audio files (.wav), recording logs, and accelerometer data.
+After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using [SoundTrap Host software](https://www.oceaninstruments.co.nz/downloads/) file extraction tool. The exported files include raw audio files (.wav), recording logs, and accelerometer data.
 
 ### Decimation and LTSAs
 
-To prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the Matlab based [Triton Software Package](https://www.cetus.ucsd.edu/technologies_triton.html). LTSAs were also made for each dataset with the following parameters;
+To prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the MATLAB based [Triton Software Package](https://www.cetus.ucsd.edu/technologies_triton.html). LTSAs were also made for each dataset with the following parameters;
 
 -   384 kHz (raw data): 5 seconds, 200 Hz
 
@@ -21,13 +21,13 @@ To prep for analysis, the data were decimated and Long Term Spectral Averages (L
 
 -   500 Hz: 1 seconds, 1 Hz
 
-The data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before anaylsis.
+The data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before analysis.
 
 ## QAQC
 
 The full bandwidth LTSAs were used to assess the overall data quality as good, compromised, or unusable.
 
-A recording QAQC was also run to identify abnormal file sizes, gaps in the recordings, or other recording abnormalities. This QAQC was ran using a custom Matlab script [(PAMmisc QAQC R version)](https://github.com/TaikiSan21/PAMmisc/blob/main/devel/qaqcFunctions.R).
+A recording QAQC was also run to identify abnormal file sizes, gaps in the recordings, or other recording abnormalities. This QAQC was ran using a custom MATLAB script [(PAMmisc QAQC R version)](https://github.com/TaikiSan21/PAMmisc/blob/main/devel/qaqcFunctions.R).
 
 ## Noise Assessment
 

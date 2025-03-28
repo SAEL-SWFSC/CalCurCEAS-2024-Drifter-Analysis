@@ -33,6 +33,6 @@ See detailed methods [here](https://sael-swfsc.github.io/SAEL-lab-manual/content
 
 Once finalized, beaked whale and sperm whale detections will be archived to [NEFSC Passive Acoustic Cetacean Map](https://apps-nefsc.fisheries.noaa.gov/pacm/#/).
 
-See detailed methods [here](https://sael-swfsc.github.io/SAEL-lab-manual/content/Data-Archive-NCEI.html#submitting-data) to archive deployment metadata and detections to PACM.
+See detailed methods [here](https://github.com/Kourtney-Burger/ADRIFT-PACM) to archive deployment metadata and detections to PACM.
 
-*Current status: Waiting for new PACM release - Makara - to archive deployment metdata. Waiting for finalized analysis results from partners to archive detections. Will link here to finalized data in PACM/Makara*
+*Current status: Waiting for new PACM release - Makara - to archive deployment metadata. Waiting for finalized analysis results from partners to archive detections. Will link here to finalized data in PACM/Makara*

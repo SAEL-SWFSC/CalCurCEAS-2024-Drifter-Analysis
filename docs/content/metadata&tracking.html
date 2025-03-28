@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.258">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -165,7 +165,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/PamguardProcessing.html" class="sidebar-item-text sidebar-link">Pamguard Processing</a>
+  <a href="../content/Overview.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/BeakedWhales.html" class="sidebar-item-text sidebar-link">Beaked Whales</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/SpermWhales.html" class="sidebar-item-text sidebar-link">Sperm Whales</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Results</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/Effort.html" class="sidebar-item-text sidebar-link">Effort</a>
   </div>
 </li>
       </ul>
@@ -208,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>We used three platforms for tracking our buoys: (1) <a href="https://fleetone.lonestartracking.com/new/">Lonestar Tracking</a> and (2) <a href="https://maps.findmespot.com/Track#live/assets">Find Me Spot</a>, and (3) Driftwatch.</p>
+<p>We used three platforms for tracking our buoys: (1) <a href="https://fleetone.lonestartracking.com/new/">Lonestar Tracking</a> and (2) <a href="https://maps.findmespot.com/Track#live/assets">Find Me Spot</a>, and (3) <a href="https://github.com/TaikiSan21/DriftWatch/tree/main">Driftwatch</a>.</p>
 <section id="lonestar-tracking" class="level2">
 <h2 class="anchored" data-anchor-id="lonestar-tracking"><strong>Lonestar Tracking</strong></h2>
 <p>Lonestar Tracking is an online tracking platform provided by our satellite tracking provider for our SolarOne GPS units. This platform provides updates on previous and current positions of our pole buoys. Each GPS has it’s own track. The tracks can only be displayed one at a time on the website.</p>
@@ -256,11 +281,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Plots are uploaded to the “DriftPlots” folder every hour, and are named according to the following naming scheme:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/CalCurCEAS_007_09-11-2024_ORE-01.png" class="img-fluid figure-img" alt="Figure 3. Driftwatch output for  HYCOM, HFRADAR and WCOFS models"></p>
-<p></p><figcaption class="figure-caption">Figure 3. Driftwatch plot output for HYCOM, HFRADAR and WCOFS models</figcaption><p></p>
+<p><img src="images/CalCurCEAS_007_09-11-2024_ORE-01.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 3. Driftwatch output for HYCOM, HFRADAR and WCOFS models</figcaption><p></p>
 </figure>
 </div>
-<p>“Current” is either HYCOM, HFRADAR or WCOFS depending on which source of ocean current data is being used. DriftWatch will always try to make a plot using both, but occasionally it can run into errors trying to download the data so you may only see one. HYCOM data have excellent coverage everywhere, but the major downside is that they are only updated once a day, typically in the morning. This means that the current picture may not look accurate later in the day. HFRADAR is updated much more frequently, but there are many areas that do not have any coverage for HFRADAR, so your plot may not show any data. Additionally, the HFRADAR data source has been much more finicky, and can often be unavailable for download. All plots show the last time the current data was updated at the bottom.</p>
+<p>The “Current” being displayed is from either Hybrid Coordinate Ocean Model (HYCOM), High Frequency Radar (HFRADAR), or West Coast Operational Forecast System (WCOFS) depending on which source of ocean current data is being used. DriftWatch will always try to make a plot using all three, but occasionally it can run into errors trying to download the data so you may only see one. HYCOM data have excellent coverage everywhere, but the major downside is that they are only updated once a day, typically in the morning. This means that the current picture may not look accurate later in the day. HFRADAR is updated much more frequently, but there are many areas that do not have any coverage for HFRADAR, so your plot may not show any data. Additionally, the HFRADAR data source has been much more finicky, and can often be unavailable for download. WCOFS provides predictions of the astronomical tide up to four times per day, but cannot predict current changes due to wind, atmospheric pressure, and river flow. All plots show the last time the current data was updated at the bottom.</p>
 
 
 </section>
