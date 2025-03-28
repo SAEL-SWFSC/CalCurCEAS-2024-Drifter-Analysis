@@ -4,7 +4,7 @@
     "href": "index.html#overview",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Overview",
-    "text": "Overview\nThe 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the Marine Mammal and Turtle Division (MMTD) of NOAA Fisheries’ Southwest Fisheries Science Center (SWFSC). The survey was conducted over the course of 6 legs aboard the M/V Bold Horizon between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD’s fulfillment of regulatory requirements and scientific initiatives, such as marine mammal stock assessments for stakeholders such as the US Navy and the Bureau of Ocean Energy Managment (BOEM).",
+    "text": "Overview\nThe 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS) was conducted by the Marine Mammal and Turtle Division (MMTD) of NOAA Fisheries’ Southwest Fisheries Science Center (SWFSC). The survey was conducted over the course of 6 legs aboard the M/V Bold Horizon between July 24th and December 5th 2024. The primary objectives of CalCurCEAS 2024 was to collect visual sightings data for marine mammals and seabirds, passive acoustic data for cetaceans, biopsy tissue samples for cetaceans and environmental DNA samples. These datasets will be used for a suite of analyses that support MMTD’s fulfillment of regulatory requirements and scientific initiatives, including marine mammal stock assessments for stakeholders such as the US Navy and the Bureau of Ocean Energy Management (BOEM).",
     "crumbs": [
       "Home"
     ]
@@ -14,7 +14,7 @@
     "href": "index.html#why-drifting-acoustic-recorders",
     "title": "The Passive Acoustic Analysis for the California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS)",
     "section": "Why Drifting Acoustic Recorders",
-    "text": "Why Drifting Acoustic Recorders\nPassive acoustic monitoring (PAM) of marine mammals provides a non-invasive tool for studying marine mammals, allowing researchers to detect species in no or low visability conditions and track their presence over long periods. It helps identify deep diving creatures, such as beaked whales",
+    "text": "Why Drifting Acoustic Recorders\nPassive acoustic monitoring (PAM) of marine mammals provides a non-invasive tool for studying marine mammals, allowing researchers to detect species in no or low visibility conditions and track their presence over long periods. It helps identify deep diving creatures, such as beaked whales",
     "crumbs": [
       "Home"
     ]
@@ -55,7 +55,7 @@
     "href": "content/metadata&tracking.html#lonestar-tracking",
     "title": "Metadata and Tracking",
     "section": "Lonestar Tracking",
-    "text": "Lonestar Tracking\nLonestar Tracking is an online tracking platform provided by our satellite tracking provider for our SolarOne GPS units. This platform provides updates on previous and current positions of our pole buoys. Each GPS has it’s own track. The tracks can only be displayed one at a time on the website.\n\n\n\nFigure 1. Lonestar SolarOne GPS tracking interface.\n\n\n*Contact Shannon Rankin (shannon.rankin@noaa.gov) if you require login information.",
+    "text": "Lonestar Tracking\nLonestar Tracking is an online tracking platform provided by our satellite tracking provider for our SmartOne Solar GPS units. This platform provides updates on previous and current positions of our pole buoys. Each GPS has it’s own track. The tracks can only be displayed one at a time on the website.\n\n\n\nFigure 1. Lonestar SmartOne Solar GPS tracking interface.\n\n\n*Contact Shannon Rankin (shannon.rankin@noaa.gov) if you require login information.",
     "crumbs": [
       "Data Collection",
       "Metadata and Tracking"
@@ -77,7 +77,7 @@
     "href": "content/metadata&tracking.html#driftwatch",
     "title": "Metadata and Tracking",
     "section": "Driftwatch",
-    "text": "Driftwatch\nDriftWatch was developed by our team (Taiki Sakai) to help us track our buoys. Ocean currents can be unpredictable, so having a near-real-time tool to keep track of buoy positions is very useful. DriftWatch automatically downloads GPS data for each buoy, and creates plots of their drift tracks with the ocean currents every hour. These get uploaded to a Google Drive folder so that it is easy for anyone to access them.\nDriftwatch currently consists of 3 functions:\n\nDrift Maps. Maps of current deployments, updated hourly\nTest Deployments. Allows user to create a map of potential deployment locations overlaid on ocean currents\nText Location Updates. Sends text message updates on buoy location to aid retrieval.\n\n\nDrift Maps\nMaps will automatically be made for any deployments that DriftWatch knows about. To add a new deployment, you need to fill in information in the NEW DEPLOYMENT TO SAVE tab of the Deployment Details worksheet. The important fields for DriftWatch are:\n\nDeployment_Date_UTC - The date of deployment. This is when DriftWatch will start creating maps. This can just be a date initially, but should eventually be updated to an accurate deployment time.\nData_Start_UTC - To be filled in later, the start of usable data on the recording. \nRecovery_Date_UTC - The date of recovery. This is when DriftWatch will stop creating maps. This can just be a date initially, but should eventually be updated to an accurate deployment time.\nData_End_UTC - To be filled in later, the end of usable data on the recording. \nGPS ID - The ID(s) for the trackers attached to this deployment. Should be letters for SPOT devices, or SO-### for solar devices. If multiple trackers are used, they should be separated by a /\nProject - Project name, e.g ADRIFT\nDeploymentID - Deployment number for this project\nSite - Optional, a 3 letter code for the deployment site. Should be one of the options on the “Site List” tab of the worksheet\n\nOnce these are filled in, DriftWatch will add this drift to its known deployments the next time it runs, and maps will be made. The remainder of the fields are not used by DriftWatch, but should be filled in if you have the information.\nPlots are uploaded to the “DriftPlots” folder every hour, and are named according to the following naming scheme:\n\n\n\nFigure 3. Driftwatch plot output for HYCOM, HFRADAR and WCOFS models\n\n\n“Current” is either HYCOM, HFRADAR or WCOFS depending on which source of ocean current data is being used. DriftWatch will always try to make a plot using both, but occasionally it can run into errors trying to download the data so you may only see one. HYCOM data have excellent coverage everywhere, but the major downside is that they are only updated once a day, typically in the morning. This means that the current picture may not look accurate later in the day. HFRADAR is updated much more frequently, but there are many areas that do not have any coverage for HFRADAR, so your plot may not show any data. Additionally, the HFRADAR data source has been much more finicky, and can often be unavailable for download. All plots show the last time the current data was updated at the bottom.",
+    "text": "Driftwatch\nDriftWatch was developed by our team (Taiki Sakai) to help us track our buoys. Ocean currents can be unpredictable, so having a near-real-time tool to keep track of buoy positions is very useful. DriftWatch automatically downloads GPS data for each buoy, and creates plots of their drift tracks with the ocean currents every hour. These get uploaded to a Google Drive folder so that it is easy for anyone to access them.\nDriftwatch currently consists of 3 functions:\n\nDrift Maps. Maps of current deployments, updated hourly\nTest Deployments. Allows user to create a map of potential deployment locations overlaid on ocean currents\nText Location Updates. Sends text message updates on buoy location to aid retrieval.\n\n\nDrift Maps\nMaps will automatically be made for any deployments that DriftWatch knows about. To add a new deployment, you need to fill in information in the NEW DEPLOYMENT TO SAVE tab of the Deployment Details worksheet. The important fields for DriftWatch are:\n\nDeployment_Date_UTC - The date of deployment. This is when DriftWatch will start creating maps. This can just be a date initially, but should eventually be updated to an accurate deployment time.\nData_Start_UTC - To be filled in later, the start of usable data on the recording. \nRecovery_Date_UTC - The date of recovery. This is when DriftWatch will stop creating maps. This can just be a date initially, but should eventually be updated to an accurate deployment time.\nData_End_UTC - To be filled in later, the end of usable data on the recording. \nGPS ID - The ID(s) for the trackers attached to this deployment. Should be letters for SPOT devices, or SO-### for solar devices. If multiple trackers are used, they should be separated by a /\nProject - Project name, e.g ADRIFT\nDeploymentID - Deployment number for this project\nSite - Optional, a 3 letter code for the deployment site. Should be one of the options on the “Site List” tab of the worksheet\n\nOnce these are filled in, DriftWatch will add this drift to its known deployments the next time it runs, and maps will be made. The remainder of the fields are not used by DriftWatch, but should be filled in if you have the information.\nPlots are uploaded to the “DriftPlots” folder every hour, and are named according to the following naming scheme:\n\n\n\nFigure 3. Driftwatch output for HYCOM, HFRADAR and WCOFS models\n\n\nThe “Current” being displayed is from either Hybrid Coordinate Ocean Model (HYCOM), High Frequency Radar (HFRADAR), or West Coast Operational Forecast System (WCOFS) depending on which source of ocean current data is being used. DriftWatch will always try to make a plot using all three, but occasionally it can run into errors trying to download the data so you may only see one. HYCOM data have excellent coverage everywhere, but the major downside is that they are only updated once a day, typically in the morning. This means that the current picture may not look accurate later in the day. HFRADAR is updated much more frequently, but there are many areas that do not have any coverage for HFRADAR, so your plot may not show any data. Additionally, the HFRADAR data source has been much more finicky, and can often be unavailable for download. WCOFS provides predictions of the astronomical tide up to four times per day, but cannot predict current changes due to wind, atmospheric pressure, and river flow. All plots show the last time the current data was updated at the bottom.",
     "crumbs": [
       "Data Collection",
       "Metadata and Tracking"
@@ -88,30 +88,30 @@
     "href": "content/SpermWhales.html",
     "title": "Sperm Whales",
     "section": "",
-    "text": "PAMGuard\nFull bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. Each drifting acoustic recorder was run indepedently through PAMGuard. Click information was save in binary files, while settings for the configuration were saved in a database. PAMGuard settings files can be found here.\n\n\nPAMpal\nFollowing PAMGuard processing, PAMpal was used to create acoustic studies for all detections in each drift (code can be found in the _code folder of this repo and is called “CalCurCEAS_drift-specific_Pm.Rmd”). The next step was to create event summary reports for all potential sperm whale click events (code here - input later). Lastly, these events will be manually validated as sperm whale click events or noise, and those validated detections will be used for further analysis.\n\n\nStatus:\nAll data has been processed in PAMGuard. PAMpal analysis in progress",
+    "text": "PAMGuard\nFull bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. Each drifting acoustic recorder was run independently through PAMGuard. Click information was saved in binary files, while settings for the configuration were saved in a database. PAMGuard settings files can be found here.\n\n\nPAMpal\nFollowing PAMGuard processing, PAMpal was used to create acoustic studies for all detections in each drift (code can be found in the _code folder of this repo and is called “CalCurCEAS_drift-specific_Pm.Rmd”). The next step was to create event summary reports for all potential sperm whale click events (code here - input later). Lastly, these events will be manually validated as sperm whale click events or noise, and those validated detections will be used for further analysis.\n\n\nStatus:\nAll data has been processed in PAMGuard. PAMpal analysis in progress",
     "crumbs": [
-      "Overview",
+      "Analysis",
       "Sperm Whales"
     ]
   },
   {
     "objectID": "content/Overview.html",
     "href": "content/Overview.html",
-    "title": "Overview",
+    "title": "Analysis",
     "section": "",
-    "text": "Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. It should be stated that the whistle and moan and the cepstrum detectors were also run on the data, although those output are not currently being used for this analysis. Analysis of these data will differ on a species by species basis.\n\n\nThis page is a work in progress and more will be added when analysis is completed.",
+    "text": "PAMGaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. It should be stated that the whistle and moan and the cepstrum detectors were also run on the data, although those output are not currently being used for this analysis. Analysis of these data will differ on a species by species basis.\n\n\nThis page is a work in progress and more will be added when analysis is completed.",
     "crumbs": [
-      "Overview"
+      "Analysis"
     ]
   },
   {
     "objectID": "content/Overview.html#status",
     "href": "content/Overview.html#status",
-    "title": "Overview",
+    "title": "Analysis",
     "section": "",
     "text": "This page is a work in progress and more will be added when analysis is completed.",
     "crumbs": [
-      "Overview"
+      "Analysis"
     ]
   },
   {
@@ -141,7 +141,7 @@
     "href": "content/DataQualityCheck.html",
     "title": "Data Prep and Quality Check",
     "section": "",
-    "text": "After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using Soundtrap Host software file extraction tool (version ___). The exported files include raw audio files (.wav), recording logs, and accelerometer data.\n\n\n\nTo prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the Matlab based Triton Software Package. LTSAs were also made for each dataset with the following parameters;\n\n384 kHz (raw data): 5 seconds, 200 Hz\n48 kHz: 5 seconds, 1 Hz\n12 kHz: 5 seconds, 1 Hz\n500 Hz: 1 seconds, 1 Hz\n\nThe data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before anaylsis.",
+    "text": "After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using SoundTrap Host software file extraction tool. The exported files include raw audio files (.wav), recording logs, and accelerometer data.\n\n\n\nTo prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the MATLAB based Triton Software Package. LTSAs were also made for each dataset with the following parameters;\n\n384 kHz (raw data): 5 seconds, 200 Hz\n48 kHz: 5 seconds, 1 Hz\n12 kHz: 5 seconds, 1 Hz\n500 Hz: 1 seconds, 1 Hz\n\nThe data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before analysis.",
     "crumbs": [
       "Data Managment and Archive",
       "Data Prep and Quality Check"
@@ -152,7 +152,7 @@
     "href": "content/DataQualityCheck.html#data-prep",
     "title": "Data Prep and Quality Check",
     "section": "",
-    "text": "After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using Soundtrap Host software file extraction tool (version ___). The exported files include raw audio files (.wav), recording logs, and accelerometer data.\n\n\n\nTo prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the Matlab based Triton Software Package. LTSAs were also made for each dataset with the following parameters;\n\n384 kHz (raw data): 5 seconds, 200 Hz\n48 kHz: 5 seconds, 1 Hz\n12 kHz: 5 seconds, 1 Hz\n500 Hz: 1 seconds, 1 Hz\n\nThe data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before anaylsis.",
+    "text": "After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using SoundTrap Host software file extraction tool. The exported files include raw audio files (.wav), recording logs, and accelerometer data.\n\n\n\nTo prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the MATLAB based Triton Software Package. LTSAs were also made for each dataset with the following parameters;\n\n384 kHz (raw data): 5 seconds, 200 Hz\n48 kHz: 5 seconds, 1 Hz\n12 kHz: 5 seconds, 1 Hz\n500 Hz: 1 seconds, 1 Hz\n\nThe data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before analysis.",
     "crumbs": [
       "Data Managment and Archive",
       "Data Prep and Quality Check"
@@ -163,7 +163,7 @@
     "href": "content/DataQualityCheck.html#qaqc",
     "title": "Data Prep and Quality Check",
     "section": "QAQC",
-    "text": "QAQC\nThe full bandwidth LTSAs were used to assess the overall data quality as good, compromised, or unusable.\nA recording QAQC was also run to identify abnormal file sizes, gaps in the recordings, or other recording abnormalities. This QAQC was ran using a custom Matlab script (PAMmisc QAQC R version).",
+    "text": "QAQC\nThe full bandwidth LTSAs were used to assess the overall data quality as good, compromised, or unusable.\nA recording QAQC was also run to identify abnormal file sizes, gaps in the recordings, or other recording abnormalities. This QAQC was ran using a custom MATLAB script (PAMmisc QAQC R version).",
     "crumbs": [
       "Data Managment and Archive",
       "Data Prep and Quality Check"
@@ -185,9 +185,9 @@
     "href": "content/BeakedWhales.html",
     "title": "Beaked Whales",
     "section": "",
-    "text": "PAMGuard\nFull bandwidth recordings were run through a suite of click detectors in PAMguard to pull out clicks corresponding to specific frequency bands. The recordings were first decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMguard settings files can be found here.\n\n\nEvents (work in progress)\nAn experienced analyst (Anne Simonis) manually scanned the click data in PAMGuard Viewer Mode and created beaked whale events.\n\n\nStatus:\nAll data has been processed in PAMGuard. Manual event annotation on hold until contract awarded.",
+    "text": "PAMGuard\nFull bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. The recordings were first decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMGuard settings files can be found here.\n\n\nEvents (work in progress)\nAn experienced analyst (Anne Simonis) manually scanned the click data in PAMGuard Viewer Mode and created beaked whale events.\n\n\nStatus:\nAll data has been processed in PAMGuard. Manual event annotation on hold until contract awarded.",
     "crumbs": [
-      "Overview",
+      "Analysis",
       "Beaked Whales"
     ]
   },
@@ -229,7 +229,7 @@
     "href": "content/DataUpload.html#pacm",
     "title": "Data Upload & Archive",
     "section": "PACM",
-    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map.\nSee detailed methods here to archive deployment metadata and detections to PACM.\nCurrent status: Waiting for new PACM release - Makara - to archive deployment metdata. Waiting for finalized analysis results from partners to archive detections. Will link here to finalized data in PACM/Makara",
+    "text": "PACM\nOnce finalized, beaked whale and sperm whale detections will be archived to NEFSC Passive Acoustic Cetacean Map.\nSee detailed methods here to archive deployment metadata and detections to PACM.\nCurrent status: Waiting for new PACM release - Makara - to archive deployment metadata. Waiting for finalized analysis results from partners to archive detections. Will link here to finalized data in PACM/Makara",
     "crumbs": [
       "Data Managment and Archive",
       "Data Upload & Archive"
@@ -262,7 +262,7 @@
     "href": "content/Equipment.html#pole-buoy",
     "title": "Equipment",
     "section": "Pole Buoy",
-    "text": "Pole Buoy\nThe pole buoy was built using an 8 to 12 foot aluminum pole with 10 pounds of lead weight secured at the base for stability. Two crab floats were attached at the center to maintain an upright position in the water. A radar reflector was mounted near the top to improve visibility on the ship’s radar system in poor conditions. A SmarOne Solar GPS unit was affixed to a custom aluminum mount at the top, enabling reliable tracking. Finally, a rope bridle was attached above and below the crab floats and allowed easy connection between the buoy and the array.",
+    "text": "Pole Buoy\nThe pole buoy was built using an 8 to 12 foot aluminum pole with 10 pounds of lead weight secured at the base for stability. Two crab floats were attached at the center to maintain an upright position in the water. A radar reflector was mounted near the top to improve visibility on the ship’s radar system in poor conditions. A SmartOne Solar GPS unit was affixed to a custom aluminum mount at the top, enabling reliable tracking. Finally, a rope bridle was attached above and below the crab floats and allowed easy connection between the buoy and the array.",
     "crumbs": [
       "Data Collection",
       "Equipment"
@@ -284,7 +284,7 @@
     "href": "content/Equipment.html#array",
     "title": "Equipment",
     "section": "Array",
-    "text": "Array\nA 100m long array was attached to both buoy configurations, with the only difference being the addition of a surface buoy in the pole buoy setup. This provided buoyancy for the array, as it was not directly supported by the pole. Aside from this distinction, the arrays were identical. Each consisted of approximately 100m of crab line with a subsurface buoy attached. Below the subsurface buoy was a drogue, an in-line bungee, and a dampener plate. The hydrophone array, positioned beneath these components, included a SoundTrap 640recorder and two HTI hydrophones spaced 5 meters apart.",
+    "text": "Array\nA 100m long array was attached to both buoy configurations, with the only difference being the addition of a surface buoy in the pole buoy setup. This provided buoyancy for the array, as it was not directly supported by the pole. Aside from this distinction, the arrays were identical. Each consisted of approximately 100m of crab line with a subsurface buoy attached. Below the subsurface buoy was a drogue, an in-line bungee, and a dampener plate. The hydrophone array, positioned beneath these components, included a SoundTrap 640 recorder and two HTI hydrophones spaced 5 meters apart.",
     "crumbs": [
       "Data Collection",
       "Equipment"
@@ -324,7 +324,7 @@
     "href": "content/deployment.html",
     "title": "Deployment",
     "section": "",
-    "text": "Identify the buoy (spar or pole) that you will deploy\nPrepare an array that will work for that buoy type\nAttach Sensus depth senor to the top of the array with a zip tie\nSetup SoundTrap recorder to record at the following settings (see screenshot below) and attach to brace on the array\n\nSet time (UTC) to start recording an hour or more prior than the planned deployment time\nSelect channels 1 & 2\n384kHz sample rate\nCheck off ancillary sensors if available (log every 10s)\nCheck disable calibration tones\nClick deploy\n\n\n\n\n\nFigure 1. Screenshot of SoundTrap deployment settings for CalCurCEAS 2025\n\n\n\nA few hours prior to deployment, turn on the GPS and make sure it has a clear view of the sky.\n\nCheck that it is pinging consistently over a few hours\nMake sure it is attached properly to the buoy\n\nAttach a strobe to the buoy using zip ties (see screen shot below)\nPull out an anchor that is appropriate for the buoy you are using\nNote all equipment details in the Deployment Details Google Sheet",
+    "text": "Identify the buoy (spar or pole) that you will deploy\nPrepare an array that will work for that buoy type\nAttach Sensus depth sensor to the top of the array with a zip tie\nSetup SoundTrap recorder to record at the following settings (see screenshot below) and attach to brace on the array\n\nSet time (UTC) to start recording an hour or more prior than the planned deployment time\nSelect channels 1 & 2\n384kHz sample rate\nCheck off ancillary sensors if available (log every 10s)\nCheck disable calibration tones\nClick deploy\n\n\n\n\n\nFigure 1. Screenshot of SoundTrap deployment settings for CalCurCEAS 2025\n\n\n\nA few hours prior to deployment, turn on the GPS and make sure it has a clear view of the sky.\n\nCheck that it is pinging consistently over a few hours\nMake sure it is attached properly to the buoy\n\nAttach a strobe to the buoy using zip ties (see screen shot below)\nPull out an anchor that is appropriate for the buoy you are using\nNote all equipment details in the Deployment Details Google Sheet",
     "crumbs": [
       "Data Collection",
       "Deployment"
@@ -335,7 +335,7 @@
     "href": "content/deployment.html#pre-deployment",
     "title": "Deployment",
     "section": "",
-    "text": "Identify the buoy (spar or pole) that you will deploy\nPrepare an array that will work for that buoy type\nAttach Sensus depth senor to the top of the array with a zip tie\nSetup SoundTrap recorder to record at the following settings (see screenshot below) and attach to brace on the array\n\nSet time (UTC) to start recording an hour or more prior than the planned deployment time\nSelect channels 1 & 2\n384kHz sample rate\nCheck off ancillary sensors if available (log every 10s)\nCheck disable calibration tones\nClick deploy\n\n\n\n\n\nFigure 1. Screenshot of SoundTrap deployment settings for CalCurCEAS 2025\n\n\n\nA few hours prior to deployment, turn on the GPS and make sure it has a clear view of the sky.\n\nCheck that it is pinging consistently over a few hours\nMake sure it is attached properly to the buoy\n\nAttach a strobe to the buoy using zip ties (see screen shot below)\nPull out an anchor that is appropriate for the buoy you are using\nNote all equipment details in the Deployment Details Google Sheet",
+    "text": "Identify the buoy (spar or pole) that you will deploy\nPrepare an array that will work for that buoy type\nAttach Sensus depth sensor to the top of the array with a zip tie\nSetup SoundTrap recorder to record at the following settings (see screenshot below) and attach to brace on the array\n\nSet time (UTC) to start recording an hour or more prior than the planned deployment time\nSelect channels 1 & 2\n384kHz sample rate\nCheck off ancillary sensors if available (log every 10s)\nCheck disable calibration tones\nClick deploy\n\n\n\n\n\nFigure 1. Screenshot of SoundTrap deployment settings for CalCurCEAS 2025\n\n\n\nA few hours prior to deployment, turn on the GPS and make sure it has a clear view of the sky.\n\nCheck that it is pinging consistently over a few hours\nMake sure it is attached properly to the buoy\n\nAttach a strobe to the buoy using zip ties (see screen shot below)\nPull out an anchor that is appropriate for the buoy you are using\nNote all equipment details in the Deployment Details Google Sheet",
     "crumbs": [
       "Data Collection",
       "Deployment"
@@ -346,7 +346,7 @@
     "href": "content/deployment.html#deployment",
     "title": "Deployment",
     "section": "Deployment",
-    "text": "Deployment\n\nAsk the vessel captain to slow the boat to 2kts (or whatever speed you need for bare steerage)\nLay the buoy, array, and anchor on the back deck and attach all components to one another\nSet up a guideline for the anchor so that you can easily lower it into the water\nCommunicate with the ship’s captain when you are ready to deploy\nWith the help of at least one other person, lower the buoy into the water first\nPay out the 100m of line that is attached to the buoy and the array\nLower the array into the water gently\nLower the anchor into the water with the guideline\nMark the lat/long and time (UTC) in a GPS\n\nRecord this information in the Deployment Details Google Sheet\n\n\n\n\n\nFigure 2. Drifting acoustic recording buoy being deployed from the back deck of the Bold Horizon",
+    "text": "Deployment\n\nAsk the vessel captain to slow the boat to 2 kts (or whatever speed you need for bare steerage)\nLay the buoy, array, and anchor on the back deck and attach all components to one another\nSet up a guideline for the anchor so that you can easily lower it into the water\nCommunicate with the ship’s captain when you are ready to deploy\nWith the help of at least one other person, lower the buoy into the water first\nPay out the 100m of line that is attached to the buoy and the array\nLower the array into the water gently\nLower the anchor into the water with the guideline\nMark the lat/long and time (UTC) in a GPS\n\nRecord this information in the Deployment Details Google Sheet\n\n\n\n\n\nFigure 2. Drifting acoustic recording buoy being deployed from the back deck of the Bold Horizon",
     "crumbs": [
       "Data Collection",
       "Deployment"
@@ -368,7 +368,7 @@
     "href": "content/retrieval.html#steps-for-retrieval",
     "title": "Retrieval",
     "section": "Steps for Retrieval",
-    "text": "Steps for Retrieval\n\nShip approaches last know location (using GPS coordinates)\nSlow to 5kts when within one nautical mile of the last known location\n\nDuring daylight hours, ask the crew or visual team to use bionoculars to aid in finding the buoy.\n\nDuring the night, the strobe should be flashing on the pole buoys to help find them. If using a different surface buoy, the reflective solas tape can be seen at ranges up to 0.5 nmi. Use a spotlight to illuminate the reflective tape.\nUsing a boat hook or grapple to grab the orange floating line between the main buoy and the trailing buoy.\nBring the buoy on board and set it on deck\nRetrieve the main line down to the subsurface gear and gentally wrap it around the power capstan to pull in. Make sure that one person keeps an eye on the line as it is being pulled aboard so that it doesn’t chaff on the ship and so that you can see the subsurface gear as it approaches the surface.\nRemove line from the capstan once you see the drogue and hand pull the array onto the ship.\n\nHold the hydrophone array away from the vessel lip as you are retrieving it to avoid banging the array against the ship.\nLift the recorder and anchor carefully over the railing.\n\nMake note of the date, time, latitude and longitude upon retrieval.",
+    "text": "Steps for Retrieval\n\nShip approaches last know location (using GPS coordinates)\nSlow to 5 kts when within one nautical mile of the last known location\n\nDuring daylight hours, ask the crew or visual team to use binoculars to aid in finding the buoy.\n\nDuring the night, the strobe should be flashing on the pole buoys to help find them. If using a different surface buoy, the reflective SOLAS tape can be seen at ranges up to 0.5 nmi. Use a spotlight to illuminate the reflective tape.\nUsing a boat hook or grapple to grab the orange floating line between the main buoy and the trailing buoy.\nBring the buoy on board and set it on deck\nRetrieve the main line down to the subsurface gear and gently wrap it around the power capstan to pull in. Make sure that one person keeps an eye on the line as it is being pulled aboard so that it doesn’t chaff on the ship and so that you can see the subsurface gear as it approaches the surface.\nRemove line from the capstan once you see the drogue and hand pull the array onto the ship.\n\nHold the hydrophone array away from the vessel lip as you are retrieving it to avoid banging the array against the ship.\nLift the recorder and anchor carefully over the railing.\n\nMake note of the date, time, latitude and longitude upon retrieval.",
     "crumbs": [
       "Data Collection",
       "Retrieval"
