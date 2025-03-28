@@ -11,7 +11,7 @@ Two types of buoys were used for CalCurCEAS, a pole buoy and a spar buoy (design
 
 ## Pole Buoy
 
-The pole buoy was built using an 8 to 12 foot aluminum pole with 10 pounds of lead weight secured at the base for stability. Two crab floats were attached at the center to maintain an upright position in the water. A radar reflector was mounted near the top to improve visibility on the ship's radar system in poor conditions. A [SmarOne Solar GPS](https://www.lonestartracking.com/tracking-devices/smartone-solar-satellite-based-solar-powered-iot-asset-tracker-device/?srsltid=AfmBOopZkzLYCHWgZznwq4ADMguXEVZa-eZM0coR_r64zuEgYnk8AxhX) unit was affixed to a custom aluminum mount at the top, enabling reliable tracking. Finally, a rope bridle was attached above and below the crab floats and allowed easy connection between the buoy and the array.
+The pole buoy was built using an 8 to 12 foot aluminum pole with 10 pounds of lead weight secured at the base for stability. Two crab floats were attached at the center to maintain an upright position in the water. A radar reflector was mounted near the top to improve visibility on the ship's radar system in poor conditions. A [SmartOne Solar GPS](https://www.lonestartracking.com/tracking-devices/smartone-solar-satellite-based-solar-powered-iot-asset-tracker-device/?srsltid=AfmBOopZkzLYCHWgZznwq4ADMguXEVZa-eZM0coR_r64zuEgYnk8AxhX) unit was affixed to a custom aluminum mount at the top, enabling reliable tracking. Finally, a rope bridle was attached above and below the crab floats and allowed easy connection between the buoy and the array.
 
 ## PIFSC Buoy
 
@@ -19,7 +19,7 @@ The PIFSC buoy featured a watertight PVC spar as its main body, with a clamshell
 
 ## Array
 
-A 100m long array was attached to both buoy configurations, with the only difference being the addition of a surface buoy in the pole buoy setup. This provided buoyancy for the array, as it was not directly supported by the pole. Aside from this distinction, the arrays were identical. Each consisted of approximately 100m of crab line with a subsurface buoy attached. Below the subsurface buoy was a drogue, an in-line bungee, and a dampener plate. The hydrophone array, positioned beneath these components, included a [SoundTrap 640](https://www.oceaninstruments.co.nz/product/st640/)recorder and two [HTI hydrophone](https://www.hightechincusa.com/products/hydrophones/)s spaced 5 meters apart.
+A 100m long array was attached to both buoy configurations, with the only difference being the addition of a surface buoy in the pole buoy setup. This provided buoyancy for the array, as it was not directly supported by the pole. Aside from this distinction, the arrays were identical. Each consisted of approximately 100m of crab line with a subsurface buoy attached. Below the subsurface buoy was a drogue, an in-line bungee, and a dampener plate. The hydrophone array, positioned beneath these components, included a [SoundTrap 640](https://www.oceaninstruments.co.nz/product/st640/) recorder and two [HTI hydrophones](https://www.hightechincusa.com/products/hydrophones/https://www.hightechincusa.com/products/hydrophones/) spaced 5 meters apart.
 
 ## Anchor
 

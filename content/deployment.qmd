@@ -7,7 +7,7 @@ editor: visual
 
 1.  Identify the buoy (spar or pole) that you will deploy
 2.  Prepare an array that will work for that buoy type
-3.  Attach Sensus depth senor to the top of the array with a zip tie
+3.  Attach Sensus depth sensor to the top of the array with a zip tie
 4.  Setup SoundTrap recorder to record at the following settings (see screenshot below) and attach to brace on the array
     -   Set time (UTC) to start recording an hour or more prior than the planned deployment time
     -   Select channels 1 & 2
@@ -27,7 +27,7 @@ editor: visual
 
 ## Deployment
 
-1.  Ask the vessel captain to slow the boat to 2kts (or whatever speed you need for bare steerage)
+1.  Ask the vessel captain to slow the boat to 2 kts (or whatever speed you need for bare steerage)
 2.  Lay the buoy, array, and anchor on the back deck and attach all components to one another
 3.  Set up a guideline for the anchor so that you can easily lower it into the water
 4.  Communicate with the ship's captain when you are ready to deploy

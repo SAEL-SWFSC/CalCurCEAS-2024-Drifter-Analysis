@@ -5,7 +5,7 @@ editor: visual
 
 ### PAMGuard
 
-Full bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. Each drifting acoustic recorder was run indepedently through PAMGuard. Click information was save in binary files, while settings for the configuration were saved in a database. PAMGuard settings files can be found [here](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/SpermWhales/Pamguard/PamguardSettings).
+Full bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. Each drifting acoustic recorder was run independently through PAMGuard. Click information was saved in binary files, while settings for the configuration were saved in a database. PAMGuard settings files can be found [here](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/SpermWhales/Pamguard/PamguardSettings).
 
 ### PAMpal
 

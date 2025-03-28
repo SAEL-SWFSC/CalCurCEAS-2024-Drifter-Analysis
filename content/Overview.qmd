@@ -1,11 +1,11 @@
 ---
-title: "Overview"
+title: "Analysis"
 editor: visual
 ---
 
 # Summary
 
-[Pamgaurd version 2.02.14](https://www.pamguard.org/releases/download.html) was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. It should be stated that the whistle and moan and the cepstrum detectors were also run on the data, although those output are not currently being used for this analysis. Analysis of these data will differ on a species by species basis.
+[PAMGaurd version 2.02.14](https://www.pamguard.org/releases/download.html) was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. It should be stated that the whistle and moan and the cepstrum detectors were also run on the data, although those output are not currently being used for this analysis. Analysis of these data will differ on a species by species basis.
 
 ## *Status:*
 
