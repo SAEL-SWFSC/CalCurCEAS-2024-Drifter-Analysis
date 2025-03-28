@@ -90,7 +90,7 @@
     "section": "",
     "text": "PAMGuard\nFull bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. Each drifting acoustic recorder was run indepedently through PAMGuard. Click information was save in binary files, while settings for the configuration were saved in a database. PAMGuard settings files can be found here.\n\n\nPAMpal\nFollowing PAMGuard processing, PAMpal was used to create acoustic studies for all detections in each drift (code can be found in the _code folder of this repo and is called “CalCurCEAS_drift-specific_Pm.Rmd”). The next step was to create event summary reports for all potential sperm whale click events (code here - input later). Lastly, these events will be manually validated as sperm whale click events or noise, and those validated detections will be used for further analysis.\n\n\nStatus:\nAll data has been processed in PAMGuard. PAMpal analysis in progress",
     "crumbs": [
-      "Analysis",
+      "Overview",
       "Sperm Whales"
     ]
   },
@@ -101,7 +101,6 @@
     "section": "",
     "text": "Pamgaurd version 2.02.14 was used to process all drifting acoustic buoy recordings in order to collect click data for both sperm whales and beaked whales. It should be stated that the whistle and moan and the cepstrum detectors were also run on the data, although those output are not currently being used for this analysis. Analysis of these data will differ on a species by species basis.\n\n\nThis page is a work in progress and more will be added when analysis is completed.",
     "crumbs": [
-      "Analysis",
       "Overview"
     ]
   },
@@ -112,7 +111,6 @@
     "section": "",
     "text": "This page is a work in progress and more will be added when analysis is completed.",
     "crumbs": [
-      "Analysis",
       "Overview"
     ]
   },
@@ -189,7 +187,7 @@
     "section": "",
     "text": "PAMGuard\nFull bandwidth recordings were run through a suite of click detectors in PAMguard to pull out clicks corresponding to specific frequency bands. The recordings were first decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMguard settings files can be found here.\n\n\nEvents (work in progress)\nAn experienced analyst (Anne Simonis) manually scanned the click data in PAMGuard Viewer Mode and created beaked whale events.\n\n\nStatus:\nAll data has been processed in PAMGuard. Manual event annotation on hold until contract awarded.",
     "crumbs": [
-      "Analysis",
+      "Overview",
       "Beaked Whales"
     ]
   },
