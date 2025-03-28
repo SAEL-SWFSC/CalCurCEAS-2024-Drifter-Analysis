@@ -172,6 +172,9 @@ shipTrack_GPS <- na.omit(shipTrack_GPS)
 ```{r}
 # Excluding ship track so I can control that layer independently on map
 AllGPS <- bind_rows(DASBR_hourly_gps, glider_GPS)
+
+# Write to csv for future analysis
+write.csv(AllGPS, file = paste0(here('_data/GPS'), '/DASBR_Glider_AllGPS_Hourly.csv'), row.names = FALSE)
 ```
 
 # Plot Data
