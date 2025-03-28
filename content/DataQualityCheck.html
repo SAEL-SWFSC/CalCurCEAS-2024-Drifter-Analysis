@@ -179,13 +179,19 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../content/Overview.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Analysis</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/Overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/BeakedWhales.html" class="sidebar-item-text sidebar-link">
@@ -263,24 +269,24 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="data-prep">Data Prep</h2>
 <section id="offloading-and-decompressing-sud-files" class="level3">
 <h3 class="anchored" data-anchor-id="offloading-and-decompressing-sud-files">Offloading and Decompressing SUD files</h3>
-<p>After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using <a href="https://www.oceaninstruments.co.nz/downloads/">SoundTrap Host software</a> file extraction tool. The exported files include raw audio files (.wav), recording logs, and accelerometer data.</p>
+<p>After each drifting buoy deployment, SUD files (compressed audio file with recording metadata) were offloaded from each recording device. The SUD files were extracted using <a href="https://www.oceaninstruments.co.nz/downloads/">Soundtrap Host software</a> file extraction tool (version ___). The exported files include raw audio files (.wav), recording logs, and accelerometer data.</p>
 </section>
 <section id="decimation-and-ltsas" class="level3">
 <h3 class="anchored" data-anchor-id="decimation-and-ltsas">Decimation and LTSAs</h3>
-<p>To prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the MATLAB based <a href="https://www.cetus.ucsd.edu/technologies_triton.html">Triton Software Package</a>. LTSAs were also made for each dataset with the following parameters;</p>
+<p>To prep for analysis, the data were decimated and Long Term Spectral Averages (LTSA) were created. Data were decimated to 48 kHz, 12 kHz, and 500 Hz using the Matlab based <a href="https://www.cetus.ucsd.edu/technologies_triton.html">Triton Software Package</a>. LTSAs were also made for each dataset with the following parameters;</p>
 <ul>
 <li><p>384 kHz (raw data): 5 seconds, 200 Hz</p></li>
 <li><p>48 kHz: 5 seconds, 1 Hz</p></li>
 <li><p>12 kHz: 5 seconds, 1 Hz</p></li>
 <li><p>500 Hz: 1 seconds, 1 Hz</p></li>
 </ul>
-<p>The data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before analysis.</p>
+<p>The data start and end times were also determined from the full bandwidth LTSAs and the data was truncated before anaylsis.</p>
 </section>
 </section>
 <section id="qaqc" class="level2">
 <h2 class="anchored" data-anchor-id="qaqc">QAQC</h2>
 <p>The full bandwidth LTSAs were used to assess the overall data quality as good, compromised, or unusable.</p>
-<p>A recording QAQC was also run to identify abnormal file sizes, gaps in the recordings, or other recording abnormalities. This QAQC was ran using a custom MATLAB script <a href="https://github.com/TaikiSan21/PAMmisc/blob/main/devel/qaqcFunctions.R">(PAMmisc QAQC R version)</a>.</p>
+<p>A recording QAQC was also run to identify abnormal file sizes, gaps in the recordings, or other recording abnormalities. This QAQC was ran using a custom Matlab script <a href="https://github.com/TaikiSan21/PAMmisc/blob/main/devel/qaqcFunctions.R">(PAMmisc QAQC R version)</a>.</p>
 </section>
 <section id="noise-assessment" class="level2">
 <h2 class="anchored" data-anchor-id="noise-assessment">Noise Assessment</h2>
