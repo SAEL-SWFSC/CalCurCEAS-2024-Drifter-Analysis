@@ -1,0 +1,122 @@
+---
+title: "DASBR_Glider_Overlap"
+author: "Kourtney Burger"
+date: "2025-03-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Visual overlap
+We can see in our maps that there is spatial overlap between CalCurCEAS 7-15 
+(some more than others). Characterizing the overlap is more difficult, how much 
+overlap is enough to analyze the probability of detecting a species, etc.
+
+# Prep data
+## Load drifter data
+```{r}
+# Load driftwatch functions here - note: line 39 of this code is commented out. That only works if full driftwatch directory is saved to this repo but it is not needed for this purpose
+source(here('_code/driftwatch/DriftWatchFunctions.R'))
+
+# Load GPS database, may need to download updated version from driftwatch google drive if new drifts aren't included
+db <- here('_data/GPS/DASBRs/SPOTGPS_Logger.sqlite3')
+
+#All CalCurCEAS data
+DASBR_gps <- getDbDeployment(db)
+DASBR_gps <- filter(DASBR_gps, grepl('CalCurCEAS_', DriftName))
+
+#Subset gliders that were in the same general area and remove lost drifts
+DASBR_gps <- getDbDeployment(db, drift = c('CalCurCEAS_006', 'CalCurCEAS_008', 'CalCurCEAS_009', 'CalCurCEAS_010', 'CalCurCEAS_011', 'CalCurCEAS_012', 'CalCurCEAS_013', 'CalCurCEAS_014', 'CalCurCEAS_015', 'CalCurCEAS_016'))
+
+#Subset to only include DriftName, UTC, latitude, and longitude
+DASBR_gps <- DASBR_gps %>% 
+  select(UTC,Latitude,Longitude,DriftName)
+
+# Change DriftName to general name to match gliders and ship
+DASBR_gps <- DASBR_gps %>% rename(
+  ID = DriftName
+)
+```
+
+
+## Load glider data
+```{r}
+# Load 3 glider gps files
+Glider_sg639 <- read.csv(here('_data/GPS/Gliders/sg639_CalCurCEAS_Sep24_simpleSurfaceGPS.csv'))
+Glider_sg679 <- read.csv(here('_data/GPS/Gliders/sg679_CalCurCEAS_Sep24_simpleSurfaceGPS.csv'))
+Glider_sg680 <- read.csv(here('_data/GPS/Gliders/sg680_CalCurCEAS_Aug24_simpleSurfaceGPS.csv'))
+
+# Add ID column to each dataframe
+Glider_sg639 <- Glider_sg639 %>% 
+  mutate(ID = 'sg639')
+
+Glider_sg679 <- Glider_sg679 %>% 
+  mutate(ID = 'sg679')
+
+Glider_sg680 <- Glider_sg680 %>% 
+  mutate(ID = 'sg680')
+
+# Combine into one dataframe
+glider_GPS <- bind_rows(Glider_sg639, Glider_sg679, Glider_sg680)
+
+# Only interested in GPS points at start of dive, remove end of dive points
+glider_GPS <- glider_GPS %>% 
+  filter(label == "start")
+
+# correct datetime format
+glider_GPS$dateTime_UTC <- as.POSIXct(glider_GPS$dateTime_UTC, format = "%d-%b-%Y %H:%M:%S", tz = "UTC")
+
+# Subset to only include glider ID, datetime, latitude, and longitude
+glider_GPS <- glider_GPS %>% 
+  select(ID, dateTime_UTC,latitude,longitude)
+
+# change column names
+glider_GPS <- glider_GPS %>% rename(
+  ID = ID,
+  UTC = dateTime_UTC,
+  Latitude = latitude,
+  Longitude = longitude
+)
+```
+
+## Combine into one dataframe
+```{r}
+AllGPS <- bind_rows(DASBR_gps, glider_GPS)
+```
+
+# Check for overlap
+## Set allowed distances
+```{r}
+# Max temporal distance (in seconds)
+MaxTime <- 600 # 10 minutes
+# Max spatial distance (in meters)
+MaxSpace <- 100 # meters
+```
+
+
+## Temporal
+```{r}
+
+```
+
+## Spatial
+```{r}
+
+```
+
+## Temporal & Spatial
+```{r}
+
+```
+
+
+
+#### TESTING
+```{r}
+### MATRIX IDEA NOT WORKING 
+
+
+```
+
