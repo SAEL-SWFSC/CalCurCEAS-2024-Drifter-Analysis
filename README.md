@@ -2,6 +2,8 @@
 
 This repository contains methods for the passive acoustic analysis of the CalCurCEAS 2024 survey conducted by Southwest Fisheries Science Center. You will find data, code and methodology within this repo. This is a living document to provide information about the acoustic analysis as it is completed.
 
+Passive acoustic gliders were deployed concurrently with the CalCurCEAS 2024 survey (offshore Oregon and northern California). Analysis methods for these data can be found in the [glider-CalCurCEAS repo](https://github.com/sfregosi-noaa/glider-CalCurCEAS).
+
 ## Status of Analysis
 
 Pre-processing of acoustic data through PAMGuard software is complete. We are working on sperm whale and beaked whale next steps. Sperm whale data will be sent off to PIFSC for further analysis. Beaked whale data will be worked up by Anne Simonis (funding pending).
