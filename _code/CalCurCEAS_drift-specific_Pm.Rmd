@@ -3,9 +3,6 @@ title: "CalCurCEAS_drift-specific_Pm_take2"
 author: "Kourtney Burger"
 date: "2025-03-12"
 output: html_document
-editor_options: 
-  markdown: 
-    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
@@ -14,11 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Code source
 
-Replicated code from Jenny Trickey's repo
-[here](https://github.com/jtrickey86/SpermWhale_DASBR/blob/main/HICEAS_2023/HICEAS23_drift-specific_Pm.Rmd)
+Replicated code from Jenny Trickey's repo [here](https://github.com/jtrickey86/SpermWhale_DASBR/blob/main/HICEAS_2023/HICEAS23_drift-specific_Pm.Rmd)
 
 # Load Libraries and settings
-
 ```{r}
 #Load libraries
 library(PAMpal)
@@ -31,28 +26,36 @@ Sys.setenv(TZ = 'UTC')
 ```
 
 # Set global variables
-
-Follow this folder structure for raw data - Root directory - Sperm
-Whales/ - Binaries/ - CalCurCEAS\_###/ - YYYYMMDD - PG Binary files -
-... - Databases/ - CalCurCEAS\_###*2024_SpermWhale_PAM20214.sqlite3 -
-... - GPS Data/ - CalCurCEAS*###\_GPS.csv - ... - Pm_AcousticStudies/
-(empty folder for code results to be saved to)
-
+Follow this folder structure for raw data
+- Root directory
+  - Binaries/
+    - CalCurCEAS_###/
+      - YYYYMMDD
+        - PG Binary files
+      - ...
+  - Databases/
+    - CalCurCEAS_###_2024_SpermWhale_PAM20214.sqlite3
+    - ...
+  - GPS Data/
+    - CalCurCEAS_###_GPS.csv
+    - ...
+  - Pm_AcousticStudies/ (empty folder for code results to be saved to)
+    
 ```{r}
 # Path to binaries, databases, and GPS files
-Binaries <- 'D:/CalCurCEAS_2024/Sperm Whales/Binaries/'
-Databases <- 'D:/CalCurCEAS_2024/Sperm Whales/Databases/'
-GPS <- 'D:/CalCurCEAS_2024/Sperm Whales/GPS Data/'
+Binaries <- 'F:/Binaries/'
+Databases <- 'F:/Databases/'
+GPS <- 'F:/GPS Data/'
 
 # Path to save acoustic studies to
-save_path <- 'D:/CalCurCEAS_2024/Sperm Whales/PM_AcousticStudies'
+save_path <- 'F:/Pm_AcousticStudies/23 reprocess'
 
 # Global variable to drift ID, edit with each run
-DriftID <- '026'
+DriftID <- '023'
 ```
 
-# Add GPS into databases
 
+# Add GPS into databases
 ```{r}
 #Copy and paste the below lines for each drift
 DB <- paste0(Databases,'CalCurCEAS_', DriftID, '_2024_SpermWhale_PAM20214.sqlite3') #path to first deployment database
@@ -98,5 +101,5 @@ saveRDS(ch2AS_data_filtered, file=file.path(save_path, paste0('CalCurCEAS_2024_'
 
 ```{r}
 #reload data from anywhere: get Data
-#Data20_DS2 <- readRDS(file.choose())
+AS_data <- readRDS(file.choose())
 ```
