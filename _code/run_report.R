@@ -15,9 +15,9 @@
 # refSpecSp: !r c('Pm-OnAxis','Pm_ALL') 
 
 # MODIFY THESE
-path_out <- 'C:/Users/pam_user/Desktop/CalCurCEAS_Pm_EventSummaries'
+path_out <- 'C:/Users/pam_user/Documents/GitHub/CalCurCEAS-2024-Drifter-Analysis/_data/SpermWhales/Event Summaries'
 mission <- 'CalCurCEAS'
-drift <- '004'
+drift <- '015'
 channelStr <- 'ch1'
 channelNum <- 1
 path_pg <- 'Z:/drifting_recorder/1_Binaries-Database/2024_CalCurCEAS' 

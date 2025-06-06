@@ -43,12 +43,12 @@ Follow this folder structure for raw data
     
 ```{r}
 # Path to binaries, databases, and GPS files
-Binaries <- 'F:/Binaries/'
-Databases <- 'F:/Databases/'
-GPS <- 'F:/GPS Data/'
+Binaries <- 'Z:/drifting_recorder/1_Binaries-Database/2024_CalCurCEAS/'
+Databases <- 'C:/Users/pam_user/Desktop/CalCurCEAS_023 PG Rerun/'
+GPS <- 'C:/Users/pam_user/Desktop/CalCurCEAS_023 PG Rerun/'
 
 # Path to save acoustic studies to
-save_path <- 'F:/Pm_AcousticStudies/23 reprocess'
+save_path <- 'C:/Users/pam_user/Desktop/CalCurCEAS/acoustic studies'
 
 # Global variable to drift ID, edit with each run
 DriftID <- '023'
