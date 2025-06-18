@@ -15,13 +15,13 @@
 # refSpecSp: !r c('Pm-OnAxis','Pm_ALL') 
 
 # MODIFY THESE
-path_out <- 'C:/Users/pam_user/Documents/GitHub/CalCurCEAS-2024-Drifter-Analysis/_data/SpermWhales/Event Summaries'
+path_out <- 'F:/Pm_AcousticStudies/23 reprocess//'
 mission <- 'CalCurCEAS'
-drift <- '015'
+drift <- '023'
 channelStr <- 'ch1'
 channelNum <- 1
-path_pg <- 'Z:/drifting_recorder/1_Binaries-Database/2024_CalCurCEAS' 
-path_dets <- 'Z:/drifting_recorder/2_Acoustic-Studies/2024_CalCurCEAS'
+path_pg <- 'F:/Binaries/rerun/CalCurCEAS_023/' 
+path_dets <- 'F:/Pm_AcousticStudies/23 reprocess/'
 
 
 # RUN THIS

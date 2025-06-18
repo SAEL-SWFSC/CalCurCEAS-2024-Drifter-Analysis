@@ -17,14 +17,14 @@ editor_options:
 params: 
   # use !r to call r then 
   mission: CalCurCEAS # for report printing/building filenames
-  drift: '013'
+  drift: '023'
   channelStr: ch1
   channelNum: 1
   # pgver: PAM20210a # string e.g., pam20207b, doesn't need quotations, for making file names
-  path_pg: 'Z:/drifting_recorder/1_Binaries-Database/2024_CalCurCEAS' # must use drive letter (not //)
-  path_dets: 'Z:/drifting_recorder/2_Acoustic-Studies/2024_CalCurCEAS' # path to AcousticStudies
+  path_pg: 'F:/Binaries/rerun/CalCurCEAS_023/' # must use drive letter (not //)
+  path_dets: 'F:/Pm_AcousticStudies/23 reprocess/' # path to AcousticStudies
   # path_code: 'Z:/LLHARP/processingCode/llamp' # path to code (if not using r proj/here package)
-  path_to_refSpec: 'C:/Users/pam_user/Documents/GitHub/CalCurCEAS-2024-Drifter-Analysis/_code/refSpec'
+  path_to_refSpec: "../_code/refSpec"
   refSpecList: !r c('Pm_refSpec_MACS2018_DS3_event18_onAxis','Pm_refSpec_MACS2018_DS3_event180712093005_allClicks') 
   refSpecSp: !r c('Pm-OnAxis','Pm_ALL') 
 ---
