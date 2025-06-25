@@ -1,1 +1,0 @@
-Acoustic studies are too large to store on GitHub. For SAEL members, they can be accessed on the Don here (Z:\ANALYSIS\CalCurCEAS_2024\Sperm_whales\AcousticStudies) or on GCP here (pifsc-1-detector-output/drifting_recorder/2_Acoustic-Studies/2024_CalCurCEAS)
