@@ -1,0 +1,1 @@
+Binaries and databases for each drift are too large to store on GitHub. These can be found locally on the DON here "Z:/ANALYSIS/CalCurCEAS_2024/Sperm_whales", and on the cloud here "pifsc-1-detector-output/drifting_recorder/1_Binaries-Database/2024_CalCurCEAS"
