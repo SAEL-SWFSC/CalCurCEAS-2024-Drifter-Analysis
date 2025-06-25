@@ -15,13 +15,14 @@
 # refSpecSp: !r c('Pm-OnAxis','Pm_ALL') 
 
 # MODIFY THESE
-path_out <- 'F:/Pm_AcousticStudies/23 reprocess//'
+path_out <- 'C:\\Users\\kourtney.burger\\Desktop\\CalCurCEAS_022_rerun'
 mission <- 'CalCurCEAS'
-drift <- '023'
+drift <- '022'
 channelStr <- 'ch1'
 channelNum <- 1
-path_pg <- 'F:/Binaries/rerun/CalCurCEAS_023/' 
-path_dets <- 'F:/Pm_AcousticStudies/23 reprocess/'
+path_pg <- 'C:\\Users\\kourtney.burger\\Desktop\\CalCurCEAS_022_rerun\\CalCurCEAS_022\\' 
+path_dets <- 'C:\\Users\\kourtney.burger\\Desktop\\CalCurCEAS_022_rerun'
+path_to_refSpec <- "../_code/refSpec"
 
 
 # RUN THIS
