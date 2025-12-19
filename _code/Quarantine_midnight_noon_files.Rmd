@@ -1,0 +1,122 @@
+---
+title: "Quarantine_midnight_noon_files"
+author: "Anne Simonis"
+date: "2025-12-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Description
+
+This document identifies Pamguard binary files whose filenames contain timestamps in the time windows **00:00–00:59** and **12:00–12:59** (based on the `yyyymmdd_HHmmss` pattern embedded in each filename).
+
+The script recursively scans a specified source directory for files with extensions `.pgdf`, `.pgdx`, and `.pgnf`, extracts the timestamp from each filename, and determines whether the file falls within the specified time windows.
+
+By default, the script runs in **dry-run mode**, meaning it reports which files *would* be moved without modifying the filesystem. When dry-run mode is disabled, matching files are moved into a designated quarantine directory for later review or deletion.
+
+```{r}
+
+# ---- USER SETTINGS ----
+
+source_dir <- "D:/Beaked_whale_data/Binaries_orig/CalCurCEAS_027/" #source folder
+target_dir <- "D:/Beaked_whale_data/Binaries_orig/CalCurCEAS_027_quarantine" #quarantine folder
+dry_run    <- FALSE   # TRUE = preview only, FALSE = actually move files
+
+# Create target directory if needed (only when not dry run)
+if (!dry_run && !dir.exists(target_dir)) {
+  dir.create(target_dir, recursive = TRUE)
+}
+
+#List all files recursively
+all_files <- list.files(
+  path = source_dir,
+  recursive = TRUE,
+  full.names = TRUE,
+  no.. = TRUE
+)
+
+# Filter by extension (case-insensitive) to only keep binary files 
+allowed_ext <- c("pgdf", "pgdx", "pgnf")
+exts <- tolower(tools::file_ext(all_files))
+keep_idx <- exts %in% allowed_ext
+files <- all_files[keep_idx]
+
+cat("Found", length(all_files), "files under source_dir;",
+    sum(keep_idx), "match allowed extensions.\n\n")
+
+#Extract datetime from filename
+#Identify timestamp token (yyyymmdd_HHmmss) from filename
+# This will find the first occurrence of 8digits_6digits in the base filename.
+bn <- basename(files)
+
+ts_tokens <- rep(NA_character_, length(bn))
+hit <- grepl("\\d{8}_\\d{6}", bn)
+ts_tokens[hit] <- sub(".*(\\d{8}_\\d{6}).*$", "\\1", bn[hit])
+
+datetimes <- as.POSIXct(ts_tokens, format = "%Y%m%d_%H%M%S", tz = "UTC")
+
+ok <- !is.na(datetimes)
+files <- files[ok]
+datetimes <- datetimes[ok]
+
+hours   <- as.integer(format(datetimes, "%H"))
+minutes <- as.integer(format(datetimes, "%M"))
+
+select_idx <- (hours == 0 | hours == 12) & minutes >= 0 & minutes <= 59
+files_to_move <- files[select_idx]
+datetimes_to_move <- datetimes[select_idx]
+
+cat("Identified", length(files_to_move), "files matching the time windows (00:00–00:59 or 12:00–12:59).\n\n")
+
+if (length(files_to_move) == 0) {
+  cat("No files to move — nothing else to do.\n")
+} else {
+  
+  # ---- PREPARE DEST PATHS (PRESERVE RELATIVE SUBDIRS) ----
+  # Compute relative paths from source_dir to each file
+  rel_paths <- substr(files_to_move, nchar(normalizePath(source_dir, winslash = "/")) + 2, nchar(files_to_move))
+  
+  # If source_dir ends with slash handling:
+  rel_paths[substr(rel_paths, 1, 1) == "/"] <- substring(rel_paths[substr(rel_paths, 1, 1) == "/"], 2)
+  
+  dest_paths <- file.path(normalizePath(target_dir, winslash = "/"), rel_paths)
+  dest_dirs  <- dirname(dest_paths)
+  
+  # DRY RUN OUTPUT
+  if (dry_run) {
+    cat("DRY RUN — the following files WOULD be moved (source -> destination):\n\n")
+    df_preview <- data.frame(
+      source = files_to_move,
+      destination = dest_paths,
+      timestamp = format(datetimes_to_move, "%Y-%m-%d %H:%M:%S"),
+      stringsAsFactors = FALSE
+    )
+    print(head(df_preview, 50)) # print up to first 50; adjust if you want all
+    cat("\nTotal:", nrow(df_preview), "files would be moved.\n")
+    
+  } else {
+    # Create destination directories if they don't exist
+    unique_dirs <- unique(dest_dirs)
+    for (d in unique_dirs) {
+      if (!dir.exists(d)) dir.create(d, recursive = TRUE, showWarnings = FALSE)
+    }
+    
+    # Perform moves and track failures
+    moved <- logical(length(files_to_move))
+    for (i in seq_along(files_to_move)) {
+      # If file already exists at destination, file.rename will fail (we could overwrite if desired)
+      moved[i] <- file.rename(files_to_move[i], dest_paths[i])
+      if (!moved[i]) {
+        warning("Failed to move: ", files_to_move[i], " -> ", dest_paths[i])
+      }
+    }
+    
+    cat(sum(moved), "of", length(files_to_move), "files moved to", target_dir, "\n")
+  }
+}
+```
+
+## I
