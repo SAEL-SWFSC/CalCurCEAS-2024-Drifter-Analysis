@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,18 +34,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4670abfac73e3528f418f8f1090c11ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-c537e1bb270ade77a803f8d52ccc87d4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-4670abfac73e3528f418f8f1090c11ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3fe749c4c491919af384cf3d21cd6cd9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-232e4682cfd531faa731a02c7ded2837.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-3fe749c4c491919af384cf3d21cd6cd9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -263,7 +264,8 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/NOAA_logo.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/NOAA_logo.svg" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/NOAA_logo.svg" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://nmfs-ost.github.io/PAM_National_NMFS_Network" title="NMFS National Passive Acoustic Monitoring Network" class="quarto-navigation-tool px-1" aria-label="NMFS National Passive Acoustic Monitoring Network"><i class="bi bi-globe"></i></a>
@@ -392,8 +394,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pamguard" id="toc-pamguard" class="nav-link active" data-scroll-target="#pamguard">PAMGuard</a></li>
-  <li><a href="#pampal" id="toc-pampal" class="nav-link" data-scroll-target="#pampal">PAMpal</a></li>
+  <li><a href="#pamguard---detection-binaries-databases" id="toc-pamguard---detection-binaries-databases" class="nav-link active" data-scroll-target="#pamguard---detection-binaries-databases">PAMGuard - Detection Binaries &amp; Databases</a></li>
+  <li><a href="#pampal---acoustic-studies" id="toc-pampal---acoustic-studies" class="nav-link" data-scroll-target="#pampal---acoustic-studies">PAMpal - Acoustic Studies</a></li>
+  <li><a href="#event-summaries" id="toc-event-summaries" class="nav-link" data-scroll-target="#event-summaries">Event Summaries</a></li>
+  <li><a href="#manual-validation" id="toc-manual-validation" class="nav-link" data-scroll-target="#manual-validation">Manual Validation</a></li>
   <li><a href="#status" id="toc-status" class="nav-link" data-scroll-target="#status"><em>Status:</em></a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/edit/main/content/SpermWhales.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/content/SpermWhales.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -421,17 +425,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="pamguard" class="level3">
-<h3 class="anchored" data-anchor-id="pamguard">PAMGuard</h3>
-<p>Full bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. Each drifting acoustic recorder was run independently through PAMGuard. Click information was saved in binary files, while settings for the configuration were saved in a database. PAMGuard settings files can be found <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/SpermWhales/Pamguard/PamguardSettings">here</a>.</p>
+<section id="pamguard---detection-binaries-databases" class="level3">
+<h3 class="anchored" data-anchor-id="pamguard---detection-binaries-databases">PAMGuard - Detection Binaries &amp; Databases</h3>
+<p>Full bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. Each drifting acoustic recorder was run independently through PAMGuard. Click information was saved in binary files, while settings for the configuration were saved in a database.</p>
+<ul>
+<li><p>PAMGuard settings files can be found <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/SpermWhales/Pamguard/PamguardSettings">here</a>.</p></li>
+<li><p>Binaries and databases can be found locally on the DON here “Z:/ANALYSIS/CalCurCEAS_2024/Sperm_whales”, and on the cloud here “pifsc-1-detector-output/drifting_recorder/1_Binaries-Database/2024_CalCurCEAS”</p></li>
+</ul>
 </section>
-<section id="pampal" class="level3">
-<h3 class="anchored" data-anchor-id="pampal">PAMpal</h3>
-<p>Following PAMGuard processing, <a href="https://taikisan21.github.io/PAMpal/">PAMpal</a> was used to create acoustic studies for all detections in each drift (code can be found in the _code folder of this repo and is called “CalCurCEAS_drift-specific_Pm.Rmd”). The next step was to create event summary reports for all potential sperm whale click events (code here - <em>input later</em>). Lastly, these events will be manually validated as sperm whale click events or noise, and those validated detections will be used for further analysis.</p>
+<section id="pampal---acoustic-studies" class="level3">
+<h3 class="anchored" data-anchor-id="pampal---acoustic-studies">PAMpal - Acoustic Studies</h3>
+<p>Following PAMGuard processing, <a href="https://taikisan21.github.io/PAMpal/">PAMpal</a> was used to create acoustic studies for all detections in each drift. Using the binaries and databases from PAMGuard, the <a href="Analysis/blob/main/_code/PM_analysis/CalCurCEAS_drift-specific_Pm.Rmd">CalCurCEAS_drift-specific_Pm.Rmd R code</a> was run for each drift, resulting in 4 .RData objects per drift.</p>
+<ul>
+<li>Acoustic studies can be found locally on the DON here “Z:/ANALYSIS/CalCurCEAS_2024/Sperm_whales/AcousticStudies”, and on the cloud here “pifsc-1-detector-output/drifting_recorder/2_Acoustic-Studies/2024_CalCurCEAS”</li>
+</ul>
+</section>
+<section id="event-summaries" class="level3">
+<h3 class="anchored" data-anchor-id="event-summaries">Event Summaries</h3>
+<p>The next step was to create event summary reports for all potential sperm whale click events. The <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/_code/PM_analysis/SpermWhale_event_summary_report_drifter.Rmd">SpermWhale_event_summary_report_drifter.rmd</a> and <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/_code/PM_analysis/run_report.R">run_report.R</a> code were run to produce an HTML of each potential event and an event table.</p>
+<p>Event summary reports can be found;</p>
+<ul>
+<li><p>Locally on the DON <a href="Z:\ANALYSIS\CalCurCEAS_2024\Sperm_whales\EventSummaries">here</a></p></li>
+<li><p>On the cloud <a href="pifsc-1-detector-output/drifting_recorder/3_Event-Summaries/2024_CalCurCEAS">here</a></p></li>
+<li><p>On this GitHub repo <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/SpermWhales/EventSummaries">here</a></p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/PMEventSummary.PNG" class="img-fluid figure-img"></p>
+<figcaption>Sperm whale event summary report</figcaption>
+</figure>
+</div>
+</section>
+<section id="manual-validation" class="level3">
+<h3 class="anchored" data-anchor-id="manual-validation">Manual Validation</h3>
+<p>Lastly, these events will be manually validated as sperm whale click events or noise, and those validated detections will be used for further analysis.</p>
 </section>
 <section id="status" class="level3">
 <h3 class="anchored" data-anchor-id="status"><em>Status:</em></h3>
-<p><em>All data has been processed in PAMGuard. PAMpal analysis in progress</em></p>
+<p><em>All data pre-processing has been completed and the event summaries are ready to be manually validated</em></p>
 
 
 </section>
@@ -501,13 +532,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
