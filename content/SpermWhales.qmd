@@ -33,8 +33,12 @@ Event summary reports can be found;
 
 ### Manual Validation
 
-Lastly, these events will be manually validated as sperm whale click events or noise, and those validated detections will be used for further analysis.
+These events were manually validated (Jenny Trickey, PIFSC) using a Triton-based approach similar to methods used during the [Adrift project](https://sael-swfsc.github.io/adrift-analysis-methods/content/ToothedWhales/SpermWhales-Detection.html), except without decimation. This manual analysis provides a list of wav files that contain sperm whales.
+
+Summary reports (above) were unhelpful for unvalidated sperm whale events (the relatively generic spectral features of sperm whales made filtering the large numbers of false positives very difficult). The summary reports may be helpful if run post-classification and validation.
+
+Links to datasets can be found on this github repository ([SpermWhale_DASBR, CalCurCEAS data locations readme](https://github.com/jtrickey86/SpermWhale_DASBR?tab=readme-ov-file#swfsc-calcurceas-2024-dasbr-notes-and-data-locations)).
 
 ### *Status:*
 
-*All data pre-processing has been completed and the event summaries are ready to be manually validated*
+*All data have been manually validated and will be analyzed by the SPACIOUS team for use in developing a statistical approach for population assessment using slowly moving PAM platforms (including drifting acoustic recorders).*
