@@ -1,0 +1,100 @@
+---
+title: "Copy_midnight_noon_wav_files"
+author: "Anne Simonis"
+date: "2025-12-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Description
+
+This document identifies `.wav` files whose filenames contain a 12-digit timestamp in the format `yymmddHHMMSS` (e.g., `241122143602`, as in `7939.241122143602.wav`). The script recursively scans a specified source directory and its subdirectories, extracts and parses the embedded timestamp from each filename, and selects files recorded during the time windows **00:00–00:59** or **12:00–12:59**.
+
+Matching files are **copied** into a separate output directory while preserving the original subdirectory structure to avoid filename collisions. The workflow supports a **dry-run mode**, which reports the files that would be copied without modifying the filesystem, allowing results to be reviewed safely before execution.
+
+Detectors can then be run in Pamguard on only the noon and midnight files.
+
+```{r}
+library(data.table)
+
+# ---- USER SETTINGS ----
+source_dir <- "E:/CalCurCEAS_018/"
+target_dir <- "E:/CalCurCEAS_018_noon-and-midnight-files/"
+dry_run    <- FALSE  # TRUE = preview only, FALSE = actually copy files
+tz_use <- "UTC"     # change to Sys.timezone() if timestamps are local time
+
+
+# ---- FIND WAV FILES RECURSIVELY ----
+paths <- list.files(source_dir, recursive = TRUE, full.names = TRUE, no.. = TRUE)
+paths <- paths[tolower(tools::file_ext(paths)) == "wav"]
+
+dt <- data.table(
+  path = paths,
+  base = basename(paths)
+)
+
+# ---- EXTRACT 12-DIGIT TOKEN (yymmddHHMMSS) ----
+# Safer pattern: token must be right before .wav (allows things like 7939.241122143602.wav)
+dt[, token := fifelse(
+  grepl("\\d{12}\\.wav$", tolower(base)),
+  sub(".*(\\d{12})\\.wav$", "\\1", tolower(base)),
+  NA_character_
+)]
+
+
+# ---- PARSE TOKEN ----
+dt[, datetime := as.POSIXct(token, format = "%y%m%d%H%M%S", tz = tz_use)]
+
+# Report/skip anything that didn't parse
+bad <- dt[is.na(datetime)]
+if (nrow(bad) > 0) {
+  cat("Skipping", nrow(bad), "wav files (missing/invalid 12-digit timestamp). Examples:\n")
+  print(bad[1:min(.N, 10), .(path, base)])
+  cat("\n")
+}
+
+dt <- dt[!is.na(datetime)]
+
+# ---- FILTER WINDOWS: 00:00–00:59 OR 12:00–12:59 ----
+dt[, `:=`(
+  hour   = as.integer(format(datetime, "%H")),
+  minute = as.integer(format(datetime, "%M"))
+)]
+
+match <- dt[(hour %in% c(0L, 12L)) & (minute <= 59L)]
+
+cat("Matched", nrow(match), "wav files in 00:00–00:59 or 12:00–12:59.\n")
+
+if (nrow(match) == 0) {
+  cat("Nothing to copy.\n")
+} else {
+  # ---- BUILD DEST PATHS (preserve relative dirs) ----
+  src_norm <- normalizePath(source_dir, winslash = "/", mustWork = FALSE)
+  match[, path_norm := normalizePath(path, winslash = "/", mustWork = FALSE)]
+  match[, rel := substring(path_norm, nchar(src_norm) + 2)]
+  match[, dest := file.path(target_dir, rel)]
+
+  if (dry_run) {
+    cat("\nDRY RUN — would copy (showing up to 50):\n")
+    print(match[1:min(.N, 50),
+                .(source = path,
+                  destination = dest,
+                  timestamp = format(datetime, "%Y-%m-%d %H:%M:%S"))])
+    cat("\nTotal:", nrow(match), "files would be copied.\n")
+  } else {
+    # Create destination directories
+    for (d in unique(dirname(match$dest))) {
+      if (!dir.exists(d)) dir.create(d, recursive = TRUE, showWarnings = FALSE)
+    }
+
+    # Copy safely: overwrite = FALSE
+    ok <- mapply(file.copy, match$path, match$dest,
+                 MoreArgs = list(overwrite = FALSE), USE.NAMES = FALSE)
+
+    cat(sum(ok), "of", length(ok), "files copied to", target_dir, "\n")
+  }
+}
+```

@@ -1,0 +1,96 @@
+---
+title: "Format_bw_PACM"
+editor: visual
+---
+
+# Intro
+
+All beaked whale acoustic detection data must be formatted for the NOAA Fisheries Passive Acoustic Reporting System (PARS; <https://passiveacoustics.fisheries.noaa.gov/pars>). All detection data will ultimately be shared on the Passive Acoustic Cetacean Map (PACM; <https://passiveacoustics.fisheries.noaa.gov/pacm/>).
+
+PARS Data Submission Guide available here: <https://passiveacoustics.fisheries.noaa.gov/pars/guide/>
+
+This document takes Pamguard database files (.sqlite3) and generates data files ready to submit to PARs.
+
+```{r study-definition}
+
+#load required packages
+library(dplyr)
+library(RSQLite)
+library(here)
+library(stringr)
+library(tidyverse)
+
+source(here('_code','functions','read_pg_events.R'))
+
+#define folder that contains all Pamguard databases
+DBList<-dir(path='F:/Beaked_whale_data/Databases',pattern='*.sqlite3',full.names = TRUE)
+
+#define folder that contains all GPS data
+baseEffort<-'C:/Users/annes/Documents/Github/CalCurCEAS-2024-Drifter-Analysis/_data/GPS/DASBRs'
+
+#define folder to save the data
+savedir<-'F:/Beaked_whale_data/PACM/'
+dir.create(savedir)
+
+#Detection Data Codes
+DetTemplate<-read_csv('F:/Beaked_whale_data/PACM/templates/detectiondata.csv',col_types = cols(.default = col_double()))
+DetTemplate$deployment_code<-as.character()
+DetTemplate$analysis_organization_code<-'SWFSC'
+DetTemplate$analysis_sound_source_codes[1]<-list(list("GOBW","BWBB","BWMC","BW43","BWMS","BWC","UNBW"))
+DetTemplate$analysis_sample_rate_khz<-384
+DetTemplate$analysis_min_frequency_khz<-10
+DetTemplate$analysis_max_frequency_khz<-384/2
+DetTemplate$analysis_processing_code<-'Post-Processed'
+DetTemplate$analysis_protocol_reference<-'SWFSC beaked whale protocol' 
+DetTemplate$detector_code<-'PAMGuard Odontocete Detector'
+DetTemplate$detector_version<-'2.02.14'
+DetTemplate$detection_start_datetime<-as.Date.POSIXct(DetTemplate$detection_start_datetime)
+DetTemplate$detection_end_datetime<-as.Date.POSIXct(DetTemplate$detection_end_datetime)
+DetTemplate$detection_sound_source_code<-as.character(DetTemplate$detection_sound_source_code)
+DetTemplate$detection_call_type_code<-'OD_CLICK_FM'
+DetTemplate$detection_result_code<-'DETECTED' #other options include POSSIBLY_DETECTED and NOT_DETECTED
+DetTemplate$localization_method_code<-'2D_TDOA'
+
+```
+
+## Process Pamguard Databases
+
+```{r process-PG-db}
+
+#Read Event data from all databases
+bwData <- purrr::map_dfr(DBList, read_pg_events)
+
+#Convert timestamp columns & calculate duration
+bwData <- bwData |>
+  dplyr::mutate(
+    detection_start_datetime = as.POSIXct(UTC, format="%Y-%m-%d %H:%M:%OS", tz = "UTC"),
+    detection_end_datetime = as.POSIXct(EventEnd, format="%Y-%m-%d %H:%M:%OS", tz = "UTC"), 
+    detection_effort_secs=round(as.numeric(as.duration(interval(detection_start_datetime,detection_end_datetime))))
+  )
+
+#Rename columns to expected names for PACM
+bwData <- bwData %>%
+  rename('detection_sound_source_code' = 'eventType') %>% 
+  dplyr::select('deployment_code','detection_start_datetime','detection_end_datetime','detection_effort_secs','detection_sound_source_code')
+  
+#Re-code species names
+bwData <- bwData %>%
+  mutate(species = recode(species,
+                          "BB" = "BWBB",
+                          "ZC" = "GOBW",
+                          "BW39V"="BWMC",
+                          "BW37V"="BWMC",
+                          "BW43" = "BW43",
+                          "MS" = "BWMS"
+  ))
+DetTemplate<-rbind(DetTemplate,bwData)
+
+#Save Detections 
+write.csv(bwData,file=here('_data','BeakedWhales','PACM','Detections.csv'))
+```
+
+Questions:
+
+1.  What is the appropriate DetTemplate\$analysis_protocol_reference? (Simonis et al 2020?)
+2.  Why are there two Stejneger's beaked whale codes? BWMS and STBWH
+3.  Confirm: In Detections sheet, Analysis_start_datetime and analysis_end_datetime will be repeating values for each drift (i.e. All Drift 1 will have the same analysis start and end times)
