@@ -50,6 +50,7 @@ website:
         contents: 
           - content/BeakedWhales.qmd
           - content/SpermWhales.qmd
+          - content/BaleenWhales.qmd
       - section: "Results"
         contents: 
           - content/Effort.qmd
