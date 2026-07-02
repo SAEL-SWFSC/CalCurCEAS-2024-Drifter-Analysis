@@ -181,6 +181,17 @@
     ]
   },
   {
+    "objectID": "content/BaleenWhales.html",
+    "href": "content/BaleenWhales.html",
+    "title": "Baleen Whales",
+    "section": "",
+    "text": "DeepAcoustics\nFull bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. The recordings were first decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMGuard settings files can be found here.\n\n\nEvents (work in progress)\nAn experienced analyst (Anne Simonis) manually scanned the click data in PAMGuard Viewer Mode and created beaked whale events.\n\n\nStatus:\nAll data has been processed in PAMGuard. Manual event annotation on hold until contract awarded.",
+    "crumbs": [
+      "Analysis",
+      "Baleen Whales"
+    ]
+  },
+  {
     "objectID": "content/BeakedWhales.html",
     "href": "content/BeakedWhales.html",
     "title": "Beaked Whales",
