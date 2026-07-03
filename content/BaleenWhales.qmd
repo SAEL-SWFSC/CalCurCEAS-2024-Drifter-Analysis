@@ -5,7 +5,7 @@ editor: visual
 
 ### DeepAcoustics
 
-Full bandwidth recordings were run through a suite of click detectors in [PAMGuard](https://www.pamguard.org/) to pull out clicks corresponding to specific frequency bands. The recordings were first decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMGuard settings files can be found [here](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/BeakedWhales/Pamguard/PamgaurdSettings).
+Recordings were decimated to 400Hz to train a deep learning multi-call classifier in DeepAcoustics (a Matlab-based software)
 
 ### Events (work in progress)
 
