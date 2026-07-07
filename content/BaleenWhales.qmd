@@ -3,14 +3,14 @@ title: "Baleen Whales"
 editor: visual
 ---
 
-### DeepAcoustics
+### Summary
 
-Recordings were decimated to 400Hz to train a deep learning multi-call classifier in DeepAcoustics (a Matlab-based software)
+[DeepAcoustics](https://github.com/Ocean-Science-Analytics/DeepAcoustics), a deep learning software package was used to develop and test models for blue, fin and sei whale calls. Two model architechtures were tested: TinyYOLO and ResNet. Ultimately a TinyYOLO model was selected to run novel data to detect blue whale A, B, and D calls, fin whale 20Hz, and 40Hz calls, and sei whale downsweeps. Those detections where then binned hourly by call type and manually validated for accuracy.
 
-### Events (work in progress)
+### DeepAcoustics 
 
-An experienced analyst (Anne Simonis) manually scanned the click data in PAMGuard Viewer Mode and created beaked whale events.
+DeepAcoustics, an open-access deep learning software package, was used to train and test multi-class, low-frequency detection networks for baleen whale calls. Training data were compiled from multiple recording platforms across the North Pacific, including sonobuoys, cabled observatories, high-frequency acoustic recording packages (HARPs), and drifting acoustic recorders (including CalCurCEAS data). Calls from blue whales (A, B, and D calls), fin whales (20 Hz and 40 Hz calls), and sei whales (downsweeps) were first annotated in Raven Pro and then used as training data, along with representative noise samples from the same recordings.\
 
-### *Status:*
+Multiple TinyYOLO and ResNet models were developed and tested to compare performance across target baleen whale call types. Based on these comparisons, a TinyYOLO model was selected to process CalCurCEAS deployments that were not used during model training. Model outputs from these novel deployments were then used to generate hourly binned presence/absence summaries by call type. A subset of these outputs was manually reviewed to evaluate model accuracy and support call-type-specific performance assessment.
 
-*All data has been processed in PAMGuard. Manual event annotation on hold until contract awarded.*
+undefined
