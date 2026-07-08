@@ -433,13 +433,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="summary" class="level3">
-<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
 <p><a href="https://github.com/Ocean-Science-Analytics/DeepAcoustics">DeepAcoustics</a>, a deep learning software package, was used to develop and test detection models for blue, fin, and sei whale calls. Two model architectures within DeepAcoustics were evaluated: TinyYOLO and ResNet. Based on model performance, a TinyYOLO model was selected to process CalCurCEAS deployments that were not used during training. The selected model was used to detect blue whale A, B, and D calls, fin whale 20 Hz and 40 Hz calls, and sei whale downsweeps.</p>
 <p>Model detections were binned by hour and call type to create standardized presence/absence summaries for each drifting recorder deployment. A subset of these hourly outputs was manually reviewed to evaluate model accuracy and compare performance among call types. Call-count summaries were also generated during processing, but interpretation of count-based metrics will depend on model performance and the availability of finalized validated datasets.</p>
 </section>
-<section id="deepacoustics" class="level3">
-<h3 class="anchored" data-anchor-id="deepacoustics">DeepAcoustics</h3>
+<section id="deepacoustics" class="level2">
+<h2 class="anchored" data-anchor-id="deepacoustics">DeepAcoustics</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/DeepAcoustics_ScreenShot.png" class="img-fluid figure-img" alt="An image of DeepAcoustic, an open-access software, on startup of the program"></p>
@@ -450,22 +450,22 @@ ul.task-list li input[type="checkbox"] {
 <p>Multiple TinyYOLO and ResNet models were developed and tested to compare performance across the target baleen whale call types. Based on these comparisons, a TinyYOLO model was selected to process CalCurCEAS deployments that were not used during training. Recordings from these novel deployments were decimated to 400 Hz prior to model processing, and the resulting model outputs were converted into standardized Raven-style selection tables.</p>
 <p>Model outputs were then processed in R to generate hourly binned summaries by deployment and call type. These hourly products included presence/absence indicators for each target call type and provided the primary unit for comparing automated detections with manual review results. Call-count summaries were also generated during processing, but interpretation of count-based metrics will depend on model performance and the availability of finalized validated datasets.</p>
 </section>
-<section id="manual-validation" class="level3">
-<h3 class="anchored" data-anchor-id="manual-validation">Manual Validation</h3>
-<p>A manual validation workflow was developed to evaluate TinyYOLO model performance on novel CalCurCEAS data. For each deployment, approximately 20% of the available audio files were selected for review using a stratified random sampling approach that distributed review effort across the full deployment period. This approach helped avoid concentrating manual review in only one portion of a deployment and allowed model performance to be assessed across different times, locations, and acoustic conditions.</p>
-<p>The selected files were manually reviewed to confirm whether each target call type was present or absent within each hourly bin. These reviewed outputs were then compared against the original TinyYOLO detections to evaluate model performance by deployment and call type. This validation step provided a way to assess which call types could be summarized reliably using hourly presence/absence and which required more cautious interpretation.</p>
+<section id="manual-validation" class="level2">
+<h2 class="anchored" data-anchor-id="manual-validation">Manual Validation</h2>
+<p>Manual review was conducted at two levels: detection-level validation and hourly presence/absence validation.</p>
+<p>For detection-level validation, approximately 20% of each deployment was selected for manual review to evaluate model accuracy. Review files were selected using a stratified random sampling approach that distributed review effort across the full deployment period. This helped avoid concentrating manual review in only one portion of a deployment and allowed model performance to be assessed across different times, locations, and acoustic conditions.</p>
+<p>During detection-level review, the original TinyYOLO Raven selection tables were manually corrected. False positive detections were deleted, missed calls were added, and mislabeled detections were corrected to the appropriate call type. These reviewed selection tables were then compared with the original model outputs to evaluate model performance and identify true positives, false positives, and false negatives by call type.</p>
+<p>In addition to detection-level validation, model outputs were also binned by hour and manually reviewed for call-type presence/absence. Each hourly bin was checked to confirm whether the target call types were present. When a call type was missing from the hourly summary but present in the data, it was added. This produced a manually reviewed hourly presence/absence dataset by deployment and call type.</p>
 </section>
 <section id="model-performance-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="model-performance-metrics">Model Performance Metrics</h2>
-<p>Model performance was evaluated at the hourly-bin level by comparing automated TinyYOLO detections with manual review results. For each call type, hourly bins were classified as true positives, false positives, false negatives, or true negatives based on agreement between model output and manual review.</p>
-<p>These comparisons were used to calculate performance metrics such as precision, recall/sensitivity, specificity, and overall agreement by call type and deployment. Precision was used to describe how often model-positive hourly bins were confirmed during manual review, while recall/sensitivity described how often manually confirmed positive hours were detected by the model. Specificity described how well the model identified hourly bins without the target call type.</p>
-<p>Initial results suggest that model performance varied by call type. Blue whale A/B calls and fin whale 20 Hz calls performed best and are likely the strongest candidates for broader presence/absence summaries. Other call types, including blue whale D calls, sei whale downsweeps, and especially fin whale 40 Hz calls, showed weaker performance and may require additional manual review, cautious interpretation, or exclusion from some quantitative summaries.</p>
+<p>Model performance was evaluated by comparing the original TinyYOLO outputs with the manually reviewed results. At the detection level, reviewed Raven selection tables were used to identify false positives, missed calls, and mislabeled detections. These comparisons provided information on how well the model detected and classified individual call events within the manually reviewed subset of each deployment.</p>
+<p>Model performance was also evaluated at the hourly-bin level by comparing automated TinyYOLO presence/absence outputs with the manually reviewed hourly presence/absence results. For each call type, hourly bins were classified as true positives, false positives, false negatives, or true negatives based on agreement between model output and manual review.</p>
+<p>These comparisons were used to calculate performance metrics such as precision, recall/sensitivity, specificity, and overall agreement by call type and deployment. Precision described how often model-positive hourly bins were confirmed during manual review, while recall/sensitivity described how often manually confirmed positive hours were detected by the model. Specificity described how well the model identified hourly bins without the target call type.</p>
 </section>
 <section id="code-and-reproducible-products" class="level2">
 <h2 class="anchored" data-anchor-id="code-and-reproducible-products">Code and Reproducible Products</h2>
 <p>R scripts were developed to clean and combine DeepAcoustics outputs across deployments, remove or flag unusable recording periods, incorporate deployment and recovery metadata where needed, summarize detections by hour and call type, and generate exploratory figures. These scripts will be uploaded to the repository as analysis files are finalized.</p>
-<p>At this stage, the baleen whale DeepAcoustics workflow provides a standardized framework for moving from raw automated detections to reviewed, hourly binned detection products. Ongoing work includes finalizing recovered analysis files, confirming validated datasets, refining call-type-specific reporting decisions, and uploading reproducible R code used to generate tables, plots, and figures.</p>
-<p>undefined</p>
 
 
 </section>
