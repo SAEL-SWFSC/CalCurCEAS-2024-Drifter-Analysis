@@ -3,13 +3,13 @@ title: "Baleen Whales"
 editor: visual
 ---
 
-### Summary
+## Summary
 
 [DeepAcoustics](https://github.com/Ocean-Science-Analytics/DeepAcoustics), a deep learning software package, was used to develop and test detection models for blue, fin, and sei whale calls. Two model architectures within DeepAcoustics were evaluated: TinyYOLO and ResNet. Based on model performance, a TinyYOLO model was selected to process CalCurCEAS deployments that were not used during training. The selected model was used to detect blue whale A, B, and D calls, fin whale 20 Hz and 40 Hz calls, and sei whale downsweeps.
 
 Model detections were binned by hour and call type to create standardized presence/absence summaries for each drifting recorder deployment. A subset of these hourly outputs was manually reviewed to evaluate model accuracy and compare performance among call types. Call-count summaries were also generated during processing, but interpretation of count-based metrics will depend on model performance and the availability of finalized validated datasets.
 
-### DeepAcoustics 
+## DeepAcoustics 
 
 ![DeepAcoustics Interface](images/DeepAcoustics_ScreenShot.png){fig-alt="An image of DeepAcoustic, an open-access software, on startup of the program" fig-align="center"}
 
@@ -19,7 +19,7 @@ Multiple TinyYOLO and ResNet models were developed and tested to compare perform
 
 Model outputs were then processed in R to generate hourly binned summaries by deployment and call type. These hourly products included presence/absence indicators for each target call type and provided the primary unit for comparing automated detections with manual review results. Call-count summaries were also generated during processing, but interpretation of count-based metrics will depend on model performance and the availability of finalized validated datasets.
 
-### Manual Validation
+## Manual Validation
 
 Manual review was conducted at two levels: detection-level validation and hourly presence/absence validation.
 
