@@ -21,8 +21,10 @@ By default, the script runs in **dry-run mode**, meaning it reports which files 
 
 # ---- USER SETTINGS ----
 
-source_dir <- "D:/Beaked_whale_data/Binaries_orig/CalCurCEAS_027/" #source folder
-target_dir <- "D:/Beaked_whale_data/Binaries_orig/CalCurCEAS_027_quarantine" #quarantine folder
+source_dir <- "D:/Beaked_whale_data/Binaries/CalCurCEAS_016/" #source folder
+target_dir <- "D:/Beaked_whale_data/Binaries/CalCurCEAS_016_quarantine"
+
+#quarantine folder
 dry_run    <- FALSE   # TRUE = preview only, FALSE = actually move files
 
 # Create target directory if needed (only when not dry run)
@@ -117,6 +119,7 @@ if (length(files_to_move) == 0) {
     cat(sum(moved), "of", length(files_to_move), "files moved to", target_dir, "\n")
   }
 }
+
 ```
 
 ## I
