@@ -49,9 +49,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-bd6cbec3f8f1e47e65ea724175f0138c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-8aaea1cc776fd55558d06debd1d5c78a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-bd6cbec3f8f1e47e65ea724175f0138c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3ab3233c9c3113396c7524351f110b95.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-84839adb8e130ac3934da03dd79d7c75.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-3ab3233c9c3113396c7524351f110b95.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -405,9 +405,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pamguard" id="toc-pamguard" class="nav-link active" data-scroll-target="#pamguard">PAMGuard</a></li>
-  <li><a href="#events-work-in-progress" id="toc-events-work-in-progress" class="nav-link" data-scroll-target="#events-work-in-progress">Events (work in progress)</a></li>
-  <li><a href="#status" id="toc-status" class="nav-link" data-scroll-target="#status"><em>Status:</em></a></li>
+  <li><a href="#beaked-whale-detection-and-classification" id="toc-beaked-whale-detection-and-classification" class="nav-link active" data-scroll-target="#beaked-whale-detection-and-classification">Beaked Whale Detection and Classification</a></li>
+  <li><a href="#ziphius-abundance-estimation" id="toc-ziphius-abundance-estimation" class="nav-link" data-scroll-target="#ziphius-abundance-estimation">Ziphius Abundance Estimation</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/edit/main/content/BeakedWhales.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/content/BeakedWhales.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -434,17 +433,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="pamguard" class="level3">
-<h3 class="anchored" data-anchor-id="pamguard">PAMGuard</h3>
-<p>Full bandwidth recordings were run through a suite of click detectors in <a href="https://www.pamguard.org/">PAMGuard</a> to pull out clicks corresponding to specific frequency bands. The recordings were first decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMGuard settings files can be found <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/BeakedWhales/Pamguard/PamgaurdSettings">here</a>.</p>
+<section id="beaked-whale-detection-and-classification" class="level2">
+<h2 class="anchored" data-anchor-id="beaked-whale-detection-and-classification">Beaked Whale Detection and Classification</h2>
+<p>Beaked whale echolocation clicks were detected and classified using methods developed for previous DASBR surveys in the California Current (Keating et al.&nbsp;2018; Simonis et al.&nbsp;2020; Rankin et al.&nbsp;2024).</p>
+<ul>
+<li><p>Acoustic recordings were decimated to 288 kHz and processed using the Click Detector module in <a href="https://www.pamguard.org/">PAMGuard</a> (v. 2.02.14).</p></li>
+<li><p>Recordings were high-pass filtered at 10 kHz, with an additional 80 kHz whitening filter applied to flatten the ambient noise spectrum.</p></li>
+<li><p>Click detection was performed on the upper hydrophone using a 12 dB signal-to-noise ratio threshold. PAMGuard settings for each deployment are available <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/BeakedWhales/Pamguard/PamgaurdSettings">here</a>.</p></li>
+<li><p>An experienced analyst (AES) manually reviewed detections in PAMGuard Viewer Mode and identified beaked whale acoustic events based on click frequency, waveform and spectral characteristics, inter-click interval, and angle of arrival.</p></li>
+<li><p>Acoustic events were defined as three or more echolocation clicks from a given species within 2 or more minutes.</p></li>
+<li><p>Events were classified to species or signal type using established characteristics of beaked whale echolocation signals (Simonis et al.&nbsp;2020). Species included goose-beaked (<em>Ziphius cavirostris</em>), Baird’s (<em>Berardius bairdii</em>), Stejneger’s (<em>Mesoplodon stejnegeri</em>), Hubbs’ (<em>Mesoplodon carlhubbsi</em>), and ginkgo-toothed (<em>Mesoplodon ginkgodens</em>) beaked whales, along with unidentified and possible beaked whale categories.</p></li>
+<li><p>All events were classified twice by the same analyst for quality control.</p></li>
+</ul>
 </section>
-<section id="events-work-in-progress" class="level3">
-<h3 class="anchored" data-anchor-id="events-work-in-progress">Events (work in progress)</h3>
-<p>An experienced analyst (Anne Simonis) manually scanned the click data in PAMGuard Viewer Mode and created beaked whale events.</p>
-</section>
-<section id="status" class="level3">
-<h3 class="anchored" data-anchor-id="status"><em>Status:</em></h3>
-<p><em>All data has been processed in PAMGuard. Manual event annotation on hold until contract awarded.</em></p>
+<section id="ziphius-abundance-estimation" class="level2">
+<h2 class="anchored" data-anchor-id="ziphius-abundance-estimation">Ziphius Abundance Estimation</h2>
+<p>Density and abundance of goose-beaked whales (<em>Ziphius cavirostris</em>) were estimated using the group-based acoustic point-transect approach developed by Barlow et al.&nbsp;(2021).</p>
+<ul>
+<li><p>Acoustic effort was divided into two-minute snapshots and each snapshot was classified according to the presence or absence of goose-beaked whale echolocation clicks.</p></li>
+<li><p>Effective detection area was estimated from the distribution of vertical arrival angles using the maximum simulated likelihood approach of Barlow et al.&nbsp;(2021).</p></li>
+<li><p>Acoustic availability was estimated from observed encounter durations using the mark-recapture approach of Barlow et al.&nbsp;(2021).</p></li>
+<li><p>Group density was estimated from the proportion of snapshots containing detections, corrected for effective survey area and acoustic availability.</p></li>
+<li><p>Group density was converted to animal density using a mean group size of 1.9, and abundance was estimated by extrapolating density across the study area.</p></li>
+<li><p>Uncertainty in the components of the abundance estimate was incorporated using a Bayesian estimation procedure.</p></li>
+</ul>
+<p>Code associated with the abundance analysis is available in the <a href="https://github.com/asimonis/Beaked-Whale-Abundance-Estimation">Beaked Whale Abundance Estimation repository</a>.</p>
+<!--# Consider pseudoreplication issues from continuous recordings -->
+<!--# Add group size citation (RoboJay uses 1.9) -->
+<!--# Add description of study area (RoboJay shows 1057925 km^2) -->
 
 
 </section>

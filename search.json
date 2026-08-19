@@ -251,7 +251,29 @@
     "href": "content/BeakedWhales.html",
     "title": "Beaked Whales",
     "section": "",
-    "text": "PAMGuard\nFull bandwidth recordings were run through a suite of click detectors in PAMGuard to pull out clicks corresponding to specific frequency bands. The recordings were first decimated to 288kHz. A 10kHz high pass filter was applied to the decimated recordings and then passed to the click detector. PAMGuard settings files can be found here.\n\n\nEvents (work in progress)\nAn experienced analyst (Anne Simonis) manually scanned the click data in PAMGuard Viewer Mode and created beaked whale events.\n\n\nStatus:\nAll data has been processed in PAMGuard. Manual event annotation on hold until contract awarded.",
+    "text": "Beaked whale echolocation clicks were detected and classified using methods developed for previous DASBR surveys in the California Current (Keating et al. 2018; Simonis et al. 2020; Rankin et al. 2024).\n\nAcoustic recordings were decimated to 288 kHz and processed using the Click Detector module in PAMGuard (v. 2.02.14).\nRecordings were high-pass filtered at 10 kHz, with an additional 80 kHz whitening filter applied to flatten the ambient noise spectrum.\nClick detection was performed on the upper hydrophone using a 12 dB signal-to-noise ratio threshold. PAMGuard settings for each deployment are available here.\nAn experienced analyst (AES) manually reviewed detections in PAMGuard Viewer Mode and identified beaked whale acoustic events based on click frequency, waveform and spectral characteristics, inter-click interval, and angle of arrival.\nAcoustic events were defined as three or more echolocation clicks from a given species within 2 or more minutes.\nEvents were classified to species or signal type using established characteristics of beaked whale echolocation signals (Simonis et al. 2020). Species included goose-beaked (Ziphius cavirostris), Baird’s (Berardius bairdii), Stejneger’s (Mesoplodon stejnegeri), Hubbs’ (Mesoplodon carlhubbsi), and ginkgo-toothed (Mesoplodon ginkgodens) beaked whales, along with unidentified and possible beaked whale categories.\nAll events were classified twice by the same analyst for quality control.",
+    "crumbs": [
+      "Analysis",
+      "Beaked Whales"
+    ]
+  },
+  {
+    "objectID": "content/BeakedWhales.html#beaked-whale-detection-and-classification",
+    "href": "content/BeakedWhales.html#beaked-whale-detection-and-classification",
+    "title": "Beaked Whales",
+    "section": "",
+    "text": "Beaked whale echolocation clicks were detected and classified using methods developed for previous DASBR surveys in the California Current (Keating et al. 2018; Simonis et al. 2020; Rankin et al. 2024).\n\nAcoustic recordings were decimated to 288 kHz and processed using the Click Detector module in PAMGuard (v. 2.02.14).\nRecordings were high-pass filtered at 10 kHz, with an additional 80 kHz whitening filter applied to flatten the ambient noise spectrum.\nClick detection was performed on the upper hydrophone using a 12 dB signal-to-noise ratio threshold. PAMGuard settings for each deployment are available here.\nAn experienced analyst (AES) manually reviewed detections in PAMGuard Viewer Mode and identified beaked whale acoustic events based on click frequency, waveform and spectral characteristics, inter-click interval, and angle of arrival.\nAcoustic events were defined as three or more echolocation clicks from a given species within 2 or more minutes.\nEvents were classified to species or signal type using established characteristics of beaked whale echolocation signals (Simonis et al. 2020). Species included goose-beaked (Ziphius cavirostris), Baird’s (Berardius bairdii), Stejneger’s (Mesoplodon stejnegeri), Hubbs’ (Mesoplodon carlhubbsi), and ginkgo-toothed (Mesoplodon ginkgodens) beaked whales, along with unidentified and possible beaked whale categories.\nAll events were classified twice by the same analyst for quality control.",
+    "crumbs": [
+      "Analysis",
+      "Beaked Whales"
+    ]
+  },
+  {
+    "objectID": "content/BeakedWhales.html#ziphius-abundance-estimation",
+    "href": "content/BeakedWhales.html#ziphius-abundance-estimation",
+    "title": "Beaked Whales",
+    "section": "Ziphius Abundance Estimation",
+    "text": "Ziphius Abundance Estimation\nDensity and abundance of goose-beaked whales (Ziphius cavirostris) were estimated using the group-based acoustic point-transect approach developed by Barlow et al. (2021).\n\nAcoustic effort was divided into two-minute snapshots and each snapshot was classified according to the presence or absence of goose-beaked whale echolocation clicks.\nEffective detection area was estimated from the distribution of vertical arrival angles using the maximum simulated likelihood approach of Barlow et al. (2021).\nAcoustic availability was estimated from observed encounter durations using the mark-recapture approach of Barlow et al. (2021).\nGroup density was estimated from the proportion of snapshots containing detections, corrected for effective survey area and acoustic availability.\nGroup density was converted to animal density using a mean group size of 1.9, and abundance was estimated by extrapolating density across the study area.\nUncertainty in the components of the abundance estimate was incorporated using a Bayesian estimation procedure.\n\nCode associated with the abundance analysis is available in the Beaked Whale Abundance Estimation repository.",
     "crumbs": [
       "Analysis",
       "Beaked Whales"
