@@ -1,0 +1,511 @@
+---
+title: "CalCurCEAS_bw_results"
+editor: visual
+---
+
+# CalCurCEAS Beaked Whale Results
+
+This code generates summary figures and tables along with relevant text for the beaked whale detections from the 2024 NOAA CalCurCEAS survey.
+
+## Load libraries 
+
+```{r}
+#| warning: false
+library(ggplot2)
+library(dplyr)
+library(purrr)
+library(marmap)       
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(ggnewscale)
+library(here)
+library(lubridate)
+library(readxl)
+library(PAMpal)
+library(ggrepel)
+library(ggspatial)
+```
+
+## Define Settings
+
+```{r}
+# Worksheet containing deployment details
+deployment_info_file<-'C:/Users/annes/Documents/Github/TethysSAEL/Deployment Worksheets/DeploymentDetails.xlsx'
+  
+# Folder containing all *_GPS.csv files
+gps_dir <- here('_data','GPS','DASBRs')
+
+# Path containing acoustic study of all beaked whale detections
+AcousticStudy_File <-'F:/Beaked_whale_data/AcousticStudy/CombinedStudy_03_EventswRecordingsGPS.rds'
+
+# Output folder for the map files
+output_dir <- here('_figs','beaked_whales')
+
+# Output filename (without extension — both .png and .pdf will be saved)
+output_filename <- "CalCurCEAS_bw_"
+
+# Map dimensions in inches
+map_width  <- 6
+map_height <- 10
+
+# Bathymetry resolution in arc-minutes (1 = finest/slowest, 4 = coarser/faster)
+# For a publication figure, 1 is recommended. Use 4 for quick previews.
+bathy_resolution <- 1
+
+# Depth contour levels to draw (metres, negative = below sea level)
+contour_depths <- c(-100, -500, -1000, -5000)
+```
+
+## Import Drift Track Data
+
+```{r}
+deployment_info <- read_excel(deployment_info_file,sheet='deployDetails') %>%
+ filter(Status=="Complete", Project=="CalCurCEAS")%>%
+  mutate(Deployment = as.integer(DeploymentID),
+    # Match deployment numbers to the DriftName values in the GPS files
+    DriftName = sprintf("CalCurCEAS_%03d", DeploymentID),
+    # Treat all deployment/recovery times as UTC
+    # Recode "NA" text to real NA before converting to numeric,
+    # then treat the numeric serial as a UTC datetime
+    Deployment_Date = as.POSIXct(
+      as.numeric(na_if(Deployment_Date, "NA")) * 86400,
+      origin = '1899-12-30', tz = 'UTC'),
+    Recovery_Date = as.POSIXct(
+      as.numeric(na_if(Recovery_Date, "NA")) * 86400,
+      origin = '1899-12-30', tz = 'UTC'),
+    Deployment_Latitude = as.numeric(Deployment_Latitude),
+    Deployment_Longitude = as.numeric(Deployment_Longitude),
+    Recovery_Latitude = as.numeric(Recovery_Latitude),
+    Recovery_Longitude = as.numeric(Recovery_Longitude)) %>%
+  dplyr::select(
+    DriftName,
+    Deployment_Date,
+    Deployment_Latitude,
+    Deployment_Longitude,
+    Recovery_Date,
+    Recovery_Latitude,
+    Recovery_Longitude)
+```
+
+## Import Beaked Whale Detection Data
+
+```{r}
+#Load in saved Acoustic Study with GPS data
+data<-readRDS(AcousticStudy_File)
+detections<-getClickData(data)
+
+detections <- detections %>%
+  mutate(species = recode(species,
+                          BB = "BBWH",
+                          Bb = "BBWH",
+                          ZC = "GOBW",
+                          BW37V="HUBW",
+                          BW43 = "GTBW",
+                          MS = "STBWH",
+                          BW="UNME"))
+#Remove detections of "BW?", "Oo" and "Other"
+detections<-detections %>%
+  filter(!species %in% c('BW?','?BW','Oo','Other'))
+
+table(detections$species)
+
+#Create DriftName variables
+detections<-detections %>%
+  mutate(DriftName = sub("\\..*$", "", eventId))
+
+#Save the mean lat/lon for each event
+detections_summary <- detections %>%
+  group_by(eventId) %>%
+  summarise(
+    Longitude = mean(Longitude, na.rm = TRUE),
+    Latitude  = mean(Latitude, na.rm = TRUE),
+    UTC       = mean(UTC, na.rm = TRUE),
+    species   = first(species),
+    DriftName = unique(DriftName),
+    .groups = "drop"
+  )
+
+detections_hourly <- detections_summary %>%
+  mutate(hour_bin = floor_date(UTC, unit = "12 hour")) %>%
+  group_by(species, DriftName,hour_bin) %>%
+  summarise(
+    Longitude = mean(Longitude, na.rm = TRUE),
+    Latitude  = mean(Latitude, na.rm = TRUE),
+    UTC       = hour_bin[1],
+    n_events  = n(),
+    .groups = "drop"
+  ) %>%
+  dplyr::select(species, Longitude, Latitude, UTC, n_events)
+
+#Divide species into separate dataframes for plotting
+BB_summary<-dplyr::filter(detections_hourly,species=="BBWH")
+ZC_summary<-dplyr::filter(detections_hourly,species=="GOBW")
+MC_MS_MG_summary<-dplyr::filter(detections_hourly,species %in% c("HUBW","STBWH","GTBW"))
+
+```
+
+## Import Drift Track Data
+
+```{r}
+# Load all GPS tracks
+gps_files <- list.files(gps_dir, pattern = "_GPS\\.csv$",
+                        full.names = TRUE, ignore.case = TRUE)
+
+gps_all <- map_dfr(gps_files, function(f) {
+  df <- read.csv(f, stringsAsFactors = FALSE, colClasses = c(DeviceId = "character"))
+  df$utc_parsed <- as.POSIXct(df$UTC, tz = "UTC", format = "%Y-%m-%d %H:%M:%S")
+  df
+}) %>%
+  filter(!is.na(Latitude), !is.na(Longitude)) %>%
+  arrange(DriftName, utc_parsed)
+
+
+#######################
+##Restrict to times that instruments were deployed 
+gps_all <- gps_all %>%
+  inner_join(
+    deployment_info %>%
+      dplyr::select(DriftName, Deployment_Date, Recovery_Date),
+    by = "DriftName"
+  ) %>%
+  filter(utc_parsed >= Deployment_Date, utc_parsed <= Recovery_Date) %>%
+  dplyr::select(-Deployment_Date, -Recovery_Date)
+
+```
+
+## **Define Map Settings**
+
+```{r}
+# ── COMPUTE MAP EXTENT ────────────────────────────────────────────────────────
+# Auto-expand bounding box to include all GPS and detection points
+all_lons <- c(gps_all$Longitude)
+all_lats <- c(gps_all$Latitude)
+
+lon_pad <- diff(range(all_lons, na.rm = TRUE)) * 0.1
+lat_pad <- diff(range(all_lats, na.rm = TRUE)) * 0.1
+
+xlim <- range(all_lons, na.rm = TRUE) + c(-lon_pad, lon_pad)
+ylim <- range(all_lats, na.rm = TRUE) + c(-lat_pad, lat_pad)
+
+# ── BATHYMETRY ────────────────────────────────────────────────────────────────
+
+message("Fetching bathymetry data (this may take a moment)...")
+
+bathy_raw <- getNOAA.bathy(
+  lon1 = xlim[1], lon2 = xlim[2],
+  lat1 = ylim[1], lat2 = ylim[2],
+  resolution = bathy_resolution,
+  keep = TRUE       # cache locally so re-runs are fast
+)
+
+# Convert to data frame for ggplot
+bathy_df <- fortify(bathy_raw) %>%
+  rename(lon = x, lat = y, depth = z)
+
+# ── COASTLINE ─────────────────────────────────────────────────────────────────
+
+coastline <- ne_countries(scale = "medium", returnclass = "sf")
+states    <- ne_states(country = c("United States of America", "Canada", "Mexico"),
+                       returnclass = "sf")
+
+# ── START / END MARKERS ───────────────────────────────────────────────────────
+
+track_endpoints <- gps_all %>%
+  group_by(DriftName, DeviceName) %>%
+  summarise(
+    start_lon = first(Longitude), start_lat = first(Latitude),
+    end_lon   = last(Longitude),  end_lat   = last(Latitude),
+    start_time = min(utc_parsed),
+    end_time = max(utc_parsed),
+    .groups = "drop"
+  )
+
+track_endpoints_single <- track_endpoints %>%
+  group_by(DriftName) %>%
+  summarise(
+    # Take start position from whichever device started earliest
+    start_lon  = start_lon[which.min(start_time)],
+    start_lat  = start_lat[which.min(start_time)],
+    start_time = min(start_time, na.rm = TRUE),
+    
+    # Take end position from whichever device ended latest
+    end_lon  = end_lon[which.max(end_time)],
+    end_lat  = end_lat[which.max(end_time)],
+    end_time = max(end_time, na.rm = TRUE),
+    
+    .groups = "drop"
+  )
+
+# Reshape to long format so one geom handles both
+endpoints_long <- bind_rows(
+  track_endpoints_single %>% transmute(DriftName, lon = start_lon, lat = start_lat,
+                                point_type = "Start (▲)"),
+  track_endpoints_single %>% transmute(DriftName, lon = end_lon,   lat = end_lat,
+                                point_type = "End (▽)")
+)
+
+# ── COLOUR PALETTE FOR SPECIES ────────────────────────────────────────────────
+
+species_codes <- sort(unique(detections$species))
+
+# Colorblind-friendly palette (expand automatically if > 8 species)
+base_palette <- c(
+  "#E69F00", # orange
+  "#CC79A7", # reddish purple,
+  "#F0E442", # yellow
+  "#D55E00", # vermillion
+  "#009E73"  # bluish green
+)
+
+myColors<-c("#22A884FF","#440154FF","#E69F00","#7AD151FF","#FDE725FF", "#414487FF")
+
+species_colors <- setNames(
+  # colorRampPalette(base_palette)(length(species_codes)),
+  #viridis(length(species_codes)),
+  myColors,
+  species_codes
+)
+
+```
+
+## Map Plots
+
+## BaseMap
+
+Adjust code below so that a base map is made, and then species-specific detections, legends, and titles are plotted for each species map
+
+```{r}
+
+p <- ggplot() +
+  # --- Bathymetry fill ---
+  geom_raster(data = bathy_df %>% filter(depth < 0),
+              aes(x = lon, y = lat, fill = depth),
+              interpolate = TRUE) +
+  scale_fill_gradientn(
+    name   = "Depth (m)",
+    colours = c("#08306b", "#08519c", "#2171b5", "#4292c6",
+                "#6baed6", "#9ecae1", "#c6dbef", "#deebf7"),
+    values  = scales::rescale(c(-6000, -4000, -2000, -1000, -500, -200, -50, 0)),
+    limits  = c(min(bathy_df$depth, na.rm = TRUE), 0),
+    guide   = guide_colorbar(barheight = 8, barwidth = 0.8,
+                             title.position = "top")
+  ) +
+  
+  # --- Bathymetric contours ---
+  geom_contour(data = bathy_df %>% filter(depth < 0),
+               aes(x = lon, y = lat, z = depth),
+               breaks    = contour_depths,
+               colour    = "white",
+               linewidth = 0.2,
+               alpha     = 0.5) +
+  
+  # --- Land (filled) ---
+  geom_sf(data = coastline, fill = "grey75", colour = "grey40",
+          linewidth = 0.3, inherit.aes = FALSE) +
+  geom_sf(data = states,    fill = NA,       colour = "grey55",
+          linewidth = 0.2, inherit.aes = FALSE) +
+  new_scale_fill() +
+  # --- Drift tracks ---
+  geom_path(data = gps_all,
+            aes(x = Longitude, y = Latitude, group = interaction(DriftName,DeviceName)),
+            colour    = "white",
+            linewidth = 0.6,
+            alpha     = 0.8) +
+  
+  # --- Start / end triangles ---
+  geom_point(data = endpoints_long,
+             aes(x = lon, y = lat, shape = point_type),
+             colour = "white",
+             fill   = "black",
+             size   = 2,
+             stroke = 0.5) +
+  scale_shape_manual(name   = "Track endpoint",
+                     values = c("Start (▲)" = 24,   # filled up-triangle
+                                "End (▽)"   = 22)) + # filled down-triangle
+  # ---Drift Number labels ---
+  geom_text_repel(data = endpoints_long %>% filter(point_type == "Start (▲)") %>%
+                    mutate(drift_num = as.integer(gsub(".*_(\\d+)$", "\\1", DriftName))),
+                  aes(x = lon, y = lat, label = drift_num),
+                  colour   = "white",
+                  size     = 3,
+                  max.overlaps = Inf,
+                  box.padding=.5,
+                  point.padding =.3,
+                  fontface = "bold")+
+  
+  # --- Map extent ---
+  coord_sf(xlim = xlim, ylim = ylim, expand = FALSE) +
+  
+  # --- scale bar ---
+  annotation_scale(
+    location = "bl",  # bottom-left; also "br", "tl", "tr"
+    width_hint=0.25,
+    unit_category = "metric",
+    style = "bar", # or "ticks"
+    line_col = "white",
+    text_col = "white",
+    bar_cols = c("white", "black")
+  )
+  
+```
+
+### Goose-beaked whales
+
+```{r}
+
+plot_detections<-ZC_summary
+
+FullMap_ZC <- p +
+  
+  # --- Detection points (colored by species) ---
+  geom_point(data = plot_detections %>% filter(!is.na(Latitude)),
+             aes(x = Longitude, y = Latitude,
+                 fill = species),    # changed from colour to fill
+             shape  = 21,
+             colour = "black",              # fixed outline colour
+             size   = 2,
+             alpha  = 0.7) +
+  scale_fill_manual(name   = "Species code",    # changed from scale_colour_manual
+                    values = species_colors) +
+
+  # --- Labels & theme ---
+  labs(
+    title    = "Drifting Recorder Tracks and Acoustic Detections",
+    subtitle =  " Goose-beaked whale acoustic events",
+    x = "Longitude",
+    y = "Latitude"
+  ) +
+  theme_bw(base_size = 11) +
+  theme(
+    panel.grid       = element_line(colour = "grey30", linewidth = 0.2,
+                                    linetype = "dotted"),
+    legend.position  = "right",
+    legend.box       = "vertical",
+    legend.key       = element_rect(fill = "grey20"),
+    legend.background = element_rect(fill = "grey20", colour = NA),
+    legend.text      = element_text(colour = "white"),
+    legend.title     = element_text(colour = "white", face = "bold"),
+    plot.background  = element_rect(fill = "white"),
+    axis.text        = element_text(size = 8)
+  )
+```
+
+### Baird's beaked whales
+
+```{r}
+
+plot_detections<-BB_summary
+
+FullMap_BB <- p +
+  
+  # --- Detection points (colored by species) ---
+  geom_point(data = plot_detections %>% filter(!is.na(Latitude)),
+             aes(x = Longitude, y = Latitude,
+                 fill = species),    # changed from colour to fill
+             shape  = 21,
+             colour = "black",              # fixed outline colour
+             size   = 2,
+             alpha  = 0.7) +
+  scale_fill_manual(name   = "Species code",    # changed from scale_colour_manual
+                    values = species_colors) +
+  
+  # --- Labels & theme ---
+  labs(
+    title    = "Drifting Recorder Tracks and Acoustic Detections",
+    subtitle =  " Goose-beaked whale acoustic events",
+    x = "Longitude",
+    y = "Latitude"
+  ) +
+  theme_bw(base_size = 11) +
+  theme(
+    panel.grid       = element_line(colour = "grey30", linewidth = 0.2,
+                                    linetype = "dotted"),
+    legend.position  = "right",
+    legend.box       = "vertical",
+    legend.key       = element_rect(fill = "grey20"),
+    legend.background = element_rect(fill = "grey20", colour = NA),
+    legend.text      = element_text(colour = "white"),
+    legend.title     = element_text(colour = "white", face = "bold"),
+    plot.background  = element_rect(fill = "white"),
+    axis.text        = element_text(size = 8)
+  )
+```
+
+### Hubbs', Stejneger's, and Gingko-toothed beaked whales
+
+```{r}
+
+plot_detections<- MC_MS_MG_summary
+
+FullMap_BW <- p +
+  
+  # --- Detection points (colored by species) ---
+  geom_point(data = plot_detections %>% filter(!is.na(Latitude)),
+             aes(x = Longitude, y = Latitude,
+                 fill = species),    # changed from colour to fill
+             shape  = 21,
+             colour = "black",              # fixed outline colour
+             size   = 2,
+             alpha  = 0.7) +
+  scale_fill_manual(name   = "Species code",    # changed from scale_colour_manual
+                    values = species_colors) +
+  
+  # --- Labels & theme ---
+  labs(
+    title    = "Drifting Recorder Tracks and Acoustic Detections",
+    subtitle =  " Goose-beaked whale acoustic events",
+    x = "Longitude",
+    y = "Latitude"
+  ) +
+  theme_bw(base_size = 11) +
+  theme(
+    panel.grid       = element_line(colour = "grey30", linewidth = 0.2,
+                                    linetype = "dotted"),
+    legend.position  = "right",
+    legend.box       = "vertical",
+    legend.key       = element_rect(fill = "grey20"),
+    legend.background = element_rect(fill = "grey20", colour = NA),
+    legend.text      = element_text(colour = "white"),
+    legend.title     = element_text(colour = "white", face = "bold"),
+    plot.background  = element_rect(fill = "white"),
+    axis.text        = element_text(size = 8)
+  )
+```
+
+## Save map figures
+
+```{r}
+
+dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+
+#Goose-beaked whale
+png_path <- file.path(output_dir, paste0(output_filename, "FullMap_ZC.png"))
+pdf_path <- file.path(output_dir, paste0(output_filename, "FullMap_ZC.pdf"))
+
+ggsave(png_path, plot = FullMap_ZC, width = map_width, height = map_height,
+       dpi = 300, bg = "white")
+ggsave(pdf_path, plot = FullMap_ZC, width = map_width, height = map_height,
+device = cairo_pdf)
+
+#Baird's beaked whale
+png_path <- file.path(output_dir, paste0(output_filename, "FullMap_BB.png"))
+pdf_path <- file.path(output_dir, paste0(output_filename, "FullMap_BB.pdf"))
+
+ggsave(png_path, plot = FullMap_BB, width = map_width, height = map_height,
+       dpi = 300, bg = "white")
+ggsave(pdf_path, plot = FullMap_BB, width = map_width, height = map_height,
+       device = cairo_pdf)
+
+#Other beaked whales
+png_path <- file.path(output_dir, paste0(output_filename, "FullMap_BW.png"))
+pdf_path <- file.path(output_dir, paste0(output_filename, "FullMap_BW.pdf"))
+
+ggsave(png_path, plot = FullMap_BW, width = map_width, height = map_height,
+       dpi = 300, bg = "white")
+ggsave(pdf_path, plot = FullMap_BW, width = map_width, height = map_height,
+       device = cairo_pdf)
+
+
+
+```
