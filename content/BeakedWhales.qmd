@@ -11,13 +11,13 @@ Beaked whale echolocation clicks were detected and classified using methods deve
 
 - Recordings were high-pass filtered at 10 kHz, with an additional 80 kHz whitening filter applied to flatten the ambient noise spectrum.
 
-- Click detection was performed on the upper hydrophone using a 12 dB signal-to-noise ratio threshold. PAMGuard settings for each deployment are available [here](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/BeakedWhales/Pamguard/PamgaurdSettings).
+- Click detection was performed on the upper hydrophone (HTI-92-WB) using a 12 dB signal-to-noise ratio threshold. PAMGuard settings for each deployment are available [here](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_data/BeakedWhales/PamgaurdSettings).
 
 - An experienced analyst (AES) manually reviewed detections in PAMGuard Viewer Mode and identified beaked whale acoustic events based on click frequency, waveform and spectral characteristics, inter-click interval, and angle of arrival.
 
 - Acoustic events were defined as three or more echolocation clicks from a given species within 2 or more minutes.
 
-- Events were classified to species or signal type using established characteristics of beaked whale echolocation signals (Simonis et al. 2020). Species included goose-beaked (*Ziphius cavirostris*), Baird's (*Berardius bairdii*), Stejneger's (*Mesoplodon stejnegeri*), Hubbs' (*Mesoplodon carlhubbsi*), and ginkgo-toothed (*Mesoplodon ginkgodens*) beaked whales, along with unidentified and possible beaked whale categories.
+- Events were classified to species or signal type using established characteristics of beaked whale echolocation signals (see \[Beaked Whale ID Guide\](BeakedWhales-IDGuide.qmd)). Species acoustically identified in this study included goose-beaked (*Ziphius cavirostris*), Baird's (*Berardius bairdii*), Stejneger's (*Mesoplodon stejnegeri*), Hubbs' (*Mesoplodon carlhubbsi*), and ginkgo-toothed (*Mesoplodon ginkgodens*) beaked whales, along with unidentified and possible beaked whale categories.
 
 - All events were classified twice by the same analyst for quality control.
 
