@@ -55,7 +55,7 @@ website:
       - section: "Results"
         contents: 
           - content/Effort.qmd
-          - content/BeakedWhale-Results.qmd
+          - content/BeakedWhales-Results.qmd
         
 format:
   html:

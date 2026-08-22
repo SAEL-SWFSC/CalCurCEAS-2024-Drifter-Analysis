@@ -17,7 +17,14 @@ Beaked whale echolocation clicks were detected and classified using methods deve
 
 - Acoustic events were defined as three or more echolocation clicks from a given species within 2 or more minutes.
 
-- Events were classified to species or signal type using established characteristics of beaked whale echolocation signals (see [Beaked Whale ID Guide](BeakedWhales-IDGuide.qmd)). Species acoustically identified in this study included goose-beaked (*Ziphius cavirostris*), Baird's (*Berardius bairdii*), Stejneger's (*Mesoplodon stejnegeri*), Hubbs' (*Mesoplodon carlhubbsi*), and ginkgo-toothed (*Mesoplodon ginkgodens*) beaked whales, along with unidentified and possible beaked whale categories.
+- Events were classified to species or signal type using established characteristics of beaked whale echolocation signals (see [Beaked Whale ID Guide](BeakedWhales-IDGuide.qmd)). Species acoustically identified in this study included
+
+  - goose-beaked whale (*Ziphius cavirostris*)
+  - Baird's beaked whale (*Berardius bairdii*)
+  - Stejneger's beaked whale (*Mesoplodon stejnegeri*)
+  - Hubbs' beaked whale (*Mesoplodon carlhubbsi*)
+  - ginkgo-toothed beaked whales (*Mesoplodon ginkgodens*)
+  - unidentified and possible beaked whale categories
 
 - All events were classified twice by the same analyst for quality control.
 
