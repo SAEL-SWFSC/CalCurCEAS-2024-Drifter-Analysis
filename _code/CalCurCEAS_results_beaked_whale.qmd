@@ -7,7 +7,7 @@ editor: visual
 
 This code generates summary figures and tables along with relevant text for the beaked whale detections from the 2024 NOAA CalCurCEAS survey.
 
-## Load libraries 
+## Load libraries
 
 ```{r}
 #| warning: false
@@ -289,7 +289,7 @@ p <- ggplot() +
     values  = scales::rescale(c(-6000, -4000, -2000, -1000, -500, -200, -50, 0)),
     limits  = c(min(bathy_df$depth, na.rm = TRUE), 0),
     guide   = guide_colorbar(barheight = 8, barwidth = 0.8,
-                             title.position = "top")
+                             title.position = "top",order=3)
   ) +
   
   # --- Bathymetric contours ---
@@ -322,7 +322,8 @@ p <- ggplot() +
              stroke = 0.5) +
   scale_shape_manual(name   = "Track endpoint",
                      values = c("Start (▲)" = 24,   # filled up-triangle
-                                "End (▽)"   = 22)) + # filled down-triangle
+                                "End (▽)"   = 22),
+                     guide = guide_legend(order = 2)) + # filled down-triangle
   # ---Drift Number labels ---
   geom_text_repel(data = endpoints_long %>% filter(point_type == "Start (▲)") %>%
                     mutate(drift_num = as.integer(gsub(".*_(\\d+)$", "\\1", DriftName))),
@@ -367,12 +368,13 @@ FullMap_ZC <- p +
              size   = 2,
              alpha  = 0.7) +
   scale_fill_manual(name   = "Species code",    # changed from scale_colour_manual
-                    values = species_colors) +
+                    values = species_colors,
+                    guide = guide_legend(order = 1)) +
 
   # --- Labels & theme ---
   labs(
     title    = "Drifting Recorder Tracks and Acoustic Detections",
-    subtitle =  " Goose-beaked whale acoustic events",
+    subtitle =  " Goose-beaked whale",
     x = "Longitude",
     y = "Latitude"
   ) +
@@ -408,12 +410,14 @@ FullMap_BB <- p +
              size   = 2,
              alpha  = 0.7) +
   scale_fill_manual(name   = "Species code",    # changed from scale_colour_manual
-                    values = species_colors) +
+                    values = species_colors,
+                    guide = guide_legend(order = 1)) +
+  
   
   # --- Labels & theme ---
   labs(
     title    = "Drifting Recorder Tracks and Acoustic Detections",
-    subtitle =  " Goose-beaked whale acoustic events",
+    subtitle =  "Baird's beaked whale",
     x = "Longitude",
     y = "Latitude"
   ) +
@@ -449,12 +453,14 @@ FullMap_BW <- p +
              size   = 2,
              alpha  = 0.7) +
   scale_fill_manual(name   = "Species code",    # changed from scale_colour_manual
-                    values = species_colors) +
+                    values = species_colors,
+                    guide = guide_legend(order = 1)) +
+  
   
   # --- Labels & theme ---
   labs(
     title    = "Drifting Recorder Tracks and Acoustic Detections",
-    subtitle =  " Goose-beaked whale acoustic events",
+    subtitle =  " Hubbs', Stejneger's and gingko-toothed beaked whale",
     x = "Longitude",
     y = "Latitude"
   ) +

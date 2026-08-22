@@ -49,11 +49,13 @@ website:
       - section: content/Overview.qmd
         contents: 
           - content/BeakedWhales.qmd
+          - content/BeakedWhales-IDGuide.qmd
           - content/SpermWhales.qmd
           - content/BaleenWhales.qmd
       - section: "Results"
         contents: 
           - content/Effort.qmd
+          - content/BeakedWhale-Results.qmd
         
 format:
   html:

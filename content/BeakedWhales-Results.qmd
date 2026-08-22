@@ -1,0 +1,24 @@
+---
+title: "Beaked Whale Results"
+editor: visual
+---
+
+## Beaked Whale Results
+
+Preliminary maps of beaked whale acoustic detections
+
+![](/_figs/beaked_whales/CalCurCEAS_bw_FullMap_ZC.png){width="224"} ![](/_figs/beaked_whales/CalCurCEAS_bw_FullMap_BB.png){width="224"} ![](/_figs/beaked_whales/CalCurCEAS_bw_FullMap_BW.png){width="224"}
+
+Add plots for
+
+- distribution of beaked whale detection angles
+
+- detection function
+
+- map of density estimates per drift
+
+Add tables of:
+
+- total detections for each species that also shows total duration & number of clicks
+
+- Estimated Ziphius population density per drift (See Table 3 in [Barlow et al 2021](https://onlinelibrary.wiley.com/doi/pdf/10.1111/mms.12872?casa_token=ER8_SO6RWa4AAAAA%3AGFq5A9-J9N4VvzGyANylmdNfKSXXAHe6hEQWnN_FUV-Ey82PIBfyN7DNjzH3YYB_weNaf5dqiI2eerg))
