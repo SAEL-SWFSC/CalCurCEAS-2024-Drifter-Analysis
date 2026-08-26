@@ -96,38 +96,81 @@ data<-readRDS(AcousticStudy_File)
 detections<-getClickData(data)
 
 detections <- detections %>%
-  mutate(species = recode(species,
-                          BB = "BBWH",
-                          Bb = "BBWH",
-                          ZC = "GOBW",
-                          BW37V="HUBW",
-                          BW43 = "GTBW",
-                          MS = "STBWH",
-                          BW="UNME"))
-#Remove detections of "BW?", "Oo" and "Other"
-detections<-detections %>%
-  filter(!species %in% c('BW?','?BW','Oo','Other'))
-
-table(detections$species)
+  mutate(
+    # Standardize existing species values
+    species_std = recode(
+      as.character(species),
+      BB    = "BBWH",
+      Bb    = "BBWH",
+      ZC    = "GOBW",
+      BW37V = "HUBW",
+      BW43  = "GTBW",
+      MS    = "STBWH",
+      BW    = "UNME",
+      .default = as.character(species)
+    ),
+    
+    # Standardize eventLabel values
+    species_from_label = recode(
+      as.character(eventLabel),
+      BB    = "BBWH",
+      Bb    = "BBWH",
+      ZC    = "GOBW",
+      BW37V = "HUBW",
+      BW43  = "GTBW",
+      MS    = "STBWH",
+      BW    = "UNME",
+      .default = as.character(eventLabel)
+    ),
+    
+    # Use species if available; otherwise fill from eventLabel
+    species = coalesce(species_std, species_from_label)
+  ) %>%
+  filter(
+    !species %in% c("BW?", "?BW", "Oo", "Other")
+  ) %>%
+  select(-species_std,-species_from_label)
 
 #Create DriftName variables
 detections<-detections %>%
   mutate(DriftName = sub("\\..*$", "", eventId))
 
-#Save the mean lat/lon for each event
+# Save summary information for each event
 detections_summary <- detections %>%
   group_by(eventId) %>%
   summarise(
     Longitude = mean(Longitude, na.rm = TRUE),
     Latitude  = mean(Latitude, na.rm = TRUE),
-    UTC       = mean(UTC, na.rm = TRUE),
-    species   = first(species),
-    DriftName = unique(DriftName),
+    
+    StartUTC = min(UTC, na.rm = TRUE),
+    EndUTC   = max(UTC, na.rm = TRUE),
+    UTC      = mean(UTC, na.rm = TRUE),
+    
+    Duration_sec = as.numeric(
+      difftime(EndUTC, StartUTC, units = "secs")
+    ),
+    
+    n_clicks = n(),
+    
+    species = paste(
+      unique(na.omit(as.character(species))),
+      collapse = ", "
+    ),
+    
+    DriftName = paste(
+      unique(na.omit(as.character(DriftName))),
+      collapse = ", "
+    ),
+    
     .groups = "drop"
+  ) %>%
+  mutate(
+    Duration_min = Duration_sec / 60
   )
 
+#Create 12-Hour summary for plotting
 detections_hourly <- detections_summary %>%
-  mutate(hour_bin = floor_date(UTC, unit = "12 hour")) %>%
+  mutate(hour_bin = floor_date(StartUTC, unit = "12 hour")) %>%
   group_by(species, DriftName,hour_bin) %>%
   summarise(
     Longitude = mean(Longitude, na.rm = TRUE),
@@ -174,7 +217,52 @@ gps_all <- gps_all %>%
 
 ```
 
-## **Define Map Settings**
+## Acoustic Detection Table
+
+Write table showing total acoustic detections for each species that also shows total duration & number of clicks
+
+```{r}
+
+species_summary_pub <- detections_summary %>%
+  group_by(species) %>%
+  summarise(
+    `Acoustic events` = n(),
+    `Total duration (min)` = round(sum(Duration_min, na.rm = TRUE), 0),
+    `Median event duration (min)` = round(median(Duration_min, na.rm = TRUE), 0),
+    `Total clicks` = sum(n_clicks, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    Species = recode(
+      species,
+      "BBWH"  = "*Berardius bairdii*",
+      "GOBW"  = "*Ziphius cavirostris*",
+      "HUBW"  = "*Mesoplodon carlhubbsi*",
+      "GTBW"  = "*Mesoplodon ginkgodens*",
+      "STBWH" = "*Mesoplodon stejnegeri*", 
+      "UNME"  = "Unidentified beaked whale"
+    )
+  ) %>%
+  select(
+    Species,
+    `Acoustic events`,
+    `Total duration (min)`,
+    `Median event duration (min)`,
+    `Total clicks`
+  ) %>%
+  arrange(Species)
+
+knitr::kable(
+  species_summary_pub,
+  caption = "Summary of beaked whale acoustic events by species.",
+  align = c("l", "c", "c", "c", "c"),
+  format.args = list(big.mark = ",")
+)
+```
+
+## Map Plots
+
+### Define Map Settings
 
 ```{r}
 # ── COMPUTE MAP EXTENT ────────────────────────────────────────────────────────
@@ -269,9 +357,7 @@ species_colors <- setNames(
 
 ```
 
-## Map Plots
-
-## BaseMap
+### BaseMap
 
 Adjust code below so that a base map is made, and then species-specific detections, legends, and titles are plotted for each species map
 
@@ -479,7 +565,7 @@ FullMap_BW <- p +
   )
 ```
 
-## Save map figures
+### Save map figures
 
 ```{r}
 
