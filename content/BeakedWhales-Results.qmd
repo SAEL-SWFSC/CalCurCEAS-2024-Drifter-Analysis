@@ -3,7 +3,7 @@ title: "Beaked Whale Results"
 editor: visual
 ---
 
-```{r}
+```{r, libraries}
 #| warning: false
 library(ggplot2)
 library(dplyr)
@@ -15,7 +15,7 @@ library(suncalc)
 
 # Beaked Whale Results
 
-```{r}
+```{r, ImportData}
 #Import beaked whale detections
 detections_summary<-readRDS(here('_data','BeakedWhales','Detections_summary.rds'))
 # Acoustic study of all beaked whale detections
