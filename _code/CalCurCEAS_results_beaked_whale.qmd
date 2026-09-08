@@ -37,7 +37,10 @@ deployment_info_file<-'C:/Users/annes/Documents/Github/TethysSAEL/Deployment Wor
 gps_dir <- here('_data','GPS','DASBRs')
 
 # Path containing acoustic study of all beaked whale detections
-AcousticStudy_File <-'F:/Beaked_whale_data/AcousticStudy/CombinedStudy_03_EventswRecordingsGPS.rds'
+AcousticStudy_File <-AcousticStudy_File <-here('_data','BeakedWhales','CombinedStudy_EventswRecordingsGPS.rds')
+
+#Path containing all beaked whale databases
+Database_dir <-'F:/Beaked_whale_data/Databases'
 
 # Output folder for the map files
 output_dir <- here('_figs','beaked_whales')
@@ -86,6 +89,38 @@ deployment_info <- read_excel(deployment_info_file,sheet='deployDetails') %>%
     Recovery_Date,
     Recovery_Latitude,
     Recovery_Longitude)
+
+saveRDS(deployment_info,here('_data','BeakedWhales','Detections_summary.rds'))
+```
+
+## GPS files
+
+```{r}
+# Load all GPS tracks
+gps_files <- list.files(gps_dir, pattern = "_GPS\\.csv$",
+                        full.names = TRUE, ignore.case = TRUE)
+
+gps_all <- map_dfr(gps_files, function(f) {
+  df <- read.csv(f, stringsAsFactors = FALSE, colClasses = c(DeviceId = "character"))
+  df$utc_parsed <- as.POSIXct(df$UTC, tz = "UTC", format = "%Y-%m-%d %H:%M:%S")
+  df
+}) %>%
+  filter(!is.na(Latitude), !is.na(Longitude)) %>%
+  arrange(DriftName, utc_parsed)
+
+
+#######################
+##Restrict to times that instruments were deployed 
+gps_all <- gps_all %>%
+  inner_join(
+    deployment_info %>%
+      dplyr::select(DriftName, Deployment_Date, Recovery_Date),
+    by = "DriftName"
+  ) %>%
+  filter(utc_parsed >= Deployment_Date, utc_parsed <= Recovery_Date) %>%
+  dplyr::select(-Deployment_Date, -Recovery_Date)
+
+
 ```
 
 ## Import Beaked Whale Detection Data
@@ -186,78 +221,40 @@ BB_summary<-dplyr::filter(detections_hourly,species=="BBWH")
 ZC_summary<-dplyr::filter(detections_hourly,species=="GOBW")
 MC_MS_MG_summary<-dplyr::filter(detections_hourly,species %in% c("HUBW","STBWH","GTBW"))
 
-```
-
-## Import Drift Track Data
-
-```{r}
-# Load all GPS tracks
-gps_files <- list.files(gps_dir, pattern = "_GPS\\.csv$",
-                        full.names = TRUE, ignore.case = TRUE)
-
-gps_all <- map_dfr(gps_files, function(f) {
-  df <- read.csv(f, stringsAsFactors = FALSE, colClasses = c(DeviceId = "character"))
-  df$utc_parsed <- as.POSIXct(df$UTC, tz = "UTC", format = "%Y-%m-%d %H:%M:%S")
-  df
-}) %>%
-  filter(!is.na(Latitude), !is.na(Longitude)) %>%
-  arrange(DriftName, utc_parsed)
-
-
-#######################
-##Restrict to times that instruments were deployed 
-gps_all <- gps_all %>%
-  inner_join(
-    deployment_info %>%
-      dplyr::select(DriftName, Deployment_Date, Recovery_Date),
-    by = "DriftName"
-  ) %>%
-  filter(utc_parsed >= Deployment_Date, utc_parsed <= Recovery_Date) %>%
-  dplyr::select(-Deployment_Date, -Recovery_Date)
+saveRDS(detections_summary,here('_data','BeakedWhales','Detections_summary.rds'))
 
 ```
 
-## Acoustic Detection Table
-
-Write table showing total acoustic detections for each species that also shows total duration & number of clicks
+## Identify Beaked Whale & Dolphin Events
 
 ```{r}
+#List all beaked whale databases 
+pattern = "\\.sqlite3$"
+db_files <- list.files(Database_dir,pattern=pattern,full.names=TRUE)
 
-species_summary_pub <- detections_summary %>%
-  group_by(species) %>%
-  summarise(
-    `Acoustic events` = n(),
-    `Total duration (min)` = round(sum(Duration_min, na.rm = TRUE), 0),
-    `Median event duration (min)` = round(median(Duration_min, na.rm = TRUE), 0),
-    `Total clicks` = sum(n_clicks, na.rm = TRUE),
-    .groups = "drop"
-  ) %>%
-  mutate(
-    Species = recode(
-      species,
-      "BBWH"  = "*Berardius bairdii*",
-      "GOBW"  = "*Ziphius cavirostris*",
-      "HUBW"  = "*Mesoplodon carlhubbsi*",
-      "GTBW"  = "*Mesoplodon ginkgodens*",
-      "STBWH" = "*Mesoplodon stejnegeri*", 
-      "UNME"  = "Unidentified beaked whale"
-    )
-  ) %>%
-  select(
-    Species,
-    `Acoustic events`,
-    `Total duration (min)`,
-    `Median event duration (min)`,
-    `Total clicks`
-  ) %>%
-  arrange(Species)
+all_comments <- map_dfr(db_files, function(db) {
+  
+  con <- dbConnect(SQLite(), db)
+  
+  x <- dbGetQuery(
+    con,
+    'SELECT Id, comment
+     FROM "Click_Detector_OfflineEvents"
+     WHERE comment IS NOT NULL
+       AND TRIM(comment) != ""'
+  )
+  dbDisconnect(con)
+  
+  #Add Drift Name to the object 
+   x %>%
+    mutate(
+      DriftName = tools::file_path_sans_ext(basename(db)))})
 
-knitr::kable(
-  species_summary_pub,
-  caption = "Summary of beaked whale acoustic events by species.",
-  align = c("l", "c", "c", "c", "c"),
-  format.args = list(big.mark = ",")
-)
+dolphin_comments <- all_comments %>%
+  filter(grepl("dolphin", comment, ignore.case = TRUE))%>%
+  mutate(encounterId = paste0(DriftName,'_',Id))
+
+saveRDS(dolphin_comments,here('_data','BeakedWhales','BW_Dolphin_summary.rds'))
 ```
 
 ## Map Plots

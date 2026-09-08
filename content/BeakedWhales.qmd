@@ -26,6 +26,10 @@ Beaked whale echolocation clicks were detected and classified using methods deve
   - ginkgo-toothed beaked whales (*Mesoplodon ginkgodens*)
   - unidentified and possible beaked whale categories
 
+- When two or more species were present at the same time, separate events were labeled for each species.
+
+- Mixed-species events are defined as two or more beaked whale species present within 20 minutes or less
+
 - All events were classified twice by the same analyst for quality control.
 
 ## Ziphius Abundance Estimation
