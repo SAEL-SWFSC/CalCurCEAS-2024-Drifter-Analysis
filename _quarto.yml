@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render: 
     - "*.qmd"
+    - "!_code/CalCurCEAS_results_beaked_whale.qmd"
 
 website: 
   page-navigation: true
