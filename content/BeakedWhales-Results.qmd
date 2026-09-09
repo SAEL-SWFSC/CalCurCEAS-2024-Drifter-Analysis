@@ -1,10 +1,13 @@
 ---
 title: "Beaked Whale Results"
 editor: visual
+execute:
+  echo: false
 ---
 
 ```{r, libraries}
 #| warning: false
+#| echo: false
 library(ggplot2)
 library(dplyr)
 library(ggnewscale)
@@ -16,6 +19,7 @@ library(suncalc)
 # Beaked Whale Results
 
 ```{r, ImportData}
+#| echo: false
 #Import beaked whale detections
 detections_summary<-readRDS(here('_data','BeakedWhales','Detections_summary.rds'))
 # Acoustic study of all beaked whale detections
@@ -146,11 +150,11 @@ dolphin_summary <- dolphin_comments  %>%
 
 ## Overall beaked whale presence
 
-There were `{r}length(unique(detections_summmary$eventId` total beaked whale events detected on `{r} length(unique(detections_summary$DriftName))` separate drifts, corresponding to an overall encounter rate of `{r}overall_encounter_rate` encounters per 24 hours of recording. Encounter rates varied among individual drifts, ranging from 0-6.9 encounters per 24 hours (median = 1.9, IQR = \[0.9-4.1\]. The highest encounter rates were observed during drifts 10 (6.9 encounters per 24 h), drift 22 (6.7 encounters per 24 h), and drift 9 (6.2 encounters per 24 h), while drifts 12, 13, and 14 contained zero beaked whale acoustic detections.
+There were `r length(unique(detections_summmary$eventId` total beaked whale events detected on `r length(unique(detections_summary$DriftName))` separate drifts, corresponding to an overall encounter rate of `r overall_encounter_rate` encounters per 24 hours of recording. Encounter rates varied among individual drifts, ranging from 0-6.9 encounters per 24 hours (median = 1.9, IQR = \[0.9-4.1\]. The highest encounter rates were observed during drifts 10 (6.9 encounters per 24 h), drift 22 (6.7 encounters per 24 h), and drift 9 (6.2 encounters per 24 h), while drifts 12, 13, and 14 contained zero beaked whale acoustic detections.
 
-Five distinct beaked whale species were acoustically detected, including goose-beaked, Hubb's, Stejneger's, Baird's, and gingko-toothed beaked whales [@tbl_species_detections]. Encounters with multiple beaked whales were relatively uncommon, comprising `{r}mixed_summary$total_mixed` of `{r}mixed_summary$total_encounters` encounters (`{r}mixed_summary$percent_mixed %`. Mixed-species of beaked whale encounters occurred on `{r}mixed_summary$drifts_with_mixed` drifts, with 0-`{r}mixed_summary$max_mixed_per_drift` mixed species encounters per drift. The greatest numbers of mixed species were observed on drifts 9 (7 encounters) and drift 10 (7 encounters).
+Five distinct beaked whale species were acoustically detected, including goose-beaked, Hubb's, Stejneger's, Baird's, and gingko-toothed beaked whales [@tbl_species_detections]. Encounters with multiple beaked whales were relatively uncommon, comprising `r mixed_summary$total_mixed` of `r mixed_summary$total_encounters` encounters (`r mixed_summary$percent_mixed %`. Mixed-species of beaked whale encounters occurred on `r mixed_summary$drifts_with_mixed` drifts, with 0-`r mixed_summary$max_mixed_per_drift` mixed species encounters per drift. The greatest numbers of mixed species were observed on drifts 9 (7 encounters) and drift 10 (7 encounters).
 
-Analyst comments noted dolphins at the surface during `{r}dolphin_summary$n_encounters` beaked whale encounters across `{r}dolphin_summary$n_drifts`drifts. Because these observations were recorded opportunistically during acoustic review rather than through a standardized protocol, they are reported as incidental observations rather than as a rate or proportion of encounters.
+Analyst comments noted dolphins at the surface during `r dolphin_summary$n_encounters` beaked whale encounters across `r dolphin_summary$n_drifts`drifts. Because these observations were recorded opportunistically during acoustic review rather than through a standardized protocol, they are reported as incidental observations rather than as a rate or proportion of encounters.
 
 ```{r}
 #| label: tbl_species_detections
