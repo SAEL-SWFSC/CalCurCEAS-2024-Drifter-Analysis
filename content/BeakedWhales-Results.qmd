@@ -267,32 +267,27 @@ detected_minutes <- detections_summary_diel %>%
     .groups = "drop"  )
 
 #Calculate detection rate per diel period 
-activity_rate <- detected_minutes %>%
-  left_join(effort_diel, by = "diel_period") %>%
-  mutate(
-    detected_min_per_hour = detected_min / effort_hours)
 
 
-
-#plot
-ggplot(
-  detections_summary_diel,
-  aes(x = diel_period, y = Duration_min)
-) +
-  geom_boxplot(
-    outlier.shape = NA,
-    width = 0.6
-  ) +
-  geom_jitter(
-    width = 0.15,
-    alpha = 0.5
-  ) +
-  facet_wrap(~ species) +
-  labs(
-    x = "Diel period",
-    y = "Event duration (min, log scale)"
-  ) +
-  theme_bw()
+# #plot
+# ggplot(
+#   detections_summary_diel,
+#   aes(x = diel_period, y = Duration_min)
+# ) +
+#   geom_boxplot(
+#     outlier.shape = NA,
+#     width = 0.6
+#   ) +
+#   geom_jitter(
+#     width = 0.15,
+#     alpha = 0.5
+#   ) +
+#   facet_wrap(~ species) +
+#   labs(
+#     x = "Diel period",
+#     y = "Event duration (min, log scale)"
+#   ) +
+#   theme_bw()
 ```
 
 ## 
