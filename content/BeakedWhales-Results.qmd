@@ -11,6 +11,7 @@ library(ggnewscale)
 library(here)
 library(lubridate)
 library(suncalc)
+library(PAMpal)
 ```
 
 # Beaked Whale Results
@@ -19,8 +20,9 @@ library(suncalc)
 #Import beaked whale detections
 detections_summary<-readRDS(here('_data','BeakedWhales','Detections_summary.rds'))
 # Acoustic study of all beaked whale detections
-AcousticStudy_File <-here('_data','BeakedWhales','CombinedStudy_EventswRecordingsGPS.rds')
-
+data <-readRDS(here('_data','BeakedWhales','CombinedStudy_EventswRecordingsGPS.rds'))
+detections<- getClickData(data)  %>%
+  mutate(DriftName = sub("\\..*$", "", eventId))
 #Import deployment info
 deployment_info<-readRDS(here('_data','BeakedWhales','Deployment_info.rds'))
 
@@ -46,7 +48,7 @@ effort_total <- effort_deployment %>%
     recording_days = recording_hours / 24)
 
 #Encounter rates
-encounters <- detections %>%
+encounters <-detections %>%
   group_by(eventId) %>%
   summarise(
     DriftName = first(.data$DriftName),
