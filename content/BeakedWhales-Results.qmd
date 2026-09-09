@@ -22,7 +22,7 @@ detections_summary<-readRDS(here('_data','BeakedWhales','Detections_summary.rds'
 AcousticStudy_File <-here('_data','BeakedWhales','CombinedStudy_EventswRecordingsGPS.rds')
 
 #Import deployment info
-deployment_info<-saveRDS(deployment_info,here('_data','BeakedWhales','Deployment_info.rds'))
+deployment_info<-readRDS(deployment_info,here('_data','BeakedWhales','Deployment_info.rds'))
 
 #Calculate recording effort 
 recordings <- data@files$recordings %>%
