@@ -29,7 +29,7 @@ library(ggspatial)
 
 ## Define Settings
 
-```{r}
+```{r, Settings}
 # Worksheet containing deployment details
 deployment_info_file<-'C:/Users/annes/Documents/Github/TethysSAEL/Deployment Worksheets/DeploymentDetails.xlsx'
   
@@ -62,7 +62,7 @@ contour_depths <- c(-100, -500, -1000, -5000)
 
 ## Import Drift Track Data
 
-```{r}
+```{r, trackData}
 deployment_info <- read_excel(deployment_info_file,sheet='deployDetails') %>%
  filter(Status=="Complete", Project=="CalCurCEAS")%>%
   mutate(Deployment = as.integer(DeploymentID),
@@ -221,8 +221,8 @@ BB_summary<-dplyr::filter(detections_hourly,species=="BBWH")
 ZC_summary<-dplyr::filter(detections_hourly,species=="GOBW")
 MC_MS_MG_summary<-dplyr::filter(detections_hourly,species %in% c("HUBW","STBWH","GTBW"))
 
+saveRDS(detections,here('_data','BeakedWhales','Detections.rds'))
 saveRDS(detections_summary,here('_data','BeakedWhales','Detections_summary.rds'))
-
 ```
 
 ## Identify Beaked Whale & Dolphin Events
