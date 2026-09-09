@@ -185,7 +185,7 @@
     "href": "content/BeakedWhales-Results.html",
     "title": "Beaked Whale Results",
     "section": "",
-    "text": "library(ggplot2)\nlibrary(dplyr)\nlibrary(ggnewscale)\nlibrary(here)\nlibrary(lubridate)\nlibrary(suncalc)",
+    "text": "There were 638 total beaked whale events detected on 22 separate drifts, corresponding to an overall encounter rate of 3.0085036 encounters per 24 hours of recording. Encounter rates varied among individual drifts, ranging from 0-6.9 encounters per 24 hours (median = 1.9, IQR = [0.9-4.1]. The highest encounter rates were observed during drifts 10 (6.9 encounters per 24 h), drift 22 (6.7 encounters per 24 h), and drift 9 (6.2 encounters per 24 h), while drifts 12, 13, and 14 contained zero beaked whale acoustic detections.\nFive distinct beaked whale species were acoustically detected, including goose-beaked, Hubb’s, Stejneger’s, Baird’s, and gingko-toothed beaked whales [@tbl_species_detections]. Encounters with multiple beaked whales were relatively uncommon, comprising 28 of 596 encounters (4.6979866 %). Mixed-species of beaked whale encounters occurred on 11 drifts, with 0-7 mixed species encounters per drift. The greatest numbers of mixed species were observed on drifts 9 (7 encounters) and drift 10 (7 encounters).\nAnalyst comments noted dolphins at the surface during 163 beaked whale encounters across 19 drifts. Because these observations were recorded opportunistically during acoustic review rather than through a standardized protocol, they are reported as incidental observations rather than as a rate or proportion of encounters.\n\n\n\nSummary of beaked whale acoustic events by species.\n\n\n\n\n\n\n\n\n\nSpecies\nAcoustic events\nTotal duration (min)\nMedian event duration (min)\nTotal clicks\n\n\n\n\nBerardius bairdii\n19\n425\n10\n91,676\n\n\nMesoplodon carlhubbsi\n84\n1,039\n10\n80,060\n\n\nMesoplodon ginkgodens\n1\n13\n13\n88\n\n\nMesoplodon stejnegeri\n65\n704\n10\n125,906\n\n\nZiphius cavirostris\n468\n7,378\n13\n305,978\n\n\nUnidentified beaked whale\n1\n15\n15\n56\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPreliminary maps of beaked whale acoustic detections\n  \n\n\n\nAdd plots for\n\ndistribution of beaked whale detection angles\ndetection function\nmap of density estimates per drift\n\nAdd tables of:\n\nEstimated Ziphius population density per drift (See Table 3 in Barlow et al 2021)\n\n\n\n\n\n\n\n\nSurvey effort (Available in “Effort.qmd”)\n\nNumber of drifters analyzed\nTotal recording effort\nGeographic & temporal coverage\nMissing data\n\nOverall beaked whale detections\n\nTotal number of beaked whale acoustic encounters\nWhich drifts contained beaked whale encounters\nOverall detection rate\nVariation among drifts\nMixed species detections\n\nIndividual Species\n\nZiphius\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nBaird’s beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nHubbs’ beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nStejneger’s beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nGinkgo-toothed beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\n\nZiphius Abundance Estimation",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -195,63 +195,8 @@
     "objectID": "content/BeakedWhales-Results.html#overall-beaked-whale-presence",
     "href": "content/BeakedWhales-Results.html#overall-beaked-whale-presence",
     "title": "Beaked Whale Results",
-    "section": "Overall beaked whale presence",
-    "text": "Overall beaked whale presence\nThere were {r}length(unique(detections_summmary$eventId total beaked whale events detected on 22 separate drifts, corresponding to an overall encounter rate of {r}overall_encounter_rate encounters per 24 hours of recording. Encounter rates varied among individual drifts, ranging from 0-6.9 encounters per 24 hours (median = 1.9, IQR = [0.9-4.1]. The highest encounter rates were observed during drifts 10 (6.9 encounters per 24 h), drift 22 (6.7 encounters per 24 h), and drift 9 (6.2 encounters per 24 h), while drifts 12, 13, and 14 contained zero beaked whale acoustic detections.\nFive distinct beaked whale species were acoustically detected, including goose-beaked, Hubb’s, Stejneger’s, Baird’s, and gingko-toothed beaked whales [@tbl_species_detections]. Encounters with multiple beaked whales were relatively uncommon, comprising {r}mixed_summary$total_mixed of {r}mixed_summary$total_encounters encounters ({r}mixed_summary$percent_mixed %. Mixed-species of beaked whale encounters occurred on {r}mixed_summary$drifts_with_mixed drifts, with 0-{r}mixed_summary$max_mixed_per_drift mixed species encounters per drift. The greatest numbers of mixed species were observed on drifts 9 (7 encounters) and drift 10 (7 encounters).\nAnalyst comments noted dolphins at the surface during {r}dolphin_summary$n_encounters beaked whale encounters across {r}dolphin_summary$n_driftsdrifts. Because these observations were recorded opportunistically during acoustic review rather than through a standardized protocol, they are reported as incidental observations rather than as a rate or proportion of encounters.\n\nspecies_summary_pub &lt;- detections_summary %&gt;%\n  group_by(species) %&gt;%\n  summarise(\n    `Acoustic events` = n(),\n    `Total duration (min)` = round(sum(Duration_min, na.rm = TRUE), 0),\n    `Median event duration (min)` = round(median(Duration_min, na.rm = TRUE), 0),\n    `Total clicks` = sum(n_clicks, na.rm = TRUE),\n    .groups = \"drop\"\n  ) %&gt;%\n  mutate(\n    Species = recode(\n      species,\n      \"BBWH\"  = \"*Berardius bairdii*\",\n      \"GOBW\"  = \"*Ziphius cavirostris*\",\n      \"HUBW\"  = \"*Mesoplodon carlhubbsi*\",\n      \"GTBW\"  = \"*Mesoplodon ginkgodens*\",\n      \"STBWH\" = \"*Mesoplodon stejnegeri*\", \n      \"UNME\"  = \"Unidentified beaked whale\"\n    )\n  ) %&gt;%\n  select(\n    Species,\n    `Acoustic events`,\n    `Total duration (min)`,\n    `Median event duration (min)`,\n    `Total clicks`\n  ) %&gt;%\n  arrange(Species)\n\nknitr::kable(\n  species_summary_pub,\n  caption = \"Summary of beaked whale acoustic events by species.\",\n  align = c(\"l\", \"c\", \"c\", \"c\", \"c\"),\n  format.args = list(big.mark = \",\")\n)\n\n\nSummary of beaked whale acoustic events by species.\n\n\n\n\n\n\n\n\n\nSpecies\nAcoustic events\nTotal duration (min)\nMedian event duration (min)\nTotal clicks\n\n\n\n\nBerardius bairdii\n19\n425\n10\n91,676\n\n\nMesoplodon carlhubbsi\n84\n1,039\n10\n80,060\n\n\nMesoplodon ginkgodens\n1\n13\n13\n88\n\n\nMesoplodon stejnegeri\n65\n704\n10\n125,906\n\n\nZiphius cavirostris\n468\n7,378\n13\n305,978\n\n\nUnidentified beaked whale\n1\n15\n15\n56",
-    "crumbs": [
-      "Results",
-      "Beaked Whale Results"
-    ]
-  },
-  {
-    "objectID": "content/BeakedWhales-Results.html#goose-beaked-whales",
-    "href": "content/BeakedWhales-Results.html#goose-beaked-whales",
-    "title": "Beaked Whale Results",
-    "section": "Goose-beaked whales",
-    "text": "Goose-beaked whales",
-    "crumbs": [
-      "Results",
-      "Beaked Whale Results"
-    ]
-  },
-  {
-    "objectID": "content/BeakedWhales-Results.html#hubbs-beaked-whales",
-    "href": "content/BeakedWhales-Results.html#hubbs-beaked-whales",
-    "title": "Beaked Whale Results",
-    "section": "Hubb’s beaked whales",
-    "text": "Hubb’s beaked whales",
-    "crumbs": [
-      "Results",
-      "Beaked Whale Results"
-    ]
-  },
-  {
-    "objectID": "content/BeakedWhales-Results.html#stejnegers-beaked-whales",
-    "href": "content/BeakedWhales-Results.html#stejnegers-beaked-whales",
-    "title": "Beaked Whale Results",
-    "section": "Stejneger’s beaked whales",
-    "text": "Stejneger’s beaked whales",
-    "crumbs": [
-      "Results",
-      "Beaked Whale Results"
-    ]
-  },
-  {
-    "objectID": "content/BeakedWhales-Results.html#bairds-beaked-whales",
-    "href": "content/BeakedWhales-Results.html#bairds-beaked-whales",
-    "title": "Beaked Whale Results",
-    "section": "Baird’s beaked whales",
-    "text": "Baird’s beaked whales",
-    "crumbs": [
-      "Results",
-      "Beaked Whale Results"
-    ]
-  },
-  {
-    "objectID": "content/BeakedWhales-Results.html#gingko-toothed-beaked-whales",
-    "href": "content/BeakedWhales-Results.html#gingko-toothed-beaked-whales",
-    "title": "Beaked Whale Results",
-    "section": "Gingko-toothed beaked whales",
-    "text": "Gingko-toothed beaked whales",
+    "section": "",
+    "text": "There were 638 total beaked whale events detected on 22 separate drifts, corresponding to an overall encounter rate of 3.0085036 encounters per 24 hours of recording. Encounter rates varied among individual drifts, ranging from 0-6.9 encounters per 24 hours (median = 1.9, IQR = [0.9-4.1]. The highest encounter rates were observed during drifts 10 (6.9 encounters per 24 h), drift 22 (6.7 encounters per 24 h), and drift 9 (6.2 encounters per 24 h), while drifts 12, 13, and 14 contained zero beaked whale acoustic detections.\nFive distinct beaked whale species were acoustically detected, including goose-beaked, Hubb’s, Stejneger’s, Baird’s, and gingko-toothed beaked whales [@tbl_species_detections]. Encounters with multiple beaked whales were relatively uncommon, comprising 28 of 596 encounters (4.6979866 %). Mixed-species of beaked whale encounters occurred on 11 drifts, with 0-7 mixed species encounters per drift. The greatest numbers of mixed species were observed on drifts 9 (7 encounters) and drift 10 (7 encounters).\nAnalyst comments noted dolphins at the surface during 163 beaked whale encounters across 19 drifts. Because these observations were recorded opportunistically during acoustic review rather than through a standardized protocol, they are reported as incidental observations rather than as a rate or proportion of encounters.\n\n\n\nSummary of beaked whale acoustic events by species.\n\n\n\n\n\n\n\n\n\nSpecies\nAcoustic events\nTotal duration (min)\nMedian event duration (min)\nTotal clicks\n\n\n\n\nBerardius bairdii\n19\n425\n10\n91,676\n\n\nMesoplodon carlhubbsi\n84\n1,039\n10\n80,060\n\n\nMesoplodon ginkgodens\n1\n13\n13\n88\n\n\nMesoplodon stejnegeri\n65\n704\n10\n125,906\n\n\nZiphius cavirostris\n468\n7,378\n13\n305,978\n\n\nUnidentified beaked whale\n1\n15\n15\n56",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -261,8 +206,8 @@
     "objectID": "content/BeakedWhales-Results.html#figures",
     "href": "content/BeakedWhales-Results.html#figures",
     "title": "Beaked Whale Results",
-    "section": "Figures",
-    "text": "Figures\nPreliminary maps of beaked whale acoustic detections",
+    "section": "",
+    "text": "Preliminary maps of beaked whale acoustic detections",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -273,7 +218,7 @@
     "href": "content/BeakedWhales-Results.html#section",
     "title": "Beaked Whale Results",
     "section": "",
-    "text": "Add plots for\n\ndistribution of beaked whale detection angles\ndetection function\nmap of density estimates per drift\n\nAdd tables of:\n\nEstimated Ziphius population density per drift (See Table 3 in Barlow et al 2021)\n\n\ndetections_summary &lt;- detections_summary %&gt;%\n  mutate(date = as.Date(UTC))\n\nsun_times &lt;- getSunlightTimes(\n  data = detections_summary %&gt;%\n    transmute(\n      date = date,\n      lat = Latitude,\n      lon = Longitude),\n  keep = c(\"dawn\", \"sunrise\", \"sunset\", \"dusk\"),\n  tz = \"UTC\")\n\n#bind to detections summary\ndetections_summary_diel &lt;- detections_summary %&gt;%\n  bind_cols(\n    sun_times %&gt;%\n      select(dawn, sunrise, sunset, dusk))\n\n#assign diel category to each event\ndetections_summary_diel &lt;- detections_summary_diel %&gt;%\n  mutate(\n    diel_period = case_when(\n      UTC &gt;= sunrise & UTC &lt; sunset ~ \"day\",\n      UTC &gt;= dawn & UTC &lt; sunrise ~ \"dawn\",\n      UTC &gt;= sunset & UTC &lt; dusk ~ \"dusk\",\n      TRUE ~ \"night\"))\n\ndetections_summary_diel &lt;- detections_summary_diel %&gt;%\n  mutate(\n    diel_period = factor(\n      diel_period,\n      levels = c(\"dawn\", \"day\", \"dusk\", \"night\")))\n\n\n#Calculate total detected minutes per diel period\ndetected_minutes &lt;- detections_summary_diel %&gt;%\n  group_by(species, diel_period) %&gt;%\n  summarise(\n    detected_min = sum(Duration_min, na.rm = TRUE),\n    n_events = n(),\n    .groups = \"drop\"  )\n\n#Calculate detection rate per diel period \n\n\n# #plot\n# ggplot(\n#   detections_summary_diel,\n#   aes(x = diel_period, y = Duration_min)\n# ) +\n#   geom_boxplot(\n#     outlier.shape = NA,\n#     width = 0.6\n#   ) +\n#   geom_jitter(\n#     width = 0.15,\n#     alpha = 0.5\n#   ) +\n#   facet_wrap(~ species) +\n#   labs(\n#     x = \"Diel period\",\n#     y = \"Event duration (min, log scale)\"\n#   ) +\n#   theme_bw()",
+    "text": "Add plots for\n\ndistribution of beaked whale detection angles\ndetection function\nmap of density estimates per drift\n\nAdd tables of:\n\nEstimated Ziphius population density per drift (See Table 3 in Barlow et al 2021)",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -283,8 +228,8 @@
     "objectID": "content/BeakedWhales-Results.html#outline",
     "href": "content/BeakedWhales-Results.html#outline",
     "title": "Beaked Whale Results",
-    "section": "Outline",
-    "text": "Outline\n\nSurvey effort (Available in “Effort.qmd”)\n\nNumber of drifters analyzed\nTotal recording effort\nGeographic & temporal coverage\nMissing data\n\nOverall beaked whale detections\n\nTotal number of beaked whale acoustic encounters\nWhich drifts contained beaked whale encounters\nOverall detection rate\nVariation among drifts\nMixed species detections\n\nIndividual Species\n\nZiphius\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nBaird’s beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nHubbs’ beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nStejneger’s beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nGinkgo-toothed beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\n\nZiphius Abundance Estimation",
+    "section": "",
+    "text": "Survey effort (Available in “Effort.qmd”)\n\nNumber of drifters analyzed\nTotal recording effort\nGeographic & temporal coverage\nMissing data\n\nOverall beaked whale detections\n\nTotal number of beaked whale acoustic encounters\nWhich drifts contained beaked whale encounters\nOverall detection rate\nVariation among drifts\nMixed species detections\n\nIndividual Species\n\nZiphius\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nBaird’s beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nHubbs’ beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nStejneger’s beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nGinkgo-toothed beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\n\nZiphius Abundance Estimation",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
