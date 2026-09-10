@@ -456,55 +456,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.076923</code></pre>
 </div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 7
-  species `Acoustic events` Min_Depth Max_Depth `Median Depth` Q1_Depth Q3_Depth
-  &lt;chr&gt;               &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;          &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
-1 BBWH                   19     1820.     4208.           3123     2639     3516
-2 GOBW                  468      657      4508.           3679     3182     4178
-3 GTBW                    1     4082.     4082.           4082     4082     4082
-4 HUBW                   84     2315.     4509.           2914     2735     3141
-5 STBWH                  65     2026.     4177.           2984     2725     3135</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: species was coerced to a factor.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>  Kruskal-Wallis rank sum test
-
-data: x and g
-Kruskal-Wallis chi-squared = 120.7116, df = 3, p-value = 0
-
-                      Dunn's Pairwise Comparison of x by g                      
-                              (Benjamini-Hochberg)                              
-
-Col Mean-│
-Row Mean │       BBWH       GOBW       HUBW
-─────────┼─────────────────────────────────
-    GOBW │  -3.335861
-         │     0.0017*
-         │
-    HUBW │   0.800585   8.304522
-         │     0.5080     0.0000*
-         │
-   STBWH │   1.007146   7.882117   0.358863
-         │     0.4708     0.0000*    0.7197 
-
-FDR = 0.05
-Reject Ho if adjusted p ≤ FDR with stopping rule, where (unadjusted) p = Pr(|Z| ≥ |z|)
-Dunn (1964) Kruskal-Wallis multiple comparison
-
-  p-values adjusted with the Benjamini-Hochberg method.</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    Comparison          Z      P.unadj        P.adj
-1  BBWH - GOBW -3.3358614 8.503555e-04 1.700711e-03
-2  BBWH - HUBW  0.8005853 4.233717e-01 5.080461e-01
-3  GOBW - HUBW  8.3045230 1.002213e-16 6.013276e-16
-4 BBWH - STBWH  1.0071468 3.138642e-01 4.707964e-01
-5 GOBW - STBWH  7.8821172 3.218798e-15 9.656395e-15
-6 HUBW - STBWH  0.3588626 7.196979e-01 7.196979e-01</code></pre>
-</div>
 </div>
 <section id="overall-beaked-whale-presence" class="level2">
 <h2 class="anchored" data-anchor-id="overall-beaked-whale-presence">Overall beaked whale presence</h2>
