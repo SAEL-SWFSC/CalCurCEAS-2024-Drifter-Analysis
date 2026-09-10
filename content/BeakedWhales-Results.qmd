@@ -189,16 +189,15 @@ depth_summary<- detections_summary %>%
     `Q1_Depth` = round(quantile(bottom_depth_m,.25)),
     `Q3_Depth` = round(quantile(bottom_depth_m,.75)),
     .groups = "drop")  
-depth_summary
 
 #Remove GTBW since there is only one event
 detections_summary_Stat<-filter(detections_summary,species!="GTBW")
 
-#Dunn's test (designed as post-hoc multiple-comparison procuedure following Kruskal-Wallis and handles unqueal sample sizes naturally)
-dunnTest(
-  bottom_depth_m~species,
-  data =detections_summary_Stat,
-  method="bh")
+# #Dunn's test (designed as post-hoc multiple-comparison procuedure following Kruskal-Wallis and handles unqueal sample sizes naturally)
+# dunnTest(
+#   bottom_depth_m~species,
+#   data =detections_summary_Stat,
+#   method="bh")
 ```
 
 ## Overall beaked whale presence
