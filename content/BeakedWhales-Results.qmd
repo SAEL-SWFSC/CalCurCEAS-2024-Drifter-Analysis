@@ -21,22 +21,19 @@ library(FSA)
 #| echo: false
 #Import beaked whale detections
 detections_summary<-readRDS(here('_data','BeakedWhales','Detections_summary.rds'))
-# Acoustic study of all beaked whale detections
-data <-readRDS(here('_data','BeakedWhales','CombinedStudy_EventswRecordingsGPS.rds'))
+
 # Click detection data
 detections<-readRDS(here('_data','BeakedWhales','Detections.rds'))
 
 #Remove Unidentified beaked whale event
 detections_summary<-detections_summary %>% filter(species!='UNME')
-data<-data %>% filter(species!='UNME')
 detections<-detections %>% filter(species!='UNME')
 
 #Import deployment info
 deployment_info<-readRDS(here('_data','BeakedWhales','Deployment_info.rds'))
 
 #Calculate recording effort 
-recordings <- data@files$recordings %>%
-  mutate(DriftName = stringr::str_extract(file, "CalCurCEAS_\\d{3}"))
+recordings<-readRDS(here("_data", "BeakedWhales", "Recordings.rds"))
 
 recordings_unique <- recordings %>%
   distinct(file, .keep_all = TRUE)
