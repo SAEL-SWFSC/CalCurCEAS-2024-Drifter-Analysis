@@ -25,6 +25,11 @@ library(readxl)
 library(PAMpal)
 library(ggrepel)
 library(ggspatial)
+library(remotes)
+library(terra)
+library(suncalc)
+library(glmmTMB)
+library(emmeans)
 ```
 
 ## Define Settings
@@ -90,7 +95,7 @@ deployment_info <- read_excel(deployment_info_file,sheet='deployDetails') %>%
     Recovery_Latitude,
     Recovery_Longitude)
 
-saveRDS(deployment_info,here('_data','BeakedWhales','Detections_summary.rds'))
+saveRDS(deployment_info,here('_data','BeakedWhales','Deployment_info.rds'))
 ```
 
 ## GPS files
@@ -120,6 +125,61 @@ gps_all <- gps_all %>%
   filter(utc_parsed >= Deployment_Date, utc_parsed <= Recovery_Date) %>%
   dplyr::select(-Deployment_Date, -Recovery_Date)
 
+##Calculate solar times for each drift & day
+gps_daily <- gps_all %>%
+  mutate(
+    UTC = as.POSIXct(UTC, tz = "UTC"),
+    date = as.Date(
+      with_tz(UTC, "America/Los_Angeles")
+    )
+  ) %>%
+  group_by(DriftName, date) %>%
+  summarise(
+    Latitude = median(Latitude, na.rm = TRUE),
+    Longitude = median(Longitude, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+#Calculate solar times for every drift-day
+sun_times_effort <- getSunlightTimes(
+  data = gps_daily %>%
+    transmute(
+      date,
+      lat = Latitude,
+      lon = Longitude
+    ),
+  keep = c("dawn", "sunrise", "sunset", "dusk"),
+  tz = "America/Los_Angeles"
+)
+
+gps_daily_sun <- gps_daily %>%
+  bind_cols(
+    sun_times_effort %>%
+      select(dawn, sunrise, sunset, dusk)
+  )
+
+gps_daily_sun <- gps_daily_sun %>%
+  mutate(
+    sunset_corrected = sunset + days(1))
+
+recordings_diel <- recordings %>%
+  mutate(
+    midpoint = start + seconds(length / 2),
+    date = as.Date(midpoint, tz = "UTC")
+  ) %>%
+  left_join(
+    gps_daily_sun %>%
+      select(
+        DriftName,
+        date,
+        sunrise,
+        sunset_corrected),
+    by = c("DriftName", "date")) %>%
+  mutate(
+    diel_period = case_when(
+      midpoint >= sunrise &
+        midpoint < sunset_corrected ~ "day",
+      TRUE ~ "night"))
 
 ```
 
@@ -142,8 +202,7 @@ detections <- detections %>%
       BW43  = "GTBW",
       MS    = "STBWH",
       BW    = "UNME",
-      .default = as.character(species)
-    ),
+      .default = as.character(species)),
     
     # Standardize eventLabel values
     species_from_label = recode(
@@ -155,15 +214,13 @@ detections <- detections %>%
       BW43  = "GTBW",
       MS    = "STBWH",
       BW    = "UNME",
-      .default = as.character(eventLabel)
-    ),
+      .default = as.character(eventLabel)),
     
     # Use species if available; otherwise fill from eventLabel
     species = coalesce(species_std, species_from_label)
   ) %>%
   filter(
-    !species %in% c("BW?", "?BW", "Oo", "Other")
-  ) %>%
+    !species %in% c("BW?", "?BW", "Oo", "Other")) %>%
   select(-species_std,-species_from_label)
 
 #Create DriftName variables
@@ -182,26 +239,21 @@ detections_summary <- detections %>%
     UTC      = mean(UTC, na.rm = TRUE),
     
     Duration_sec = as.numeric(
-      difftime(EndUTC, StartUTC, units = "secs")
-    ),
+      difftime(EndUTC, StartUTC, units = "secs")),
     
     n_clicks = n(),
     
     species = paste(
       unique(na.omit(as.character(species))),
-      collapse = ", "
-    ),
+      collapse = ", "),
     
     DriftName = paste(
       unique(na.omit(as.character(DriftName))),
-      collapse = ", "
-    ),
+      collapse = ", "),
     
-    .groups = "drop"
-  ) %>%
+    .groups = "drop") %>%
   mutate(
-    Duration_min = Duration_sec / 60
-  )
+    Duration_min = Duration_sec / 60)
 
 #Create 12-Hour summary for plotting
 detections_hourly <- detections_summary %>%
@@ -212,8 +264,7 @@ detections_hourly <- detections_summary %>%
     Latitude  = mean(Latitude, na.rm = TRUE),
     UTC       = hour_bin[1],
     n_events  = n(),
-    .groups = "drop"
-  ) %>%
+    .groups = "drop") %>%
   dplyr::select(species, Longitude, Latitude, UTC, n_events)
 
 #Divide species into separate dataframes for plotting
@@ -222,7 +273,7 @@ ZC_summary<-dplyr::filter(detections_hourly,species=="GOBW")
 MC_MS_MG_summary<-dplyr::filter(detections_hourly,species %in% c("HUBW","STBWH","GTBW"))
 
 saveRDS(detections,here('_data','BeakedWhales','Detections.rds'))
-saveRDS(detections_summary,here('_data','BeakedWhales','Detections_summary.rds'))
+
 ```
 
 ## Identify Beaked Whale & Dolphin Events
@@ -241,8 +292,7 @@ all_comments <- map_dfr(db_files, function(db) {
     'SELECT Id, comment
      FROM "Click_Detector_OfflineEvents"
      WHERE comment IS NOT NULL
-       AND TRIM(comment) != ""'
-  )
+       AND TRIM(comment) != ""')
   dbDisconnect(con)
   
   #Add Drift Name to the object 
@@ -352,6 +402,21 @@ species_colors <- setNames(
   species_codes
 )
 
+#Match bathymetry with each encounter
+coords<-detections_summary %>% 
+  transmute(lon = Longitude,
+            lat = Latitude)
+
+depths <- marmap::get.depth(
+  bathy_raw,
+  coords,
+  locator = FALSE
+)
+
+detections_summary <- detections_summary %>%
+  mutate(bottom_depth_m = abs(depths$depth))
+
+saveRDS(detections_summary,here('_data','BeakedWhales','Detections_summary.rds'))
 ```
 
 ### BaseMap
@@ -500,7 +565,7 @@ FullMap_BB <- p +
   # --- Labels & theme ---
   labs(
     title    = "Drifting Recorder Tracks and Acoustic Detections",
-    subtitle =  "Baird's beaked whale",
+    subtitle =  "Bairds beaked whale",
     x = "Longitude",
     y = "Latitude"
   ) +
@@ -596,5 +661,244 @@ ggsave(pdf_path, plot = FullMap_BW, width = map_width, height = map_height,
        device = cairo_pdf)
 
 
+
+```
+
+## Plot Depth Distribution
+
+```{r}
+#| echo: false
+#| warning: false
+
+##Confirm detections of each species come from a variety of drifts
+# detections_summary %>%
+#   filter(species %in% c("BBWH", "GOBW", "HUBW", "STBWH")) %>%
+#   group_by(species) %>%
+#   summarise(
+#     n_events = n(),
+#     n_drifts = n_distinct(DriftName),
+#     .groups = "drop")
+
+detections_summary$species <-factor(detections_summary$species,
+                                    levels=c("GOBW","BBWH","HUBW","STBWH","GTBW"))
+
+
+DepthDist<-ggplot(detections_summary,
+               aes(x = species, y = bottom_depth_m,fill=species)) +
+       geom_violin(trim = FALSE) +
+       geom_boxplot(width = 0.15, outlier.shape = NA) +
+       geom_jitter(width = 0.1, alpha = 0.3) +
+     scale_y_reverse() +
+       labs(x = "species", y = "Bottom depth (m)") +
+  scale_fill_manual(name   = "Species code",    # changed from scale_colour_manual
+                    values = species_colors,
+                    guide = guide_legend(order = 1)) +
+       theme_classic()
+  
+
+png_path <- file.path(output_dir, paste0(output_filename, "DepthDist.png"))
+# pdf_path <- file.path(output_dir, paste0(output_filename, "DepthDist.pdf"))
+
+ggsave(png_path, plot = DepthDist, width = 5, height = 4,
+       dpi = 300, bg = "white")
+# ggsave(pdf_path, plot = DepthDist, width = map_width, height = map_height,
+       # device = cairo_pdf)
+```
+
+## Explore Diel Variation
+
+```{r}
+#| echo: false
+#| warning: false
+
+
+detections_summary_diel <- detections_summary %>%
+  mutate(
+    date = as.Date(UTC, tz = "UTC")) %>%
+  left_join(
+    gps_daily_sun %>%
+      select(
+        DriftName,
+        date,
+        sunrise,
+        sunset_corrected
+      ),
+    by = c("DriftName", "date")
+  ) %>%
+  mutate(
+    diel_period = case_when(
+      UTC >= sunrise &
+        UTC < sunset_corrected ~ "day",
+      TRUE ~ "night"))
+
+events_diel<-detections_summary_diel %>%
+  filter(species %in% c("BBWH","GOBW", "HUBW", "STBWH")) %>%
+  count(species,diel_period,name="n_events")
+
+#Join effort and calculate rates for every 100 hours recording day/night
+diel_rates <- events_diel %>%
+  left_join(
+    effort_diel,
+    by = "diel_period"
+  ) %>%
+  mutate(
+    events_per_100h = n_events / effort_hours * 100
+  )
+
+
+#Calculate effort by drift and diel period
+effort_drift_diel <- recordings_diel %>%
+  group_by(DriftName, diel_period) %>%
+  summarise(
+    effort_hours = sum(length, na.rm = TRUE) / 3600,
+    .groups = "drop")
+
+#Count events by drift, species and diel period
+events_drift_diel <- detections_summary_diel %>%
+  filter(species %in% c("BBWH", "GOBW", "HUBW", "STBWH")) %>%
+  count(
+    DriftName,
+    species,
+    diel_period,
+    name = "n_events")
+
+#Create Poisson GLMM to evaluate encounters per diel period 
+species_list <- c("BBWH", "GOBW", "HUBW", "STBWH")
+
+model_data <- effort_drift_diel %>%
+  tidyr::crossing(species = species_list) %>%
+  left_join(
+    events_drift_diel,
+    by = c("DriftName", "diel_period", "species")
+  ) %>%
+  mutate(n_events = tidyr::replace_na(n_events, 0),
+         diel_period = factor(diel_period,levels=c("day","night")))
+
+#GOBW
+m_GOBW <- glmmTMB(
+  n_events ~ diel_period +
+    offset(log(effort_hours)) +
+    (1 | DriftName),
+  family = poisson,
+  data = filter(model_data, species == "GOBW"))
+
+#Bairds
+m_BBWH <- glmmTMB(
+  n_events ~ diel_period +
+    offset(log(effort_hours)) +
+    (1 | DriftName),
+  family = poisson,
+  data = filter(model_data, species == "BBWH")
+)
+#Hubbs
+m_HUBW <- glmmTMB(
+  n_events ~ diel_period +
+    offset(log(effort_hours)) +
+    (1 | DriftName),
+  family = poisson,
+  data = filter(model_data, species == "HUBW")
+)
+#Stejneger's
+m_STBWH <- glmmTMB(
+  n_events ~ diel_period +
+    offset(log(effort_hours)) +
+    (1 | DriftName),
+  family = poisson,
+  data = filter(model_data, species == "STBWH")
+)
+
+#Evaluate for overdispersion
+sim <- simulateResiduals(m_GOBW)
+testDispersion(sim)
+
+sim <- simulateResiduals(m_BBWH)
+testDispersion(sim)
+
+sim <- simulateResiduals(m_HUBW)
+testDispersion(sim)
+
+sim <- simulateResiduals(m_STBWH)
+testDispersion(sim)
+
+#1. Goose-beaked 
+#Get estimated day/night rate ratio and CI
+emm <- emmeans(
+  m_GOBW ,
+  ~ diel_period,
+  type = "response"
+)
+
+GOBW_contrast <- contrast(
+  emm,
+  method = list("Day / Night" = c(1, -1)),
+  type = "response"
+)
+confint(GOBW_contrast)
+GOBW_results <- as.data.frame(
+  summary(GOBW_contrast, infer = c(TRUE, TRUE))
+)
+
+
+#2. Baird's
+#Get estimated day/night rate ratio and CI
+emm <- emmeans(
+  m_BBWH ,
+  ~ diel_period,
+  type = "response"
+)
+
+BBWH_contrast <- contrast(
+  emm,
+  method = list("Day / Night" = c(1, -1)),
+  type = "response"
+)
+confint(BBWH_contrast)
+BBWH_results <- as.data.frame(
+  summary(BBWH_contrast, infer = c(TRUE, TRUE))
+)
+
+
+#3.Hubbs'
+#Get estimated day/night rate ratio and CI
+emm <- emmeans(
+  m_HUBW ,
+  ~ diel_period,
+  type = "response"
+)
+
+HUBW_contrast <- contrast(
+  emm,
+  method = list("Day / Night" = c(1, -1)),
+  type = "response"
+)
+
+HUBW_results <- as.data.frame(
+  summary(HUBW_contrast, infer = c(TRUE, TRUE))
+)
+
+
+#4.Stejneger's
+#Get estimated day/night rate ratio and CI
+emm <- emmeans(
+  m_STBWH ,
+  ~ diel_period,
+  type = "response"
+)
+
+STBWH_contrast <- contrast(
+  emm,
+  method = list("Day / Night" = c(1, -1)),
+  type = "response"
+)
+
+STBWH_results <- as.data.frame(
+  summary(STBWH_contrast, infer = c(TRUE, TRUE))
+)
+
+#Print results
+GOBW_results
+BBWH_results
+HUBW_results
+STBWH_results
 
 ```

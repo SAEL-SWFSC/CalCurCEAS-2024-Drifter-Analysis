@@ -14,6 +14,7 @@ library(ggnewscale)
 library(here)
 library(lubridate)
 library(suncalc)
+library(FSA)
 ```
 
 ```{r, ImportData}
@@ -24,6 +25,11 @@ detections_summary<-readRDS(here('_data','BeakedWhales','Detections_summary.rds'
 data <-readRDS(here('_data','BeakedWhales','CombinedStudy_EventswRecordingsGPS.rds'))
 # Click detection data
 detections<-readRDS(here('_data','BeakedWhales','Detections.rds'))
+
+#Remove Unidentified beaked whale event
+detections_summary<-detections_summary %>% filter(species!='UNME')
+data<-data %>% filter(species!='UNME')
+detections<-detections %>% filter(species!='UNME')
 
 #Import deployment info
 deployment_info<-readRDS(here('_data','BeakedWhales','Deployment_info.rds'))
@@ -144,6 +150,58 @@ dolphin_summary <- dolphin_comments  %>%
   summarise(
     n_encounters = n_distinct(encounterId),
     n_drifts = n_distinct(DriftName))
+
+species_summary <- detections_summary %>%
+  group_by(species) %>%
+  summarise(
+    `Acoustic events` = n(),
+    `Total drifts` = length(unique(DriftName)),
+    `Min_Dur` = round(min(Duration_min),1),
+    `Max_Dur` = round(max(Duration_min),1),
+    `Median event duration (min)` = round(median(Duration_min, na.rm = TRUE), 0),
+    `Q1_Dur` = round(quantile(Duration_min,.25)),
+    `Q3_Dur` = round(quantile(Duration_min,.75)),
+    .groups = "drop") %>% 
+  arrange(desc(`Acoustic events`))
+
+#Report percentile rank of specific latitudes using empirical cumulative distribution function
+#Latitude 37 is approximately San Francisco
+
+Hubbs <- detections_summary %>% 
+  filter(species=="HUBW") 
+HubbsLatECDF<-ecdf(Hubbs$Latitude)
+
+#Percentile of Hubbs detections less than 37 degrees
+HubbsLatECDF(37)*100 
+
+Stej <- detections_summary %>% 
+  filter(species=="STBWH") 
+StejLatECDF<-ecdf(Stej$Latitude)
+
+#Percentile of Stejneger's detections less than 37 degrees
+StejLatECDF(37)*100 
+
+#Evaluate depth distributions
+depth_summary<- detections_summary %>% 
+  group_by(species) %>%
+  summarise(
+    `Acoustic events` = n(),
+    `Min_Depth` = round(min(bottom_depth_m),1),
+    `Max_Depth` = round(max(bottom_depth_m),1),
+    `Median Depth` = round(median(bottom_depth_m, na.rm = TRUE), 0),
+    `Q1_Depth` = round(quantile(bottom_depth_m,.25)),
+    `Q3_Depth` = round(quantile(bottom_depth_m,.75)),
+    .groups = "drop")  
+depth_summary
+
+#Remove GTBW since there is only one event
+detections_summary_Stat<-filter(detections_summary,species!="GTBW")
+
+#Dunn's test (designed as post-hoc multiple-comparison procuedure following Kruskal-Wallis and handles unqueal sample sizes naturally)
+dunnTest(
+  bottom_depth_m~species,
+  data =detections_summary_Stat,
+  method="bh")
 ```
 
 ## Overall beaked whale presence
@@ -194,23 +252,37 @@ knitr::kable(
 )
 ```
 
+![](/_figs/beaked_whales/CalCurCEAS_bw_FullMap_ZC.png){width="224"} ![](/_figs/beaked_whales/CalCurCEAS_bw_FullMap_BB.png){width="224"} ![](/_figs/beaked_whales/CalCurCEAS_bw_FullMap_BW.png){width="224"}
+
+Bottom depth at acoustic encounters differed among species (Kruskal-Wallis: χ²(3) = 120.71, *p* \< 0.001). Goose-beaked whale encounters occurred at the greatest median depth (3,679 m; IQR=3,182-4,178 m), compared with Baird's (3,123 m; IQR=2,639-3,516 m), Stejneger's (2,984 m; IQR=2,725-3,135 m) and Hubbs' beaked whales (2,914 m; IQR=2,735-3,141 m). Post-hoc Dunn tests with Benjamini–Hochberg correction indicated significant differences between goose-beaked and Baird's beaked whales (*p =* 0.0017), goose-beaked and Hubbs' beaked whales (*p\<*0.001), and goose-beaked and Stejneger's beaked whales (*p\<*0.001). No significant differences were detected among Baird's, Hubbs' and Stejneger's beaked whales (all adjusted *p≥* 0.47)*.* The single gingko-toothed beaked whale encounter occurred over a bottom depth of 4,082 m, but was excluded from statistical comparisons because only one encounter was detected.
+
+![](/_figs/beaked_whales/CalCurCEAS_bw_DepthDist.png){width="500"}
+
+No significant differences in acoustic event rates between day and night were detected for any species. Day rate ratios were 1.20 for GOBW (95% CI = 1.00–1.44, *p* = 0.051), 1.09 for BBWH (95% CI = 0.44–2.72, *p* = 0.848), 1.08 for HUBW (95% CI = 0.70–1.66, *p* = 0.733), and 0.78 for STBWH (95% CI = 0.47–1.30, *p* = 0.340). Baird's beaked whales had a substantially greater uncertainty because of the smaller number of encounters.
+
 ## Goose-beaked whales
+
+Goose-beaked whales were the most abundant and wide-spread beaked whale species acoustically detected in this study. Overall, there were 468 goose-beaked whale encounters identified on 21 drifts, with encounter durations ranging from 1-80 minutes (median=13, IQR= 2-25).
 
 ## Hubbs' beaked whales
 
+Hubb's beaked whales were the second most common beaked whale species acoustically detected in this study. Overall there were 84 acoustic encounters identified on 13 drifts, with encounter durations ranging from 1-80 minutes (median=10, IQR=4-16). Hubbs' beaked whales were predominantly detected in the northern California Current, with 98% (n=82) of encounters detected north of San Francisco, CA (roughly latitude 37.77°N.
+
 ## Stejneger's beaked whales
+
+Stejneger's beaked whales were the third most common beaked whale species acoustically detected in this study. Overall there were 65 acoustic encounters identified on 12 drifts, with encounter durations ranging from 1-86 minutes (median=10, IQR=6-13). Stejneger's beaked whales were predominantly detected in the northern California Current, with 97% (n=63) of encounters detected north of San Francisco, CA (roughly latitude 37.77°N).
 
 ## Baird's beaked whales
 
+Baird's beaked whales were detected in 19 acoustic encounters on 13 drifts, with encounter durations ranging from 1-124 minutes (median=10, IQR=5-20). Baird's beaked whales were detected throughout the California Current.
+
 ## Gingko-toothed beaked whales
+
+There was one acoustic detection of gingko-toothed whales that was 13.4 minutes in duration. This event was detected on drift 27, in the southern extent of the study offshore of the Southern California Bight (roughly latitude 33°N). During this encounter, there were concurrent echolocation clicks detected in separate click trains from goose-beaked whales at depth and delphinid echolocation clicks in the upper water column.
 
 ## Figures
 
 Preliminary maps of beaked whale acoustic detections
-
-![](/_figs/beaked_whales/CalCurCEAS_bw_FullMap_ZC.png){width="224"} ![](/_figs/beaked_whales/CalCurCEAS_bw_FullMap_BB.png){width="224"} ![](/_figs/beaked_whales/CalCurCEAS_bw_FullMap_BW.png){width="224"}
-
-## 
 
 Add plots for
 
@@ -223,109 +295,3 @@ Add plots for
 Add tables of:
 
 - Estimated Ziphius population density per drift (See Table 3 in [Barlow et al 2021](https://onlinelibrary.wiley.com/doi/pdf/10.1111/mms.12872?casa_token=ER8_SO6RWa4AAAAA%3AGFq5A9-J9N4VvzGyANylmdNfKSXXAHe6hEQWnN_FUV-Ey82PIBfyN7DNjzH3YYB_weNaf5dqiI2eerg))
-
-```{r}
-
-detections_summary <- detections_summary %>%
-  mutate(date = as.Date(UTC))
-
-sun_times <- getSunlightTimes(
-  data = detections_summary %>%
-    transmute(
-      date = date,
-      lat = Latitude,
-      lon = Longitude),
-  keep = c("dawn", "sunrise", "sunset", "dusk"),
-  tz = "UTC")
-
-#bind to detections summary
-detections_summary_diel <- detections_summary %>%
-  bind_cols(
-    sun_times %>%
-      select(dawn, sunrise, sunset, dusk))
-
-#assign diel category to each event
-detections_summary_diel <- detections_summary_diel %>%
-  mutate(
-    diel_period = case_when(
-      UTC >= sunrise & UTC < sunset ~ "day",
-      UTC >= dawn & UTC < sunrise ~ "dawn",
-      UTC >= sunset & UTC < dusk ~ "dusk",
-      TRUE ~ "night"))
-
-detections_summary_diel <- detections_summary_diel %>%
-  mutate(
-    diel_period = factor(
-      diel_period,
-      levels = c("dawn", "day", "dusk", "night")))
-
-
-#Calculate total detected minutes per diel period
-detected_minutes <- detections_summary_diel %>%
-  group_by(species, diel_period) %>%
-  summarise(
-    detected_min = sum(Duration_min, na.rm = TRUE),
-    n_events = n(),
-    .groups = "drop"  )
-
-#Calculate detection rate per diel period 
-
-
-# #plot
-# ggplot(
-#   detections_summary_diel,
-#   aes(x = diel_period, y = Duration_min)
-# ) +
-#   geom_boxplot(
-#     outlier.shape = NA,
-#     width = 0.6
-#   ) +
-#   geom_jitter(
-#     width = 0.15,
-#     alpha = 0.5
-#   ) +
-#   facet_wrap(~ species) +
-#   labs(
-#     x = "Diel period",
-#     y = "Event duration (min, log scale)"
-#   ) +
-#   theme_bw()
-```
-
-## 
-
-## Outline
-
-1.  *Survey effort (Available in "Effort.qmd")*
-    1.  *Number of drifters analyzed*
-    2.  *Total recording effort*
-    3.  *Geographic & temporal coverage*
-    4.  *Missing data*
-2.  *Overall beaked whale detections*
-    1.  *Total number of beaked whale acoustic encounters*
-    2.  *Which drifts contained beaked whale encounters*
-    3.  *Overall detection rate*
-    4.  *Variation among drifts*
-    5.  *Mixed species detections*
-3.  Individual Species
-    1.  Ziphius
-        1.  Number of encounters
-        2.  Geographic distribution
-        3.  Diel pattern
-    2.  Baird's beaked whale
-        1.  Number of encounters
-        2.  Geographic distribution
-        3.  Diel pattern
-    3.  Hubbs' beaked whale
-        1.  Number of encounters
-        2.  Geographic distribution
-        3.  Diel pattern
-    4.  Stejneger's beaked whale
-        1.  Number of encounters
-        2.  Geographic distribution
-        3.  Diel pattern
-    5.  Ginkgo-toothed beaked whale
-        1.  Number of encounters
-        2.  Geographic distribution
-        3.  Diel pattern
-4.  Ziphius Abundance Estimation

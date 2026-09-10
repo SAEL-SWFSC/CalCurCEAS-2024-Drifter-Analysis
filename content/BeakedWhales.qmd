@@ -32,6 +32,12 @@ Beaked whale echolocation clicks were detected and classified using methods deve
 
 - All events were classified twice by the same analyst for quality control.
 
+## Spatio-temporal patterns
+
+Differences in bottom depth among species were evaluated using a Kruskal–Wallis test, excluding species represented by only a single acoustic encounter. When the overall test was significant, pairwise differences were evaluated using Dunn’s post-hoc tests with Benjamini–Hochberg adjustment for multiple comparisons.
+
+We examined encounter rates of each species during day and nighttime periods. Each 6 minute recording file was assigned to daytime or nighttime periods. Daytime was defined as times between sunrise and sunet, and night as sunset to sunrise, with solar times calculated for the location/date of each recording using the R package suncalc. Differences in acoustic event rates between day and night were evaluated separately for each species using Poisson generalized linear mixed-effects models. Models included diel period as a fixed effect, drift as a random intercept, and the log of recording effort (hours) as an offset to account for unequal sampling effort. Model dispersion was evaluated using simulated residuals. Day rate ratios and 95% confidence intervals were estimated from model contrasts.
+
 ## Ziphius Abundance Estimation
 
 Density and abundance of goose-beaked whales (*Ziphius cavirostris*) were estimated using the group-based acoustic point-transect approach developed by Barlow et al. (2021).
