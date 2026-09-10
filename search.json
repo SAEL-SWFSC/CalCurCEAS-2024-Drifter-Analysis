@@ -119,7 +119,7 @@
     "href": "content/Effort.html",
     "title": "Effort",
     "section": "",
-    "text": "Drifting acoustic recording buoys were deployed on legs 2 through 6 along predetermined locations within the California Current Ecosystem. A total of 27 buoys were deployed along select trackline intersections to provide good spatial coverage across the entire study area (Figure 1). Additionally, 4 opportunistic buoys were deployed during sei whale encounters in an attempt to collect valuable acoustic data on this understudied species. Both deployments and retrievals occurred during the day and night, depending on other scientific operations.\n\n\n\nFigure 1. CalCurCEAS 2025 Drifting Acoustic Recorder Tracks. Black squares represent the start of the deployment and gray triangles represent the end of the deployment. Purple outlines represent the west coast Wind Energy Areas (WEAs). It should be noted that drift 5 was lost at sea but the end point for that deployment was the last GPS ping available, and drift 7 was retrieved without a recorder attached.\n\n\nDuring the survey, the buoys covered a distance of 1,959 nautical miles and collected 5330 hours of acoustic recordings (Table 1). Unfortunately, one buoy was lost at sea and a second buoy lost its hydrophone array due to equipment failure, but overall the acoustic sampling effort was successful.",
+    "text": "Drifting acoustic recording buoys were deployed on legs 2 through 6 along predetermined locations within the California Current Ecosystem. A total of 27 buoys were deployed along select trackline intersections to provide good spatial coverage across the entire study area (Figure 1). Additionally, 4 opportunistic buoys were deployed during sei whale encounters in an attempt to collect valuable acoustic data on this understudied species. Both deployments and retrievals occurred during the day and night, depending on other scientific operations.\n\n\n\nFigure 1. CalCurCEAS 2025 Drifting Acoustic Recorder Tracks. Black squares represent the start of the deployment and gray triangles represent the end of the deployment. Purple outlines represent the west coast Wind Energy Areas (WEAs). It should be noted that drift 5 was lost at sea but the end point for that deployment was the last GPS ping available, and drift 7 was retrieved without a recorder attached.\n\n\nDuring the survey, the buoys covered a distance of 1,959 nautical miles and collected 5091 hours of acoustic recordings (Table 1). Unfortunately, one buoy was lost at sea and a second buoy lost its hydrophone array due to equipment failure, but overall the acoustic sampling effort was successful.",
     "crumbs": [
       "Results",
       "Effort"
@@ -130,7 +130,7 @@
     "href": "content/Effort.html#acoustic-survey-effort",
     "title": "Effort",
     "section": "",
-    "text": "Drifting acoustic recording buoys were deployed on legs 2 through 6 along predetermined locations within the California Current Ecosystem. A total of 27 buoys were deployed along select trackline intersections to provide good spatial coverage across the entire study area (Figure 1). Additionally, 4 opportunistic buoys were deployed during sei whale encounters in an attempt to collect valuable acoustic data on this understudied species. Both deployments and retrievals occurred during the day and night, depending on other scientific operations.\n\n\n\nFigure 1. CalCurCEAS 2025 Drifting Acoustic Recorder Tracks. Black squares represent the start of the deployment and gray triangles represent the end of the deployment. Purple outlines represent the west coast Wind Energy Areas (WEAs). It should be noted that drift 5 was lost at sea but the end point for that deployment was the last GPS ping available, and drift 7 was retrieved without a recorder attached.\n\n\nDuring the survey, the buoys covered a distance of 1,959 nautical miles and collected 5330 hours of acoustic recordings (Table 1). Unfortunately, one buoy was lost at sea and a second buoy lost its hydrophone array due to equipment failure, but overall the acoustic sampling effort was successful.",
+    "text": "Drifting acoustic recording buoys were deployed on legs 2 through 6 along predetermined locations within the California Current Ecosystem. A total of 27 buoys were deployed along select trackline intersections to provide good spatial coverage across the entire study area (Figure 1). Additionally, 4 opportunistic buoys were deployed during sei whale encounters in an attempt to collect valuable acoustic data on this understudied species. Both deployments and retrievals occurred during the day and night, depending on other scientific operations.\n\n\n\nFigure 1. CalCurCEAS 2025 Drifting Acoustic Recorder Tracks. Black squares represent the start of the deployment and gray triangles represent the end of the deployment. Purple outlines represent the west coast Wind Energy Areas (WEAs). It should be noted that drift 5 was lost at sea but the end point for that deployment was the last GPS ping available, and drift 7 was retrieved without a recorder attached.\n\n\nDuring the survey, the buoys covered a distance of 1,959 nautical miles and collected 5091 hours of acoustic recordings (Table 1). Unfortunately, one buoy was lost at sea and a second buoy lost its hydrophone array due to equipment failure, but overall the acoustic sampling effort was successful.",
     "crumbs": [
       "Results",
       "Effort"
@@ -185,7 +185,7 @@
     "href": "content/BeakedWhales-Results.html",
     "title": "Beaked Whale Results",
     "section": "",
-    "text": "There were 638 total beaked whale events detected on 22 separate drifts, corresponding to an overall encounter rate of 3.0085036 encounters per 24 hours of recording. Encounter rates varied among individual drifts, ranging from 0-6.9 encounters per 24 hours (median = 1.9, IQR = [0.9-4.1]. The highest encounter rates were observed during drifts 10 (6.9 encounters per 24 h), drift 22 (6.7 encounters per 24 h), and drift 9 (6.2 encounters per 24 h), while drifts 12, 13, and 14 contained zero beaked whale acoustic detections.\nFive distinct beaked whale species were acoustically detected, including goose-beaked, Hubb’s, Stejneger’s, Baird’s, and gingko-toothed beaked whales (Table Table 1). Encounters with multiple beaked whales were relatively uncommon, comprising 28 of 596 encounters (5 %). Mixed-species of beaked whale encounters occurred on 11 drifts, with 0-7 mixed species encounters per drift. The greatest numbers of mixed species were observed on drifts 9 (7 encounters) and drift 10 (7 encounters).\nAnalyst comments noted dolphins at the surface during 163 beaked whale encounters across 19 drifts. Because these observations were recorded opportunistically during acoustic review rather than through a standardized protocol, they are reported as incidental observations rather than as a rate or proportion of encounters.\n\n\n\n\nTable 1: Summary of beaked whale acoustic events by species.\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpecies\nAcoustic events\nTotal duration (min)\nMedian event duration (min)\nTotal clicks\n\n\n\n\nBerardius bairdii\n19\n425\n10\n91,676\n\n\nMesoplodon carlhubbsi\n84\n1,039\n10\n80,060\n\n\nMesoplodon ginkgodens\n1\n13\n13\n88\n\n\nMesoplodon stejnegeri\n65\n704\n10\n125,906\n\n\nZiphius cavirostris\n468\n7,378\n13\n305,978\n\n\nUnidentified beaked whale\n1\n15\n15\n56",
+    "text": "[1] 2.380952\n\n\n[1] 3.076923\n\n\n# A tibble: 5 × 7\n  species `Acoustic events` Min_Depth Max_Depth `Median Depth` Q1_Depth Q3_Depth\n  &lt;chr&gt;               &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;          &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 BBWH                   19     1820.     4208.           3123     2639     3516\n2 GOBW                  468      657      4508.           3679     3182     4178\n3 GTBW                    1     4082.     4082.           4082     4082     4082\n4 HUBW                   84     2315.     4509.           2914     2735     3141\n5 STBWH                  65     2026.     4177.           2984     2725     3135\n\n\nWarning: species was coerced to a factor.\n\n\n  Kruskal-Wallis rank sum test\n\ndata: x and g\nKruskal-Wallis chi-squared = 120.7116, df = 3, p-value = 0\n\n                      Dunn's Pairwise Comparison of x by g                      \n                              (Benjamini-Hochberg)                              \n\nCol Mean-│\nRow Mean │       BBWH       GOBW       HUBW\n─────────┼─────────────────────────────────\n    GOBW │  -3.335861\n         │     0.0017*\n         │\n    HUBW │   0.800585   8.304522\n         │     0.5080     0.0000*\n         │\n   STBWH │   1.007146   7.882117   0.358863\n         │     0.4708     0.0000*    0.7197 \n\nFDR = 0.05\nReject Ho if adjusted p ≤ FDR with stopping rule, where (unadjusted) p = Pr(|Z| ≥ |z|)\nDunn (1964) Kruskal-Wallis multiple comparison\n\n  p-values adjusted with the Benjamini-Hochberg method.\n\n\n    Comparison          Z      P.unadj        P.adj\n1  BBWH - GOBW -3.3358614 8.503555e-04 1.700711e-03\n2  BBWH - HUBW  0.8005853 4.233717e-01 5.080461e-01\n3  GOBW - HUBW  8.3045230 1.002213e-16 6.013276e-16\n4 BBWH - STBWH  1.0071468 3.138642e-01 4.707964e-01\n5 GOBW - STBWH  7.8821172 3.218798e-15 9.656395e-15\n6 HUBW - STBWH  0.3588626 7.196979e-01 7.196979e-01",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -195,8 +195,8 @@
     "objectID": "content/BeakedWhales-Results.html#overall-beaked-whale-presence",
     "href": "content/BeakedWhales-Results.html#overall-beaked-whale-presence",
     "title": "Beaked Whale Results",
-    "section": "",
-    "text": "There were 638 total beaked whale events detected on 22 separate drifts, corresponding to an overall encounter rate of 3.0085036 encounters per 24 hours of recording. Encounter rates varied among individual drifts, ranging from 0-6.9 encounters per 24 hours (median = 1.9, IQR = [0.9-4.1]. The highest encounter rates were observed during drifts 10 (6.9 encounters per 24 h), drift 22 (6.7 encounters per 24 h), and drift 9 (6.2 encounters per 24 h), while drifts 12, 13, and 14 contained zero beaked whale acoustic detections.\nFive distinct beaked whale species were acoustically detected, including goose-beaked, Hubb’s, Stejneger’s, Baird’s, and gingko-toothed beaked whales (Table Table 1). Encounters with multiple beaked whales were relatively uncommon, comprising 28 of 596 encounters (5 %). Mixed-species of beaked whale encounters occurred on 11 drifts, with 0-7 mixed species encounters per drift. The greatest numbers of mixed species were observed on drifts 9 (7 encounters) and drift 10 (7 encounters).\nAnalyst comments noted dolphins at the surface during 163 beaked whale encounters across 19 drifts. Because these observations were recorded opportunistically during acoustic review rather than through a standardized protocol, they are reported as incidental observations rather than as a rate or proportion of encounters.\n\n\n\n\nTable 1: Summary of beaked whale acoustic events by species.\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpecies\nAcoustic events\nTotal duration (min)\nMedian event duration (min)\nTotal clicks\n\n\n\n\nBerardius bairdii\n19\n425\n10\n91,676\n\n\nMesoplodon carlhubbsi\n84\n1,039\n10\n80,060\n\n\nMesoplodon ginkgodens\n1\n13\n13\n88\n\n\nMesoplodon stejnegeri\n65\n704\n10\n125,906\n\n\nZiphius cavirostris\n468\n7,378\n13\n305,978\n\n\nUnidentified beaked whale\n1\n15\n15\n56",
+    "section": "Overall beaked whale presence",
+    "text": "Overall beaked whale presence\nThere were 637 total beaked whale events detected on 22 separate drifts, corresponding to an overall encounter rate of 3.1261405 encounters per 24 hours of recording. Encounter rates varied among individual drifts, ranging from 0-6.9 encounters per 24 hours (median = 1.9, IQR = [0.9-4.1]. The highest encounter rates were observed during drifts 10 (6.9 encounters per 24 h), drift 22 (6.7 encounters per 24 h), and drift 9 (6.2 encounters per 24 h), while drifts 12, 13, and 14 contained zero beaked whale acoustic detections.\nFive distinct beaked whale species were acoustically detected, including goose-beaked, Hubb’s, Stejneger’s, Baird’s, and gingko-toothed beaked whales (Table 1). Encounters with multiple beaked whales were relatively uncommon, comprising 28 of 595 encounters (5 %). Mixed-species of beaked whale encounters occurred on 11 drifts, with 0-7 mixed species encounters per drift. The greatest numbers of mixed species were observed on drifts 9 (7 encounters) and drift 10 (7 encounters).\nAnalyst comments noted dolphins at the surface during 163 beaked whale encounters across 19 drifts. Because these observations were recorded opportunistically during acoustic review rather than through a standardized protocol, they are reported as incidental observations rather than as a rate or proportion of encounters.\n\n\n\n\nTable 1: Summary of beaked whale acoustic events by species.\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpecies\nAcoustic events\nTotal duration (min)\nMedian event duration (min)\nTotal clicks\n\n\n\n\nBerardius bairdii\n19\n425\n10\n91,676\n\n\nMesoplodon carlhubbsi\n84\n1,039\n10\n80,060\n\n\nMesoplodon ginkgodens\n1\n13\n13\n88\n\n\nMesoplodon stejnegeri\n65\n704\n10\n125,906\n\n\nZiphius cavirostris\n468\n7,378\n13\n305,978\n\n\n\n\n\n\n\n\n  \nBottom depth at acoustic encounters differed among species (Kruskal-Wallis: χ²(3) = 120.71, p &lt; 0.001). Goose-beaked whale encounters occurred at the greatest median depth (3,679 m; IQR=3,182-4,178 m), compared with Baird’s (3,123 m; IQR=2,639-3,516 m), Stejneger’s (2,984 m; IQR=2,725-3,135 m) and Hubbs’ beaked whales (2,914 m; IQR=2,735-3,141 m). Post-hoc Dunn tests with Benjamini–Hochberg correction indicated significant differences between goose-beaked and Baird’s beaked whales (p = 0.0017), goose-beaked and Hubbs’ beaked whales (p&lt;0.001), and goose-beaked and Stejneger’s beaked whales (p&lt;0.001). No significant differences were detected among Baird’s, Hubbs’ and Stejneger’s beaked whales (all adjusted p≥ 0.47). The single gingko-toothed beaked whale encounter occurred over a bottom depth of 4,082 m, but was excluded from statistical comparisons because only one encounter was detected.\n\nNo significant differences in acoustic event rates between day and night were detected for any species. Day rate ratios were 1.20 for GOBW (95% CI = 1.00–1.44, p = 0.051), 1.09 for BBWH (95% CI = 0.44–2.72, p = 0.848), 1.08 for HUBW (95% CI = 0.70–1.66, p = 0.733), and 0.78 for STBWH (95% CI = 0.47–1.30, p = 0.340). Baird’s beaked whales had a substantially greater uncertainty because of the smaller number of encounters.",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -207,7 +207,7 @@
     "href": "content/BeakedWhales-Results.html#goose-beaked-whales",
     "title": "Beaked Whale Results",
     "section": "Goose-beaked whales",
-    "text": "Goose-beaked whales",
+    "text": "Goose-beaked whales\nGoose-beaked whales were the most abundant and wide-spread beaked whale species acoustically detected in this study. Overall, there were 468 goose-beaked whale encounters identified on 21 drifts, with encounter durations ranging from 1-80 minutes (median=13, IQR= 2-25).",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -218,7 +218,7 @@
     "href": "content/BeakedWhales-Results.html#hubbs-beaked-whales",
     "title": "Beaked Whale Results",
     "section": "Hubbs’ beaked whales",
-    "text": "Hubbs’ beaked whales",
+    "text": "Hubbs’ beaked whales\nHubb’s beaked whales were the second most common beaked whale species acoustically detected in this study. Overall there were 84 acoustic encounters identified on 13 drifts, with encounter durations ranging from 1-80 minutes (median=10, IQR=4-16). Hubbs’ beaked whales were predominantly detected in the northern California Current, with 98% (n=82) of encounters detected north of San Francisco, CA (roughly latitude 37.77°N.",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -229,7 +229,7 @@
     "href": "content/BeakedWhales-Results.html#stejnegers-beaked-whales",
     "title": "Beaked Whale Results",
     "section": "Stejneger’s beaked whales",
-    "text": "Stejneger’s beaked whales",
+    "text": "Stejneger’s beaked whales\nStejneger’s beaked whales were the third most common beaked whale species acoustically detected in this study. Overall there were 65 acoustic encounters identified on 12 drifts, with encounter durations ranging from 1-86 minutes (median=10, IQR=6-13). Stejneger’s beaked whales were predominantly detected in the northern California Current, with 97% (n=63) of encounters detected north of San Francisco, CA (roughly latitude 37.77°N).",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -240,7 +240,7 @@
     "href": "content/BeakedWhales-Results.html#bairds-beaked-whales",
     "title": "Beaked Whale Results",
     "section": "Baird’s beaked whales",
-    "text": "Baird’s beaked whales",
+    "text": "Baird’s beaked whales\nBaird’s beaked whales were detected in 19 acoustic encounters on 13 drifts, with encounter durations ranging from 1-124 minutes (median=10, IQR=5-20). Baird’s beaked whales were detected throughout the California Current.",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -251,7 +251,7 @@
     "href": "content/BeakedWhales-Results.html#gingko-toothed-beaked-whales",
     "title": "Beaked Whale Results",
     "section": "Gingko-toothed beaked whales",
-    "text": "Gingko-toothed beaked whales",
+    "text": "Gingko-toothed beaked whales\nThere was one acoustic detection of gingko-toothed whales that was 13.4 minutes in duration. This event was detected on drift 27, in the southern extent of the study offshore of the Southern California Bight (roughly latitude 33°N). During this encounter, there were concurrent echolocation clicks detected in separate click trains from goose-beaked whales at depth and delphinid echolocation clicks in the upper water column.",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -262,29 +262,7 @@
     "href": "content/BeakedWhales-Results.html#figures",
     "title": "Beaked Whale Results",
     "section": "Figures",
-    "text": "Figures\nPreliminary maps of beaked whale acoustic detections",
-    "crumbs": [
-      "Results",
-      "Beaked Whale Results"
-    ]
-  },
-  {
-    "objectID": "content/BeakedWhales-Results.html#section",
-    "href": "content/BeakedWhales-Results.html#section",
-    "title": "Beaked Whale Results",
-    "section": "",
-    "text": "Add plots for\n\ndistribution of beaked whale detection angles\ndetection function\nmap of density estimates per drift\n\nAdd tables of:\n\nEstimated Ziphius population density per drift (See Table 3 in Barlow et al 2021)",
-    "crumbs": [
-      "Results",
-      "Beaked Whale Results"
-    ]
-  },
-  {
-    "objectID": "content/BeakedWhales-Results.html#outline",
-    "href": "content/BeakedWhales-Results.html#outline",
-    "title": "Beaked Whale Results",
-    "section": "Outline",
-    "text": "Outline\n\nSurvey effort (Available in “Effort.qmd”)\n\nNumber of drifters analyzed\nTotal recording effort\nGeographic & temporal coverage\nMissing data\n\nOverall beaked whale detections\n\nTotal number of beaked whale acoustic encounters\nWhich drifts contained beaked whale encounters\nOverall detection rate\nVariation among drifts\nMixed species detections\n\nIndividual Species\n\nZiphius\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nBaird’s beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nHubbs’ beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nStejneger’s beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\nGinkgo-toothed beaked whale\n\nNumber of encounters\nGeographic distribution\nDiel pattern\n\n\nZiphius Abundance Estimation",
+    "text": "Figures\nPreliminary maps of beaked whale acoustic detections\nAdd plots for\n\ndistribution of beaked whale detection angles\ndetection function\nmap of density estimates per drift\n\nAdd tables of:\n\nEstimated Ziphius population density per drift (See Table 3 in Barlow et al 2021)",
     "crumbs": [
       "Results",
       "Beaked Whale Results"
@@ -395,6 +373,17 @@
     "title": "Beaked Whales",
     "section": "",
     "text": "Beaked whale echolocation clicks were detected and classified using methods developed for previous DASBR surveys in the California Current (Keating et al. 2018; Simonis et al. 2020; Rankin et al. 2024).\n\nAcoustic recordings were decimated to 288 kHz and processed using the Click Detector module in PAMGuard (v. 2.02.14).\nRecordings were high-pass filtered at 10 kHz, with an additional 80 kHz whitening filter applied to flatten the ambient noise spectrum.\nClick detection was performed on the upper hydrophone (HTI-92-WB) using a 12 dB signal-to-noise ratio threshold. PAMGuard settings for each deployment are available here.\nAn experienced analyst (AES) manually reviewed detections in PAMGuard Viewer Mode and identified beaked whale acoustic events based on click frequency, waveform and spectral characteristics, inter-click interval, and angle of arrival.\nAcoustic events were defined as three or more echolocation clicks from a given species within 2 or more minutes.\nEvents were classified to species or signal type using established characteristics of beaked whale echolocation signals (see Beaked Whale ID Guide). Species acoustically identified in this study included\n\ngoose-beaked whale (Ziphius cavirostris)\nBaird’s beaked whale (Berardius bairdii)\nStejneger’s beaked whale (Mesoplodon stejnegeri)\nHubbs’ beaked whale (Mesoplodon carlhubbsi)\nginkgo-toothed beaked whales (Mesoplodon ginkgodens)\nunidentified and possible beaked whale categories\n\nWhen two or more species were present at the same time, separate events were labeled for each species.\nMixed-species events are defined as two or more beaked whale species present within 20 minutes or less\nAll events were classified twice by the same analyst for quality control.",
+    "crumbs": [
+      "Analysis",
+      "Beaked Whales"
+    ]
+  },
+  {
+    "objectID": "content/BeakedWhales.html#spatio-temporal-patterns",
+    "href": "content/BeakedWhales.html#spatio-temporal-patterns",
+    "title": "Beaked Whales",
+    "section": "Spatio-temporal patterns",
+    "text": "Spatio-temporal patterns\nDifferences in bottom depth among species were evaluated using a Kruskal–Wallis test, excluding species represented by only a single acoustic encounter. When the overall test was significant, pairwise differences were evaluated using Dunn’s post-hoc tests with Benjamini–Hochberg adjustment for multiple comparisons.\nWe examined encounter rates of each species during day and nighttime periods. Each 6 minute recording file was assigned to daytime or nighttime periods. Daytime was defined as times between sunrise and sunet, and night as sunset to sunrise, with solar times calculated for the location/date of each recording using the R package suncalc. Differences in acoustic event rates between day and night were evaluated separately for each species using Poisson generalized linear mixed-effects models. Models included diel period as a fixed effect, drift as a random intercept, and the log of recording effort (hours) as an offset to account for unequal sampling effort. Model dispersion was evaluated using simulated residuals. Day rate ratios and 95% confidence intervals were estimated from model contrasts.",
     "crumbs": [
       "Analysis",
       "Beaked Whales"
