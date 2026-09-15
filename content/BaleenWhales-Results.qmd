@@ -1,5 +1,5 @@
 ---
-title: "Beaked Whale Results"
+title: "Baleen Whale Results"
 editor: visual
 execute:
   echo: false
