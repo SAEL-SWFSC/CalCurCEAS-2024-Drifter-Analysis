@@ -339,7 +339,62 @@
     "href": "content/BaleenWhales-Results.html",
     "title": "Baleen Whale Results",
     "section": "",
-    "text": "This page presents reproducible analyses and results for blue, fin, and sei whales from the 2024 CalCurCEAS drifting acoustic recorder survey.",
+    "text": "This page summarizes key results from the blue, fin, and sei whale analyses conducted using drifting acoustic recorder data collected during the 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS). Complete data products and supporting outputs are available in the project repository.",
+    "crumbs": [
+      "Results",
+      "Baleen Whale Results"
+    ]
+  },
+  {
+    "objectID": "content/BaleenWhales-Results.html#validated-hourly-occurrence",
+    "href": "content/BaleenWhales-Results.html#validated-hourly-occurrence",
+    "title": "Baleen Whale Results",
+    "section": "Validated hourly occurrence",
+    "text": "Validated hourly occurrence\nSummary of manually validated hourly occurrence of blue, fin, and sei whales across geographic zones.\n[Key figure/table goes here]",
+    "crumbs": [
+      "Results",
+      "Baleen Whale Results"
+    ]
+  },
+  {
+    "objectID": "content/BaleenWhales-Results.html#detector-performance-on-novel-calcurceas-data",
+    "href": "content/BaleenWhales-Results.html#detector-performance-on-novel-calcurceas-data",
+    "title": "Baleen Whale Results",
+    "section": "Detector performance on novel CalCurCEAS data",
+    "text": "Detector performance on novel CalCurCEAS data\nPerformance of the final DeepAcoustics TinyYOLO detector was evaluated using manually annotated novel CalCurCEAS recordings. Automated call-level analyses were restricted to call types meeting the specified performance criterion.\n[Compact performance figure or table goes here]",
+    "crumbs": [
+      "Results",
+      "Baleen Whale Results"
+    ]
+  },
+  {
+    "objectID": "content/BaleenWhales-Results.html#relative-automated-call-activity",
+    "href": "content/BaleenWhales-Results.html#relative-automated-call-activity",
+    "title": "Baleen Whale Results",
+    "section": "Relative automated call activity",
+    "text": "Relative automated call activity\nFor call types with sufficient detector performance, automated detections were summarized relative to acoustic recording effort to characterize variation in call activity among geographic zones.\n[Key figure/table goes here]",
+    "crumbs": [
+      "Results",
+      "Baleen Whale Results"
+    ]
+  },
+  {
+    "objectID": "content/BaleenWhales-Results.html#environmental-context",
+    "href": "content/BaleenWhales-Results.html#environmental-context",
+    "title": "Baleen Whale Results",
+    "section": "Environmental context",
+    "text": "Environmental context\nExploratory comparisons were used to describe the environmental conditions associated with call-positive and call-negative hours. These analyses are descriptive and were not intended as formal habitat models.\n[Optional compact figure or short summary]",
+    "crumbs": [
+      "Results",
+      "Baleen Whale Results"
+    ]
+  },
+  {
+    "objectID": "content/BaleenWhales-Results.html#data-products",
+    "href": "content/BaleenWhales-Results.html#data-products",
+    "title": "Baleen Whale Results",
+    "section": "Data products",
+    "text": "Data products\nSupporting datasets, tables, figures, model files, and analysis outputs used for the baleen whale analyses are available in the GitHub repository.",
     "crumbs": [
       "Results",
       "Baleen Whale Results"
