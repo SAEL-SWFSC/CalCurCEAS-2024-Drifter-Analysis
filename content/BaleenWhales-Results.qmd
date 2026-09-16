@@ -11,4 +11,46 @@ execute:
 
 ```
 
-This page presents reproducible analyses and results for blue, fin, and sei whales from the 2024 CalCurCEAS drifting acoustic recorder survey.
+This page summarizes key results from the blue, fin, and sei whale
+analyses conducted using drifting acoustic recorder data collected during
+the 2024 California Current Cetacean and Ecosystem Assessment Survey
+(CalCurCEAS). Complete data products and supporting outputs are available
+in the project repository.
+
+## Validated hourly occurrence
+
+Summary of manually validated hourly occurrence of blue, fin, and sei
+whales across geographic zones.
+
+\[Key figure/table goes here\]
+
+## Detector performance on novel CalCurCEAS data
+
+Performance of the final DeepAcoustics TinyYOLO detector was evaluated
+using manually annotated novel CalCurCEAS recordings. Automated
+call-level analyses were restricted to call types meeting the specified
+performance criterion.
+
+\[Compact performance figure or table goes here\]
+
+## Relative automated call activity
+
+For call types with sufficient detector performance, automated detections
+were summarized relative to acoustic recording effort to characterize
+variation in call activity among geographic zones.
+
+\[Key figure/table goes here\]
+
+## Environmental context
+
+Exploratory comparisons were used to describe the environmental
+conditions associated with call-positive and call-negative hours.
+These analyses are descriptive and were not intended as formal habitat
+models.
+
+\[Optional compact figure or short summary\]
+
+## Data products
+
+Supporting datasets, tables, figures, model files, and analysis outputs
+used for the baleen whale analyses are available in the GitHub repository.
