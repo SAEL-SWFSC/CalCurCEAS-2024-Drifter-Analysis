@@ -1,0 +1,7 @@
+call_type,deployments_evaluated,deployments_with_reference_calls,original_detections,reviewed_truth_calls,true_positive,false_positive,false_negative,precision,recall,f1_score,retained_for_call_level_analysis
+Blue A,20,13,264,278,263,1,15,0.996,0.946,0.97,TRUE
+Blue B,20,19,3227,4724,3189,38,1535,0.988,0.675,0.802,TRUE
+Blue D,20,14,109,179,105,4,74,0.963,0.587,0.729,FALSE
+Fin 20 Hz,20,20,9134,11864,8887,247,2977,0.973,0.749,0.846,TRUE
+Fin 40 Hz,20,7,12,115,7,5,108,0.583,0.061,0.11,FALSE
+Sei DS,20,15,456,819,394,62,425,0.864,0.481,0.618,FALSE

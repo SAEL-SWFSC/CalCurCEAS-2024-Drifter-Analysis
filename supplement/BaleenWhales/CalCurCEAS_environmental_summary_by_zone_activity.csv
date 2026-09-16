@@ -1,0 +1,181 @@
+call_metric,geographic_zone,activity_category,high_call_threshold,category_hours,environmental_variable,units,n_available,median,q25,q75
+Blue A/B,Northern California,high_call,5,177,gebco_bathymetry_m,m,177,-3080,-3171,-1124
+Blue A/B,Northern California,high_call,5,177,sst_c,deg_C,177,15.189,13.402,16.546
+Blue A/B,Northern California,high_call,5,177,chlorophyll_a,mg_m-3,123,0.658201158,0.5676708815,0.8417361375
+Blue A/B,Northern California,high_call,5,177,phytoplankton_carbon,mg_m-3,123,40.18890381,34.52432251,44.99072266
+Blue A/B,Northern California,high_call,5,177,poc,mg_m-3,123,142.7998047,128.5,169.5998535
+Blue A/B,Northern California,high_call,5,177,npp_concurrent,mg_C_m-2_d-1,126,789.4076233000001,680.7670898,866.2015381
+Blue A/B,Northern California,high_call,5,177,npp_lag_30d,mg_C_m-2_d-1,42,670.0368042,667.7471313,678.1729126
+Blue A/B,Northern California,high_call,5,177,npp_lag_60d,mg_C_m-2_d-1,39,761.4703979,630.762207,918.6525879
+Blue A/B,Northern California,high_call,5,177,npp_lag_90d,mg_C_m-2_d-1,123,652.3760986,605.9633179,723.5491638
+Blue A/B,Northern California,high_call,5,177,npp_lag_120d,mg_C_m-2_d-1,44,716.0004272,700.3295898,843.81297305
+Blue A/B,Northern California,low_call,5,286,gebco_bathymetry_m,m,286,-3130.5,-4187,-2644.25
+Blue A/B,Northern California,low_call,5,286,sst_c,deg_C,286,16.1745,15.19,16.83
+Blue A/B,Northern California,low_call,5,286,chlorophyll_a,mg_m-3,133,0.636013567,0.376097918,0.802490652
+Blue A/B,Northern California,low_call,5,286,phytoplankton_carbon,mg_m-3,133,40.23125839,31.72317505,45.57423782
+Blue A/B,Northern California,low_call,5,286,poc,mg_m-3,133,139.3999023,96.60009766,163.6000977
+Blue A/B,Northern California,low_call,5,286,npp_concurrent,mg_C_m-2_d-1,143,685.9769897,637.62231445,803.5668335
+Blue A/B,Northern California,low_call,5,286,npp_lag_30d,mg_C_m-2_d-1,39,676.0142212,657.0993042,783.5285034
+Blue A/B,Northern California,low_call,5,286,npp_lag_60d,mg_C_m-2_d-1,42,619.1119994999999,587.8088989,745.58283995
+Blue A/B,Northern California,low_call,5,286,npp_lag_90d,mg_C_m-2_d-1,126,713.2390137,614.7281494,738.7296753
+Blue A/B,Northern California,low_call,5,286,npp_lag_120d,mg_C_m-2_d-1,76,700.3295898,646.9873047,843.0797729
+Blue A/B,Northern California,no_call,5,194,gebco_bathymetry_m,m,194,-3127,-4208.25,-2596.5
+Blue A/B,Northern California,no_call,5,194,sst_c,deg_C,194,16.459,15.1965,16.99825
+Blue A/B,Northern California,no_call,5,194,chlorophyll_a,mg_m-3,83,0.658201158,0.427058518,0.899588466
+Blue A/B,Northern California,no_call,5,194,phytoplankton_carbon,mg_m-3,83,37.6353302,26.131513595,44.75040817
+Blue A/B,Northern California,no_call,5,194,poc,mg_m-3,83,142.7998047,104.69995115,177.6000977
+Blue A/B,Northern California,no_call,5,194,npp_concurrent,mg_C_m-2_d-1,89,669.8894653,618.8444214,813.8980103
+Blue A/B,Northern California,no_call,5,194,npp_lag_30d,mg_C_m-2_d-1,53,673.6986084,656.8884277,775.067627
+Blue A/B,Northern California,no_call,5,194,npp_lag_60d,mg_C_m-2_d-1,26,630.762207,596.3531799,639.8800049
+Blue A/B,Northern California,no_call,5,194,npp_lag_90d,mg_C_m-2_d-1,81,614.7281494,573.3277588,722.6110229
+Blue A/B,Northern California,no_call,5,194,npp_lag_120d,mg_C_m-2_d-1,56,659.3616027999999,585.53318785,723.231414825
+Blue A/B,Central California,high_call,9,258,gebco_bathymetry_m,m,258,-4163,-4249,-3645.75
+Blue A/B,Central California,high_call,9,258,sst_c,deg_C,258,15.792000000000002,15.284,16.804
+Blue A/B,Central California,high_call,9,258,chlorophyll_a,mg_m-3,141,0.421100527,0.246031776,0.524846792
+Blue A/B,Central California,high_call,9,258,phytoplankton_carbon,mg_m-3,141,20.03223228,17.71529579,22.53652763
+Blue A/B,Central California,high_call,9,258,poc,mg_m-3,141,103.7998047,70.39990234,121.6000977
+Blue A/B,Central California,high_call,9,258,npp_concurrent,mg_C_m-2_d-1,150,515.4660645,436.5058594,588.0915527
+Blue A/B,Central California,high_call,9,258,npp_lag_30d,mg_C_m-2_d-1,156,499.0621338,425.766571,580.065887475
+Blue A/B,Central California,high_call,9,258,npp_lag_60d,mg_C_m-2_d-1,42,625.0946655,602.875274675,683.6884766
+Blue A/B,Central California,high_call,9,258,npp_lag_90d,mg_C_m-2_d-1,23,704.5187378,689.3362427,1071.893433
+Blue A/B,Central California,high_call,9,258,npp_lag_120d,mg_C_m-2_d-1,67,733.5574341,514.5727234000001,859.7487793
+Blue A/B,Central California,low_call,9,483,gebco_bathymetry_m,m,483,-4121,-4231,-3446
+Blue A/B,Central California,low_call,9,483,sst_c,deg_C,483,15.945,15.449,16.576
+Blue A/B,Central California,low_call,9,483,chlorophyll_a,mg_m-3,235,0.465747744,0.246031776,0.5392761825000001
+Blue A/B,Central California,low_call,9,483,phytoplankton_carbon,mg_m-3,235,20.93194199,18.3236351,23.23637772
+Blue A/B,Central California,low_call,9,483,poc,mg_m-3,235,111.6000977,70.79980469,123.89990234999999
+Blue A/B,Central California,low_call,9,483,npp_concurrent,mg_C_m-2_d-1,240,534.70706175,472.526924125,641.5124512
+Blue A/B,Central California,low_call,9,483,npp_lag_30d,mg_C_m-2_d-1,279,490.3354187,421.8277283,571.4509888
+Blue A/B,Central California,low_call,9,483,npp_lag_60d,mg_C_m-2_d-1,77,679.3353271,602.612793,683.6884766
+Blue A/B,Central California,low_call,9,483,npp_lag_90d,mg_C_m-2_d-1,44,678.0702515,592.0376587,690.6339722
+Blue A/B,Central California,low_call,9,483,npp_lag_120d,mg_C_m-2_d-1,112,733.5574341,555.6504517,869.51620485
+Blue A/B,Central California,no_call,9,215,gebco_bathymetry_m,m,215,-4169,-4280,-3487
+Blue A/B,Central California,no_call,9,215,sst_c,deg_C,215,16.23,15.5475,16.36
+Blue A/B,Central California,no_call,9,215,chlorophyll_a,mg_m-3,133,0.405023992,0.244808227,0.498987436
+Blue A/B,Central California,no_call,9,215,phytoplankton_carbon,mg_m-3,133,18.99382019,16.26378632,21.41898727
+Blue A/B,Central California,no_call,9,215,poc,mg_m-3,133,100.7998047,68.19995117,117.199707
+Blue A/B,Central California,no_call,9,215,npp_concurrent,mg_C_m-2_d-1,130,526.9759216,469.2242432,647.2494507
+Blue A/B,Central California,no_call,9,215,npp_lag_30d,mg_C_m-2_d-1,128,493.2564392,450.12431337499993,547.1566315
+Blue A/B,Central California,no_call,9,215,npp_lag_60d,mg_C_m-2_d-1,38,680.5088806,675.9278717000001,685.1824951
+Blue A/B,Central California,no_call,9,215,npp_lag_90d,mg_C_m-2_d-1,27,690.6339722,636.8848877,870.97869885
+Blue A/B,Central California,no_call,9,215,npp_lag_120d,mg_C_m-2_d-1,57,617.380249,579.3591919,806.0298462
+Blue A/B,Southern California,high_call,8,381,gebco_bathymetry_m,m,381,-3695,-3994,-3551
+Blue A/B,Southern California,high_call,8,381,sst_c,deg_C,381,15.551,15.128,16.209
+Blue A/B,Southern California,high_call,8,381,chlorophyll_a,mg_m-3,174,0.405519992,0.363122553,0.442088008
+Blue A/B,Southern California,high_call,8,381,phytoplankton_carbon,mg_m-3,174,18.12174797,17.62073517,21.5425519925
+Blue A/B,Southern California,high_call,8,381,poc,mg_m-3,174,100.99975585,94,107.6000977
+Blue A/B,Southern California,high_call,8,381,npp_concurrent,mg_C_m-2_d-1,163,549.3463745,470.6891785,624.2747192
+Blue A/B,Southern California,high_call,8,381,npp_lag_30d,mg_C_m-2_d-1,218,587.7636108,493.2564392,750.2456055
+Blue A/B,Southern California,high_call,8,381,npp_lag_60d,mg_C_m-2_d-1,101,847.5523071,702.3421631,923.7832642
+Blue A/B,Southern California,high_call,8,381,npp_lag_90d,mg_C_m-2_d-1,104,807.8183289000001,674.1419678,976.0809326
+Blue A/B,Southern California,high_call,8,381,npp_lag_120d,mg_C_m-2_d-1,44,898.5310669,606.2071228,996.5338135
+Blue A/B,Southern California,low_call,8,601,gebco_bathymetry_m,m,601,-3808,-4048,-3558
+Blue A/B,Southern California,low_call,8,601,sst_c,deg_C,601,15.694,15.245,16.223
+Blue A/B,Southern California,low_call,8,601,chlorophyll_a,mg_m-3,270,0.390428752,0.31529583775000003,0.442088008
+Blue A/B,Southern California,low_call,8,601,phytoplankton_carbon,mg_m-3,270,19.255812645,16.66526604,22.341170312499997
+Blue A/B,Southern California,low_call,8,601,poc,mg_m-3,270,99.79980469,86.42486572499999,107.6000977
+Blue A/B,Southern California,low_call,8,601,npp_concurrent,mg_C_m-2_d-1,259,531.3897095,452.1691284,668.9337769
+Blue A/B,Southern California,low_call,8,601,npp_lag_30d,mg_C_m-2_d-1,299,572.8378906,464.6277161,705.57717895
+Blue A/B,Southern California,low_call,8,601,npp_lag_60d,mg_C_m-2_d-1,136,668.6594238,485.27323917499996,822.557373
+Blue A/B,Southern California,low_call,8,601,npp_lag_90d,mg_C_m-2_d-1,171,714.4690552,623.17086795,973.66748045
+Blue A/B,Southern California,low_call,8,601,npp_lag_120d,mg_C_m-2_d-1,38,704.9187622,558.7621612749999,885.040161125
+Blue A/B,Southern California,no_call,8,415,gebco_bathymetry_m,m,415,-3730,-4160,-3544.5
+Blue A/B,Southern California,no_call,8,415,sst_c,deg_C,415,15.671,15.176,16.168
+Blue A/B,Southern California,no_call,8,415,chlorophyll_a,mg_m-3,169,0.34409371,0.273066491,0.432017177
+Blue A/B,Southern California,no_call,8,415,phytoplankton_carbon,mg_m-3,169,19.29904938,17.42320824,21.15146637
+Blue A/B,Southern California,no_call,8,415,poc,mg_m-3,169,93.19970703,75.89990234,105.6000977
+Blue A/B,Southern California,no_call,8,415,npp_concurrent,mg_C_m-2_d-1,169,491.0799561,452.1691284,574.2073975
+Blue A/B,Southern California,no_call,8,415,npp_lag_30d,mg_C_m-2_d-1,169,598.1698608,496.3655396,682.0928345
+Blue A/B,Southern California,no_call,8,415,npp_lag_60d,mg_C_m-2_d-1,94,728.0098571999999,528.508796675,822.557373
+Blue A/B,Southern California,no_call,8,415,npp_lag_90d,mg_C_m-2_d-1,139,678.7924194,589.1018066,949.58093265
+Blue A/B,Southern California,no_call,8,415,npp_lag_120d,mg_C_m-2_d-1,52,745.6107178,641.7391357,764.8795166
+Fin 20 Hz,Northern California,high_call,8,165,gebco_bathymetry_m,m,165,-2427,-3123,-1087
+Fin 20 Hz,Northern California,high_call,8,165,sst_c,deg_C,165,14.815,13.327,15.989
+Fin 20 Hz,Northern California,high_call,8,165,chlorophyll_a,mg_m-3,115,0.748835742,0.658201158,0.852383196
+Fin 20 Hz,Northern California,high_call,8,165,phytoplankton_carbon,mg_m-3,115,40.12385941,34.52432251,45.85004425
+Fin 20 Hz,Northern California,high_call,8,165,poc,mg_m-3,115,156.6000977,142.7998047,171
+Fin 20 Hz,Northern California,high_call,8,165,npp_concurrent,mg_C_m-2_d-1,117,803.5668335,739.9211426,866.2015381
+Fin 20 Hz,Northern California,high_call,8,165,npp_lag_30d,mg_C_m-2_d-1,58,678.1729126,676.0142212,783.5285034
+Fin 20 Hz,Northern California,high_call,8,165,npp_lag_60d,mg_C_m-2_d-1,18,918.6525879,781.379959075,981.3381958
+Fin 20 Hz,Northern California,high_call,8,165,npp_lag_90d,mg_C_m-2_d-1,129,694.3258667,614.7281494,734.3806763
+Fin 20 Hz,Northern California,high_call,8,165,npp_lag_120d,mg_C_m-2_d-1,31,700.3295898,652.5502319499999,745.4732666
+Fin 20 Hz,Northern California,low_call,8,173,gebco_bathymetry_m,m,173,-3126,-3201,-2871
+Fin 20 Hz,Northern California,low_call,8,173,sst_c,deg_C,173,15.931,15.029,16.87
+Fin 20 Hz,Northern California,low_call,8,173,chlorophyll_a,mg_m-3,101,0.658201158,0.471041083,0.899588466
+Fin 20 Hz,Northern California,low_call,8,173,phytoplankton_carbon,mg_m-3,101,42.17924881,37.6353302,44.75040817
+Fin 20 Hz,Northern California,low_call,8,173,poc,mg_m-3,101,142.7998047,112.5,177.6000977
+Fin 20 Hz,Northern California,low_call,8,173,npp_concurrent,mg_C_m-2_d-1,105,770.8478394,653.4711914,836.3624268
+Fin 20 Hz,Northern California,low_call,8,173,npp_lag_30d,mg_C_m-2_d-1,28,668.0358276,659.98712155,747.8682708499999
+Fin 20 Hz,Northern California,low_call,8,173,npp_lag_60d,mg_C_m-2_d-1,22,716.5159912,607.3536987,888.4337158
+Fin 20 Hz,Northern California,low_call,8,173,npp_lag_90d,mg_C_m-2_d-1,93,695.3927002,577.8266602,730.3372803
+Fin 20 Hz,Northern California,low_call,8,173,npp_lag_120d,mg_C_m-2_d-1,56,716.0004272,689.493499725,842.9289551
+Fin 20 Hz,Northern California,no_call,8,319,gebco_bathymetry_m,m,319,-4166,-4277,-2833.5
+Fin 20 Hz,Northern California,no_call,8,319,sst_c,deg_C,319,16.568,15.7105,17.012
+Fin 20 Hz,Northern California,no_call,8,319,chlorophyll_a,mg_m-3,123,0.417350143,0.339165896,0.527209401
+Fin 20 Hz,Northern California,no_call,8,319,phytoplankton_carbon,mg_m-3,123,40.23125839,25.984118459999998,44.75040817
+Fin 20 Hz,Northern California,no_call,8,319,poc,mg_m-3,123,103,91,122
+Fin 20 Hz,Northern California,no_call,8,319,npp_concurrent,mg_C_m-2_d-1,136,638.3764648,615.175415,680.7670898
+Fin 20 Hz,Northern California,no_call,8,319,npp_lag_30d,mg_C_m-2_d-1,48,656.8884277,633.021423325,673.6986084
+Fin 20 Hz,Northern California,no_call,8,319,npp_lag_60d,mg_C_m-2_d-1,67,623.5563354,584.82250975,639.48162845
+Fin 20 Hz,Northern California,no_call,8,319,npp_lag_90d,mg_C_m-2_d-1,108,712.1637573,521.02877805,732.2659302
+Fin 20 Hz,Northern California,no_call,8,319,npp_lag_120d,mg_C_m-2_d-1,89,666.6251831,582.4919434,842.9289551
+Fin 20 Hz,Central California,high_call,11,245,gebco_bathymetry_m,m,245,-3465,-4140,-3412
+Fin 20 Hz,Central California,high_call,11,245,sst_c,deg_C,245,15.744,15.384,16.334
+Fin 20 Hz,Central California,high_call,11,245,chlorophyll_a,mg_m-3,100,0.5070367155,0.47642800975,0.5785083470000001
+Fin 20 Hz,Central California,high_call,11,245,phytoplankton_carbon,mg_m-3,100,21.41898727,21.04387665,24.526120665
+Fin 20 Hz,Central California,high_call,11,245,poc,mg_m-3,100,118.5998535,113.24987789999999,130.449707
+Fin 20 Hz,Central California,high_call,11,245,npp_concurrent,mg_C_m-2_d-1,109,606.1464844,522.6004028,654.1107178
+Fin 20 Hz,Central California,high_call,11,245,npp_lag_30d,mg_C_m-2_d-1,143,499.0621338,439.1333313,581.88079835
+Fin 20 Hz,Central California,high_call,11,245,npp_lag_60d,mg_C_m-2_d-1,35,679.2646484,679.2646484,683.6884766
+Fin 20 Hz,Central California,high_call,11,245,npp_lag_90d,mg_C_m-2_d-1,17,689.3362427,636.8848877,695.0459595
+Fin 20 Hz,Central California,high_call,11,245,npp_lag_120d,mg_C_m-2_d-1,61,617.380249,510.7176208,859.7487793
+Fin 20 Hz,Central California,low_call,11,390,gebco_bathymetry_m,m,390,-4132,-4285,-3499
+Fin 20 Hz,Central California,low_call,11,390,sst_c,deg_C,390,15.784,15.38925,16.367
+Fin 20 Hz,Central California,low_call,11,390,chlorophyll_a,mg_m-3,216,0.465747744,0.289678484,0.562865376
+Fin 20 Hz,Central California,low_call,11,390,phytoplankton_carbon,mg_m-3,216,20.93194199,18.1529803275,23.7468404775
+Fin 20 Hz,Central California,low_call,11,390,poc,mg_m-3,216,111.6000977,77.60009766,128
+Fin 20 Hz,Central California,low_call,11,390,npp_concurrent,mg_C_m-2_d-1,218,543.5145569,475.891899125,669.105575575
+Fin 20 Hz,Central California,low_call,11,390,npp_lag_30d,mg_C_m-2_d-1,234,499.8846588,433.45629117500005,582.1933288749999
+Fin 20 Hz,Central California,low_call,11,390,npp_lag_60d,mg_C_m-2_d-1,64,679.3353271,602.612793,684.061981225
+Fin 20 Hz,Central California,low_call,11,390,npp_lag_90d,mg_C_m-2_d-1,40,690.6339722,680.08546445,1029.9109195
+Fin 20 Hz,Central California,low_call,11,390,npp_lag_120d,mg_C_m-2_d-1,82,659.1989746,566.869522125,861.6461182
+Fin 20 Hz,Central California,no_call,11,321,gebco_bathymetry_m,m,321,-4196,-4277,-4134
+Fin 20 Hz,Central California,no_call,11,321,sst_c,deg_C,321,16.334,15.684,16.826
+Fin 20 Hz,Central California,no_call,11,321,chlorophyll_a,mg_m-3,193,0.246031776,0.234994709,0.377695709
+Fin 20 Hz,Central California,no_call,11,321,phytoplankton_carbon,mg_m-3,193,18.3236351,16.26378632,20.03223228
+Fin 20 Hz,Central California,no_call,11,321,poc,mg_m-3,193,70.79980469,63.69995117,95.79980469
+Fin 20 Hz,Central California,no_call,11,321,npp_concurrent,mg_C_m-2_d-1,193,486.1214294,436.4893188,520.0286865
+Fin 20 Hz,Central California,no_call,11,321,npp_lag_30d,mg_C_m-2_d-1,186,465.4289856,416.47618865000004,549.184021
+Fin 20 Hz,Central California,no_call,11,321,npp_lag_60d,mg_C_m-2_d-1,58,649.95513915,602.612793,685.1824951
+Fin 20 Hz,Central California,no_call,11,321,npp_lag_90d,mg_C_m-2_d-1,37,592.0376587,578.0977173,713.3989258
+Fin 20 Hz,Central California,no_call,11,321,npp_lag_120d,mg_C_m-2_d-1,93,733.5574341,607.0196533,859.7487793
+Fin 20 Hz,Southern California,high_call,15,357,gebco_bathymetry_m,m,357,-2223,-3625,-800
+Fin 20 Hz,Southern California,high_call,15,357,sst_c,deg_C,357,15.453,15.112,16.037
+Fin 20 Hz,Southern California,high_call,15,357,chlorophyll_a,mg_m-3,137,0.532816529,0.387193263,0.603809714
+Fin 20 Hz,Southern California,high_call,15,357,phytoplankton_carbon,mg_m-3,137,20.69981384,18.07842255,28.23990631
+Fin 20 Hz,Southern California,high_call,15,357,poc,mg_m-3,137,123,97.60009766,134.199707
+Fin 20 Hz,Southern California,high_call,15,357,npp_concurrent,mg_C_m-2_d-1,121,579.1367798,478.5682373,714.1428833
+Fin 20 Hz,Southern California,high_call,15,357,npp_lag_30d,mg_C_m-2_d-1,184,606.2317505,496.3655396,662.9018555
+Fin 20 Hz,Southern California,high_call,15,357,npp_lag_60d,mg_C_m-2_d-1,86,702.3421631,385.9753113,821.1548462
+Fin 20 Hz,Southern California,high_call,15,357,npp_lag_90d,mg_C_m-2_d-1,129,716.9094849,672.3637695,979.9468384
+Fin 20 Hz,Southern California,high_call,15,357,npp_lag_120d,mg_C_m-2_d-1,29,674.2318726,661.5723267,764.8795166
+Fin 20 Hz,Southern California,low_call,15,730,gebco_bathymetry_m,m,730,-3834,-4072.75,-3584.25
+Fin 20 Hz,Southern California,low_call,15,730,sst_c,deg_C,730,15.58,15.143,16.215
+Fin 20 Hz,Southern California,low_call,15,730,chlorophyll_a,mg_m-3,355,0.386594176,0.333866984,0.41435799
+Fin 20 Hz,Southern California,low_call,15,730,phytoplankton_carbon,mg_m-3,355,19.21257591,17.62073517,21.45196915
+Fin 20 Hz,Southern California,low_call,15,730,poc,mg_m-3,355,98.79980469,88.79980469,103
+Fin 20 Hz,Southern California,low_call,15,730,npp_concurrent,mg_C_m-2_d-1,349,534.8165283,455.993866,624.767395
+Fin 20 Hz,Southern California,low_call,15,730,npp_lag_30d,mg_C_m-2_d-1,369,606.2317505,486.0192871,747.6055908
+Fin 20 Hz,Southern California,low_call,15,730,npp_lag_60d,mg_C_m-2_d-1,171,791.7227173,609.4988403,908.7372437
+Fin 20 Hz,Southern California,low_call,15,730,npp_lag_90d,mg_C_m-2_d-1,214,744.4983215,609.6050415,970.3358765
+Fin 20 Hz,Southern California,low_call,15,730,npp_lag_120d,mg_C_m-2_d-1,86,767.491272,603.7695313,928.0216674999999
+Fin 20 Hz,Southern California,no_call,15,310,gebco_bathymetry_m,m,310,-4038,-4206,-3778.25
+Fin 20 Hz,Southern California,no_call,15,310,sst_c,deg_C,310,16.0075,15.445,16.266000000000002
+Fin 20 Hz,Southern California,no_call,15,310,chlorophyll_a,mg_m-3,121,0.27875638,0.244391963,0.396933198
+Fin 20 Hz,Southern California,no_call,15,310,phytoplankton_carbon,mg_m-3,121,18.06202316,15.57138729,21.39183807
+Fin 20 Hz,Southern California,no_call,15,310,poc,mg_m-3,121,76.19995117,67.19970703,99.79980469
+Fin 20 Hz,Southern California,no_call,15,310,npp_concurrent,mg_C_m-2_d-1,121,454.9329834,418.9320374,540.1470947
+Fin 20 Hz,Southern California,no_call,15,310,npp_lag_30d,mg_C_m-2_d-1,133,563.6392212,459.2654724,747.6055908
+Fin 20 Hz,Southern California,no_call,15,310,npp_lag_60d,mg_C_m-2_d-1,74,668.6594238,594.1421509,813.2644042999999
+Fin 20 Hz,Southern California,no_call,15,310,npp_lag_90d,mg_C_m-2_d-1,71,679.7244263,589.4492492500001,728.5266724
+Fin 20 Hz,Southern California,no_call,15,310,npp_lag_120d,mg_C_m-2_d-1,19,661.5723267,510.7702026,755.8775635
