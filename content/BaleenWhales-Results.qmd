@@ -418,7 +418,7 @@ environmental_n_deployments <- n_distinct(environmental_hourly$deployment)
 
 This page summarizes key results from the blue, fin, and sei whale analyses conducted using drifting acoustic recorder data collected during the 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS). Results are presented from two complementary analytical products: a manually validated hourly occurrence dataset used to characterize acoustic presence, and automated call-level detections used to examine relative acoustic activity for call types with sufficient detector performance.
 
-::: {.callout-note}
+::: callout-note
 Hourly geographic-zone assignments were based on the drifting recorder's position during each hour. Because CalCurCEAS sampling progressed generally from north to south between August and December 2024, differences among geographic zones represent combined spatial and temporal variation rather than seasonally standardized regional comparisons.
 :::
 
@@ -478,7 +478,7 @@ knitr::kable(
 
 ![Spatial magnitude of retained automated detections for (A) blue whale A and B calls combined and (B) fin whale 20 Hz calls along CalCurCEAS 2024 drifter trajectories. Symbol size represents the number of retained detections within each hourly bin.](../_figs/BaleenWhales/CalCurCEAS_baleen_automated_call_activity_magnitude_maps.png){#fig-baleen-relative-activity fig-alt="Two maps showing the spatial magnitude of automated blue whale A and B calls and fin whale 20 Hz calls along CalCurCEAS drifter tracks." width="100%"}
 
-::: {.callout-important}
+::: callout-important
 Automated detection rates are indices of **relative acoustic activity within call type**. They should not be interpreted as whale abundance, whale density, or directly compared among call types because call production, detectability, and detector performance differ among classes.
 :::
 
@@ -499,7 +499,7 @@ Additional environmental summaries, the Central and Southern California boxplots
 The public-facing baleen whale products are maintained in [`supplement/BaleenWhales/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/supplement/BaleenWhales). The principal reusable products are:
 
 | Product | Description |
-|---|---|
+|----|----|
 | [`CalCurCEAS_baleen_validated_hourly_presence_absence.csv`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/supplement/BaleenWhales/CalCurCEAS_baleen_validated_hourly_presence_absence.csv) | Final manually validated hourly presence/absence dataset for blue, fin, and sei whale call types and species-level occurrence. |
 | [`CalCurCEAS_baleen_retained_automated_hourly_call_activity.csv`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/supplement/BaleenWhales/CalCurCEAS_baleen_retained_automated_hourly_call_activity.csv) | Final hourly automated call-activity dataset for Blue A, Blue B, and Fin 20 Hz, including exact usable acoustic effort. |
 | [`CalCurCEAS_baleen_environmental_hourly.csv`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/supplement/BaleenWhales/CalCurCEAS_baleen_environmental_hourly.csv) | Hourly call-activity and environmental dataset used for the exploratory environmental analyses. |

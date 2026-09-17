@@ -5,38 +5,133 @@ editor: visual
 
 ## Summary
 
-[DeepAcoustics](https://github.com/Ocean-Science-Analytics/DeepAcoustics), a deep learning software package, was used to develop and test detection models for blue, fin, and sei whale calls. Two model architectures within DeepAcoustics were evaluated: TinyYOLO and ResNet. Based on model performance, a TinyYOLO model was selected to process CalCurCEAS deployments that were not used during training. The selected model was used to detect blue whale A, B, and D calls, fin whale 20 Hz and 40 Hz calls, and sei whale downsweeps.
+The CalCurCEAS baleen whale analysis used [DeepAcoustics](https://github.com/Ocean-Science-Analytics/DeepAcoustics), a multiclass TinyYOLO detector, to identify low-frequency calls from blue, fin, and sei whales in drifting-recorder data collected during the 2024 survey. The detector was adapted from an existing base model using additional annotations from two representative CalCurCEAS deployments — 008 (offshore) and 014 (nearshore) — so it reflected the acoustic conditions of this survey before being applied more broadly. Recordings were first screened for data-quality problems, then decimated to 400 Hz before detection.
 
-Model detections were binned by hour and call type to create standardized presence/absence summaries for each drifting recorder deployment. A subset of these hourly outputs was manually reviewed to evaluate model accuracy and compare performance among call types. Call-count summaries were also generated during processing, but interpretation of count-based metrics will depend on model performance and the availability of finalized validated datasets.
+Six focal call types were evaluated:
 
-## DeepAcoustics
+- Blue whale A, B, and D calls
+- Fin whale 20 Hz and 40 Hz calls
+- Sei whale downsweeps (Sei DS)
 
-![DeepAcoustics Interface](images/DeepAcoustics_ScreenShot.png){fig-alt="An image of DeepAcoustic, an open-access software, on startup of the program" fig-align="center"}
+From there, the analysis followed two complementary paths. In the first, detector output was binned by hour and each hour was manually reviewed to produce a validated hourly presence/absence dataset for each call type; this dataset was used for acoustic-occurrence analyses products. In the second, detector performance was evaluated at the individual-call level against held-out CalCurCEAS recordings not used in training, and only call types with a pooled F1-score of at least 0.80 were carried forward into secondary analyses, consisting of effort-normalized automated call activity. Environmental comparisons were then conducted as an exploratory extension of those retained, automated call-level analyses.
 
-DeepAcoustics, an open-access deep learning software package, was used to train and test multi-class, low-frequency detection networks for baleen whale calls. For the CalCurCEAS project, training data were compiled from multiple recording platforms across the North Pacific, including sonobuoys, cabled observatories, high-frequency acoustic recording packages (HARPs), and drifting acoustic recorders, including some CalCurCEAS deployments. Calls from blue whales (A, B, and D calls), fin whales (20 Hz and 40 Hz calls), and sei whales (downsweeps) were first annotated in Raven Pro and then used as model training data, along with representative noise samples from the same recordings.
+## Acoustic preprocessing and data-quality screening
 
-Multiple TinyYOLO and ResNet models were developed and tested to compare performance across the target baleen whale call types. Based on these comparisons, a TinyYOLO model was selected to process CalCurCEAS deployments that were not used during training. Recordings from these novel deployments were decimated to 400 Hz prior to model processing, and the resulting model outputs were converted into standardized Raven-style selection tables.
+For the baleen whale analyses, only channel one of each recording (HTI-92WB hydrophone) was used. Recordings were decimated from the original 384-kHz sampling rate to 400 Hz using Triton. This reduced data volume while retaining the frequency range needed to detect the focal low-frequency baleen whale calls and matched the input sampling rate used for the DeepAcoustics detector.
 
-Model outputs were then processed in R to generate hourly binned summaries by deployment and call type. These hourly products included presence/absence indicators for each target call type and provided the primary unit for comparing automated detections with manual review results. Call-count summaries were also generated during processing, but interpretation of count-based metrics will depend on model performance and the availability of finalized validated datasets.
+Long-term spectral averages (LTSAs) were generated for each deployment and visually reviewed to identify recording-quality problems. Periods affected by instrument self-noise, line strumming, or other low-frequency interference that prevented reliable detection of the target calls were annotated as unusable and excluded from subsequent analyses. Deployments with persistent unusable conditions could be excluded in their entirety.
 
-## Manual Validation
+Confirmed data gaps in acoustic recording were also accounted for when constructing the final analysis products. The validated hourly-occurrence workflow and the automated call-activity workflow handled usable effort differently: hourly occurrence used eligible full hour bins, whereas automated call activity retained exact usable recording duration, including usable portions of partial hours.
 
-Manual review was conducted at two levels: detection-level validation and hourly presence/absence validation.
+## DeepAcoustics model development
 
-For detection-level validation, approximately 20% of each deployment was selected for manual review to evaluate model accuracy. Review files were selected using a stratified random sampling approach that distributed review effort across the full deployment period. This helped avoid concentrating manual review in only one portion of a deployment and allowed model performance to be assessed across different times, locations, and acoustic conditions.
+![DeepAcoustics Interface](images/DeepAcoustics_ScreenShot.png){fig-alt="DeepAcoustics software interface." fig-align="center"}
 
-During detection-level review, the original TinyYOLO Raven selection tables were manually corrected. False positive detections were deleted, missed calls were added, and mislabeled detections were corrected to the appropriate call type. These reviewed selection tables were then compared with the original model outputs to evaluate model performance and identify true positives, false positives, and false negatives by call type.
+[DeepAcoustics](https://github.com/Ocean-Science-Analytics/DeepAcoustics) is a MATLAB-based software package for training and applying deep-learning object-detection networks to acoustic data. Prior model development by Ocean Science Analytics identified TinyYOLO as an effective architecture for a multiclass low-frequency baleen whale detector. That existing detector provided the starting point for the CalCurCEAS model rather than developing a new network from scratch.
 
-In addition to detection-level validation, model outputs were also binned by hour and manually reviewed for call-type presence/absence. Each hourly bin was checked to confirm whether the target call types were present. When a call type was missing from the hourly summary but present in the data, it was added. This produced a manually reviewed hourly presence/absence dataset by deployment and call type.
+To adapt the detector to CalCurCEAS acoustic conditions, recordings from **CalCurCEAS_008** and **CalCurCEAS_014** were fully annotated for focal call types and incorporated into the training data. These deployments represented different acoustic environments and were supplemented with additional sei whale downsweep annotations from sonobuoy recordings. The broader training dataset included recordings from multiple passive acoustic monitoring platforms and environments.
 
-## Model Performance Metrics
+The six focal call classes used in the CalCurCEAS analysis were Blue A, Blue B, Blue D, Fin 20 Hz, Fin 40 Hz, and Sei DS. Fin whale 18 Hz calls and an unidentified biological sound class (UNID) were also represented during model training but were not retained for the downstream biological analyses.
 
-Model performance was evaluated by comparing the original TinyYOLO outputs with the manually reviewed results. At the detection level, reviewed Raven selection tables were used to identify false positives, missed calls, and mislabeled detections. These comparisons provided information on how well the model detected and classified individual call events within the manually reviewed subset of each deployment.
+Annotated calls were converted to 400-Hz spectrogram images for TinyYOLO training. Training images used 40-s spectrogram windows with 80% overlap, a 256-point FFT, and 320 × 320-pixel image resolution. Noise samples were incorporated during image generation, and selected training datasets were augmented to increase representation of underrepresented call classes. Augmented samples increased the number and diversity of training images but did not represent additional independent whale calls or recordings.
 
-Model performance was also evaluated at the hourly-bin level by comparing automated TinyYOLO presence/absence outputs with the manually reviewed hourly presence/absence results. For each call type, hourly bins were classified as true positives, false positives, false negatives, or true negatives based on agreement between model output and manual review.
+Multiple candidate TinyYOLO networks were evaluated, and Network 17 was selected as the final 400-Hz multiclass detector (**Final TinyYOLO detector**) based on performance across the focal call classes and evaluation datasets rather than performance for any single class.
 
-These comparisons were used to calculate performance metrics such as precision, recall/sensitivity, specificity, and overall agreement by call type and deployment. Precision described how often model-positive hourly bins were confirmed during manual review, while recall/sensitivity described how often manually confirmed positive hours were detected by the model. Specificity described how well the model identified hourly bins without the target call type.
+The final TinyYOLO detector and accompanying documentation are archived in [`supplement/BaleenWhales/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/supplement/BaleenWhales).
 
-## Code and Reproducible Products
+## Application to novel CalCurCEAS recordings
 
-R scripts were developed to clean and combine DeepAcoustics outputs across deployments, remove or flag unusable recording periods, incorporate deployment and recovery metadata where needed, summarize detections by hour and call type, and generate exploratory figures. These scripts will be uploaded to the repository as analysis files are finalized.
+The final TinyYOLO detector was applied to the CalCurCEAS deployments retained for baleen whale analysis except CalCurCEAS_008 and CalCurCEAS_014, because those recordings had contributed to model training.
+
+DeepAcoustics generated individual detections with predicted call classes and confidence scores. Detections meeting the **0.5 minimum confidence threshold** used in the DeepAcoustics workflow were retained. Detections occurring during periods identified as unusable during data-quality screening were excluded from the downstream analysis products.
+
+## Call-level detector performance
+
+Detector performance on novel CalCurCEAS recordings was evaluated using a stratified manual review of approximately **20% of the usable 6-min recording files from each novel deployment**. Each deployment was divided into approximately ten temporal bins, and files were randomly selected within those bins so that review effort was distributed across the deployment rather than concentrated in a single time period.
+
+For each sampled subset, the original DeepAcoustics detections were compared with an analyst-reviewed Raven selection table. Automated detections retained during review were classified as true positives (TP), detections removed during review as false positives (FP), and calls added manually because they had been missed by the detector as false negatives (FN).
+
+Precision, recall, and F1-score were calculated at two scales:
+
+- **deployment level**, to characterize variation in detector performance among deployments and acoustic environments; and
+- **pooled by call type**, by summing TP, FP, and FN across novel deployments before calculating the performance metrics.
+
+The pooled call-type performance was used to determine which automated call classes were sufficiently reliable for secondary unreviewed call-level analyses. A pooled **F1-score ≥ 0.80** was used as the retention criterion, which retained Blue A, Blue B, and Fin 20 Hz. Blue D, Fin 40 Hz, and Sei DS remained part of the manually validated hourly occurrence dataset but were not used for quantitative analyses of unreviewed automated call counts.
+
+The reproducible detector-performance workflow is available in [`_code/baleen_whales/detector_performance/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_code/baleen_whales/detector_performance).
+
+## Validated hourly acoustic occurrence
+
+The manually validated hourly dataset was the **primary data product for acoustic-occurrence analyses**.
+
+For deployments processed with the final TinyYOLO detector, automated detections were first summarized into full hour bins by call type. A call type was initially considered present when at least one detector output occurred within the hour. For CalCurCEAS_008 and CalCurCEAS_014, hourly presence/absence was derived from the existing analyst annotations because those deployments were fully annotated during model development.
+
+These initial hourly classifications were only a starting point. **Each hourly interval was manually reviewed for each focal call type, including hours in which the detector produced no detections**, so that missed calls could be identified. The analyst then assigned final binary presence/absence values for Blue A, Blue B, Blue D, Fin 20 Hz, Fin 40 Hz, and Sei DS. Individual call counts were not manually corrected as part of this hourly-occurrence product.
+
+Hourly bins overlapping unusable recording periods or confirmed recording interruptions were excluded from the validated occurrence analysis. The retained bins are designated **Validated Analysis Hours** in the final public dataset.
+
+Species-level occurrence was derived from the validated call-type fields:
+
+- **Blue whale:** Blue A, Blue B, or Blue D present;
+- **Fin whale:** Fin 20 Hz or Fin 40 Hz present; and
+- **Sei whale:** Sei DS present.
+
+An hourly value of absence indicates that no focal vocalization was detected during analyst review of that hour. It should not be interpreted as evidence that the species was biologically absent from the area.
+
+For regional summaries, geographic zone was assigned from the hourly recorder position, rather than assigning each deployment to a single region. A drifting recorder could therefore contribute hours to more than one geographic zone.
+
+The reproducible validated-occurrence workflow is available in [`_code/baleen_whales/validated_hourly_occurrence/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_code/baleen_whales/validated_hourly_occurrence).
+
+## Relative automated call activity
+
+Automated call-level detections were used as a secondary measure of relative acoustic activity for the three retained call classes: **Blue A, Blue B, and Fin 20 Hz**.
+
+These analyses excluded the two CalCurCEAS training deployments (008 and 014). For each hourly bin, exact usable acoustic effort was retained in minutes, and detections occurring within documented unusable intervals were excluded. This allowed usable portions of partially affected hours to contribute to the call-activity analysis.
+
+Relative acoustic activity was expressed as:
+
+> **detection rate = retained automated detections / usable recording hours**
+
+Detection rates were compared only within the same call type among geographic zones or along drifter trajectories. They were not interpreted as estimates of whale abundance, whale density, or true call production, and rates were not compared directly among call types because call characteristics, detectability, and detector performance differ among classes.
+
+The reproducible workflow is available in [`_code/baleen_whales/relative_call_activity/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_code/baleen_whales/relative_call_activity).
+
+## Exploratory environmental analysis
+
+Environmental analyses were conducted as an exploratory extension of the retained automated call-activity data. Blue A and B detections were combined as an index of blue whale song-associated activity, while Fin 20 Hz detections were evaluated separately.
+
+Hourly drifter positions were paired with environmental covariates including:
+
+- GEBCO bathymetric depth;
+- sea-surface temperature (MUR SST);
+- chlorophyll-a;
+- phytoplankton carbon;
+- particulate organic carbon (POC); and
+- net primary productivity (PACE NPP CAFE).
+
+Concurrent NPP and nominal 30-, 60-, 90-, and 120-day NPP lags were examined. Satellite values were extracted from the nearest available daily product within the search windows used in the analysis, using the median of a 3 × 3 pixel neighborhood around each hourly drifter position. Missing satellite observations were retained as missing rather than interpolated.
+
+For the regional California comparisons, hourly detection counts were classified separately for each call metric and geographic zone as:
+
+- **high-call:** counts at or above the zone-specific 75th percentile;
+- **low-call:** one or more detections below that threshold; or
+- **no-call:** zero retained detections.
+
+The 75th-percentile threshold was calculated using all hourly bins in each call-metric × geographic-zone group, including zero-detection hours. These categories therefore represent relative acoustic activity within a geographic zone and are not directly comparable among species or zones.
+
+No statistical significance testing or habitat modeling was conducted. Environmental results were interpreted as descriptive, survey-specific context rather than evidence of habitat preference or causal environmental drivers.
+
+The finalized environmental dataset and regional summaries are stored in [`supplement/BaleenWhales/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/supplement/BaleenWhales), and the reproducible workflow is available in [`_code/baleen_whales/environmental_analysis/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_code/baleen_whales/environmental_analysis).
+
+## Code and reproducible products
+
+The finalized baleen whale analysis is organized into four reproducible workflow folders:
+
+- [`validated_hourly_occurrence/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_code/baleen_whales/validated_hourly_occurrence)
+- [`detector_performance/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_code/baleen_whales/detector_performance)
+- [`relative_call_activity/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_code/baleen_whales/relative_call_activity)
+- [`environmental_analysis/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_code/baleen_whales/environmental_analysis)
+
+Final reusable datasets and the Final TinyYOLO detector are archived in [`supplement/BaleenWhales/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/supplement/BaleenWhales), and final rendered figures are stored under [`_figs/BaleenWhales/`](https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_figs/BaleenWhales).
+
+See the [Baleen Whale Results](BaleenWhales-Results.qmd) page for the final occurrence, detector-performance, relative call-activity, and environmental results.
