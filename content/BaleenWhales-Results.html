@@ -453,30 +453,358 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This page summarizes key results from the blue, fin, and sei whale analyses conducted using drifting acoustic recorder data collected during the 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS). Complete data products and supporting outputs are available in the project repository.</p>
+<p>This page summarizes key results from the blue, fin, and sei whale analyses conducted using drifting acoustic recorder data collected during the 2024 California Current Cetacean and Ecosystem Assessment Survey (CalCurCEAS). Results are presented from two complementary analytical products: a manually validated hourly occurrence dataset used to characterize acoustic presence, and automated call-level detections used to examine relative acoustic activity for call types with sufficient detector performance.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Hourly geographic-zone assignments were based on the drifting recorder’s position during each hour. Because CalCurCEAS sampling progressed generally from north to south between August and December 2024, differences among geographic zones represent combined spatial and temporal variation rather than seasonally standardized regional comparisons.</p>
+</div>
+</div>
 <section id="validated-hourly-occurrence" class="level2">
 <h2 class="anchored" data-anchor-id="validated-hourly-occurrence">Validated hourly occurrence</h2>
-<p>Summary of manually validated hourly occurrence of blue, fin, and sei whales across geographic zones.</p>
-<p>[Key figure/table goes here]</p>
+<p>After data-quality screening and conversion of usable recordings to complete clock-hour bins, the validated occurrence dataset contained <strong>4,266 Validated Analysis Hours</strong> from <strong>22 deployments</strong>. Blue whale vocalizations were confirmed during <strong>2,447 hours (57.4%)</strong>, fin whale vocalizations during <strong>2,633 hours (61.7%)</strong>, and sei whale vocalizations during <strong>486 hours (11.4%)</strong>. Blue whales were detected on <strong>21 of 22</strong> analyzed deployments, fin whales on <strong>22 of 22</strong>, and calls attributed to sei whales on <strong>19 of 22</strong>.</p>
+<div class="cell">
+<div id="tbl-baleen-occurrence" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-baleen-occurrence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Validated hourly acoustic occurrence of blue, fin, and sei whales by geographic zone during CalCurCEAS 2024.
+</figcaption>
+<div aria-describedby="tbl-baleen-occurrence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Geographic zone</th>
+<th style="text-align: center;">Validated hours</th>
+<th style="text-align: center;">Blue whale positive hours, n (%)</th>
+<th style="text-align: center;">Fin whale positive hours, n (%)</th>
+<th style="text-align: center;">Sei whale positive hours, n (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Columbia River</td>
+<td style="text-align: center;">481</td>
+<td style="text-align: center;">4 (0.8%)</td>
+<td style="text-align: center;">216 (44.9%)</td>
+<td style="text-align: center;">4 (0.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oregon</td>
+<td style="text-align: center;">703</td>
+<td style="text-align: center;">251 (35.7%)</td>
+<td style="text-align: center;">447 (63.6%)</td>
+<td style="text-align: center;">83 (11.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Northern California</td>
+<td style="text-align: center;">731</td>
+<td style="text-align: center;">497 (68.0%)</td>
+<td style="text-align: center;">380 (52.0%)</td>
+<td style="text-align: center;">42 (5.7%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Central California</td>
+<td style="text-align: center;">955</td>
+<td style="text-align: center;">721 (75.5%)</td>
+<td style="text-align: center;">580 (60.7%)</td>
+<td style="text-align: center;">132 (13.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Southern California</td>
+<td style="text-align: center;">1,396</td>
+<td style="text-align: center;">974 (69.8%)</td>
+<td style="text-align: center;">1,010 (72.3%)</td>
+<td style="text-align: center;">225 (16.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: center;">4,266</td>
+<td style="text-align: center;">2,447 (57.4%)</td>
+<td style="text-align: center;">2,633 (61.7%)</td>
+<td style="text-align: center;">486 (11.4%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Blue whale occurrence was very low during Columbia River sampling and increased substantially during Oregon and California sampling, with the highest proportional hourly occurrence in <strong>Central California</strong>. Fin whale vocalizations were common throughout the survey and reached their highest proportional occurrence during <strong>Southern California</strong> sampling. Sei whale vocalizations were less frequent on an hourly basis but were detected across all five geographic zones and most analyzed deployments.</p>
+<div id="fig-baleen-hourly-occurrence" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-panel time series showing validated hourly acoustic occurrence of blue, fin, and sei whales by geographic zone during CalCurCEAS 2024.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-baleen-hourly-occurrence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../_figs/BaleenWhales/CalCurCEAS_baleen_validated_hourly_occurrence_by_geographic_zone.png" class="img-fluid figure-img" style="width:100.0%" alt="Three-panel time series showing validated hourly acoustic occurrence of blue, fin, and sei whales by geographic zone during CalCurCEAS 2024.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-baleen-hourly-occurrence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Validated hourly acoustic occurrence of (A) blue whales, (B) fin whales, and (C) sei whales by geographic zone during CalCurCEAS 2024. Colored bars indicate the number of deployment-hours with validated acoustic presence on each day, and black lines indicate the total number of usable deployment-hours available for analysis.
+</figcaption>
+</figure>
+</div>
+<p>Call-type-specific and deployment-level timing is shown in the regional acoustic-scene figures archived in the <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_figs/BaleenWhales"><code>_figs/BaleenWhales/</code></a> directory.</p>
 </section>
 <section id="detector-performance-on-novel-calcurceas-data" class="level2">
 <h2 class="anchored" data-anchor-id="detector-performance-on-novel-calcurceas-data">Detector performance on novel CalCurCEAS data</h2>
-<p>Performance of the final DeepAcoustics TinyYOLO detector was evaluated using manually annotated novel CalCurCEAS recordings. Automated call-level analyses were restricted to call types meeting the specified performance criterion.</p>
-<p>[Compact performance figure or table goes here]</p>
+<p>The final DeepAcoustics <strong>Network 17, 400-Hz TinyYOLO</strong> detector was evaluated using a stratified 20% manual review of novel CalCurCEAS recordings. Precision, recall, and F1-score were calculated from pooled true-positive, false-positive, and false-negative counts across novel deployments.</p>
+<p>A pooled <strong>F1-score of at least 0.80</strong> was used as the criterion for retaining call classes for unreviewed automated call-level analyses. This criterion retained <strong>Blue whale A, Blue whale B, and Fin whale 20 Hz</strong>. <strong>Blue whale D, Fin whale 40 Hz, and Sei whale downsweep</strong> remained available in the manually validated hourly occurrence dataset but were not used for quantitative analyses of unreviewed automated call counts.</p>
+<div class="cell">
+<div id="tbl-baleen-performance" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-baleen-performance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Call-level performance of the final TinyYOLO DeepAcoustics network on novel CalCurCEAS recordings by call type.
+</figcaption>
+<div aria-describedby="tbl-baleen-performance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 13%">
+<col style="width: 10%">
+<col style="width: 12%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Call type</th>
+<th style="text-align: center;">Precision</th>
+<th style="text-align: center;">Recall</th>
+<th style="text-align: center;">F1-score</th>
+<th style="text-align: left;">Automated call-level analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Blue whale A</td>
+<td style="text-align: center;">0.996</td>
+<td style="text-align: center;">0.946</td>
+<td style="text-align: center;">0.970</td>
+<td style="text-align: left;">Retained</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Blue whale B</td>
+<td style="text-align: center;">0.988</td>
+<td style="text-align: center;">0.675</td>
+<td style="text-align: center;">0.802</td>
+<td style="text-align: left;">Retained</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Blue whale D</td>
+<td style="text-align: center;">0.963</td>
+<td style="text-align: center;">0.587</td>
+<td style="text-align: center;">0.729</td>
+<td style="text-align: left;">Not retained</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fin whale 20 Hz</td>
+<td style="text-align: center;">0.973</td>
+<td style="text-align: center;">0.749</td>
+<td style="text-align: center;">0.846</td>
+<td style="text-align: left;">Retained</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fin whale 40 Hz</td>
+<td style="text-align: center;">0.583</td>
+<td style="text-align: center;">0.061</td>
+<td style="text-align: center;">0.110</td>
+<td style="text-align: left;">Not retained</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sei whale downsweep</td>
+<td style="text-align: center;">0.864</td>
+<td style="text-align: center;">0.481</td>
+<td style="text-align: center;">0.618</td>
+<td style="text-align: left;">Not retained</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Deployment-level performance results and the pooled performance dataset are available with the <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/supplement/BaleenWhales">baleen whale supplementary products</a>, and the reproducible evaluation workflow is in <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_code/baleen_whales/detector_performance"><code>_code/baleen_whales/detector_performance/</code></a>.</p>
 </section>
 <section id="relative-automated-call-activity" class="level2">
 <h2 class="anchored" data-anchor-id="relative-automated-call-activity">Relative automated call activity</h2>
-<p>For call types with sufficient detector performance, automated detections were summarized relative to acoustic recording effort to characterize variation in call activity among geographic zones.</p>
-<p>[Key figure/table goes here]</p>
+<p>Automated detections of the three retained call classes were summarized as a secondary index of relative acoustic activity. Across the <strong>20 novel deployments</strong> included in this analysis, the detector identified <strong>1,353 blue whale A calls</strong>, <strong>15,874 blue whale B calls</strong>, and <strong>45,529 fin whale 20 Hz calls</strong> over <strong>4,030.6 hours</strong> of usable acoustic recording effort.</p>
+<p>Effort-normalized detection rates varied among geographic zones within each call type. Blue whale A and B rates were lowest in the northern portion of the survey and higher during California sampling. Fin whale 20 Hz activity was present throughout the study area and had its highest regional detection rate during <strong>Southern California</strong> sampling.</p>
+<div class="cell">
+<div id="tbl-baleen-relative-activity" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-baleen-relative-activity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Relative automated call activity for blue whale A and B calls and fin whale 20 Hz calls by geographic zone during CalCurCEAS 2024.
+</figcaption>
+<div aria-describedby="tbl-baleen-relative-activity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 21%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Geographic zone</th>
+<th style="text-align: center;">Usable recordings (h)</th>
+<th style="text-align: center;">Blue A detections/h</th>
+<th style="text-align: center;">Blue B detections/h</th>
+<th style="text-align: center;">Fin 20 Hz detections/h</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Columbia River</td>
+<td style="text-align: center;">483.3</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.02</td>
+<td style="text-align: center;">3.77</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oregon</td>
+<td style="text-align: center;">536.2</td>
+<td style="text-align: center;">0.01</td>
+<td style="text-align: center;">1.25</td>
+<td style="text-align: center;">9.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Northern California</td>
+<td style="text-align: center;">656.5</td>
+<td style="text-align: center;">0.12</td>
+<td style="text-align: center;">3.50</td>
+<td style="text-align: center;">10.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Central California</td>
+<td style="text-align: center;">955.5</td>
+<td style="text-align: center;">0.46</td>
+<td style="text-align: center;">5.99</td>
+<td style="text-align: center;">10.13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Southern California</td>
+<td style="text-align: center;">1,399.1</td>
+<td style="text-align: center;">0.59</td>
+<td style="text-align: center;">5.13</td>
+<td style="text-align: center;">16.08</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total</td>
+<td style="text-align: center;">4,030.6</td>
+<td style="text-align: center;">0.34</td>
+<td style="text-align: center;">3.94</td>
+<td style="text-align: center;">11.30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div id="fig-baleen-relative-activity" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two maps showing the spatial magnitude of automated blue whale A and B calls and fin whale 20 Hz calls along CalCurCEAS drifter tracks.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-baleen-relative-activity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../_figs/BaleenWhales/CalCurCEAS_baleen_automated_call_activity_magnitude_maps.png" class="img-fluid figure-img" style="width:100.0%" alt="Two maps showing the spatial magnitude of automated blue whale A and B calls and fin whale 20 Hz calls along CalCurCEAS drifter tracks.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-baleen-relative-activity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Spatial magnitude of retained automated detections for (A) blue whale A and B calls combined and (B) fin whale 20 Hz calls along CalCurCEAS 2024 drifter trajectories. Symbol size represents the number of retained detections within each hourly bin.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Automated detection rates are indices of <strong>relative acoustic activity within call type</strong>. They should not be interpreted as whale abundance, whale density, or directly compared among call types because call production, detectability, and detector performance differ among classes.</p>
+</div>
+</div>
 </section>
 <section id="environmental-context" class="level2">
 <h2 class="anchored" data-anchor-id="environmental-context">Environmental context</h2>
-<p>Exploratory comparisons were used to describe the environmental conditions associated with call-positive and call-negative hours. These analyses are descriptive and were not intended as formal habitat models.</p>
-<p>[Optional compact figure or short summary]</p>
+<p>Environmental comparisons were exploratory and were used to place variation in automated call activity in oceanographic context. The finalized environmental dataset contains <strong>4,025 hourly bins</strong> from <strong>20 novel deployments</strong>. For blue whale A/B and fin whale 20 Hz activity, hours were classified separately within each California geographic zone as high-call, low-call, or no-call using the zone-specific 75th percentile of hourly call counts.</p>
+<p>Across pooled comparisons, call-positive hours generally occurred in deeper and cooler waters and under higher chlorophyll-a and particulate organic carbon conditions than hours with no retained detections. Fin whale 20 Hz activity showed the clearest environmental separation, including relatively high activity under cooler conditions and elevated chlorophyll-a and particulate organic carbon in Northern California. Blue whale A/B patterns were weaker and less consistent. Net primary productivity (NPP CAFE) was also examined at concurrent and nominal 30-, 60-, 90-, and 120-day lags, but no single lag consistently separated higher and lower call activity across species or geographic zones.</p>
+<div id="fig-baleen-environment" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Environmental boxplots comparing high, low, and no-call activity for fin whale 20 Hz and blue whale A/B calls in Northern California.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-baleen-environment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../_figs/BaleenWhales/CalCurCEAS_northern_california_environmental_boxplots.png" class="img-fluid figure-img" style="width:100.0%" alt="Environmental boxplots comparing high, low, and no-call activity for fin whale 20 Hz and blue whale A/B calls in Northern California.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-baleen-environment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Exploratory environmental comparisons for (A) fin whale 20 Hz and (B) blue whale A/B relative acoustic activity in Northern California. Hourly bins are grouped into high-call, low-call, and no-call categories within each call metric and geographic zone.
+</figcaption>
+</figure>
+</div>
+<p>These relationships are descriptive. Survey location, season, deployment identity, environmental conditions, and acoustic activity varied concurrently, so the observed patterns are not interpreted as evidence of habitat preference or causal environmental drivers.</p>
+<p>Additional environmental summaries, the Central and Southern California boxplots, and the selected Southern California four-panel spatial context figure are available in <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_figs/BaleenWhales"><code>_figs/BaleenWhales/</code></a> and the <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_code/baleen_whales/environmental_analysis">environmental analysis workflow</a>.</p>
 </section>
 <section id="data-products" class="level2">
 <h2 class="anchored" data-anchor-id="data-products">Data products</h2>
-<p>Supporting datasets, tables, figures, model files, and analysis outputs used for the baleen whale analyses are available in the GitHub repository.</p>
+<p>The public-facing baleen whale products are maintained in <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/supplement/BaleenWhales"><code>supplement/BaleenWhales/</code></a>. The principal reusable products are:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Product</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/supplement/BaleenWhales/CalCurCEAS_baleen_validated_hourly_presence_absence.csv"><code>CalCurCEAS_baleen_validated_hourly_presence_absence.csv</code></a></td>
+<td>Final manually validated hourly presence/absence dataset for blue, fin, and sei whale call types and species-level occurrence.</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/supplement/BaleenWhales/CalCurCEAS_baleen_retained_automated_hourly_call_activity.csv"><code>CalCurCEAS_baleen_retained_automated_hourly_call_activity.csv</code></a></td>
+<td>Final hourly automated call-activity dataset for Blue A, Blue B, and Fin 20 Hz, including exact usable acoustic effort.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/supplement/BaleenWhales/CalCurCEAS_baleen_environmental_hourly.csv"><code>CalCurCEAS_baleen_environmental_hourly.csv</code></a></td>
+<td>Hourly call-activity and environmental dataset used for the exploratory environmental analyses.</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/supplement/BaleenWhales/CalCurCEAS_DeepAcoustics_performance_pooled_by_calltype.csv"><code>CalCurCEAS_DeepAcoustics_performance_pooled_by_calltype.csv</code></a></td>
+<td>Pooled detector-performance metrics by focal call type.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/supplement/BaleenWhales/CalCurCEAS_DeepAcoustics_performance_by_deployment_calltype.csv"><code>CalCurCEAS_DeepAcoustics_performance_by_deployment_calltype.csv</code></a></td>
+<td>Deployment-level TP, FP, FN, precision, recall, and F1 results for novel recordings.</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/supplement/BaleenWhales/CalCurCEAS_environmental_summary_by_zone_activity.csv"><code>CalCurCEAS_environmental_summary_by_zone_activity.csv</code></a></td>
+<td>Regional environmental summaries by call metric and high-, low-, and no-call activity category.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/supplement/BaleenWhales/CalCurCEAS_PacificLF_TinyYOLO_final.mat"><code>CalCurCEAS_PacificLF_TinyYOLO_final.mat</code></a></td>
+<td>Final Network 17, 400-Hz TinyYOLO detector used for the CalCurCEAS low-frequency baleen whale analysis.</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/blob/main/supplement/BaleenWhales/CalCurCEAS_PacificLF_TinyYOLO_final_README.md"><code>CalCurCEAS_PacificLF_TinyYOLO_final_README.md</code></a></td>
+<td>Detector documentation, including training provenance, software requirements, detection threshold, and performance limitations.</td>
+</tr>
+</tbody>
+</table>
+<p>Reproducible scripts and workflow documentation are organized under <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_code/baleen_whales"><code>_code/baleen_whales/</code></a>. Final rendered figures are archived under <a href="https://github.com/SAEL-SWFSC/CalCurCEAS-2024-Drifter-Analysis/tree/main/_figs/BaleenWhales"><code>_figs/BaleenWhales/</code></a>.</p>
 
 
 </section>
