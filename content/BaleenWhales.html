@@ -460,7 +460,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>The CalCurCEAS baleen whale analysis used a multi-class TinyYOLO detector trained with <a href="https://github.com/Ocean-Science-Analytics/DeepAcoustics">DeepAcoustics</a>, to identify low-frequency calls from blue, fin, and sei whales in drifting-recorder data collected during the 2024 survey. The detector was adapted from an existing base model using additional annotations from two representative CalCurCEAS deployments — 008 (offshore) and 014 (nearshore) — so it reflected the acoustic conditions of this survey before being applied more broadly. Recordings were first screened for data-quality problems, then decimated to 400 Hz before detection.</p>
+<p>The CalCurCEAS baleen whale analysis used a deep learning multi-class TinyYOLO network trained in <a href="https://github.com/Ocean-Science-Analytics/DeepAcoustics">DeepAcoustics</a>, to identify low-frequency calls from blue, fin, and sei whales in drifting-recorder data collected during the 2024 survey. The detector was adapted from an existing base model using additional annotations from two representative CalCurCEAS deployments, 008 (offshore) and 014 (nearshore), so it reflected the acoustic conditions of this survey before being applied more broadly. Recordings were first screened for data-quality problems, then decimated to 400 Hz before detection.</p>
 <p>Six focal call types were evaluated:</p>
 <ul>
 <li>Blue whale A, B, and D calls</li>
