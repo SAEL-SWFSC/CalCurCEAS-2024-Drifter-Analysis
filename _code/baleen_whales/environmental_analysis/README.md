@@ -94,6 +94,37 @@ Within each species panel, the figure shows:
 
 The boxplot workflow follows the original analysis logic: quartiles and whiskers are calculated from the untransformed data, while NPP CAFE, chlorophyll-a, and POC are displayed on logarithmic y-axes.
 
+
+### `full_environmental_distribution_boxplots.R`
+
+Creates the coastwide environmental-distribution figure comparing hours with retained Fin 20 Hz detections, retained Blue A/B detections, and no retained detections.
+
+Run with:
+
+```r
+source(
+  "_code/baleen_whales/environmental_analysis/full_environmental_distribution_boxplots.R"
+)
+```
+
+Output:
+
+```text
+_figs/BaleenWhales/
+CalCurCEAS_Full_Environmental_Distribution_box_plots.png
+```
+
+The script uses the finalized hourly environmental dataset and displays distributions for:
+
+- GEBCO bathymetric depth
+- sea-surface temperature (SST)
+- chlorophyll-a
+- phytoplankton carbon
+- particulate organic carbon (POC)
+- concurrent NPP CAFE
+
+The Fin 20 Hz and Blue A/B groups are not mutually exclusive: an hour containing both retained call types contributes to both groups. `No retained calls` indicates an hour with zero retained Fin 20 Hz detections and zero retained Blue A/B detections. Sample sizes shown beneath each boxplot are calculated after excluding missing values for the environmental variable being plotted.
+
 ## Environmental-analysis dataset
 
 The finalized environmental dataset contains 4,025 hourly bins across 20 deployments.
@@ -168,6 +199,13 @@ library(cowplot)
 library(grid)
 ```
 
+The full environmental-distribution boxplot script requires:
+
+```r
+library(tidyverse)
+library(patchwork)
+```
+
 For archival reproducibility, package versions used for the final run can be recorded with:
 
 ```r
@@ -198,7 +236,7 @@ contains derived numerical results when needed.
 _figs/BaleenWhales/
 ```
 
-contains final rendered environmental figures, including the QGIS-produced spatial context figure.
+contains final rendered environmental figures, including the California regional boxplots, Appendix Figure E-1, and the QGIS-produced spatial context figure.
 
 ## Notes
 
