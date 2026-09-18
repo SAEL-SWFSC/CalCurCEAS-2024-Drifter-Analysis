@@ -1,43 +1,60 @@
-# CalCurCEAS Reserach Compendium
+# CalCurCEAS Research Compendium
 
-This repository contains methods for the passive acoustic analysis of the CalCurCEAS 2024 survey conducted by Southwest Fisheries Science Center. You will find data, code and methodology within this repo. This is a living document to provide information about the acoustic analysis as it is completed.
+This repository contains methods, code, figures, and analytical data products from passive acoustic analyses conducted as part of the Southwest Fisheries Science Center's CalCurCEAS 2024 survey. The repository is intended to document reproducible analysis workflows and provide supporting products as individual acoustic analyses are completed.
 
-Passive acoustic gliders were deployed concurrently with the CalCurCEAS 2024 survey (offshore Oregon and northern California). Analysis methods for these data can be found in the [glider-CalCurCEAS repo](https://github.com/sfregosi-noaa/glider-CalCurCEAS).
+Passive acoustic gliders were deployed concurrently with the CalCurCEAS 2024 survey off Oregon and northern California. Methods and products associated with the glider data are maintained separately in the [glider-CalCurCEAS repository](https://github.com/sfregosi-noaa/glider-CalCurCEAS).
 
 ## Status of Analysis
 
-Pre-processing of acoustic data through PAMGuard software is complete. We are working on sperm whale and beaked whale next steps. Sperm whale data will be sent off to PIFSC for further analysis. Beaked whale data will be worked up by Anne Simonis (funding pending).
+### Baleen whales
 
-## [Link to Site](https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/)
+Analysis of blue, fin, and sei whale detections from the CalCurCEAS drifting acoustic recorders is complete. The repository includes the final analysis products and workflows used to:
 
-## Contents
+- characterize manually validated hourly acoustic occurrence;
+- evaluate the performance of the final DeepAcoustics multiclass TinyYOLO detector on novel CalCurCEAS recordings;
+- quantify effort-normalized relative acoustic activity for call types meeting the detector-performance threshold; and
+- examine exploratory relationships between acoustic activity and environmental conditions.
 
-This directory contains:
+Final shareable baleen-whale datasets and the DeepAcoustics Network 17 (400-Hz) model are provided in `supplement/BaleenWhales/`. Supporting and upstream analytical products are retained in `_data/BaleenWhales/`, derived products and summaries are in `output/BaleenWhales/`, final figures are in `_figs/BaleenWhales/`, and reproducible workflows and documentation are in `_code/baleen_whales/`.
 
-\*The underscore before a folder name means that it will not be render each time the site is built.
+A PACM-compatible version of the validated hourly occurrence dataset was also prepared for incorporation into the Passive Acoustic Cetacean Map.
 
--   📁 content: chapters/sections for online site
+### Sperm whales
 
--   📁 \_figs: contains all figures generated for the analysis
+Sperm whale data have been transferred to PIFSC for additional analysis.
 
--   📁 docs: Contains rendered versions of the site
+### Beaked whales
 
--   📁 \_data: Contains raw or raw-derived data
+CalCurCEAS recordings were processed with the PAMGuard Click Detector and detections were manually reviewed and classified to species or signal type using established spectral and temporal characteristics. Acoustic events were reviewed twice for quality control.
 
--   📁 output: This can include any modified or intermediate data or data products (data in data folder is ORIGINAL, and data in output may be modified using code stored in R folder.
+Five beaked whale species have been acoustically identified in the CalCurCEAS drifter recordings: goose-beaked whale (*Ziphius cavirostris*), Baird's beaked whale (*Berardius bairdii*), Stejneger's beaked whale (*Mesoplodon stejnegeri*), Hubbs' beaked whale (*Mesoplodon carlhubbsi*), and ginkgo-toothed beaked whale (*Mesoplodon ginkgodens*). The current analysis includes recording-effort and encounter-rate summaries, mixed-species encounters, species distributions in relation to bottom depth, and comparisons of daytime and nighttime acoustic event rates. A beaked whale identification guide documenting the acoustic characteristics used during classification is also maintained within the repository.
 
--   📁 \_code: scripts that actually do things.
+Density and abundance estimation for goose-beaked whales is being developed using a group-based acoustic point-transect approach. Methods and code for this component are in place.
 
-### Funding
+## Project Site
+
+[View the rendered CalCurCEAS 2024 Drifter Analysis site](https://sael-swfsc.github.io/CalCurCEAS-2024-Drifter-Analysis/)
+
+## Repository Contents
+
+Directories beginning with an underscore contain supporting resources and are not rendered as standalone sections of the project site.
+
+- `content/` — Quarto chapters and sections used to build the online project site.
+- `_figs/` — figures generated for the analyses, organized by analysis group.
+- `docs/` — rendered files for the project website.
+- `_data/` — upstream and raw-derived analytical inputs used by the workflows.
+- `output/` — derived, intermediate, and summarized analytical products generated by repository code.
+- `_code/` — scripts, reproducible workflows, and supporting analysis documentation.
+- `supplement/` — final shareable data products and other analysis deliverables.
+
+## Funding
 
 This study was funded by the U.S. Department of the Interior, Bureau of Ocean Energy Management (BOEM), Environmental Studies Program, Washington, DC, through Interagency Agreement Number M24PG00021 with the Southwest Fisheries Science Center. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the opinions or policies of BOEM, nor does mention of trade names or commercial products constitute endorsement or recommendation for use.
 
-### Disclaimer
+## Disclaimer
 
 This repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project content is provided on an 'as is' basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
 
-### License
+## License
 
 This content was created by U.S. Government employees as part of their official duties. This content is not subject to copyright in the United States (17 U.S.C. §105) and is in the public domain within the United States of America. Additionally, copyright is waived worldwide through the CC0 1.0 Universal public domain dedication.
-
-<hr>
